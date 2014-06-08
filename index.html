@@ -1,6 +1,37 @@
-<!DOCTYPE html5>
+<!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="style.css"/>
+        <script LANGUAGE="javascript" src="event.js" ></script>
+        <title>Labna - Home</title>
+    </head>
     <body>
-        <H1>Hello World !!</H1>
+        
+        <header>
+            <a href="index.html">
+            <div class="profil"></div>
+            <!--<H1>Hello World !!</H1>   -->
+            </a>
+        </header>
+        <nav>
+        <ul class="mainmenu" >
+            <li>accueil</li>
+            <li  onmouseover="menuOver('profil')" onmouseout="menuExit('profil')">
+                profil
+                <ul class="menuprofile" id="profil" hidden="" >
+                    <li>paramètres</li>
+                    <li>déconnection</li>
+                </ul>
+            </li>
+            <li>message</li>
+            <li>forum</li>
+            <li>FAQ</li>
+            <li>Contact</li>
+        </ul>
+        </nav>
+        <p class="temoin">hauteur : <span id="compt2">0</span></p>
+        <p>try, 1 2.. 1 2...</p>
+        <footer><a href="#">&copy;All right reserved</footer>
     </body>
 </html>

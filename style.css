@@ -1,0 +1,91 @@
+*{
+    outline: 1px solid red;/**/
+    margin: 0;
+    color: white;
+    /*font-size: 104%;*/
+}
+@font-face{
+    font-family: 'STARGATE';
+    src: url('polices/STARGATE.TTF');
+}
+
+html {
+    background: url("pictures/repeat.jpg") repeat ;
+    background-size: 100px 100px;
+}
+
+header {
+    max-width:  1280px;
+    height: 400px;
+    background: url("pictures/profil.jpg") no-repeat;
+    background-size: 100%;
+    overflow:hidden;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    display: block;
+    
+}
+
+/* h1 {
+    font-size: 3em; 
+    display:    inline-block;
+    cursor:     pointer;
+    position: relative;
+    bottom: -340px;
+}*/
+
+.profil {
+    display: inline-block;
+    width:328px;
+    height: 60px;
+    background: url("pictures/all title.png");
+    position: relative;
+    bottom: -340px /*-80%*/;
+
+/**/}
+
+p {
+    /*font-family: STARGATE;*/
+    height: 800px;
+}
+
+nav{
+}
+
+a h1{
+    color: /*#A5F528/**/white;
+}
+
+footer a{
+    /*color: black;*/
+}
+
+
+.mainmenu {
+    text-align: center;
+    font-family: "ff-din-web-pro-1", "ff-din-web-pro-2", sans-serif;
+    /*position: relative;*/
+    width: 100%;
+    list-style-type: none;
+}
+
+li{
+    text-transform: /*capitalize*/uppercase;
+    display: inline-block;
+    min-width: 100px;
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+.menuprofile{
+    position: absolute;
+    margin: 0px;
+}
+
+.temoin{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
