@@ -25,20 +25,27 @@ var control = 0;
 function getpageScroll(){
     var temp = self.pageYOffset;
 	document.getElementById("compt2").innerHTML= temp + ";" + control;
-    if ((temp > 340) && (control <= 340)) {
-        document.getElementByClassName("profil").style.position = "fixed";
+    if ((temp > 360) && (control <= 360)) {
+        moveMenu();
     }
+    if (temp < 360 && control >= 360) {
+        fixeMenu();
+    };
         control = temp;
 }
 
 
 function moveMenu(){
-    /*document.getElementById("temoin").innerHTML = self.pageYOffset;
-    /*if (self.pageYOffset >=340 && control == 0){
-        document.getElementByClassName("profil").style.position = "fixed";
-        document.getElementByClassName("profil").style.bottom = "0px";
-        control = 1;
-    }*/
+    var element = document.getElementById("baniere").style;
+    element.top = "0px";
+    element.left = "0px",
+    element.position = "fixed";
+}
+
+function fixeMenu(){
+   var element = document.getElementById("baniere").style;
+    element.top= "360px";
+    element.position = "relative";
 }
 
 /*

@@ -4,6 +4,7 @@
     color: white;
     /*font-size: 104%;*/
 }
+
 @font-face{
     font-family: 'STARGATE';
     src: url('polices/STARGATE.TTF');
@@ -35,13 +36,13 @@ header {
     bottom: -340px;
 }*/
 
-.profil {
+#baniere {
     display: inline-block;
     width:328px;
-    height: 60px;
+    height: 40px;
     background: url("pictures/all title.png");
     position: relative;
-    bottom: -340px /*-80%*/;
+    bottom: -360px /*-80%*/;
 
 /**/}
 
@@ -79,13 +80,23 @@ li{
     
 }
 
-.menuprofile{
+.miniMenu{
     position: absolute;
     margin: 0px;
 }
+/*
+.minimenu li{
+    display: block;
+}*/
 
 .temoin{
     position: fixed;
     top: 0px;
-    left: 0px;
+    right: 0px;
+}
+
+input{
+    color: black;
+    position: absolute;
+    left: 150px
 }
