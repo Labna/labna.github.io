@@ -6,6 +6,7 @@ button.onclick= fonction(){
 
 */
 window.onscroll = getpageScroll;
+/*alert(typeof self.pageYOffset);
 
 
 /*function openNewWindow(){
@@ -24,13 +25,14 @@ var control = 0;
 function getpageScroll(){
     var temp = self.pageYOffset;
 	document.getElementById("compt2").innerHTML= temp + ";" + control;
-    if (temp > 340 && contol <= 340) { alert("coucou");}
-    control = temp;
+    if ((temp > 340) && (control <= 340)) {
+        document.getElementByClassName("profil").style.position = "fixed";
+    }
+        control = temp;
 }
 
 
 function moveMenu(){
-    document.getElementByClassName("profil").style.position = "fixed";
     /*document.getElementById("temoin").innerHTML = self.pageYOffset;
     /*if (self.pageYOffset >=340 && control == 0){
         document.getElementByClassName("profil").style.position = "fixed";
