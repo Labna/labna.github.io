@@ -7,15 +7,13 @@
         <title>Labna - Home</title>
     </head>
     <body>
-        
+        <div class="content">
         <header>
-            <a href="index.html">
+            <a href="index.php">
             <div id="baniere"></div>
             <!--<H1>Hello World !!</H1>   -->
             </a>
-        </header>
-       <!--<input type="button" onclick="moveMenu()" value="coucou clic">-->
-        <nav>
+        </header>    <nav>
         <ul class="mainmenu" >
             <li>accueil</li>
             <li  onmouseover="menuOver('profil')" onmouseout="menuExit('profil')">
@@ -25,14 +23,28 @@
                     <li>déconnection</li>
                 </ul>
             </li>
-            <li>message</li>
+            <li onmouseover="menuOver('message')" onmouseout="menuExit('message')">
+                message
+                <ul class="miniMenu" id="message" hidden="">
+                    <li>reçu</li>
+                    <li>envoyé</li>
+                </ul>
+            </li>
             <li>forum</li>
             <li>FAQ</li>
-            <li>Contact</li>
+            <li onmouseover="menuOver('contact')" onmouseout="menuExit('contact')">
+                Contact
+                <ul class="miniMenu" id="contact" hidden="">
+                    <li>contactez-moi</li>
+                    <li><a href="http://us.playstation.com/playstation/psn/visit/profiles/Alblan"><img src="http://fp.profiles.us.playstation.com/playstation/psn/pid/Alblan.png" width="230" height="155" border="0" /></a><!-- <br/><a href="http://www.us.playstation.com/psn/signup">Get Your Portable ID!</a> --></li>
+                </ul>
+
+            </li>
         </ul>
-        </nav>
-        <p class="temoin">hauteur : <span id="compt2">0</span></p>
-        <p>try, 1 2.. 1 2...<br/>Site en construction, il arrive bientôt !<br/> Website in building, comming soon !</p>
-        <footer><a href="#">&copy;All right reserved</footer>
+    </nav>
+    <p class="temoin">largeur : <span id="compt2">0</span></p>
+    <!--<p><a href="#" class="transition">test</a></p>-->
+    <p>try, 1 2.. 1 2...<br/>Site en construction, il arrive bientôt !<br/> Website in building, coming soon !</p>		<footer><a href="#">&copy;All right reserved</footer>
+		</div>
     </body>
 </html>

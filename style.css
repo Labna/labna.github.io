@@ -1,6 +1,7 @@
 *{
-    outline: 1px solid red;/**/
+    /*outline: 1px solid red;/**/
     margin: 0;
+    padding: 0;
     color: white;
     /*font-size: 104%;*/
 }
@@ -15,26 +16,24 @@ html {
     background-size: 100px 100px;
 }
 
+body{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
 header {
     max-width:  1280px;
     height: 400px;
     background: url("pictures/profil.jpg") no-repeat;
     background-size: 100%;
     overflow:hidden;
-    position: relative;
+    /*position: relative;
     left: 0px;
-    top: 0px;
+    top: 0px;*/
     display: block;
+    margin: 0 auto;
     
 }
-
-/* h1 {
-    font-size: 3em; 
-    display:    inline-block;
-    cursor:     pointer;
-    position: relative;
-    bottom: -340px;
-}*/
 
 #baniere {
     display: inline-block;
@@ -42,26 +41,20 @@ header {
     height: 40px;
     background: url("pictures/all title.png");
     position: relative;
-    bottom: -360px /*-80%*/;
-
-/**/}
+    top: 360px /*-80%*/;
+}
 
 p {
-    /*font-family: STARGATE;*/
-    height: 800px;
+    height: 1000px;
 }
 
 nav{
+    max-width: 100%;
 }
 
 a h1{
     color: /*#A5F528/**/white;
 }
-
-footer a{
-    /*color: black;*/
-}
-
 
 .mainmenu {
     text-align: center;
@@ -82,12 +75,10 @@ li{
 
 .miniMenu{
     position: absolute;
-    margin: 0px;
 }
-/*
-.minimenu li{
-    display: block;
-}*/
+.miniMenu li{
+    width: 100%;
+}
 
 .temoin{
     position: fixed;
@@ -99,4 +90,15 @@ input{
     color: black;
     position: absolute;
     left: 150px
+}
+
+.transition{
+    transition: all 0.5s ease-in-out;
+}
+.transition:hover{
+    margin-left: 10px;
+    margin-left-value: 10px;
+    margin-left-ltr-source: physical;
+    margin-left-rtl-source: physical; 
+
 }
