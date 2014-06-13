@@ -1,9 +1,7 @@
 *{
-    /*outline: 1px solid red;/**/
     margin: 0;
     padding: 0;
     color: white;
-    /*font-size: 104%;*/
 }
 
 @font-face{
@@ -27,9 +25,6 @@ header {
     background: url("pictures/profil.jpg") no-repeat;
     background-size: 100%;
     overflow:hidden;
-    /*position: relative;
-    left: 0px;
-    top: 0px;*/
     display: block;
     margin: 0 auto;
     
@@ -53,24 +48,26 @@ nav{
 }
 
 a h1{
-    color: /*#A5F528/**/white;
+    color: white;
 }
 
 .mainmenu {
     text-align: center;
     font-family: "ff-din-web-pro-1", "ff-din-web-pro-2", sans-serif;
-    /*position: relative;*/
     width: 100%;
     list-style-type: none;
 }
 
 .mainmenu li{
-    text-transform: /*capitalize*/uppercase;
+    text-transform: uppercase;
     display: inline-block;
     min-width: 100px;
-    text-align: center;
+    text-align: left;
     font-weight: bold;
-    
+}
+
+.mainmenu li a:link{
+    text-decoration: none;
 }
 
 .miniMenu{
@@ -78,6 +75,7 @@ a h1{
 }
 .miniMenu li{
     width: 100%;
+    min-width: unset;
 }
 
 .temoin{
@@ -85,12 +83,6 @@ a h1{
     top: 0px;
     right: 0px;
 }
-
-/*input{
-    color: black;
-    position: absolute;
-    left: 150px
-}*/
 
 .transition{
     transition: all 0.5s ease-in-out;
