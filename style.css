@@ -35,7 +35,7 @@ header {
     
 }
 
-#baniere {
+#banniere {
     display: inline-block;
     width:328px;
     height: 40px;
@@ -64,7 +64,7 @@ a h1{
     list-style-type: none;
 }
 
-li{
+.mainmenu li{
     text-transform: /*capitalize*/uppercase;
     display: inline-block;
     min-width: 100px;
@@ -86,11 +86,11 @@ li{
     right: 0px;
 }
 
-input{
+/*input{
     color: black;
     position: absolute;
     left: 150px
-}
+}*/
 
 .transition{
     transition: all 0.5s ease-in-out;
