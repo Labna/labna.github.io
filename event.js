@@ -3,18 +3,9 @@ window.onresize = getLargeur;
 var HauteurBanniere = 360;
 var screenGlue = false;
 
-function menuOver(what){
-    document.getElementById(what).removeAttribute("hidden");
-}
-
-function menuExit(what){
-    document.getElementById(what).hidden = "true";
-}
-
 var control = 0;
 function getpageScroll(){
     var temp = self.pageYOffset;
-	//document.getElementById("compt2").innerHTML= temp + ";" + control;
     if ((temp > HauteurBanniere) && (control <= HauteurBanniere)) {
         moveMenu();
     }
@@ -24,11 +15,9 @@ function getpageScroll(){
         control = temp;
 }
 
-
 function moveMenu(){
     var element = document.getElementById("banniere").style;
     element.top = "0px";
-    //element.left = "0px",
     element.position = "fixed";
     screenGlue = false;
 }
@@ -39,7 +28,6 @@ function fixeMenu(){
     element.position = "relative";
     screenGlue = true;
 }
-
 
 function getLargeur(){
     document.getElementById("compt2").innerHTML =  /*self.pageX*/ window.innerWidth;
@@ -53,6 +41,5 @@ function getLargeur(){
         HauteurBanniere = 360;
         document.getElementById("banniere").style.top = "360px";
         document.getElementById("banniere").style.position = "relative";
-        /*alert("coucou");*/
     };
 }

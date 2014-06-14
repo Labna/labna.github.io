@@ -36,7 +36,7 @@ header {
     height: 40px;
     background: url("pictures/all title.png");
     position: relative;
-    top: 360px /*-80%*/;
+    top: 360px;
 }
 
 p {
@@ -45,6 +45,9 @@ p {
 
 nav{
     max-width: 100%;
+}
+nav a{
+    padding: 10px;
 }
 
 a h1{
@@ -72,7 +75,14 @@ a h1{
 
 .miniMenu{
     position: absolute;
+    display: none;
 }
+
+.mimiMenu li:hover > ul{
+    display: inline-block;
+    outline: 1px solid white;
+}
+
 .miniMenu li{
     width: 100%;
     min-width: unset;
@@ -87,6 +97,7 @@ a h1{
 .transition{
     transition: all 0.5s ease-in-out;
 }
+
 .transition:hover{
     margin-left: 10px;
     margin-left-value: 10px;
