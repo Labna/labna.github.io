@@ -78,9 +78,8 @@ a h1{
     display: none;
 }
 
-.mimiMenu li:hover > ul{
-    display: inline-block;
-    outline: 1px solid white;
+.mainmenu li:hover > ul{
+    display: block;
 }
 
 .miniMenu li{
