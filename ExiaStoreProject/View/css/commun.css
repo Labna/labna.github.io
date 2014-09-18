@@ -1,0 +1,26 @@
+#formLog{
+	display: none;
+}
+
+#formRegister{
+	margin : 20px 20px 20px 20px;
+}
+
+#logout, #settings, #Administration, #manage{
+	display: none;
+}
+
+table,th{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th,td{
+	padding: 15px;
+}
+
+footer{
+	margin: 0 auto;
+	display: block;
+	width: 100%;
+}
