@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Exia Store</title>
+		<link rel="stylesheet" type="text/css" href="View/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="View/css/commun.css">
+				<script type="text/javascript" src="View/js/jquery.min.js"></script>
+		<script type="text/javascript" src="View/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="View/js/actions.js"></script>
+	</head>
+	<body>
+		<header><img src="View/image/banner.png" width="100%" max-height="100px">
+<!-- change the banner.png by banner-admin.png --></header>
+		<nav><nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="home.html"><span class="glyphicon glyphicon-home"></span> Home</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown"><a id="drop1" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span> Catalog <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href='CD'>CD</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href='DVD'>DVD</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Other goodies</a></li>
+          </ul>
+        </li>
+        <li id="shoppingCart"><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+        <li id="Administration"><a href="administration"><span class="glyphicon glyphicon-tower"></span> Administration</a></li>
+		  </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Account<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li id="login"><a onclick="logintest()"><span class="glyphicon glyphicon-leaf"></span> Login</a></li>
+            <li id="logout"><a href="Model/login.php?log=logout"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+            <li id="settings" hidden="true"><a href="management"><span class="glyphicon glyphicon-cog"></span> Account Settings</a></li>
+
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav></nav>
+        
+    <form id="formLog" method="post" action="Model/login.php?log=login">
+      <p>
+        <label for="email">Your e-mail :</label>
+        <input type="email" name="email" id="email"/>
+        <label for="password">Your password :</label>
+        <input type="password" name="password" id="password"/>
+        <button type="submit" value="Valide">OK</button>
+        <a href="?page=register">Not yet register</a>
+      </p>
+    </form><script >
+	 		document.getElementById('logout').style.display = "block";
+	 		//document.getElementById('settings').style.display = "block";
+	 		document.getElementById('login').style.display = "none";
+	 		//document.getElementById('manage').style.display = "block";
+	 	</script><script type="text/javascript">document.getElementById('shoppingCart').classList.add('active');</script><script type="text/javascript">
+    session start();
+</script>
+
+
+<table style="width: 400px">
+	   <tr>
+		  <td colspan="4" style="height: 24px">Votre panier</td>
+	   </tr>
+	   <tr>
+		  <td>Libellé</td>
+		  <td>Quantité</td>
+		  <td>Prix Unitaire</td>
+		  <td>Action</td>
+
+	   </tr>
+	</table>
+	<tr><td>Votre panier est vide </ td></tr>
+
+
+
+		<footer>&copy;all rights reserved</footer>
+	</body>
+
+</html>
