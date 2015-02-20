@@ -1,13 +1,15 @@
 *{
-    margin: 0;
+    /*outline: 1px solid red;/**/
+    margin: 0 auto;
     padding: 0;
     color: white;
+    /*font-size: 104%;*/
 }
 
-@font-face{
+/*@font-face{
     font-family: 'STARGATE';
     src: url('polices/STARGATE.TTF');
-}
+}*/
 
 html {
     background: url("pictures/repeat.jpg") repeat ;
@@ -21,12 +23,15 @@ body{
 
 header {
     max-width:  1280px;
-    height: 400px;
+    height: 401px;
     background: url("pictures/profil.jpg") no-repeat;
     background-size: 100%;
     overflow:hidden;
+    /*position: relative;
+    left: 0px;
+    top: 0px;*/
     display: block;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     
 }
 
@@ -37,6 +42,7 @@ header {
     background: url("pictures/all title.png");
     position: relative;
     top: 360px;
+    border: 1px solid #000;
 }
 
 p {
@@ -48,21 +54,23 @@ nav{
 }
 nav a{
     padding: 10px;
+    
 }
 
 a h1{
-    color: white;
+    color: /*#A5F528/**/white;
 }
 
 .mainmenu {
     text-align: center;
     font-family: "ff-din-web-pro-1", "ff-din-web-pro-2", sans-serif;
+    /*position: relative;*/
     width: 100%;
     list-style-type: none;
 }
 
 .mainmenu li{
-    text-transform: uppercase;
+    text-transform: /*capitalize*/uppercase;
     display: inline-block;
     min-width: 100px;
     text-align: left;
@@ -76,6 +84,8 @@ a h1{
 .miniMenu{
     position: absolute;
     display: none;
+    background-color: rgba(0,0,0,0.5);
+    overflow: hidden;
 }
 
 .mainmenu li:hover > ul{
@@ -84,7 +94,13 @@ a h1{
 
 .miniMenu li{
     width: 100%;
-    min-width: unset;
+}
+
+.miniMenu li a{
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    right: 0px;
 }
 
 .temoin{
@@ -93,14 +109,44 @@ a h1{
     right: 0px;
 }
 
+/*input{
+    color: black;
+    position: absolute;
+    left: 150px
+}*/
+
 .transition{
     transition: all 0.5s ease-in-out;
 }
-
 .transition:hover{
     margin-left: 10px;
     margin-left-value: 10px;
     margin-left-ltr-source: physical;
     margin-left-rtl-source: physical; 
 
+}
+
+/* partie nouvelArticle */
+
+input[type="button"], input[type="submit"], input[type="text"], textarea{
+    color: black;
+    /*display: block;*/
+    text-align: center;
+    margin: 0 auto;
+    width: 150px;
+}
+
+form{
+    display: inline;
+}
+
+
+
+/* only for music */
+object{
+    width: 100%;
+    min-height: 500px;
+}
+.musicBut{
+    margin: 0 auto;
 }
