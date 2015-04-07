@@ -5,23 +5,81 @@
 <title>CV</title>
 <link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<style type="text/css">
+
+/* {outline:1px solid red;}*/
+
+.thumbnail{
+position: relative;
+z-index: 0;
+display: inline;
+padding: 0px;
+border: none;
+}
+
+.thumbnail:hover{
+background-color: transparent;
+z-index: 50;
+}
+
+.thumbnail span{ /*CSS for enlarged image*/
+position: absolute;
+left: -1000px;
+/*border: 1px dashed gray;*/
+visibility: hidden;
+color: black;
+text-decoration: none;
+}
+
+.thumbnail span a img{ /*CSS for enlarged image*/
+border-width: 0;
+padding: 0px;
+}
+
+.thumbnail:hover span{ /*CSS for enlarged image on hover*/
+visibility: visible;
+top: 0;
+left: 60px; /*position where enlarged image should offset horizontally */
+
+}
+
+#easter {
+  background-image: url("pictures/krokmou-dragons-2square-mini.jpg");
+  float:right;
+  width:200px;
+  height:200px;
+}
+
+#easter:hover {
+  background-position:100% 0;
+}
+
+
+</style>
 </head>
 <body>
-<div class="container"><p>Alban Cornuau <br/>
-6 janvier 1994 <br/>
-<!--La Petite Mer Rouge <br>
+<!-- for link hover -->
+
+
+<div class="container">
+  <div style="float:right; display: inline-block;">
+    <!-- <img src="pictures/krokmou-dragons-2square.jpg" style="overflow:hidden; float:right;"> -->
+    <div id="easter"></div>
+  </div>
+<p>Alban Cornuau <br/>
+06/01/1994<br>
+<!--6 janvier 1994 <br/>
+La Petite Mer Rouge <br>
 36300 DOUADIC <br>-->
 67 rue de Maurian<br/>
 Rce le Maurian 4204D<br/>
 33290 Blanquefort<br/>
 06 95 18 15 55<br/>
 alban.cornuau@viacesi.fr</p>
-
-
 <h2 id="competences-informatiques" style="text-align:center">COMP&Eacute;TENCES INFORMATIQUES</h2>
 
 <ul>
-  <li>Stage programmation C#</li>
+  <li><a href="#experiences-professionnelles" style="color:black;" ><!--text-decoration:underline;"--> Stage programmation C# li&eacute;e &agrave; une base de donn&eacute;es SQL Server &darr;</a></li>
   <li>Projet programmation C et JAVA</li>
   <li>Projet Base de donn&eacute;es (sous Microsoft Access, SQL)</li>
   <li>Projet Web (HTML, CSS, JS/jQuery, PHP, SQL, sous WAMP)</li>
@@ -34,7 +92,7 @@ alban.cornuau@viacesi.fr</p>
 <table>
 <tr>
   <td>2013-2015</td>
-  <td>1i&egrave;re/2i&egrave;me Ann&eacute;e &Eacute;cole sup&eacute;rieure d’informatique EXIA CESI</td>
+  <td>1i&egrave;re/2i&egrave;me Ann&eacute;e &Eacute;cole sup&eacute;rieure d’informatique <a class="thumbnail" href="#thumb">EXIA CESI<span><img src="pictures/exia.cesi.jpg" alt="exia.cesi.fr"></img></span></a></td>
 </tr>
 <tr>
   <td>2013</td>
@@ -53,29 +111,31 @@ alban.cornuau@viacesi.fr</p>
   <tr>
     <td>2014</td>
     <td>9 semaines</td>
-    <td>Stage &agrave; ANTSYS, cr&eacute;ation interface de vente bas&eacute; sur une base de donnée</td>
+    <td>Stage &agrave; <a class="thumbnail" href="#thumb">ANTSYS<span><img src="pictures/ANTSYS.JPG" alt="www.antsys.fr"></img></span></a>, cr&eacute;ation interface de vente bas&eacute; sur une base de données. La mission consistais &agrave; d&ecute;velopper l'interface en C# pour les utilisateurs </td>
   </tr>
   <tr>
     <td>2012/13/14</td>
     <td>Juillet/Aout</td>
-    <td>Guide/batelier saisonnier Marais Poitevin Embarcad&egrave;re Prada</td>
+    <td>Guide/batelier saisonnier Marais Poitevin <a class="thumbnail" href="#thumb">Embarcad&egrave;re Prada<span><img src="pictures/prada-thumb_large.jpg" alt="www.bateaux-maraispoitevin.fr"></img></span></a></td>
   </tr>
   <tr>
     <td>Mars 2011</td>
     <td>une semaine</td>
-    <td>Stage à HEULIEZ, rencontre des ing&eacute;nieurs et de l'administration, d&eacute;couverte de l'organisation g&eacute;n&eacute;ral et mise en production</td>
+    <td>Stage à <a class="thumbnail" href="#thumb">HEULIEZ<span><img src="pictures/heuliez.jpg" alt="www.heuliezbus.com"></img></span></a>, rencontre des ing&eacute;nieurs et de l'administration, d&eacute;couverte de l'organisation g&eacute;n&eacute;ral et mise en production</td>
   </tr>
 </table>
 
 <h2 id="informations-complementaires" style="text-align:center">INFORMATIONS COMPL&Eacute;MENTAIRES</h2>
 
 <ul>
-  <li>Certification CISCO niveau 1 (CCNA discovery 1)</li><!--2014-->
+  <!--<li>Certification CISCO niveau 1 (CCNA discovery 1)</li>2014-->
   <li>PSC1 (pr&eacute;vention et secours civiques de niveau 1)<br/><!--2012--></li>
   <li>Permis de conduire B<br/><!--2012--></li>
   <li>Judo (ceinture marron)<br/><!--2001/2013--></li>
   <li>Scouts de France<br/><!--2001/2010--></li>
 </ul>
 
-</div></body>
+</div>
+
+</body>
 </html>
