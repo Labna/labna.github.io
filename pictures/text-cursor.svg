@@ -1,0 +1,40 @@
+<svg version="1.1"
+	baseProfile="full"
+	xmlns="http://www.w3.org/2000/svg"
+	width="256"
+	height="256">
+  <defs>
+    <radialGradient id="RadGreenTransparent" cx="0.5" cy="-0.666" r="1">
+			<stop offset="80%" stop-color="#12FF12" />
+			<stop offset="100%" stop-color="#12FF1200" />
+    </radialGradient>
+    <radialGradient id="RadGreenTransparent2" cx="0.5" cy="1.666" r="1">
+			<stop offset="80%" stop-color="#12FF12" />
+			<stop offset="100%" stop-color="#12FF1200" />
+    </radialGradient>
+    <linearGradient id="LinGreenTransparent" >
+			<stop offset="40%" stop-color="#12FF1200" />
+      <stop offset="50%" stop-color="#12FF12" />
+			<stop offset="60%" stop-color="#12FF1200" />
+		</linearGradient>
+  </defs>
+  <!-- PARTIE COLORISATION -->  
+  <path d="M 0 0
+    A 128 128 0 0 0 128 0
+    L 128 110.8512
+    L 0 110.8512Z" stroke-opacity="null" fill="url(#RadGreenTransparent)" />
+  <path d="M 128 256
+    A 128 128 0 0 0 0 256
+    L 0 145.1487
+    L 128 145.1487Z" stroke-opacity="null" fill="url(#RadGreenTransparent2)" />
+  <path d="M 0 0
+    A 128 128 0 0 0 128 0
+    L 128 256
+    A 128 128 0 0 0 0 256Z" stroke-opacity="null" fill="url(#LinGreenTransparent)" />
+  <!-- PARTIE  DESSIN --> 
+  <path d="M 0 0
+    A 128 128 0 0 0 128 0" stroke="#000" stroke-witdh="1" fill-opacity="0"/>
+  <line x1="64" x2="64" y1="16" y2="240" stroke="#000" stroke-width="1"/>
+  <path d="M 128 256
+    A 128 128 0 0 0 0 256" stroke="#000" stroke-witdh="1" fill-opacity="0"/>
+</svg>
