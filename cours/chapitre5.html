@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Chapitre 5 .html</title>
+  <meta name="generator" content="Haroopad 0.12.2" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>div.oembedall-githubrepos{border:1px solid #DDD;border-radius:4px;list-style-type:none;margin:0 0 10px;padding:8px 10px 0;font:13.34px/1.4 helvetica,arial,freesans,clean,sans-serif;width:452px;background-color:#fff}div.oembedall-githubrepos .oembedall-body{background:-moz-linear-gradient(center top,#FAFAFA,#EFEFEF) repeat scroll 0 0 transparent;background:-webkit-gradient(linear,left top,left bottom,from(#FAFAFA),to(#EFEFEF));border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top:1px solid #EEE;margin-left:-10px;margin-top:8px;padding:5px 10px;width:100%}div.oembedall-githubrepos h3{font-size:14px;margin:0;padding-left:18px;white-space:nowrap}div.oembedall-githubrepos p.oembedall-description{color:#444;font-size:12px;margin:0 0 3px}div.oembedall-githubrepos p.oembedall-updated-at{color:#888;font-size:11px;margin:0}div.oembedall-githubrepos ul.oembedall-repo-stats{border:medium none;float:right;font-size:11px;font-weight:700;padding-left:15px;position:relative;z-index:5;margin:0}div.oembedall-githubrepos ul.oembedall-repo-stats li{border:medium none;color:#666;display:inline-block;list-style-type:none;margin:0!important}div.oembedall-githubrepos ul.oembedall-repo-stats li a{background-color:transparent;border:medium none;color:#666!important;background-position:5px -2px;background-repeat:no-repeat;border-left:1px solid #DDD;display:inline-block;height:21px;line-height:21px;padding:0 5px 0 23px}div.oembedall-githubrepos ul.oembedall-repo-stats li:first-child a{border-left:medium none;margin-right:-3px}div.oembedall-githubrepos ul.oembedall-repo-stats li a:hover{background:none no-repeat scroll 5px -27px #4183C4;color:#FFF!important;text-decoration:none}div.oembedall-githubrepos ul.oembedall-repo-stats li:first-child a:hover{border-bottom-left-radius:3px;border-top-left-radius:3px}ul.oembedall-repo-stats li:last-child a:hover{border-bottom-right-radius:3px;border-top-right-radius:3px}span.oembedall-closehide{background-color:#aaa;border-radius:2px;cursor:pointer;margin-right:3px}div.oembedall-container{margin-top:5px;text-align:left}.oembedall-ljuser{font-weight:700}.oembedall-ljuser img{vertical-align:bottom;border:0;padding-right:1px}.oembedall-stoqembed{border-bottom:1px dotted #999;float:left;overflow:hidden;width:730px;line-height:1;background:none repeat scroll 0 0 #FFF;color:#000;font-family:Arial,Liberation Sans,DejaVu Sans,sans-serif;font-size:80%;text-align:left;margin:0;padding:0}.oembedall-stoqembed a{color:#07C;text-decoration:none;margin:0;padding:0}.oembedall-stoqembed a:hover{text-decoration:underline}.oembedall-stoqembed a:visited{color:#4A6B82}.oembedall-stoqembed h3{font-family:Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;font-size:130%;font-weight:700;margin:0;padding:0}.oembedall-stoqembed .oembedall-reputation-score{color:#444;font-size:120%;font-weight:700;margin-right:2px}.oembedall-stoqembed .oembedall-user-info{height:35px;width:185px}.oembedall-stoqembed .oembedall-user-info .oembedall-user-gravatar32{float:left;height:32px;width:32px}.oembedall-stoqembed .oembedall-user-info .oembedall-user-details{float:left;margin-left:5px;overflow:hidden;white-space:nowrap;width:145px}.oembedall-stoqembed .oembedall-question-hyperlink{font-weight:700}.oembedall-stoqembed .oembedall-stats{background:none repeat scroll 0 0 #EEE;margin:0 0 0 7px;padding:4px 7px 6px;width:58px}.oembedall-stoqembed .oembedall-statscontainer{float:left;margin-right:8px;width:86px}.oembedall-stoqembed .oembedall-votes{color:#555;padding:0 0 7px;text-align:center}.oembedall-stoqembed .oembedall-vote-count-post{font-size:240%;color:#808185;display:block;font-weight:700}.oembedall-stoqembed .oembedall-views{color:#999;padding-top:4px;text-align:center}.oembedall-stoqembed .oembedall-status{margin-top:-3px;padding:4px 0;text-align:center;background:none repeat scroll 0 0 #75845C;color:#FFF}.oembedall-stoqembed .oembedall-status strong{color:#FFF;display:block;font-size:140%}.oembedall-stoqembed .oembedall-summary{float:left;width:635px}.oembedall-stoqembed .oembedall-excerpt{line-height:1.2;margin:0;padding:0 0 5px}.oembedall-stoqembed .oembedall-tags{float:left;line-height:18px}.oembedall-stoqembed .oembedall-tags a:hover{text-decoration:none}.oembedall-stoqembed .oembedall-post-tag{background-color:#E0EAF1;border-bottom:1px solid #3E6D8E;border-right:1px solid #7F9FB6;color:#3E6D8E;font-size:90%;line-height:2.4;margin:2px 2px 2px 0;padding:3px 4px;text-decoration:none;white-space:nowrap}.oembedall-stoqembed .oembedall-post-tag:hover{background-color:#3E6D8E;border-bottom:1px solid #37607D;border-right:1px solid #37607D;color:#E0EAF1}.oembedall-stoqembed .oembedall-fr{float:right}.oembedall-stoqembed .oembedall-statsarrow{background-image:url(http://cdn.sstatic.net/stackoverflow/img/sprites.png?v=3);background-repeat:no-repeat;overflow:hidden;background-position:0 -435px;float:right;height:13px;margin-top:12px;width:7px}.oembedall-facebook1{border:#1A3C6C solid 1px;padding:0;font:13.34px/1.4 verdana;width:500px}.oembedall-facebook2{background-color:#627add}.oembedall-facebook2 a{color:#e8e8e8;text-decoration:none}.oembedall-facebookBody{background-color:#fff;vertical-align:top;padding:5px}.oembedall-facebookBody .contents{display:inline-block;width:100%}.oembedall-facebookBody div img{float:left;margin-right:5px}div.oembedall-lanyard{-webkit-box-shadow:none;-webkit-transition-delay:0s;-webkit-transition-duration:.4000000059604645s;-webkit-transition-property:width;-webkit-transition-timing-function:cubic-bezier(0.42,0,.58,1);background-attachment:scroll;background-clip:border-box;background-color:transparent;background-image:none;background-origin:padding-box;border-bottom-width:0;border-left-width:0;border-right-width:0;border-top-width:0;box-shadow:none;color:#112644;display:block;float:left;font-family:'Trebuchet MS',Trebuchet,sans-serif;font-size:16px;height:253px;line-height:19px;margin-bottom:0;margin-left:0;margin-right:0;margin-top:0;max-width:none;min-height:0;outline-color:#112644;outline-style:none;outline-width:0;overflow-x:visible;overflow-y:visible;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;position:relative;text-align:left;vertical-align:baseline;width:804px}div.oembedall-lanyard .tagline{font-size:1.5em}div.oembedall-lanyard .wrapper{overflow:hidden;clear:both}div.oembedall-lanyard .split{float:left;display:inline}div.oembedall-lanyard .prominent-place .flag:active,div.oembedall-lanyard .prominent-place .flag:focus,div.oembedall-lanyard .prominent-place .flag:hover,div.oembedall-lanyard .prominent-place .flag:link,div.oembedall-lanyard .prominent-place .flag:visited{float:left;display:block;width:48px;height:48px;position:relative;top:-5px;margin-right:10px}div.oembedall-lanyard .place-context{font-size:.889em}div.oembedall-lanyard .prominent-place .sub-place{display:block}div.oembedall-lanyard .prominent-place{font-size:1.125em;line-height:1.1em;font-weight:400}div.oembedall-lanyard .main-date{color:#8CB4E0;font-weight:700;line-height:1.1}div.oembedall-lanyard .first{width:48.57%;margin:0 0 0 2.857%}html{height:100%}body{margin:0!important;padding:5px 20px 26px!important;background-color:#fff;font-family:"Lucida Grande","Segoe UI","Apple SD Gothic Neo","Malgun Gothic","Lucida Sans Unicode",Helvetica,Arial,sans-serif;font-size:.9em;overflow-x:hidden;overflow-y:auto}br,h1,h2,h3,h4,h5,h6{clear:both}hr.page{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;border:0 none;color:#ccc;height:3px;padding:0}hr.underscore{border:0 none!important;height:30px;padding:0;-webkit-margin-before:0;-webkit-margin-after:0}body >:first-child{margin-top:0!important}img.plugin{box-shadow:0 1px 3px rgba(0,0,0,.1);border-radius:3px}iframe{border:0}figure{-webkit-margin-before:0;-webkit-margin-after:0;-webkit-margin-start:0;-webkit-margin-end:0}kbd{border:1px solid #aaa;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;-moz-box-shadow:1px 2px 2px #ddd;-webkit-box-shadow:1px 2px 2px #ddd;box-shadow:1px 2px 2px #ddd;background-color:#f9f9f9;background-image:-moz-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:-o-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:-webkit-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:linear-gradient(top,#eee,#f9f9f9,#eee);padding:1px 3px;font-family:inherit;font-size:.85em}.oembeded .oembed_photo{display:inline-block}img[data-echo]{margin:25px 0;width:100px;height:100px;background:#fff url(../img/ajax.gif) no-repeat center center}.spinner{display:inline-block;width:10px;height:10px;margin-bottom:-.1em;border:2px solid rgba(0,0,0,.5);border-top-color:transparent;border-radius:100%;-webkit-animation:spin 1s infinite linear;animation:spin 1s infinite linear}.spinner:after{content:'';display:block;width:0;height:0;position:absolute;top:-6px;left:0;border:4px solid transparent;border-bottom-color:rgba(0,0,0,.5);-webkit-transform:rotate(45deg);transform:rotate(45deg)}@-webkit-keyframes spin{to{-webkit-transform:rotate(360deg)}}@keyframes spin{to{transform:rotate(360deg)}}p.toc{margin:0!important}p.toc ul{padding-left:10px}p.toc>ul{padding:10px;margin:0 10px;display:inline-block;border:1px solid #ededed;border-radius:5px}p.toc li,p.toc ul{list-style-type:none}p.toc li{width:100%;padding:0;overflow:hidden}p.toc li a::after{content:"."}p.toc li a:before{content:"• "}p.toc h5{text-transform:uppercase}p.toc .title{float:left;padding-right:3px}p.toc .number{margin:0;float:right;padding-left:3px;background:#fff;display:none}.markdown{padding:20px}.markdown a{text-decoration:none;vertical-align:baseline}.markdown a:hover{text-decoration:underline}.markdown h1{font-size:2.2em;font-weight:700;margin:1.5em 0 1em}.markdown h2{font-size:1.8em;font-weight:700;margin:1.275em 0 .85em}.markdown h3{font-size:1.6em;font-weight:700;margin:1.125em 0 .75em}.markdown h4{font-size:1.4em;font-weight:700;margin:.99em 0 .66em}.markdown h5{font-size:1.2em;font-weight:700;margin:.855em 0 .57em}.markdown h6{font-size:1em;font-weight:700;margin:.75em 0 .5em}.markdown h1+p,.markdown h1:first-child,.markdown h2+p,.markdown h2:first-child,.markdown h3+p,.markdown h3:first-child,.markdown h4+p,.markdown h4:first-child,.markdown h5+p,.markdown h5:first-child,.markdown h6+p,.markdown h6:first-child{margin-top:0}.markdown hr{border:1px solid #ccc}.markdown p{margin:1em 0;word-wrap:break-word}.markdown ol{list-style-type:decimal}.markdown li{display:list-item;line-height:1.4em}.markdown blockquote{margin:1em 20px}.markdown blockquote>:first-child{margin-top:0}.markdown blockquote>:last-child{margin-bottom:0}.markdown blockquote cite:before{content:'\2014 \00A0'}.markdown .code{border-radius:3px;word-break:break-all;word-wrap:break-word}.markdown pre{border-radius:3px;word-break:break-all;word-wrap:break-word;overflow:auto}.markdown pre code{display:block}.markdown pre>code{border:1px solid #ccc;white-space:pre;padding:.5em;margin:0}.markdown code{border-radius:3px;word-break:break-all;word-wrap:break-word;border:1px solid #ccc;padding:0 5px;margin:0 2px}.markdown img{max-width:100%}.markdown table{padding:0;border-collapse:collapse;border-spacing:0}.markdown table tr td,.markdown table tr th{border:1px solid #ccc;margin:0;padding:6px 13px}.markdown table tr th{font-weight:700}.markdown table tr th>:first-child{margin-top:0}.markdown table tr th>:last-child{margin-bottom:0}.markdown table tr td>:first-child{margin-top:0}.markdown table tr td>:last-child{margin-bottom:0}.markdown em.underline{font-style:normal;text-decoration:underline}.markdown strong.highlight{color:#000;padding:0 5px;background-color:#fdffb6;-webkit-box-shadow:#fdffb6 0 0 5px;-moz-box-shadow:#fdffb6 0 0 5px;box-shadow:#fdffb6 0 0 5px}.clearness{padding:20px;color:#737373;font-size:15px;font-family:"Lucida Grande","Lucida Sans Unicode","Lucida Sans",AppleSDGothicNeo-Medium,'Segoe UI','Malgun Gothic',Verdana,Tahoma,sans-serif;background:#fff;-webkit-font-smoothing:antialiased}.clearness a{color:#1e6ea7}.clearness a:hover{color:#268bd2}.clearness h1,.clearness h2,.clearness h3,.clearness h4,.clearness h5{color:#404040}.clearness h2{border-bottom:1px solid #ccc;line-height:1.7em}.clearness h6{color:#666}.clearness hr{border:1px solid #e6e6e6}.clearness pre>code{font-size:.9em;font-family:Consolas,Inconsolata,Courier,monospace}.clearness blockquote{padding:0 15px;font-style:italic}.clearness blockquote:before{content:"\201C";font-size:40px;margin-left:-20px;color:#aaa}.clearness table{background-color:#fff;border-collapse:separate;border-spacing:2px}.clearness table tr td,.clearness table tr th{border:0;padding:.2em 1em}.clearness table tr th{border-bottom:1px solid #bfbfbf}.clearness table tr td{border-bottom:1px solid #d9d9d9}.clearness table tr:nth-child(2n){background-color:#fff}.hljs{display:block;overflow-x:auto;padding:.5em;background:#f0f0f0;-webkit-text-size-adjust:none}.clojure .hljs-built_in,.hljs,.hljs-subst,.hljs-tag .hljs-title,.lisp .hljs-title,.nginx .hljs-title{color:#000}.apache .hljs-cbracket,.apache .hljs-tag,.asciidoc .hljs-header,.bash .hljs-variable,.coffeescript .hljs-attribute,.django .hljs-variable,.erlang_repl .hljs-function_or_atom,.haml .hljs-symbol,.hljs-addition,.hljs-constant,.hljs-flow,.hljs-parent,.hljs-pragma,.hljs-preprocessor,.hljs-rules .hljs-value,.hljs-stream,.hljs-string,.hljs-tag .hljs-value,.hljs-template_tag,.hljs-title,.markdown .hljs-header,.ruby .hljs-symbol,.ruby .hljs-symbol .hljs-string,.smalltalk .hljs-class,.tex .hljs-command,.tex .hljs-special{color:#800}.asciidoc .hljs-blockquote,.diff .hljs-header,.hljs-annotation,.hljs-chunk,.hljs-comment,.hljs-template_comment,.markdown .hljs-blockquote,.smartquote{color:#888}.asciidoc .hljs-bullet,.asciidoc .hljs-link_url,.go .hljs-constant,.hljs-change,.hljs-date,.hljs-hexcolor,.hljs-literal,.hljs-number,.hljs-regexp,.lasso .hljs-variable,.makefile .hljs-variable,.markdown .hljs-bullet,.markdown .hljs-link_url,.smalltalk .hljs-char,.smalltalk .hljs-symbol{color:#080}.apache .hljs-sqbracket,.asciidoc .hljs-attribute,.asciidoc .hljs-link_label,.clojure .hljs-attribute,.coffeescript .hljs-property,.erlang_repl .hljs-reserved,.haml .hljs-bullet,.hljs-array,.hljs-attr_selector,.hljs-decorator,.hljs-deletion,.hljs-doctype,.hljs-envvar,.hljs-filter .hljs-argument,.hljs-important,.hljs-javadoc,.hljs-label,.hljs-localvars,.hljs-phony,.hljs-pi,.hljs-prompt,.hljs-pseudo,.hljs-shebang,.lasso .hljs-attribute,.markdown .hljs-link_label,.nginx .hljs-built_in,.ruby .hljs-string,.tex .hljs-formula,.vhdl .hljs-attribute{color:#88f}.apache .hljs-tag,.asciidoc .hljs-strong,.bash .hljs-variable,.css .hljs-tag,.hljs-built_in,.hljs-id,.hljs-javadoctag,.hljs-keyword,.hljs-phpdoc,.hljs-request,.hljs-status,.hljs-title,.hljs-type,.hljs-typename,.hljs-winutils,.hljs-yardoctag,.markdown .hljs-strong,.smalltalk .hljs-class,.tex .hljs-command{font-weight:700}.asciidoc .hljs-emphasis,.markdown .hljs-emphasis{font-style:italic}.nginx .hljs-built_in{font-weight:400}.coffeescript .javascript,.javascript .xml,.lasso .markup,.tex .hljs-formula,.xml .css,.xml .hljs-cdata,.xml .javascript,.xml .vbscript{opacity:.5}footer{position:fixed;font-size:.8em;text-align:right;bottom:0;margin-left:-25px;height:20px;width:100%}</style>
+</head>
+<body class="markdown clearness">
+
+  <div style="display:flex;justify-content:space-between"><div><a href="chapitre4.html">← precedent</a></div><div><a href="chapitre6.html">suivant →</a></div></div><h1 id="servlets---données-de-formulaire"><a name="servlets---données-de-formulaire" href="#servlets---données-de-formulaire"></a>Servlets - Données de formulaire</h1><p>Vous devez avoir rencontré de nombreuses situations dans lesquelles vous devez transmettre certaines informations de votre navigateur au serveur Web et finalement à votre programme backend. Le navigateur utilise deux méthodes pour transmettre ces informations au serveur Web. Ces méthodes sont la méthode GET et la méthode POST.</p><h2 id="méthode-get"><a name="méthode-get" href="#méthode-get"></a>Méthode GET</h2><p>La méthode GET envoie les informations utilisateur codées ajoutées à la demande de page. La page et les informations codées sont séparées par le caractère? (point d’interrogation) symbole comme suit:</p><pre><code data-origin="&lt;pre&gt;&lt;code&gt;http://www.test.com/hello?key1=value1&amp;amp;key2=value2
+&lt;/code&gt;&lt;/pre&gt;">http://www.test.com/hello?key1=value1&amp;key2=value2
+</code></pre><p>La méthode GET est la méthode par défaut permettant de transmettre des informations d’un navigateur à un serveur Web. Elle produit une longue chaîne qui apparaît dans la zone Emplacement: de votre navigateur. N’utilisez jamais la méthode GET si vous avez un mot de passe ou d’autres informations sensibles à transmettre au serveur. La méthode GET a une limite de taille: vous ne pouvez utiliser que 1024 caractères dans une chaîne de requête.</p><p>Ces informations sont transmises à l’aide de l’en-tête QUERY_STRING et seront accessibles via la variable d’environnement QUERY_STRING. Servlet gère ce type de demande à l’aide de la méthode doGet ().</p><h2 id="méthode-post"><a name="méthode-post" href="#méthode-post"></a>Méthode POST</h2><p>La méthode POST est une méthode généralement plus fiable pour transmettre des informations à un programme dorsal. Cela empaquette les informations exactement de la même manière que la méthode GET, mais au lieu de les envoyer sous forme de chaîne de texte après un? (point d’interrogation) dans l’URL, il l’envoie sous forme de message séparé. Ce message arrive au programme backend sous la forme d’une entrée standard que vous pouvez analyser et utiliser pour votre traitement. Servlet gère ce type de demande à l’aide de la méthode doPost ().</p><h2 id="lecture-de-données-de-formulaire-à-l'aide-de-servlet"><a name="lecture-de-données-de-formulaire-à-l'aide-de-servlet" href="#lecture-de-données-de-formulaire-à-l'aide-de-servlet"></a>Lecture de données de formulaire à l’aide de Servlet</h2><p>Les servlets gèrent automatiquement l’analyse des données de formulaire à l’aide des méthodes suivantes, selon la situation:</p><ul>
+<li><p><strong>getParameter()</strong> − Vous appelez la méthode request.getParameter() pour obtenir la valeur d’un paramètre de formulaire.</p>
+</li>
+<li><p><strong>getParameterValues()</strong> − Appelez cette méthode si le paramètre apparaît plusieurs fois et renvoie plusieurs valeurs, par exemple une case à cocher.</p>
+</li>
+<li><p><strong>getParameterNames()</strong> − Appelez cette méthode si vous souhaitez une liste complète de tous les paramètres de la demande en cours.</p>
+</li>
+</ul><h2 id="exemple-de-méthode-get-utilisant-une-url"><a name="exemple-de-méthode-get-utilisant-une-url" href="#exemple-de-méthode-get-utilisant-une-url"></a>Exemple de méthode GET utilisant une URL</h2><p>Voici une simple URL qui passera deux valeurs au programme HelloForm en utilisant la méthode GET.<br><a href="http://localhost:8080/HelloForm?first_name=ZARA&amp;last_name=ALI">http://localhost:8080/HelloForm?first_name=ZARA&amp;last_name=ALI</a></p><p>Ci-dessous, le programme de servlet HelloForm.java pour gérer les entrées fournies par le navigateur Web. Nous allons utiliser la méthode getParameter () qui facilite l’accès aux informations transmises:</p><pre><code class="java hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;JAVA&quot;&gt;// Importer les bibliothèques Java requises
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+// Extension de la classe HttpServlet
+public class HelloForm extends HttpServlet {
+
+   public void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+
+      // Définir le type de contenu de la réponse
+      response.setContentType(&quot;text/html&quot;);
+
+      PrintWriter out = response.getWriter();
+      String title = &quot;UUtilisation de la méthode GET pour lire les données de formulaire&quot;;
+      String docType =
+         &quot;&amp;lt;!doctype html public \&quot;-//w3c//dtd html 4.0 &quot; + &quot;transitional//en\&quot;&amp;gt;\n&quot;;
+
+      out.println(docType +
+         &quot;&amp;lt;html&amp;gt;\n&quot; +
+            &quot;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;&quot; + title + &quot;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;\n&quot; +
+            &quot;&amp;lt;body bgcolor = \&quot;#f0f0f0\&quot;&amp;gt;\n&quot; +
+               &quot;&amp;lt;h1 align = \&quot;center\&quot;&amp;gt;&quot; + title + &quot;&amp;lt;/h1&amp;gt;\n&quot; +
+               &quot;&amp;lt;ul&amp;gt;\n&quot; +
+                  &quot;  &amp;lt;li&amp;gt;&amp;lt;b&amp;gt;Prénom &amp;lt;/b&amp;gt;: &quot;
+                  + request.getParameter(&quot;first_name&quot;) + &quot;\n&quot; +
+                  &quot;  &amp;lt;li&amp;gt;&amp;lt;b&amp;gt;Nom&amp;lt;/b&amp;gt;: &quot;
+                  + request.getParameter(&quot;last_name&quot;) + &quot;\n&quot; +
+               &quot;&amp;lt;/ul&amp;gt;\n&quot; +
+            &quot;&amp;lt;/body&amp;gt;&quot; +
+         &quot;&amp;lt;/html&amp;gt;&quot;
+      );
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-comment">// Importer les bibliothèques Java requises</span>
+<span class="hljs-keyword">import</span> java.io.*;
+<span class="hljs-keyword">import</span> javax.servlet.*;
+<span class="hljs-keyword">import</span> javax.servlet.http.*;
+
+<span class="hljs-comment">// Extension de la classe HttpServlet</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloForm</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">HttpServlet</span> </span>{
+
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doGet</span>(HttpServletRequest request, HttpServletResponse response)
+      <span class="hljs-keyword">throws</span> ServletException, IOException {
+
+      <span class="hljs-comment">// Définir le type de contenu de la réponse</span>
+      response.setContentType(<span class="hljs-string">"text/html"</span>);
+
+      PrintWriter out = response.getWriter();
+      String title = <span class="hljs-string">"UUtilisation de la méthode GET pour lire les données de formulaire"</span>;
+      String docType =
+         <span class="hljs-string">"&lt;!doctype html public \"-//w3c//dtd html 4.0 "</span> + <span class="hljs-string">"transitional//en\"&gt;\n"</span>;
+
+      out.println(docType +
+         <span class="hljs-string">"&lt;html&gt;\n"</span> +
+            <span class="hljs-string">"&lt;head&gt;&lt;title&gt;"</span> + title + <span class="hljs-string">"&lt;/title&gt;&lt;/head&gt;\n"</span> +
+            <span class="hljs-string">"&lt;body bgcolor = \"#f0f0f0\"&gt;\n"</span> +
+               <span class="hljs-string">"&lt;h1 align = \"center\"&gt;"</span> + title + <span class="hljs-string">"&lt;/h1&gt;\n"</span> +
+               <span class="hljs-string">"&lt;ul&gt;\n"</span> +
+                  <span class="hljs-string">"  &lt;li&gt;&lt;b&gt;Prénom &lt;/b&gt;: "</span>
+                  + request.getParameter(<span class="hljs-string">"first_name"</span>) + <span class="hljs-string">"\n"</span> +
+                  <span class="hljs-string">"  &lt;li&gt;&lt;b&gt;Nom&lt;/b&gt;: "</span>
+                  + request.getParameter(<span class="hljs-string">"last_name"</span>) + <span class="hljs-string">"\n"</span> +
+               <span class="hljs-string">"&lt;/ul&gt;\n"</span> +
+            <span class="hljs-string">"&lt;/body&gt;"</span> +
+         <span class="hljs-string">"&lt;/html&gt;"</span>
+      );
+   }
+}
+</code></pre><p>En supposant que votre environnement est correctement configuré, compilez HelloForm.java comme suit:</p><pre><code class="bash hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;BASH&quot;&gt;$ javac HelloForm.java
+&lt;/code&gt;&lt;/pre&gt;">$ javac HelloForm.java
+</code></pre><p>Si tout se passe bien, la compilation ci-dessus produira le fichier <strong>HelloForm.class</strong>. Ensuite, vous devrez copier ce fichier de classe dans <code>&lt;répertoire d'installation de Tomcat&gt;/webapps/ROOT/WEB-INF/</code> et créer les entrées suivantes dans le fichier web.xml situé dans <code>&lt;répertoire d'installation de Tomcat&gt;/webapps/ROOT/WEB- INF/</code></p><pre><code class="xml hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;XML&quot;&gt;&amp;lt;servlet&amp;gt;
+   &amp;lt;servlet-name&amp;gt;HelloForm&amp;lt;/servlet-name&amp;gt;
+   &amp;lt;servlet-class&amp;gt;HelloForm&amp;lt;/servlet-class&amp;gt;
+&amp;lt;/servlet&amp;gt;
+
+&amp;lt;servlet-mapping&amp;gt;
+   &amp;lt;servlet-name&amp;gt;HelloForm&amp;lt;/servlet-name&amp;gt;
+   &amp;lt;url-pattern&amp;gt;/HelloForm&amp;lt;/url-pattern&amp;gt;
+&amp;lt;/servlet-mapping&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-tag">&lt;<span class="hljs-title">servlet</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">servlet-name</span>&gt;</span>HelloForm<span class="hljs-tag">&lt;/<span class="hljs-title">servlet-name</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">servlet-class</span>&gt;</span>HelloForm<span class="hljs-tag">&lt;/<span class="hljs-title">servlet-class</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">servlet</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">servlet-mapping</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">servlet-name</span>&gt;</span>HelloForm<span class="hljs-tag">&lt;/<span class="hljs-title">servlet-name</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">url-pattern</span>&gt;</span>/HelloForm<span class="hljs-tag">&lt;/<span class="hljs-title">url-pattern</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">servlet-mapping</span>&gt;</span>
+</code></pre><p>Tapez maintenant <a href="http://localhost:8080/HelloForm?First_name=ZARA&amp;last_name=ALI">http://localhost:8080/HelloForm?First_name=ZARA&amp;last_name=ALI</a> dans votre navigateur et assurez-vous que vous avez déjà lancé le serveur tomcat avant de lancer la commande ci-dessus dans le navigateur. Cela générerait le résultat suivant:</p><blockquote>
+<h3 id="utilisation-de-la-méthode-get-pour-lire-les-données-de-formulaire"><a name="utilisation-de-la-méthode-get-pour-lire-les-données-de-formulaire" href="#utilisation-de-la-méthode-get-pour-lire-les-données-de-formulaire"></a>Utilisation de la méthode GET pour lire les données de formulaire</h3>
+<ul>
+<li><strong>Prénom</strong>: ZARA</li>
+<li><strong>Nom</strong>: ALI</li>
+</ul>
+</blockquote><h2 id="exemple-de-méthode-get-à-l'aide-d'un-formulaire"><a name="exemple-de-méthode-get-à-l'aide-d'un-formulaire" href="#exemple-de-méthode-get-à-l'aide-d'un-formulaire"></a>Exemple de méthode GET à l’aide d’un formulaire</h2><p>Voici un exemple simple qui transmet deux valeurs à l’aide de HTML FORM et du bouton submit. Nous allons utiliser le même Servlet HelloForm pour gérer cette entrée.</p><pre><code class="html hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;HTML&quot;&gt;&amp;lt;html&amp;gt;
+   &amp;lt;body&amp;gt;
+      &amp;lt;form action = &quot;HelloForm&quot; method = &quot;GET&quot;&amp;gt;
+         Prénom: &amp;lt;input type = &quot;text&quot; name = &quot;first_name&quot;&amp;gt;
+         &amp;lt;br /&amp;gt;
+         Nom: &amp;lt;input type = &quot;text&quot; name = &quot;last_name&quot; /&amp;gt;
+         &amp;lt;input type = &quot;submit&quot; value = &quot;Submit&quot; /&amp;gt;
+      &amp;lt;/form&amp;gt;
+   &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">action</span> = "<span class="hljs-attribute">HelloForm</span>" <span class="hljs-attribute">method</span> = "<span class="hljs-attribute">GET</span>"&gt;</span>
+         Prénom: <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span> = "<span class="hljs-attribute">text</span>" <span class="hljs-attribute">name</span> = "<span class="hljs-attribute">first_name</span>"&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+         Nom: <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span> = "<span class="hljs-attribute">text</span>" <span class="hljs-attribute">name</span> = "<span class="hljs-attribute">last_name</span>" /&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span> = "<span class="hljs-attribute">submit</span>" <span class="hljs-attribute">value</span> = "<span class="hljs-attribute">Submit</span>" /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre><p>Conservez ce code HTML dans un fichier Hello.htm et placez-le dans le répertoire <code>&lt;répertoire d'installation de Tomcat&gt;/webapps/ROOT</code>. Lorsque vous accéderez à <code>http://localhost:8080/Hello.htm</code>, voici la sortie réelle du formulaire ci-dessus.</p><blockquote>
+<form action="HelloForm" method="GET">Prénom: <input type="text" name="first_name"><br>Nom: <input type="text" name="last_name"><input type="submit" value="Submit"></form>
+
+
+</blockquote><p>Essayez d’entrer le prénom et le nom de famille, puis cliquez sur le bouton Envoyer pour afficher le résultat sur votre ordinateur local où tomcat est en cours d’exécution. Sur la base de l’entrée fournie, il générera un résultat similaire à celui mentionné dans l’exemple ci-dessus.</p><h2 id="exemple-de-méthode-post-utilisant-un-formulaire"><a name="exemple-de-méthode-post-utilisant-un-formulaire" href="#exemple-de-méthode-post-utilisant-un-formulaire"></a>Exemple de méthode POST utilisant un formulaire</h2><p>Faisons peu de modifications dans la servlet ci-dessus, afin qu’elle puisse gérer à la fois les méthodes GET et POST. Vous trouverez ci-dessous le programme de servlet HelloForm.java permettant de gérer les entrées fournies par le navigateur Web à l’aide de méthodes GET ou POST.</p><pre><code class="java hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;JAVA&quot;&gt;// Importer les bibliothèques Java requises
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+// Extension de la classe HttpServlet
+public class HelloForm extends HttpServlet {
+
+   // Méthode pour gérer la requête de méthode GET.
+   public void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+
+      // Définir le type de contenu de la réponse
+      response.setContentType(&quot;text/html&quot;);
+
+      PrintWriter out = response.getWriter();
+      String title = &quot;Utilisation de la méthode GET pour lire les données de formulaire&quot;;
+      String docType =
+         &quot;&amp;lt;!doctype html public \&quot;-//w3c//dtd html 4.0 &quot; +
+         &quot;transitional//en\&quot;&amp;gt;\n&quot;;
+
+      out.println(docType +
+         &quot;&amp;lt;html&amp;gt;\n&quot; +
+            &quot;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;&quot; + title + &quot;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;\n&quot; +
+            &quot;&amp;lt;body bgcolor = \&quot;#f0f0f0\&quot;&amp;gt;\n&quot; +
+               &quot;&amp;lt;h1 align = \&quot;center\&quot;&amp;gt;&quot; + title + &quot;&amp;lt;/h1&amp;gt;\n&quot; +
+               &quot;&amp;lt;ul&amp;gt;\n&quot; +
+                  &quot;  &amp;lt;li&amp;gt;&amp;lt;b&amp;gt;Prénom&amp;lt;/b&amp;gt;: &quot;
+                  + request.getParameter(&quot;first_name&quot;) + &quot;\n&quot; +
+                  &quot;  &amp;lt;li&amp;gt;&amp;lt;b&amp;gt;Nom&amp;lt;/b&amp;gt;: &quot;
+                  + request.getParameter(&quot;last_name&quot;) + &quot;\n&quot; +
+               &quot;&amp;lt;/ul&amp;gt;\n&quot; +
+            &quot;&amp;lt;/body&amp;gt;&quot;
+         &quot;&amp;lt;/html&amp;gt;&quot;
+      );
+   }
+
+   // Méthode pour gérer la demande de méthode POST.
+   public void doPost(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+
+      doGet(request, response);
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-comment">// Importer les bibliothèques Java requises</span>
+<span class="hljs-keyword">import</span> java.io.*;
+<span class="hljs-keyword">import</span> javax.servlet.*;
+<span class="hljs-keyword">import</span> javax.servlet.http.*;
+
+<span class="hljs-comment">// Extension de la classe HttpServlet</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloForm</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">HttpServlet</span> </span>{
+
+   <span class="hljs-comment">// Méthode pour gérer la requête de méthode GET.</span>
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doGet</span>(HttpServletRequest request, HttpServletResponse response)
+      <span class="hljs-keyword">throws</span> ServletException, IOException {
+
+      <span class="hljs-comment">// Définir le type de contenu de la réponse</span>
+      response.setContentType(<span class="hljs-string">"text/html"</span>);
+
+      PrintWriter out = response.getWriter();
+      String title = <span class="hljs-string">"Utilisation de la méthode GET pour lire les données de formulaire"</span>;
+      String docType =
+         <span class="hljs-string">"&lt;!doctype html public \"-//w3c//dtd html 4.0 "</span> +
+         <span class="hljs-string">"transitional//en\"&gt;\n"</span>;
+
+      out.println(docType +
+         <span class="hljs-string">"&lt;html&gt;\n"</span> +
+            <span class="hljs-string">"&lt;head&gt;&lt;title&gt;"</span> + title + <span class="hljs-string">"&lt;/title&gt;&lt;/head&gt;\n"</span> +
+            <span class="hljs-string">"&lt;body bgcolor = \"#f0f0f0\"&gt;\n"</span> +
+               <span class="hljs-string">"&lt;h1 align = \"center\"&gt;"</span> + title + <span class="hljs-string">"&lt;/h1&gt;\n"</span> +
+               <span class="hljs-string">"&lt;ul&gt;\n"</span> +
+                  <span class="hljs-string">"  &lt;li&gt;&lt;b&gt;Prénom&lt;/b&gt;: "</span>
+                  + request.getParameter(<span class="hljs-string">"first_name"</span>) + <span class="hljs-string">"\n"</span> +
+                  <span class="hljs-string">"  &lt;li&gt;&lt;b&gt;Nom&lt;/b&gt;: "</span>
+                  + request.getParameter(<span class="hljs-string">"last_name"</span>) + <span class="hljs-string">"\n"</span> +
+               <span class="hljs-string">"&lt;/ul&gt;\n"</span> +
+            <span class="hljs-string">"&lt;/body&gt;"</span>
+         <span class="hljs-string">"&lt;/html&gt;"</span>
+      );
+   }
+
+   <span class="hljs-comment">// Méthode pour gérer la demande de méthode POST.</span>
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doPost</span>(HttpServletRequest request, HttpServletResponse response)
+      <span class="hljs-keyword">throws</span> ServletException, IOException {
+
+      doGet(request, response);
+   }
+}
+</code></pre><p>Maintenant, compilez et déployez le Servlet ci-dessus et testez-le en utilisant Hello.htm avec la méthode POST comme suit:</p><pre><code class="html hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;HTML&quot;&gt;&amp;lt;html&amp;gt;
+   &amp;lt;body&amp;gt;
+      &amp;lt;form action=&quot;HelloForm&quot; method=&quot;POST&quot;&amp;gt;
+         Prénom: &amp;lt;input type=&quot;text&quot; name=&quot;first_name&quot;&amp;gt;
+         &amp;lt;br/&amp;gt;
+         Nom: &amp;lt;input type=&quot;text&quot; name=&quot;last_name&quot; /&amp;gt;
+         &amp;lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&amp;gt;
+      &amp;lt;/form&amp;gt;
+   &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">"HelloForm"</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">"POST"</span>&gt;</span>
+         Prénom: <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"first_name"</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">br</span>/&gt;</span>
+         Nom: <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"last_name"</span> /&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"Submit"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre><p>Voici le résultat réel du formulaire ci-dessus. Essayez de saisir le nom et le prénom, puis cliquez sur le bouton Soumettre pour afficher le résultat sur votre ordinateur local où tomcat est en cours d’exécution.</p><blockquote>
+<form action="HelloForm" method="POST">Prénom: <input type="text" name="first_name"><br>Nom: <input type="text" name="last_name"><input type="submit" value="Submit"></form>
+
+</blockquote><p>Sur la base des entrées fournies, cela générerait un résultat similaire à celui mentionné dans les exemples ci-dessus.</p><h2 id="transmission-des-données-de-case-à-cocher-au-programme-de-servlet"><a name="transmission-des-données-de-case-à-cocher-au-programme-de-servlet" href="#transmission-des-données-de-case-à-cocher-au-programme-de-servlet"></a>Transmission des données de case à cocher au programme de servlet</h2><p>Les cases à cocher sont utilisées lorsque plusieurs options doivent être sélectionnées.</p><p>Voici un exemple de code HTML, CheckBox.htm, pour un formulaire avec deux cases à cocher</p><pre><code class="html hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;HTML&quot;&gt;&amp;lt;html&amp;gt;
+   &amp;lt;body&amp;gt;
+      &amp;lt;form action=&quot;CheckBox&quot; method=&quot;POST&quot; target=&quot;_blank&quot;&amp;gt;
+         &amp;lt;input type=&quot;checkbox&quot; name=&quot;maths&quot; checked=&quot;checked&quot;/&amp;gt; Math
+         &amp;lt;input type=&quot;checkbox&quot; name=&quot;physics&quot;/&amp;gt; Physique
+         &amp;lt;input type=&quot;checkbox&quot; name=&quot;chemistry&quot; checked=&quot;checked&quot;/&amp;gt; Chimie
+         &amp;lt;input type=&quot;submit&quot; value=&quot;Sélectionner un sujet&quot;/&amp;gt;
+      &amp;lt;/form&amp;gt;
+   &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">"CheckBox"</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">"POST"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"maths"</span> <span class="hljs-attribute">checked</span>=<span class="hljs-value">"checked"</span>/&gt;</span> Math
+         <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"physics"</span>/&gt;</span> Physique
+         <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"chemistry"</span> <span class="hljs-attribute">checked</span>=<span class="hljs-value">"checked"</span>/&gt;</span> Chimie
+         <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"Sélectionner un sujet"</span>/&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre><p>Le résultat de ce code est le formulaire suivant</p><form action="CheckBox" method="POST" target="_blank"><input type="checkbox" name="maths" checked="checked"> Maths<input type="checkbox" name="physics"> Physique<input type="checkbox" name="chemistry" checked="checked">Chimie<input type="submit" value="Sélectionner un sujet"></form><p>Ci-dessous, le programme de servlet CheckBox.java permettant de gérer la saisie donnée par le navigateur Web pour le bouton de case à cocher.</p><pre><code class="java hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;JAVA&quot;&gt;// Importer les bibliothèques Java requises
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+// Extension de la classe HttpServlet
+public class CheckBox extends HttpServlet {
+
+   // Méthode pour gérer la requête de méthode GET.
+   public void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+
+      // Définir le type de contenu de la réponse
+      response.setContentType(&quot;text/html&quot;);
+
+      PrintWriter out = response.getWriter();
+      String title = &quot;Lecture des données de case à cocher&quot;;
+      String docType =
+         &quot;&amp;lt;!doctype html public \&quot;-//w3c//dtd html 4.0 &quot; + &quot;transitional//en\&quot;&amp;gt;\n&quot;;
+
+      out.println(docType +
+         &quot;&amp;lt;html&amp;gt;\n&quot; +
+            &quot;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;&quot; + title + &quot;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;\n&quot; +
+            &quot;&amp;lt;body bgcolor = \&quot;#f0f0f0\&quot;&amp;gt;\n&quot; +
+               &quot;&amp;lt;h1 align = \&quot;center\&quot;&amp;gt;&quot; + title + &quot;&amp;lt;/h1&amp;gt;\n&quot; +
+               &quot;&amp;lt;ul&amp;gt;\n&quot; +
+                  &quot;  &amp;lt;li&amp;gt;&amp;lt;b&amp;gt;Indicateur mathématique : &amp;lt;/b&amp;gt;: &quot;
+                  + request.getParameter(&quot;maths&quot;) + &quot;\n&quot; +
+                  &quot;  &amp;lt;li&amp;gt;&amp;lt;b&amp;gt;Indicateur physique: &amp;lt;/b&amp;gt;: &quot;
+                  + request.getParameter(&quot;physics&quot;) + &quot;\n&quot; +
+                  &quot;  &amp;lt;li&amp;gt;&amp;lt;b&amp;gt;Indicateur chimie: &amp;lt;/b&amp;gt;: &quot;
+                  + request.getParameter(&quot;chemistry&quot;) + &quot;\n&quot; +
+               &quot;&amp;lt;/ul&amp;gt;\n&quot; +
+            &quot;&amp;lt;/body&amp;gt;&quot;
+         &quot;&amp;lt;/html&amp;gt;&quot;
+      );
+   }
+
+   // Méthode pour gérer la demande de méthode POST.
+   public void doPost(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+
+      doGet(request, response);
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-comment">// Importer les bibliothèques Java requises</span>
+<span class="hljs-keyword">import</span> java.io.*;
+<span class="hljs-keyword">import</span> javax.servlet.*;
+<span class="hljs-keyword">import</span> javax.servlet.http.*;
+
+<span class="hljs-comment">// Extension de la classe HttpServlet</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CheckBox</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">HttpServlet</span> </span>{
+
+   <span class="hljs-comment">// Méthode pour gérer la requête de méthode GET.</span>
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doGet</span>(HttpServletRequest request, HttpServletResponse response)
+      <span class="hljs-keyword">throws</span> ServletException, IOException {
+
+      <span class="hljs-comment">// Définir le type de contenu de la réponse</span>
+      response.setContentType(<span class="hljs-string">"text/html"</span>);
+
+      PrintWriter out = response.getWriter();
+      String title = <span class="hljs-string">"Lecture des données de case à cocher"</span>;
+      String docType =
+         <span class="hljs-string">"&lt;!doctype html public \"-//w3c//dtd html 4.0 "</span> + <span class="hljs-string">"transitional//en\"&gt;\n"</span>;
+
+      out.println(docType +
+         <span class="hljs-string">"&lt;html&gt;\n"</span> +
+            <span class="hljs-string">"&lt;head&gt;&lt;title&gt;"</span> + title + <span class="hljs-string">"&lt;/title&gt;&lt;/head&gt;\n"</span> +
+            <span class="hljs-string">"&lt;body bgcolor = \"#f0f0f0\"&gt;\n"</span> +
+               <span class="hljs-string">"&lt;h1 align = \"center\"&gt;"</span> + title + <span class="hljs-string">"&lt;/h1&gt;\n"</span> +
+               <span class="hljs-string">"&lt;ul&gt;\n"</span> +
+                  <span class="hljs-string">"  &lt;li&gt;&lt;b&gt;Indicateur mathématique : &lt;/b&gt;: "</span>
+                  + request.getParameter(<span class="hljs-string">"maths"</span>) + <span class="hljs-string">"\n"</span> +
+                  <span class="hljs-string">"  &lt;li&gt;&lt;b&gt;Indicateur physique: &lt;/b&gt;: "</span>
+                  + request.getParameter(<span class="hljs-string">"physics"</span>) + <span class="hljs-string">"\n"</span> +
+                  <span class="hljs-string">"  &lt;li&gt;&lt;b&gt;Indicateur chimie: &lt;/b&gt;: "</span>
+                  + request.getParameter(<span class="hljs-string">"chemistry"</span>) + <span class="hljs-string">"\n"</span> +
+               <span class="hljs-string">"&lt;/ul&gt;\n"</span> +
+            <span class="hljs-string">"&lt;/body&gt;"</span>
+         <span class="hljs-string">"&lt;/html&gt;"</span>
+      );
+   }
+
+   <span class="hljs-comment">// Méthode pour gérer la demande de méthode POST.</span>
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doPost</span>(HttpServletRequest request, HttpServletResponse response)
+      <span class="hljs-keyword">throws</span> ServletException, IOException {
+
+      doGet(request, response);
+   }
+}
+</code></pre><p>Pour l’exemple ci-dessus, il afficherait le résultat suivant -</p><blockquote>
+<h3 id="lecture-des-données-de-la-case-à-cocher"><a name="lecture-des-données-de-la-case-à-cocher" href="#lecture-des-données-de-la-case-à-cocher"></a>Lecture des données de la case à cocher</h3>
+<ul>
+<li>Indicateur mathématique : on</li>
+<li>Indicateur physique : null</li>
+<li>Indicateur chimie : on</li>
+</ul>
+</blockquote><h2 id="lecture-de-tous-les-paramètres-de-formulaire"><a name="lecture-de-tous-les-paramètres-de-formulaire" href="#lecture-de-tous-les-paramètres-de-formulaire"></a>Lecture de tous les paramètres de formulaire</h2><p>Voici l’exemple générique qui utilise la méthode getParameterNames () de HttpServletRequest pour lire tous les paramètres de formulaire disponibles. Cette méthode retourne une énumération contenant les noms de paramètre dans un ordre non spécifié.</p><p>Une fois que nous avons une énumération, nous pouvons la boucler de manière standard en utilisant la méthode hasMoreElements () pour déterminer quand arrêter et en utilisant la méthode nextElement () pour obtenir chaque nom de paramètre.</p><pre><code class="java hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;JAVA&quot;&gt;// Importer les bibliothèques Java requises
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.util.*;
+
+// Extension de la classe HttpServlet
+public class ReadParams extends HttpServlet {
+
+   // Méthode pour gérer la requête de méthode GET.
+   public void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+
+      // Définir le type de contenu de la réponse
+      response.setContentType(&quot;text/html&quot;);
+
+      PrintWriter out = response.getWriter();
+      String title = &quot;Lecture de tous les paramètres de formulaire&quot;;
+      String docType =
+         &quot;&amp;lt;!doctype html public \&quot;-//w3c//dtd html 4.0 &quot; + &quot;transitional//en\&quot;&amp;gt;\n&quot;;
+
+      out.println(docType +
+         &quot;&amp;lt;html&amp;gt;\n&quot; +
+         &quot;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;&quot; + title + &quot;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;\n&quot; +
+         &quot;&amp;lt;body bgcolor = \&quot;#f0f0f0\&quot;&amp;gt;\n&quot; +
+         &quot;&amp;lt;h1 align = \&quot;center\&quot;&amp;gt;&quot; + title + &quot;&amp;lt;/h1&amp;gt;\n&quot; +
+         &quot;&amp;lt;table width = \&quot;100%\&quot; border = \&quot;1\&quot; align = \&quot;center\&quot;&amp;gt;\n&quot; +
+         &quot;&amp;lt;tr bgcolor = \&quot;#949494\&quot;&amp;gt;\n&quot; +
+            &quot;&amp;lt;th&amp;gt;Nom du paramètre&amp;lt;/th&amp;gt;&quot;
+            &quot;&amp;lt;th&amp;gt;Valeur(s) du paramètre&amp;lt;/th&amp;gt;\n&quot;+
+         &quot;&amp;lt;/tr&amp;gt;\n&quot;
+      );
+
+      Enumeration paramNames = request.getParameterNames();
+
+      while(paramNames.hasMoreElements()) {
+         String paramName = (String)paramNames.nextElement();
+         out.print(&quot;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&quot; + paramName + &quot;&amp;lt;/td&amp;gt;\n&amp;lt;td&amp;gt;&quot;);
+         String[] paramValues = request.getParameterValues(paramName);
+
+         // Lire des données à valeur unique
+         if (paramValues.length == 1) {
+            String paramValue = paramValues[0];
+            if (paramValue.length() == 0)
+               out.println(&quot;&amp;lt;i&amp;gt;No Value&amp;lt;/i&amp;gt;&quot;);
+               else
+               out.println(paramValue);
+         } else {
+            // Lire plusieurs données valorisées
+            out.println(&quot;&amp;lt;ul&amp;gt;&quot;);
+
+            for(int i = 0; i &amp;lt; paramValues.length; i++) {
+               out.println(&quot;&amp;lt;li&amp;gt;&quot; + paramValues[i]);
+            }
+            out.println(&quot;&amp;lt;/ul&amp;gt;&quot;);
+         }
+      }
+      out.println(&quot;&amp;lt;/tr&amp;gt;\n&amp;lt;/table&amp;gt;\n&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;&quot;);
+   }
+
+   // Méthode pour gérer la demande de méthode POST.
+   public void doPost(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+
+      doGet(request, response);
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-comment">// Importer les bibliothèques Java requises</span>
+<span class="hljs-keyword">import</span> java.io.*;
+<span class="hljs-keyword">import</span> javax.servlet.*;
+<span class="hljs-keyword">import</span> javax.servlet.http.*;
+<span class="hljs-keyword">import</span> java.util.*;
+
+<span class="hljs-comment">// Extension de la classe HttpServlet</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ReadParams</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">HttpServlet</span> </span>{
+
+   <span class="hljs-comment">// Méthode pour gérer la requête de méthode GET.</span>
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doGet</span>(HttpServletRequest request, HttpServletResponse response)
+      <span class="hljs-keyword">throws</span> ServletException, IOException {
+
+      <span class="hljs-comment">// Définir le type de contenu de la réponse</span>
+      response.setContentType(<span class="hljs-string">"text/html"</span>);
+
+      PrintWriter out = response.getWriter();
+      String title = <span class="hljs-string">"Lecture de tous les paramètres de formulaire"</span>;
+      String docType =
+         <span class="hljs-string">"&lt;!doctype html public \"-//w3c//dtd html 4.0 "</span> + <span class="hljs-string">"transitional//en\"&gt;\n"</span>;
+
+      out.println(docType +
+         <span class="hljs-string">"&lt;html&gt;\n"</span> +
+         <span class="hljs-string">"&lt;head&gt;&lt;title&gt;"</span> + title + <span class="hljs-string">"&lt;/title&gt;&lt;/head&gt;\n"</span> +
+         <span class="hljs-string">"&lt;body bgcolor = \"#f0f0f0\"&gt;\n"</span> +
+         <span class="hljs-string">"&lt;h1 align = \"center\"&gt;"</span> + title + <span class="hljs-string">"&lt;/h1&gt;\n"</span> +
+         <span class="hljs-string">"&lt;table width = \"100%\" border = \"1\" align = \"center\"&gt;\n"</span> +
+         <span class="hljs-string">"&lt;tr bgcolor = \"#949494\"&gt;\n"</span> +
+            <span class="hljs-string">"&lt;th&gt;Nom du paramètre&lt;/th&gt;"</span>
+            <span class="hljs-string">"&lt;th&gt;Valeur(s) du paramètre&lt;/th&gt;\n"</span>+
+         <span class="hljs-string">"&lt;/tr&gt;\n"</span>
+      );
+
+      Enumeration paramNames = request.getParameterNames();
+
+      <span class="hljs-keyword">while</span>(paramNames.hasMoreElements()) {
+         String paramName = (String)paramNames.nextElement();
+         out.print(<span class="hljs-string">"&lt;tr&gt;&lt;td&gt;"</span> + paramName + <span class="hljs-string">"&lt;/td&gt;\n&lt;td&gt;"</span>);
+         String[] paramValues = request.getParameterValues(paramName);
+
+         <span class="hljs-comment">// Lire des données à valeur unique</span>
+         <span class="hljs-keyword">if</span> (paramValues.length == <span class="hljs-number">1</span>) {
+            String paramValue = paramValues[<span class="hljs-number">0</span>];
+            <span class="hljs-keyword">if</span> (paramValue.length() == <span class="hljs-number">0</span>)
+               out.println(<span class="hljs-string">"&lt;i&gt;No Value&lt;/i&gt;"</span>);
+               <span class="hljs-keyword">else</span>
+               out.println(paramValue);
+         } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// Lire plusieurs données valorisées</span>
+            out.println(<span class="hljs-string">"&lt;ul&gt;"</span>);
+
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; paramValues.length; i++) {
+               out.println(<span class="hljs-string">"&lt;li&gt;"</span> + paramValues[i]);
+            }
+            out.println(<span class="hljs-string">"&lt;/ul&gt;"</span>);
+         }
+      }
+      out.println(<span class="hljs-string">"&lt;/tr&gt;\n&lt;/table&gt;\n&lt;/body&gt;&lt;/html&gt;"</span>);
+   }
+
+   <span class="hljs-comment">// Méthode pour gérer la demande de méthode POST.</span>
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doPost</span>(HttpServletRequest request, HttpServletResponse response)
+      <span class="hljs-keyword">throws</span> ServletException, IOException {
+
+      doGet(request, response);
+   }
+}
+</code></pre><p>Maintenant, essayez la servlet ci-dessus avec le formulaire suivant:</p><pre><code class="html hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;HTML&quot;&gt;&amp;lt;html&amp;gt;
+   &amp;lt;body&amp;gt;
+      &amp;lt;form action=&quot;ReadParams&quot; method=&quot;POST&quot; target=&quot;_blank&quot;&amp;gt;
+         &amp;lt;input type=&quot;checkbox&quot; name=&quot;maths&quot; checked=&quot;checked&quot;/&amp;gt; Math
+         &amp;lt;input type=&quot;checkbox&quot; name=&quot;physics&quot;/&amp;gt; Physique
+         &amp;lt;input type=&quot;checkbox&quot; name=&quot;chemistry&quot; checked=&quot;checked&quot;/&amp;gt; Chimie
+         &amp;lt;input type=&quot;submit&quot; value=&quot;Sélectionner un sujet&quot;/&amp;gt;
+      &amp;lt;/form&amp;gt;
+   &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">"ReadParams"</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">"POST"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"maths"</span> <span class="hljs-attribute">checked</span>=<span class="hljs-value">"checked"</span>/&gt;</span> Math
+         <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"physics"</span>/&gt;</span> Physique
+         <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"chemistry"</span> <span class="hljs-attribute">checked</span>=<span class="hljs-value">"checked"</span>/&gt;</span> Chimie
+         <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"Sélectionner un sujet"</span>/&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre><p>Maintenant, appeler servlet en utilisant le formulaire ci-dessus générerait le résultat suivant -</p><blockquote>
+<h3 id="lecture-de-tous-les-paramètres-de-formulaire"><a name="lecture-de-tous-les-paramètres-de-formulaire" href="#lecture-de-tous-les-paramètres-de-formulaire"></a>Lecture de tous les paramètres de formulaire</h3>
+<table>
+<thead>
+<tr>
+<th>Nom du paramètre</th>
+<th>Valeur(s) du paramètre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>maths</td>
+<td>on</td>
+</tr>
+<tr>
+<td>chemistry</td>
+<td>on</td>
+</tr>
+</tbody>
+</table>
+</blockquote><p>Vous pouvez essayer le servlet ci-dessus pour lire les données de tout autre formulaire contenant d’autres objets, tels qu’une zone de texte, un bouton radio ou une liste déroulante, etc.</p><div style="display:flex;justify-content:space-between"><div><a href="chapitre4.html">← precedent</a></div><div><a href="chapitre6.html">suivant →</a></div></div>
+
+<footer style="position:fixed; font-size:.8em; text-align:right; bottom:0px; margin-left:-25px; height:20px; width:100%;">generated by <a href="http://pad.haroopress.com" target="_blank">haroopad</a></footer>
+</body>
+</html>

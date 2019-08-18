@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Chapitre 3.html</title>
+  <title>Chapitre 4.html</title>
   <meta name="generator" content="Haroopad 0.12.2" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,105 +10,87 @@
 </head>
 <body class="markdown clearness">
 
-  <v style="display:flex;justify-content:space-between"><v><a href="chapitre2.html">← precedent</a></v><v><a href="chapitre4.html">suivant →</a></v></v><h1 id="servlets---life-cycle"><a name="servlets---life-cycle" href="#servlets---life-cycle"></a>Servlets - Cycle de vie</h1><p class="toc" style="undefined"></p><ul>
-<li><ul>
-<li><span class="title">
-<a href="#la-méthode-init()" title="La méthode init()">La méthode init()</a>
-</span>
-<!--span class="number">
-0
-</span-->
-</li>
-<li><span class="title">
-<a href="#la-méthode-service()" title="La méthode service()">La méthode service()</a>
-</span>
-<!--span class="number">
-1
-</span-->
-</li>
-<li><span class="title">
-<a href="#la-méthode-doget()" title="La méthode doGet()">La méthode doGet()</a>
-</span>
-<!--span class="number">
-2
-</span-->
-</li>
-<li><span class="title">
-<a href="#la-méthode-dopost()" title="La méthode doPost()">La méthode doPost()</a>
-</span>
-<!--span class="number">
-3
-</span-->
-</li>
-<li><span class="title">
-<a href="#la-méthode-destroy()" title="La méthode destroy()">La méthode destroy()</a>
-</span>
-<!--span class="number">
-4
-</span-->
-</li>
-<li><span class="title">
-<a href="#diagramme-d'architecture" title="Diagramme d’architecture">Diagramme d’architecture</a>
-</span>
-<!--span class="number">
-5
-</span-->
-</li>
-</ul>
-</li>
+  <div style="display:flex;justify-content:space-between"><div><a href="chapitre3.html">← precedent</a></div><div><a href="chapitre5.html">suivant →</a></div></div><h1 id="servlets---exemples"><a name="servlets---exemples" href="#servlets---exemples"></a>Servlets - Exemples</h1><p>Les servlets sont des classes Java qui répondent aux demandes HTTP et implémentent l’interface <strong>javax.servlet.Servlet</strong>. Les développeurs d’applications Web écrivent généralement des servlets qui étendent <strong>javax.servlet.http.HttpServlet</strong>, une classe abstraite implémentant l’interface Servlet et spécialement conçue pour gérer les demandes HTTP.</p><h2 id="exemple-de-code"><a name="exemple-de-code" href="#exemple-de-code"></a>Exemple de code</h2><p>Voici l’exemple de structure de code source d’un exemple de servlet pour afficher Hello World:</p><pre><code class="java hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;// Importe les librairies java requisent
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
 
-</ul>
-<p></p><p>Un cycle de vie de servlet peut être défini comme l’ensemble du processus depuis sa création jusqu’à sa destruction. Voici les chemins suivis par un servlet.</p><ul>
-<li><p>Le servlet est initialisé en appelant la méthode init().</p>
-</li>
-<li><p>Le servlet appelle la méthode service () pour traiter la demande d’un client.</p>
-</li>
-<li><p>Le servlet est terminé en appelant la méthode destroy ().</p>
-</li>
-<li><p>Enfin, servlet est un déchet collecté par le ramasse-miettes de la machine virtuelle Java.</p>
-</li>
-</ul><p>Parlons maintenant des méthodes du cycle de vie en détail.</p><h2 id="la-méthode-init()"><a name="la-méthode-init()" href="#la-méthode-init()"></a>La méthode init()</h2><p>La méthode init est appelée une seule fois. Il est appelé uniquement lors de la création du servlet, et n’est ensuite appelé pour aucune demande d’utilisateur. Donc, il est utilisé pour les initialisations uniques, comme avec la méthode init des applets.</p><p>Le servlet est normalement créé lorsqu’un utilisateur appelle pour la première fois une URL correspondant au servlet, mais vous pouvez également spécifier que le servlet soit chargé lors du premier démarrage du serveur.</p><p>Lorsqu’un utilisateur appelle un servlet, une seule instance de chaque servlet est créée, chaque demande d’utilisateur entraînant la création d’un nouveau thread transféré à doGet ou à doPost, selon le cas. La méthode init() crée ou charge simplement certaines données qui seront utilisées tout au long de la vie du servlet.</p><p>La définition de la méthode init ressemble à ceci:</p><pre><code class="java hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;JAVA&quot;&gt;public void init() throws ServletException {
-   // Code d'initialisation...
+// Étend la classe HttpServlet
+public class HelloWorld extends HttpServlet {
+
+   private String message;
+
+   public void init() throws ServletException {
+      // Fait l'initialisation requise
+      message = &quot;Hello World&quot;;
+   }
+
+   public void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+
+      // Définir le type de contenu de la réponse
+      response.setContentType(&quot;text/html&quot;);
+
+      // La logique réelle va ici.
+      PrintWriter out = response.getWriter();
+      out.println(&quot;&amp;lt;h1&amp;gt;&quot; + message + &quot;&amp;lt;/h1&amp;gt;&quot;);
+   }
+
+   public void destroy() {
+      // Ne rien faire
+   }
 }
-&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">init</span>() <span class="hljs-keyword">throws</span> ServletException {
-   <span class="hljs-comment">// Code d'initialisation...</span>
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-comment">// Importe les librairies java requisent</span>
+<span class="hljs-keyword">import</span> java.io.*;
+<span class="hljs-keyword">import</span> javax.servlet.*;
+<span class="hljs-keyword">import</span> javax.servlet.http.*;
+
+<span class="hljs-comment">// Étend la classe HttpServlet</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorld</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">HttpServlet</span> </span>{
+
+   <span class="hljs-keyword">private</span> String message;
+
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">init</span>() <span class="hljs-keyword">throws</span> ServletException {
+      <span class="hljs-comment">// Fait l'initialisation requise</span>
+      message = <span class="hljs-string">"Hello World"</span>;
+   }
+
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doGet</span>(HttpServletRequest request, HttpServletResponse response)
+      <span class="hljs-keyword">throws</span> ServletException, IOException {
+
+      <span class="hljs-comment">// Définir le type de contenu de la réponse</span>
+      response.setContentType(<span class="hljs-string">"text/html"</span>);
+
+      <span class="hljs-comment">// La logique réelle va ici.</span>
+      PrintWriter out = response.getWriter();
+      out.println(<span class="hljs-string">"&lt;h1&gt;"</span> + message + <span class="hljs-string">"&lt;/h1&gt;"</span>);
+   }
+
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">destroy</span>() {
+      <span class="hljs-comment">// Ne rien faire</span>
+   }
 }
-</code></pre><h2 id="la-méthode-service()"><a name="la-méthode-service()" href="#la-méthode-service()"></a>La méthode service()</h2><p>La méthode service() est la méthode principale pour effectuer la tâche réelle. Le conteneur de servlets (c’est-à-dire un serveur Web) appelle la méthode service() pour gérer les demandes provenant du client (navigateurs) et pour écrire la réponse formatée sur le client.</p><p>Chaque fois que le serveur reçoit une demande pour un servlet, le serveur génère un nouveau thread et appelle le service. La méthode service() vérifie le type de requête HTTP (GET, POST, PUT, DELETE, etc.) et appelle les méthodes doGet, doPost, doPut, doDelete, etc. comme il convient.</p><p>Voici la signature de cette méthode -</p><pre><code class="java hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;JAVA&quot;&gt;public void service(ServletRequest request, ServletResponse response)
-   throws ServletException, IOException {
-}
-&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">service</span>(ServletRequest request, ServletResponse response)
-   <span class="hljs-keyword">throws</span> ServletException, IOException {
-}
-</code></pre><p>La méthode service() est appelée par le conteneur et la méthode service appelle les méthodes doGet, doPost, doPut, doDelete, etc., selon les cas. Donc, vous n’avez rien à faire avec la méthode service(), mais vous surécrirez doGet() ou doPost() en fonction du type de demande que vous recevez du client.</p><p>Les méthodes doGet() et doPost() sont les méthodes les plus fréquemment utilisées dans chaque demande de service. Voici la signature de ces deux méthodes.</p><h2 id="la-méthode-doget()"><a name="la-méthode-doget()" href="#la-méthode-doget()"></a>La méthode doGet()</h2><p>Une demande GET résulte d’une demande normale pour une URL ou d’un formulaire HTML pour lequel aucune MÉTHODE n’est spécifiée et qui devrait être traitée par la méthode doGet ().</p><pre><code class="java hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;JAVA&quot;&gt;public void doGet(HttpServletRequest request, HttpServletResponse response)
-   throws ServletException, IOException {
-   // Code du servlet
-}
-&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doGet</span>(HttpServletRequest request, HttpServletResponse response)
-   <span class="hljs-keyword">throws</span> ServletException, IOException {
-   <span class="hljs-comment">// Code du servlet</span>
-}
-</code></pre><h2 id="la-méthode-dopost()"><a name="la-méthode-dopost()" href="#la-méthode-dopost()"></a>La méthode doPost()</h2><p>Une demande POST résulte d’un formulaire HTML qui répertorie spécifiquement POST en tant que METHOD et doit être gérée par la méthode doPost ().</p><pre><code class="java hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;JAVA&quot;&gt;public void doPost(HttpServletRequest request, HttpServletResponse response)
-   throws ServletException, IOException {
-   // Code du servlet
-}
-&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doPost</span>(HttpServletRequest request, HttpServletResponse response)
-   <span class="hljs-keyword">throws</span> ServletException, IOException {
-   <span class="hljs-comment">// Code du servlet</span>
-}
-</code></pre><h2 id="la-méthode-destroy()"><a name="la-méthode-destroy()" href="#la-méthode-destroy()"></a>La méthode destroy()</h2><p>La méthode destroy() n’est appelée qu’une fois à la fin du cycle de vie d’un servlet. Cette méthode donne à votre servlet une occasion de fermer les connexions à la base de données, d’arrêter les threads d’arrière-plan, d’écrire des listes de cookies ou de compter le nombre de hits sur le disque, et d’effectuer d’autres activités de nettoyage.</p><p>Après l’appel de la méthode destroy(), l’objet servlet est marqué pour le garbage collection. La définition de la méthode destroy ressemble à ceci:</p><pre><code class="java hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;JAVA&quot;&gt;public void destroy() {
-   // Code de finalisation...
-}
-&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">destroy</span>() {
-   <span class="hljs-comment">// Code de finalisation...</span>
-}
-</code></pre><h2 id="diagramme-d'architecture"><a name="diagramme-d'architecture" href="#diagramme-d'architecture"></a>Diagramme d’architecture</h2><p>La figure suivante illustre un scénario typique du cycle de vie d’un servlet.</p><ul>
-<li><p>D’abord, les requêtes HTTP envoyées au serveur sont déléguées au conteneur de servlets.</p>
-</li>
-<li><p>Le conteneur de servlet charge le servlet avant d’appeler la méthode service().</p>
-</li>
-<li><p>Ensuite, le conteneur de servlet gère plusieurs demandes en générant plusieurs threads, chaque thread exécutant la méthode service() d’une seule instance du servlet.</p>
-</li>
-</ul><p><img src="servlet-lifecycle.jpg" alt="servlet-lifecycle.jpg"></p><div style="display:flex;justify-content:space-between"><div><a href="chapitre2.html">← precedent</a></div><div><a href="chapitre4.html">suivant →</a></div></div>
+</code></pre><h2 id="compiler-un-servlet"><a name="compiler-un-servlet" href="#compiler-un-servlet"></a>Compiler un servlet</h2><p>Créons un fichier avec le nom HelloWorld.java avec le code ci-dessus. Placez ce fichier dans C:\ServletDevel (sous Windows) ou dans /usr/ServletDevel (sous Unix). Cet emplacement de chemin doit être ajouté à CLASSPATH avant de continuer.</p><p>En supposant que votre environnement est correctement configuré, allez dans le répertoire ServletDevel et compilez HelloWorld.java comme suit:</p><pre><code class="bash hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;BASH&quot;&gt;$ javac HelloWorld.java
+&lt;/code&gt;&lt;/pre&gt;">$ javac HelloWorld.java
+</code></pre><p>Si le servlet dépend d’autres bibliothèques, vous devez également inclure ces fichiers JAR sur votre CLASSPATH. J’ai uniquement inclus le fichier JAR servlet-api.jar, car je n’utilise aucune autre bibliothèque dans le programme Hello World.</p><p>Cette ligne de commande utilise le compilateur javac intégré fourni avec le kit de développement logiciel Java (JDK) de Sun Microsystems. Pour que cette commande fonctionne correctement, vous devez inclure l’emplacement du SDK Java que vous utilisez dans la variable d’environnement PATH.</p><p>Si tout se passe bien, la compilation ci-dessus produira le fichier HelloWorld.class dans le même répertoire. La section suivante explique comment un servlet compilé sera déployé en production.</p><h2 id="déploiement-de-servlets"><a name="déploiement-de-servlets" href="#déploiement-de-servlets"></a>Déploiement de servlets</h2><p>Par défaut, une application de servlet est située dans le chemin <code>&lt;répertoire d'installation de Tomcat&gt;/webapps/ROOT</code> et le fichier de classe réside dans <code>&lt;répertoire d'installation de Tomcat&gt;/webapps/ROOT/WEB-INF/classes</code>.</p><p>Si vous avez un nom de classe qualifié complet de com.myorg.MyServlet, cette classe de servlet doit être située dans <code>WEB-INF/classes/com/myorg/MyServlet.class</code>.</p><p>Pour l’instant, copions HelloWorld.class dans <code>&lt;répertoire d'installation de Tomcat&gt;/webapps/ROOT/WEB-INF/classes</code> et créons les entrées suivantes dans le fichier web.xml situé dans <code>&lt;répertoire d'installation de Tomcat&gt;/webapps/ROOT/WEB-INF/</code>.</p><pre><code class="xml hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;XML&quot;&gt;&amp;lt;servlet&amp;gt;
+   &amp;lt;servlet-name&amp;gt;HelloWorld&amp;lt;/servlet-name&amp;gt;
+   &amp;lt;servlet-class&amp;gt;HelloWorld&amp;lt;/servlet-class&amp;gt;
+&amp;lt;/servlet&amp;gt;
+
+&amp;lt;servlet-mapping&amp;gt;
+   &amp;lt;servlet-name&amp;gt;HelloWorld&amp;lt;/servlet-name&amp;gt;
+   &amp;lt;url-pattern&amp;gt;/HelloWorld&amp;lt;/url-pattern&amp;gt;
+&amp;lt;/servlet-mapping&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-tag">&lt;<span class="hljs-title">servlet</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">servlet-name</span>&gt;</span>HelloWorld<span class="hljs-tag">&lt;/<span class="hljs-title">servlet-name</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">servlet-class</span>&gt;</span>HelloWorld<span class="hljs-tag">&lt;/<span class="hljs-title">servlet-class</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">servlet</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">servlet-mapping</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">servlet-name</span>&gt;</span>HelloWorld<span class="hljs-tag">&lt;/<span class="hljs-title">servlet-name</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">url-pattern</span>&gt;</span>/HelloWorld<span class="hljs-tag">&lt;/<span class="hljs-title">url-pattern</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">servlet-mapping</span>&gt;</span>
+</code></pre><p>Les entrées ci-dessus doivent être créées dans les balises &lt;web-app&gt;…&lt;/web-app&gt; disponibles dans le fichier web.xml. Il est possible que plusieurs entrées de cette table soient déjà disponibles, mais tant pis.</p><p>Vous avez presque terminé, commençons maintenant le serveur tomcat en utilisant <code>&lt;répertoire d'installation Tomcat&gt;\bin\startup.bat</code> (sous Windows) ou <code>&lt;répertoire d'installation-Tomcat&gt;/bin/startup.sh</code> (sous Linux/Solaris, etc.) et enfin tapez <a href="http://localhost:8080/HelloWorld">http://localhost:8080/HelloWorld</a> dans la zone d’adresse du navigateur. Si tout se passe bien, vous obtiendrez le résultat suivant.</p><p><img src="/servlet-example.jpg" alt="servlet-example.jpg"></p><div style="display:flex;justify-content:space-between"><div><a href="chapitre3.html">← precedent</a></div><div><a href="chapitre5.html">suivant →</a></div></div>
 
 <footer style="position:fixed; font-size:.8em; text-align:right; bottom:0px; margin-left:-25px; height:20px; width:100%;">generated by <a href="http://pad.haroopress.com" target="_blank">haroopad</a></footer>
 </body>
