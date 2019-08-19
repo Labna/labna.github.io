@@ -9,4 +9,4 @@
 7. [Servlet - Réponse HTTP du serveur](chapitre7.html)
 8. [Servlet - Codes d'état HTTP](chapitre8.html)
 9. [Servlet - Écriture de filtres](chapitre9.html)
-10. 
+10. [Servlet - Gestion des exceptions](chapitre10.html)
