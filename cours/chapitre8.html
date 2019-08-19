@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>index.html</title>
+  <title>Chapitre 8.html</title>
   <meta name="generator" content="Haroopad 0.12.2" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,17 +10,314 @@
 </head>
 <body class="markdown clearness">
 
-  <h1 id="cours-disponibles"><a name="cours-disponibles" href="#cours-disponibles"></a>Cours disponibles</h1><ol>
-<li><a href="chapitre1.html">Servlet - Introduction</a></li>
-<li><a href="chapitre2.html">Servlet - Paramètrage de l’environnement</a></li>
-<li><a href="chapitre3.html">Servlet - Cycle de vie</a></li>
-<li><a href="chapitre4.html">Servlet - Exemple</a></li>
-<li><a href="chapitre5.html">Servlet - Données de formulaire</a></li>
-<li><a href="chapitre6.html">Servlet - Requête HTTP client</a></li>
-<li><a href="chapitre7.html">Servlet - Réponse HTTP du serveur</a></li>
-<li><a href="chapitre8.html">Servlet - Codes d’état HTTP</a></li>
-<li></li>
-</ol>
+  <div style="display:flex;justify-content:space-between"><div><a href="chapitre7.html">← precedent</a></div><div><a href="chapitre9.html">suivant →</a></div></div><h1 id="servlets---codes-d'état-http"><a name="servlets---codes-d'état-http" href="#servlets---codes-d'état-http"></a>Servlets - Codes d’état HTTP</h1><p>Le format de la requête HTTP et des messages de réponse HTTP sont similaires et auront la structure suivante:</p><ul>
+<li>Une ligne d’état initiale + CRLF (retour chariot + saut de ligne, par exemple, nouvelle ligne)</li>
+<li>Zéro ou plusieurs lignes d’en-tête + CRLF</li>
+<li>Une ligne vide, c’est-à-dire un CRLF</li>
+<li>Un corps de message optionnel comme un fichier, une donnée de requête ou une sortie de requête.</li>
+</ul><p>Par exemple, un en-tête de réponse du serveur se présente comme suit:</p><pre><code data-origin="&lt;pre&gt;&lt;code&gt;HTTP/1.1 200 OK
+Content-Type: text/html
+Header2: ...
+...
+HeaderN: ...
+   (Blank Line)
+&amp;lt;!doctype ...&amp;gt;
+&amp;lt;html&amp;gt;
+   &amp;lt;head&amp;gt;...&amp;lt;/head&amp;gt;
+   &amp;lt;body&amp;gt;
+      ...
+   &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;">HTTP/1.1 200 OK
+Content-Type: text/html
+Header2: ...
+...
+HeaderN: ...
+   (Blank Line)
+&lt;!doctype ...&gt;
+&lt;html&gt;
+   &lt;head&gt;...&lt;/head&gt;
+   &lt;body&gt;
+      ...
+   &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>La ligne d’état comprend la version HTTP (HTTP / 1.1 dans l’exemple), un code d’état (200 dans l’exemple) et un très court message correspondant au code d’état (OK dans l’exemple).</p><p>Vous trouverez ci-dessous une liste des codes d’état HTTP et des messages associés pouvant être renvoyés par le serveur Web:</p><table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Message</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>Continue</td>
+<td>Une partie seulement de la demande a été reçue par le serveur, mais tant qu’elle n’a pas été rejetée, le client doit continuer avec la demande.</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Switching Protocols</td>
+<td>Le serveur bascule le protocole.</td>
+</tr>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>La demande est OK</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td>La demande est terminée et une nouvelle ressource est créée.</td>
+</tr>
+<tr>
+<td>202</td>
+<td>Accepted</td>
+<td>La demande est acceptée pour traitement, mais le traitement n’est pas terminé.</td>
+</tr>
+<tr>
+<td>203</td>
+<td>Non-authoritative Information</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+</tr>
+<tr>
+<td>205</td>
+<td>Reset Content</td>
+</tr>
+<tr>
+<td>206</td>
+<td>Partial Content</td>
+</tr>
+<tr>
+<td>300</td>
+<td>Multiple Choices</td>
+<td>Une liste de liens. L’utilisateur peut sélectionner un lien et aller à cet endroit. Maximum cinq adresses</td>
+</tr>
+<tr>
+<td>301</td>
+<td>MovedPermanently</td>
+<td>La page demandée a été déplacée vers une nouvelle URL</td>
+</tr>
+<tr>
+<td>302</td>
+<td>Found</td>
+<td>La page demandée a été déplacée temporairement vers une nouvelle URL</td>
+</tr>
+<tr>
+<td>303</td>
+<td>See Other</td>
+<td>La page demandée peut être trouvée sous une autre URL</td>
+</tr>
+<tr>
+<td>304</td>
+<td>Not Modified</td>
+</tr>
+<tr>
+<td>305</td>
+<td>Use Proxy</td>
+</tr>
+<tr>
+<td>306</td>
+<td>Unused</td>
+<td><em>Ce code a été utilisé dans une version précédente. Il n’est plus utilisé, mais le code est réservé</em></td>
+</tr>
+<tr>
+<td>307</td>
+<td>Temporary Redirect</td>
+<td>La page demandée a été déplacée temporairement vers une nouvelle URL.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad Request</td>
+<td>Le serveur n’a pas compris la requête</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td>La page demandée nécessite un nom d’utilisateur et un mot de passe</td>
+</tr>
+<tr>
+<td>402</td>
+<td>Payment Required</td>
+<td><em>Vous ne pouvez pas encore utiliser ce code</em></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td>L’accès à la page demandée est interdit</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td>Le serveur ne peut pas trouver la page demandée.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed</td>
+<td>La méthode spécifiée dans la demande n’est pas autorisée.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable</td>
+<td>Le serveur peut uniquement générer une réponse qui n’est pas acceptée par le client.</td>
+</tr>
+<tr>
+<td>407</td>
+<td>Proxy Authentication Required</td>
+<td>Vous devez vous authentifier auprès d’un serveur proxy avant de pouvoir répondre à cette demande.</td>
+</tr>
+<tr>
+<td>408</td>
+<td>Request Timeout</td>
+<td>La demande a pris plus de temps que le serveur était prêt à attendre.</td>
+</tr>
+<tr>
+<td>409</td>
+<td>Conflict</td>
+<td>La demande n’a pas pu être complétée en raison d’un conflit.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone</td>
+<td>La page demandée n’est plus disponible.</td>
+</tr>
+<tr>
+<td>411</td>
+<td>Length Required</td>
+<td>Le “Content-Length” n’est pas défini. Le serveur n’acceptera pas la demande sans elle.</td>
+</tr>
+<tr>
+<td>412</td>
+<td>Precondition Failed</td>
+<td>La condition préalable donnée dans la demande évaluée à false par le serveur.</td>
+</tr>
+<tr>
+<td>413</td>
+<td>Request Entity Too Large</td>
+<td>Le serveur n’acceptera pas la demande, car l’entité de la demande est trop grande.</td>
+</tr>
+<tr>
+<td>414</td>
+<td>Request-url Too Long</td>
+<td>Le serveur n’acceptera pas la demande, car l’URL est trop longue. Se produit lorsque vous convertissez une requête “post” en une requête “get” avec des informations de requête longues.</td>
+</tr>
+<tr>
+<td>415</td>
+<td>Unsupported Media Type</td>
+<td>Le serveur n’acceptera pas la demande, car le type de support n’est pas pris en charge.</td>
+</tr>
+<tr>
+<td>417</td>
+<td>Expectation Failed</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Erreur interne du serveur</td>
+<td>La demande n’a pas été complétée. Le serveur a rencontré une condition inattendue.</td>
+</tr>
+<tr>
+<td>501</td>
+<td>Not Implemented</td>
+<td>La demande n’a pas été complétée. Le serveur n’a pas pris en charge la fonctionnalité requise.</td>
+</tr>
+<tr>
+<td>502</td>
+<td>Bad Gateway</td>
+<td>La demande n’a pas été complétée. Le serveur a reçu une réponse non valide du serveur en amont.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable</td>
+<td>La demande n’a pas été complétée. Le serveur est temporairement en surcharge ou hors service.</td>
+</tr>
+<tr>
+<td>504</td>
+<td>Gateway Timeout</td>
+<td>La passerelle a expiré.</td>
+</tr>
+<tr>
+<td>505</td>
+<td>HTTP Version Not Supported</td>
+<td>Le serveur ne supporte pas la version “http protocol”.</td>
+</tr>
+</tbody>
+</table><h2 id="méthodes-pour-définir-le-code-d'état-http"><a name="méthodes-pour-définir-le-code-d'état-http" href="#méthodes-pour-définir-le-code-d'état-http"></a>Méthodes pour définir le code d’état HTTP</h2><p>Les méthodes suivantes peuvent être utilisées pour définir le code de statut HTTP dans votre programme de servlet. Ces méthodes sont disponibles avec l’objet HttpServletResponse.</p><table>
+<thead>
+<tr>
+<th>Sr.No.</th>
+<th>Méthode et description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>public void setStatus ( int statusCode )</strong><br><br>Cette méthode définit un code de statut arbitraire. La méthode setStatus prend un int (le code de statut) en tant qu’argument. Si votre réponse inclut un code de statut spécial et un document, veillez à appeler setStatus avant de renvoyer le contenu avec PrintWriter.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>public void sendRedirect(String url)</strong><br><br>Cette méthode génère une réponse 302 avec un en-tête Location indiquant l’URL du nouveau document.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>public void sendError(int code, String message)</strong><br><br>Cette méthode envoie un code d’état (généralement 404) avec un message court automatiquement formaté dans un document HTML et envoyé au client.</td>
+</tr>
+</tbody>
+</table><h2 id="exemple-de-code-d'état-http"><a name="exemple-de-code-d'état-http" href="#exemple-de-code-d'état-http"></a>Exemple de code d’état HTTP</h2><p>Voici l’exemple qui enverrait un code d’erreur 407 au navigateur client et le navigateur afficherait le message «Need authentication !!!».</p><pre><code class="java hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;JAVA&quot;&gt;// Importer les bibliothèques Java requises
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.util.*;
+
+// Extension de la classe HttpServlet
+public class showError extends HttpServlet {
+
+   // Méthode pour gérer la requête de méthode GET.
+   public void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+
+      // Définit le code d'erreur et la raison.
+      response.sendError(407, &quot;Need authentication!!!&quot; );
+   }
+
+   // Méthode pour gérer la demande de méthode POST.
+   public void doPost(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+
+      doGet(request, response);
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-comment">// Importer les bibliothèques Java requises</span>
+<span class="hljs-keyword">import</span> java.io.*;
+<span class="hljs-keyword">import</span> javax.servlet.*;
+<span class="hljs-keyword">import</span> javax.servlet.http.*;
+<span class="hljs-keyword">import</span> java.util.*;
+
+<span class="hljs-comment">// Extension de la classe HttpServlet</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">showError</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">HttpServlet</span> </span>{
+
+   <span class="hljs-comment">// Méthode pour gérer la requête de méthode GET.</span>
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doGet</span>(HttpServletRequest request, HttpServletResponse response)
+      <span class="hljs-keyword">throws</span> ServletException, IOException {
+
+      <span class="hljs-comment">// Définit le code d'erreur et la raison.</span>
+      response.sendError(<span class="hljs-number">407</span>, <span class="hljs-string">"Need authentication!!!"</span> );
+   }
+
+   <span class="hljs-comment">// Méthode pour gérer la demande de méthode POST.</span>
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doPost</span>(HttpServletRequest request, HttpServletResponse response)
+      <span class="hljs-keyword">throws</span> ServletException, IOException {
+
+      doGet(request, response);
+   }
+}
+</code></pre><p>Maintenant, appeler la servlet ci-dessus afficherait le résultat suivant -</p><blockquote>
+<h3 id="__statut-http-407---need-authentication!!!__"><a name="__statut-http-407---need-authentication!!!__" href="#__statut-http-407---need-authentication!!!__"></a><strong>Statut HTTP 407 - Need authentication!!!</strong></h3>
+<p><strong>type</strong> Status report<br><strong>message</strong>Need authentication!!!<br><strong>description</strong> Le client doit d’abord s’authentifier auprès du proxy (Need authentication!!!).</p>
+<h6 id="apache-tomcat/5.5.29"><a name="apache-tomcat/5.5.29" href="#apache-tomcat/5.5.29"></a>Apache Tomcat/5.5.29</h6>
+</blockquote><div style="display:flex;justify-content:space-between"><div><a href="chapitre7.html">← precedent</a></div><div><a href="chapitre9.html">suivant →</a></div></div>
 
 <footer style="position:fixed; font-size:.8em; text-align:right; bottom:0px; margin-left:-25px; height:20px; width:100%;">generated by <a href="http://pad.haroopress.com" target="_blank">haroopad</a></footer>
 </body>
