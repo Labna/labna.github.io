@@ -10,7 +10,96 @@
 </head>
 <body class="markdown clearness">
 
-  <div style="display:flex;justify-content:space-between"><div><a href="chapitre4.html">← precedent</a></div><div><a href="chapitre6.html">suivant →</a></div></div><h1 id="servlets---données-de-formulaire"><a name="servlets---données-de-formulaire" href="#servlets---données-de-formulaire"></a>Servlets - Données de formulaire</h1><p>Vous devez avoir rencontré de nombreuses situations dans lesquelles vous devez transmettre certaines informations de votre navigateur au serveur Web et finalement à votre programme backend. Le navigateur utilise deux méthodes pour transmettre ces informations au serveur Web. Ces méthodes sont la méthode GET et la méthode POST.</p><h2 id="méthode-get"><a name="méthode-get" href="#méthode-get"></a>Méthode GET</h2><p>La méthode GET envoie les informations utilisateur codées ajoutées à la demande de page. La page et les informations codées sont séparées par le caractère? (point d’interrogation) symbole comme suit:</p><pre><code data-origin="&lt;pre&gt;&lt;code&gt;http://www.test.com/hello?key1=value1&amp;amp;key2=value2
+  <div style="display:flex;justify-content:space-between"><div><a href="chapitre4.html">← precedent</a></div><div><a href="chapitre6.html">suivant →</a></div></div><h1 id="servlets---données-de-formulaire"><a name="servlets---données-de-formulaire" href="#servlets---données-de-formulaire"></a>Servlets - Données de formulaire</h1><p class="toc" style="undefined"></p><ul>
+<li><ul>
+<li><span class="title">
+<a href="#méthode-get" title="Méthode GET">Méthode GET</a>
+</span>
+<!--span class="number">
+0
+</span-->
+</li>
+<li><span class="title">
+<a href="#méthode-post" title="Méthode POST">Méthode POST</a>
+</span>
+<!--span class="number">
+1
+</span-->
+</li>
+<li><span class="title">
+<a href="#lecture-de-données-de-formulaire-à-l'aide-de-servlet" title="Lecture de données de formulaire à l’aide de Servlet">Lecture de données de formulaire à l’aide de Servlet</a>
+</span>
+<!--span class="number">
+2
+</span-->
+</li>
+<li><span class="title">
+<a href="#exemple-de-méthode-get-utilisant-une-url" title="Exemple de méthode GET utilisant une URL">Exemple de méthode GET utilisant une URL</a>
+</span>
+<!--span class="number">
+3
+</span-->
+<ul>
+<li><span class="title">
+<a href="#utilisation-de-la-méthode-get-pour-lire-les-données-de-formulaire" title="Utilisation de la méthode GET pour lire les données de formulaire">Utilisation de la méthode GET pour lire les données de formulaire</a>
+</span>
+<!--span class="number">
+4
+</span-->
+</li>
+</ul>
+</li>
+<li><span class="title">
+<a href="#exemple-de-méthode-get-à-l'aide-d'un-formulaire" title="Exemple de méthode GET à l’aide d’un formulaire">Exemple de méthode GET à l’aide d’un formulaire</a>
+</span>
+<!--span class="number">
+5
+</span-->
+</li>
+<li><span class="title">
+<a href="#exemple-de-méthode-post-utilisant-un-formulaire" title="Exemple de méthode POST utilisant un formulaire">Exemple de méthode POST utilisant un formulaire</a>
+</span>
+<!--span class="number">
+6
+</span-->
+</li>
+<li><span class="title">
+<a href="#transmission-des-données-de-case-à-cocher-au-programme-de-servlet" title="Transmission des données de case à cocher au programme de servlet">Transmission des données de case à cocher au programme de servlet</a>
+</span>
+<!--span class="number">
+7
+</span-->
+<ul>
+<li><span class="title">
+<a href="#lecture-des-données-de-la-case-à-cocher" title="Lecture des données de la case à cocher">Lecture des données de la case à cocher</a>
+</span>
+<!--span class="number">
+8
+</span-->
+</li>
+</ul>
+</li>
+<li><span class="title">
+<a href="#lecture-de-tous-les-paramètres-de-formulaire" title="Lecture de tous les paramètres de formulaire">Lecture de tous les paramètres de formulaire</a>
+</span>
+<!--span class="number">
+9
+</span-->
+<ul>
+<li><span class="title">
+<a href="#lecture-de-tous-les-paramètres-de-formulaire-1" title="Lecture de tous les paramètres de formulaire">Lecture de tous les paramètres de formulaire</a>
+</span>
+<!--span class="number">
+10
+</span-->
+</li>
+</ul>
+</li>
+</ul>
+</li>
+
+</ul>
+<p></p><p>Vous devez avoir rencontré de nombreuses situations dans lesquelles vous devez transmettre certaines informations de votre navigateur au serveur Web et finalement à votre programme backend. Le navigateur utilise deux méthodes pour transmettre ces informations au serveur Web. Ces méthodes sont la méthode GET et la méthode POST.</p><h2 id="méthode-get"><a name="méthode-get" href="#méthode-get"></a>Méthode GET</h2><p>La méthode GET envoie les informations utilisateur codées ajoutées à la demande de page. La page et les informations codées sont séparées par le caractère? (point d’interrogation) symbole comme suit:</p><pre><code data-origin="&lt;pre&gt;&lt;code&gt;http://www.test.com/hello?key1=value1&amp;amp;key2=value2
 &lt;/code&gt;&lt;/pre&gt;">http://www.test.com/hello?key1=value1&amp;key2=value2
 </code></pre><p>La méthode GET est la méthode par défaut permettant de transmettre des informations d’un navigateur à un serveur Web. Elle produit une longue chaîne qui apparaît dans la zone Emplacement: de votre navigateur. N’utilisez jamais la méthode GET si vous avez un mot de passe ou d’autres informations sensibles à transmettre au serveur. La méthode GET a une limite de taille: vous ne pouvez utiliser que 1024 caractères dans une chaîne de requête.</p><p>Ces informations sont transmises à l’aide de l’en-tête QUERY_STRING et seront accessibles via la variable d’environnement QUERY_STRING. Servlet gère ce type de demande à l’aide de la méthode doGet ().</p><h2 id="méthode-post"><a name="méthode-post" href="#méthode-post"></a>Méthode POST</h2><p>La méthode POST est une méthode généralement plus fiable pour transmettre des informations à un programme dorsal. Cela empaquette les informations exactement de la même manière que la méthode GET, mais au lieu de les envoyer sous forme de chaîne de texte après un? (point d’interrogation) dans l’URL, il l’envoie sous forme de message séparé. Ce message arrive au programme backend sous la forme d’une entrée standard que vous pouvez analyser et utiliser pour votre traitement. Servlet gère ce type de demande à l’aide de la méthode doPost ().</p><h2 id="lecture-de-données-de-formulaire-à-l'aide-de-servlet"><a name="lecture-de-données-de-formulaire-à-l'aide-de-servlet" href="#lecture-de-données-de-formulaire-à-l'aide-de-servlet"></a>Lecture de données de formulaire à l’aide de Servlet</h2><p>Les servlets gèrent automatiquement l’analyse des données de formulaire à l’aide des méthodes suivantes, selon la situation:</p><ul>
 <li><p><strong>getParameter()</strong> − Vous appelez la méthode request.getParameter() pour obtenir la valeur d’un paramètre de formulaire.</p>

@@ -8,4 +8,5 @@
 6. [Servlet - Requête HTTP client](chapitre6.html)
 7. [Servlet - Réponse HTTP du serveur](chapitre7.html)
 8. [Servlet - Codes d'état HTTP](chapitre8.html)
-9. 
+9. [Servlet - Écriture de filtres](chapitre9.html)
+10. 

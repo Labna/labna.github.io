@@ -10,7 +10,27 @@
 </head>
 <body class="markdown clearness">
 
-  <div style="display:flex;justify-content:space-between"><div><a href="chapitre5.html">← precedent</a></div><div><a href="chapitre7.html">suivant →</a></div></div><h1 id="servlets---requête-http-client"><a name="servlets---requête-http-client" href="#servlets---requête-http-client"></a>Servlets - Requête HTTP client</h1><p>Lorsqu’un navigateur demande une page Web, il envoie au serveur Web de nombreuses informations qui ne peuvent pas être lues directement car ces informations sont transférées dans l’en-tête de la requête HTTP. Vous pouvez vérifier le <a href="https://www.tutorialspoint.com/http/index.htm">protocole HTTP</a> pour plus d’informations à ce sujet.</p><p>Voici l’en-tête des informations importantes qui proviennent du navigateur et que vous utiliseriez très fréquemment dans la programmation Web:</p><table>
+  <div style="display:flex;justify-content:space-between"><div><a href="chapitre5.html">← precedent</a></div><div><a href="chapitre7.html">suivant →</a></div></div><h1 id="servlets---requête-http-client"><a name="servlets---requête-http-client" href="#servlets---requête-http-client"></a>Servlets - Requête HTTP client</h1><p class="toc" style="undefined"></p><ul>
+<li><ul>
+<li><span class="title">
+<a href="#méthodes-pour-lire-l'en-tête-http" title="Méthodes pour lire l’en-tête HTTP">Méthodes pour lire l’en-tête HTTP</a>
+</span>
+<!--span class="number">
+0
+</span-->
+</li>
+<li><span class="title">
+<a href="#exemple-de-demande-d'en-tête-http" title="Exemple de demande d’en-tête HTTP">Exemple de demande d’en-tête HTTP</a>
+</span>
+<!--span class="number">
+1
+</span-->
+</li>
+</ul>
+</li>
+
+</ul>
+<p></p><p>Lorsqu’un navigateur demande une page Web, il envoie au serveur Web de nombreuses informations qui ne peuvent pas être lues directement car ces informations sont transférées dans l’en-tête de la requête HTTP. Vous pouvez vérifier le <a href="https://www.tutorialspoint.com/http/index.htm">protocole HTTP</a> pour plus d’informations à ce sujet.</p><p>Voici l’en-tête des informations importantes qui proviennent du navigateur et que vous utiliseriez très fréquemment dans la programmation Web:</p><table>
 <thead>
 <tr>
 <th>Sr.No.</th>
@@ -301,7 +321,8 @@ public class DisplayHeader extends HttpServlet {
    }
 }
 </code></pre><p>Maintenant, appeler la servlet ci-dessus générerait le résultat suivant:</p><blockquote>
-<h3 id="exemple-de-demande-d'en-tête-http"><a name="exemple-de-demande-d'en-tête-http" href="#exemple-de-demande-d'en-tête-http"></a>Exemple de demande d’en-tête HTTP</h3>
+<div style="font-size:large">Exemple de demande d’en-tête HTTP</div>
+
 <table>
 <thead>
 <tr>
@@ -312,7 +333,7 @@ public class DisplayHeader extends HttpServlet {
 <tbody>
 <tr>
 <td>accept</td>
-<td><em>/</em></td>
+<td>*/*</td>
 </tr>
 <tr>
 <td>accept-language</td>
