@@ -10,3 +10,20 @@
 8. [Servlet - Codes d'état HTTP](chapitre8.html)
 9. [Servlet - Écriture de filtres](chapitre9.html)
 10. [Servlet - Gestion des exceptions](chapitre10.html)
+
+
+
+##Exercices
+
+1. [Servlet - fomulaire](exercice1.html)
+
+<div style="display:none">
+3. 2. Servlet - media
+2. Servlet - JDBC
+2. Servlet - token
+3. Servlet - Jquery
+4. Servlet - 
+</div>
+
+[Quelques liens pour aller plus loin](annexes.html)
+
