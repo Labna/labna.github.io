@@ -16,9 +16,9 @@
 ##Exercices
 
 1. [Servlet - fomulaire](exercice1.html)
+2. [Servlet - media](exercice2.html)
 
 <div style="display:none">
-3. 2. Servlet - media
 2. Servlet - JDBC
 2. Servlet - token
 3. Servlet - Jquery

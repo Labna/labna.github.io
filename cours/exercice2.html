@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>index.html</title>
+  <title>Exercice 2.html</title>
   <meta name="generator" content="Haroopad 0.12.2" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,21 +10,114 @@
 </head>
 <body class="markdown clearness">
 
-  <h1 id="cours-disponibles"><a name="cours-disponibles" href="#cours-disponibles"></a>Cours disponibles</h1><ol>
-<li><a href="chapitre1.html">Servlet - Introduction</a></li>
-<li><a href="chapitre2.html">Servlet - Paramètrage de l’environnement</a></li>
-<li><a href="chapitre3.html">Servlet - Cycle de vie</a></li>
-<li><a href="chapitre4.html">Servlet - Exemple</a></li>
-<li><a href="chapitre5.html">Servlet - Données de formulaire</a></li>
-<li><a href="chapitre6.html">Servlet - Requête HTTP client</a></li>
-<li><a href="chapitre7.html">Servlet - Réponse HTTP du serveur</a></li>
-<li><a href="chapitre8.html">Servlet - Codes d’état HTTP</a></li>
-<li><a href="chapitre9.html">Servlet - Écriture de filtres</a></li>
-<li><a href="chapitre10.html">Servlet - Gestion des exceptions</a></li>
-</ol><h2 id="exercices"><a name="exercices" href="#exercices"></a>Exercices</h2><ol>
-<li><a href="exercice1.html">Servlet - fomulaire</a></li>
-<li><a href="exercice2.html">Servlet - media</a></li>
-</ol><div style="display:none"><br>2. Servlet - JDBC<br>2. Servlet - token<br>3. Servlet - Jquery<br>4. Servlet -<br></div><p><a href="annexes.html">Quelques liens pour aller plus loin</a></p>
+  <p><a href="index.html">← home</a></p><h1 id="exercice-2---exercice-de-style"><a name="exercice-2---exercice-de-style" href="#exercice-2---exercice-de-style"></a>exercice 2 - Exercice de style</h1><h2 id="quelques-notions-d'architecture..."><a name="quelques-notions-d'architecture..." href="#quelques-notions-d'architecture..."></a>Quelques notions d’architecture…</h2><p>Voici un exemple d’organisation de HTML:</p><pre><code class="html hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;HTML&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;header&amp;gt;
+    &amp;lt;meta charset=&quot;utf-8&quot; /&amp;gt;
+    &amp;lt;title&amp;gt;Mon Titre&amp;lt;/title&amp;gt;
+    &amp;lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;favicon.ico&quot; /&amp;gt;
+    &amp;lt;link rel=&quot;main.css&quot; /&amp;gt;
+    &amp;lt;script src=&quot;main.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;/header&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;!-- ici votre super contenu --&amp;gt;
+    &amp;lt;script src=&quot;super_heavy.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"utf-8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Mon Titre<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"icon"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"image/x-icon"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"favicon.ico"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"main.css"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"main.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- ici votre super contenu --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"super_heavy.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre><p>Cependant, copier ça sur chaque page de votre site est une perte de temps (imaginer devoir faire une modification de l’en-tête ou du pied de page pour les 200 pages de votre site). Afin de faciliter les futurs changements, on va diviser les parties réutilisables des parties uniques.</p><ul>
+<li>top.html</li>
+<li>bottom.html</li>
+<li>main.js</li>
+<li>main.css</li>
+<li>page 1</li>
+<li>page 2…</li>
+</ul><p><em>top.html</em>:</p><pre><code class="html hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;HTML&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;header&amp;gt;
+    &amp;lt;meta charset=&quot;utf-8&quot; /&amp;gt;
+    &amp;lt;title&amp;gt;Mon Titre&amp;lt;/title&amp;gt;
+    &amp;lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;favicon.ico&quot; /&amp;gt;
+    &amp;lt;link rel=&quot;main.css&quot; /&amp;gt;
+    &amp;lt;script src=&quot;main.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;/header&amp;gt;
+  &amp;lt;body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"utf-8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Mon Titre<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"icon"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"image/x-icon"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"favicon.ico"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"main.css"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"main.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+</code></pre><p><em>bottom.html</em>:</p><pre><code class="html hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;HTML&quot;&gt;    &amp;lt;script src=&quot;super_heavy.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;">    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"super_heavy.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre><p><em>main.js</em>:</p><pre><code class="js hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;JS&quot;&gt;function doAwesome(){
+  document.getElementsByTagName('p').foreach(function(x){x.style.color='white'})
+}
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">doAwesome</span><span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">'p'</span>).foreach(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(x)</span></span>{x.style.color=<span class="hljs-string">'white'</span>})
+}
+</code></pre><p><em>main.css</em>:</p><pre><code class="css hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;CSS&quot;&gt;html{
+ background-color: #FFF;
+ color: #222;
+}
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-tag">html</span><span class="hljs-rules">{
+ <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#FFF</span></span></span>;
+ <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#222</span></span></span>;
+<span class="hljs-rule">}</span></span>
+</code></pre><p><em>page 1</em>:</p><pre><code class="html hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;HTML&quot;&gt;    &amp;lt;!-- ici votre super contenu --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;">    <span class="hljs-comment">&lt;!-- ici votre super contenu --&gt;</span>
+</code></pre><p>Le Server tomcat à plus d’un tour dans son sac et vous permet de faire la composition directement depuis votre fichier, grâce au JSP (Java Server Page).<br>Ainsi, les fichiers HTML présentés ci-dessus peuvent être remplacés par des fichiers JSP(ou JSPF pour top et bottom).</p><p>Voici un exemple:<br><em>index.jsp</em>:</p><pre><code class="html hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;HTML&quot;&gt;&amp;lt;%@page contentType=&quot;text/html&quot; pageEncoding=&quot;UTF-8&quot;%&amp;gt;
+&amp;lt;jsp:include page=&quot;ressources/header.jspf&quot; flush='true' /&amp;gt;
+        &amp;lt;h1&amp;gt;Hello World!&amp;lt;/h1&amp;gt;
+
+&amp;lt;jsp:include page=&quot;ressources/footer.jspf&quot; flush=&quot;true&quot;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;"><span class="vbscript">&lt;%@page contentType=<span class="hljs-string">"text/html"</span> pageEncoding=<span class="hljs-string">"UTF-8"</span>%&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">jsp:include</span> <span class="hljs-attribute">page</span>=<span class="hljs-value">"ressources/header.jspf"</span> <span class="hljs-attribute">flush</span>=<span class="hljs-value">'true'</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Hello World!<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">jsp:include</span> <span class="hljs-attribute">page</span>=<span class="hljs-value">"ressources/footer.jspf"</span> <span class="hljs-attribute">flush</span>=<span class="hljs-value">"true"</span>/&gt;</span>
+</code></pre><p><em>ressources/header.jspf</em>:</p><pre><code class="html hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;HTML&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;header&amp;gt;
+    &amp;lt;meta charset=&quot;utf-8&quot; /&amp;gt;
+    &amp;lt;title&amp;gt;Mon Titre&amp;lt;/title&amp;gt;
+    &amp;lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;favicon.ico&quot; /&amp;gt;
+    &amp;lt;link rel=&quot;main.css&quot; /&amp;gt;
+    &amp;lt;script src=&quot;main.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;/header&amp;gt;
+  &amp;lt;body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"utf-8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Mon Titre<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"icon"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"image/x-icon"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"favicon.ico"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"main.css"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"main.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+</code></pre><p>À vous de créer ces fichiers (pas forcement avec ce contenu ni le même nom, mais avec la même logique ☺). Pour exécuter les fichiers JSP, leur adresse suffit (<a href="http://localhost:8080/serverWeb/index.jsp">http://localhost:8080/serverWeb/index.jsp</a>).</p><div id="v" style="display:none;"><button onclick="document.getElementById('v').style.display='block'" type="button">Indices</button><br><p></p></div><h2 id="et-de-design-!"><a name="et-de-design-!" href="#et-de-design-!"></a>Et de design !</h2><p><strong>Arrive bientôt</strong></p><h2 id="ça-vous-a-plu-?"><a name="ça-vous-a-plu-?" href="#ça-vous-a-plu-?"></a>Ça vous a plu ?</h2><p><strong>(pour aller plus loin, ou pour les plus rapides)</strong><br>Une bonne architecture c’est presque plus important qu’un bon design, et les bonnes pratiques ça ne manque pas. Je vous invite à lire et à retenir certains de ces patrons de <a href="https://fr.wikipedia.org/wiki/Patron_de_conception">cette page</a></p><p><a href="index.html">← home</a></p>
 
 <footer style="position:fixed; font-size:.8em; text-align:right; bottom:0px; margin-left:-25px; height:20px; width:100%;">generated by <a href="http://pad.haroopress.com" target="_blank">haroopad</a></footer>
 </body>
