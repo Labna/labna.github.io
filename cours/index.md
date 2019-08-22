@@ -1,4 +1,4 @@
-#Cours disponibles
+##Cours pas super
 
 1. [Servlet - Introduction](chapitre1.html)
 2. [Servlet - Paramètrage de l'environnement](chapitre2.html)
@@ -11,6 +11,9 @@
 9. [Servlet - Écriture de filtres](chapitre9.html)
 10. [Servlet - Gestion des exceptions](chapitre10.html)
 
+
+##cours un peu plus super
+1. [Definitions](cours1.html)
 
 
 ##Exercices

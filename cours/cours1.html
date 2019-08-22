@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>index.html</title>
+  <title>cours1.html</title>
   <meta name="generator" content="Haroopad 0.12.2" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,24 +10,56 @@
 </head>
 <body class="markdown clearness">
 
-  <h2 id="cours-pas-super"><a name="cours-pas-super" href="#cours-pas-super"></a>Cours pas super</h2><ol>
-<li><a href="chapitre1.html">Servlet - Introduction</a></li>
-<li><a href="chapitre2.html">Servlet - Paramètrage de l’environnement</a></li>
-<li><a href="chapitre3.html">Servlet - Cycle de vie</a></li>
-<li><a href="chapitre4.html">Servlet - Exemple</a></li>
-<li><a href="chapitre5.html">Servlet - Données de formulaire</a></li>
-<li><a href="chapitre6.html">Servlet - Requête HTTP client</a></li>
-<li><a href="chapitre7.html">Servlet - Réponse HTTP du serveur</a></li>
-<li><a href="chapitre8.html">Servlet - Codes d’état HTTP</a></li>
-<li><a href="chapitre9.html">Servlet - Écriture de filtres</a></li>
-<li><a href="chapitre10.html">Servlet - Gestion des exceptions</a></li>
-</ol><h2 id="cours-un-peu-plus-super"><a name="cours-un-peu-plus-super" href="#cours-un-peu-plus-super"></a>cours un peu plus super</h2><ol>
-<li><a href="cours1.html">Definitions</a></li>
-</ol><h2 id="exercices"><a name="exercices" href="#exercices"></a>Exercices</h2><ol>
-<li><a href="exercice1.html">Servlet - fomulaire</a></li>
-<li><a href="exercice2.html">Servlet - Mise en forme</a></li>
-<li><a href="exercice3.html">Servlet - Session</a></li>
-</ol><div style="display:none"><br>2. Servlet - JDBC<br>2. Servlet - token<br>3. Servlet - Jquery<br>4. Servlet -<br></div><p><a href="annexes.html">Quelques liens pour aller plus loin</a></p>
+  <div style="display:flex;justify-content:space-between"><div><a href="index.html">← home</a></div><div><a href="cours2.html">suivant →</a></div></div><h1 id="définitions"><a name="définitions" href="#définitions"></a>Définitions</h1><h3 id="excuses"><a name="excuses" href="#excuses"></a>Excuses</h3><p>Je tenais à commencer ce chapitre par des excuses, je viens de recevoir le contenu pédagogique de ce cours.<br>Et bien que nous ayons déjà travaillé sur les points les plus importants de ce contenu, il me semble qu’il nous faut revoir certains points depuis le début afin que tout soit plus clair et plus facile pour la suite.</p><p>Je vous demande pardon.</p><h2 id="jva_310"><a name="jva_310" href="#jva_310"></a>JVA_310</h2><h3 id="fonctionnement-global"><a name="fonctionnement-global" href="#fonctionnement-global"></a>Fonctionnement global</h3><p>Tout le monde connaît le principe du Web, mais pas forcement sont fonctionnement.</p><p>Le Chapitre 1 faisait état d’un protocole HTTP entre le serveur et le navigateur internet.</p><h4 id="le-navigateur"><a name="le-navigateur" href="#le-navigateur"></a>le Navigateur</h4><p>Je viendrais rajouter que bien qu’émettant une requête et recevant une réponse le navigateur interprète l’essentiel de ce qu’il reçoit, corrigeant les balises HTML, va chercher les fichiers mentionnés (images, scripts, applet (on verra ce dernier la semaine prochaine)). Selon le navigateur, certaines instructions ne sont pas exécutées de manière similaire, l’exemple le plus commun sont les sites développés pour Internet Explorer qui ne fonctionne pas sur les navigateurs Chrome ou Firefox.</p><p>Les réponses qu’il attend sont typées en catégories, text, image, application, vidéo, audio. Afin de savoir ce qu’il reçoit, l’en-tête de la réponse contient: <code>Content-Type: text/html</code>(ou text/css, text/javascript, image/gif, audio/mpeg, video/webm…).</p><p>Parmi ces types de contenues, le navigateur peut interpréter ce qu’il doit en faire, comme afficher l’image, structurer la page html (en masquant les balises), exécuter le JavaScript, jouter un player sur la vidéo, ou proposer d’enregistrer le contenu s’il est inconnu.</p><h4 id="le-serveur"><a name="le-serveur" href="#le-serveur"></a>Le serveur</h4><p>Quel que soit le langage du serveur, ils se plient tous au protocole HTTP, en attendant des requêtes, en y répondant. Ils mettent à disposition des ‘ports’ (80 pour le web) où ils écoutent les requêtes.</p><p>Des serveurs, il en existe beaucoup, les plus communs sont Apache qui interprète du PHP (ou JAVA, avec Tomcat) et IIS (Internet Information Services) qui peut être développé en C#, .Net, Visual Basic, JAVA. Bien que fournissant un service similaire,il y a beaucoup de différence entre eux, surtout technique.<br>Certains sont de purs fournisseurs de page web, d’autres fournissent en plus des services.<br>Le choix d’un serveur se fait pour ses fonctionnalités externe (capacité à communiqué avec certaines bases de données, les API disponibles…) et interne (Framwork facilité d’accès, légèreté d’exécution…), mais lors que ce n’est pas une contrainte, c’est par pure affinité que l’on choisit un serveur.</p><h4 id="persistance-des-données"><a name="persistance-des-données" href="#persistance-des-données"></a>Persistance des données</h4><p>Les données présentes en web sont classées si dessous:</p><table>
+<thead>
+<tr>
+<th>détenteur</th>
+<th>nom du stockage</th>
+<th>durée de vie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Navigateur</td>
+<td>page web</td>
+<td>maintenu en cache jusqu’a rafraîchissement</td>
+</tr>
+<tr>
+<td>Navigateur</td>
+<td>ressources (image,fichiers CSS/JS)</td>
+<td>mise en cache jusqu’au redémarrage du navigateur</td>
+</tr>
+<tr>
+<td>Navigateur</td>
+<td>Cookie</td>
+<td>de quelques heures à plusieurs jours</td>
+</tr>
+<tr>
+<td>Serveur</td>
+<td>requête</td>
+<td>jusqu’à l’envoi de la réponse</td>
+</tr>
+<tr>
+<td>Serveur</td>
+<td>Session</td>
+<td>max quelques heures après la dernière requête du navigateur</td>
+</tr>
+<tr>
+<td>Serveur</td>
+<td>Variables et environnement</td>
+<td>jusqu’au redémarrage du serveur</td>
+</tr>
+<tr>
+<td>Base de données</td>
+<td>données envoyées dans une table/base</td>
+<td>∞</td>
+</tr>
+</tbody>
+</table><h4 id="la-base-de-données"><a name="la-base-de-données" href="#la-base-de-données"></a>La base de données</h4><p>Cela permet de stocker de données de manière structurer et rapide d’accès.<br>Ici elle va nous servir à stocker les paramètres d’identification des utilisateurs, mais par la suite la majorité du contenu du site web.</p><p>Elle est complètement extérieure au serveur web, et peut répondre aux demandes de plusieurs services (API, application client…)</p><h2 id="jva_320"><a name="jva_320" href="#jva_320"></a>JVA_320</h2><h3 id="java,-oui,-mais-lequel-?"><a name="java,-oui,-mais-lequel-?" href="#java,-oui,-mais-lequel-?"></a>Java, oui, mais lequel ?</h3><h4 id="java-re-(runtime-environnement)"><a name="java-re-(runtime-environnement)" href="#java-re-(runtime-environnement)"></a>Java RE (runtime environnement)</h4><p>C’est une machine virtuelle qui comprend les versions compilées des ressources de base pour exécuter des fichiers exécutables.</p><h4 id="java-se-(standart-edition)"><a name="java-se-(standart-edition)" href="#java-se-(standart-edition)"></a>Java SE (Standart edition)</h4><p>Cela comprend les sources des ressources pour compiler des exécutables Java.</p><h4 id="java-ee-(entreprise-edition)"><a name="java-ee-(entreprise-edition)" href="#java-ee-(entreprise-edition)"></a>Java EE (Entreprise Edition)</h4><p>Cela comprend les sources des ressources pour créer les applications, et beaucoup de ressources supplémentaires pour faire des applications plus complexes, comme servir de module à une autre application (ex: mod Minecraft, Servlet, pluggin de navigateur internet)</p><h3 id="dynamique-!-(pas-dynamite)"><a name="dynamique-!-(pas-dynamite)" href="#dynamique-!-(pas-dynamite)"></a>Dynamique ! (pas dynamite)</h3><p>On considère 3 types de sites web:</p><ol>
+<li>Statique, lorsque vous accédez à un fichier HTML</li>
+<li>Dynamique, lorsqu’un serveur compose la page pour vous</li>
+<li>Applel, lorsque vous exécutez une miniapplication sur votre naviguateur (exemple: google doc)</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">Ici s’élevera bientôt <del>le palais de César</del> la definition de Servlet (désolé pour l’attente)</p><div style="display:flex;justify-content:space-between"><div><a href="index.html">← home</a></div><div><a href="cours2.html">suivant →</a></div></div>
 
 <footer style="position:fixed; font-size:.8em; text-align:right; bottom:0px; margin-left:-25px; height:20px; width:100%;">generated by <a href="http://pad.haroopress.com" target="_blank">haroopad</a></footer>
 </body>
