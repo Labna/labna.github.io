@@ -16,7 +16,9 @@
 ##Exercices
 
 1. [Servlet - fomulaire](exercice1.html)
-2. [Servlet - media](exercice2.html)
+2. [Servlet - Mise en forme](exercice2.html)
+3. [Servlet - Session](exercice3.html)
+
 
 <div style="display:none">
 2. Servlet - JDBC
