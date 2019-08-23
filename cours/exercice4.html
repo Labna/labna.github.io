@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>cours1.html</title>
+  <title>Exercice 4.html</title>
   <meta name="generator" content="Haroopad 0.12.2" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,189 +10,79 @@
 </head>
 <body class="markdown clearness">
 
-  <div style="display:flex;justify-content:space-between"><div><a href="index.html">← home</a></div><div><a href="cours2.html">suivant →</a></div></div><h1 id="définitions"><a name="définitions" href="#définitions"></a>Définitions</h1><p class="toc" style="undefined"></p><ul>
-<li><ul>
-<li><ul>
-<li><span class="title">
-<a href="#excuses" title="Excuses">Excuses</a>
-</span>
-<!--span class="number">
-0
-</span-->
+  <p><a href="index.html">← home</a></p><h1 id="exercice-4---database"><a name="exercice-4---database" href="#exercice-4---database"></a>exercice 4 - database</h1><p>Il va nous falloir une base de données:</p><div style="display:none;"><br>1. <a href="https://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-web-community-8.0.17.0.msi">mySQL</a><br>2. <a href="//labna.github.io/files/mysql-connector-java-8.0.17.jar">à ajouter à tomcat (apache-tomcat-9.0.22\lib\mysql-connector-java-8.0.17.jar)</a><br><br><br>il est possible de rencontrer une erreur de time zone, la solution, dans l’url d’appel du serveur ajouter:<br><code>useJDBCCompliantTimezoneShift=true;useLegacyDatetimeCode=false;serverTimezone=UTC;</code><br>(la même chose pour ajouter le serveur sur votre IDE) (<a href="//www.youtube.com/watch?v=X6DJ348ZTpU">cf vidéo de la solution</a>)<br></div><ol>
+<li>Editez le fichier META-INF comme suit: (en remplaceant username, password, et URL par ceux de votre BDD)<pre><code class="xml hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;XML&quot;&gt;&amp;lt;Resource name=&quot;jdbc/confluence&quot; auth=&quot;Container&quot; type=&quot;javax.sql.DataSource&quot;
+ username=&quot;yourDatabaseUser&quot;
+ password=&quot;yourDatabasePassword&quot;
+ driverClassName=&quot;net.sourceforge.jtds.jdbc.Driver&quot;
+ url=&quot;jdbc:jtds:sqlserver://localhost:1433/yourDatabaseName&quot;
+ maxTotal=&quot;25&quot;
+ maxIdle=&quot;10&quot;
+ validationQuery=&quot;select 1&quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-tag">&lt;<span class="hljs-title">Resource</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"jdbc/confluence"</span> <span class="hljs-attribute">auth</span>=<span class="hljs-value">"Container"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"javax.sql.DataSource"</span>
+ <span class="hljs-attribute">username</span>=<span class="hljs-value">"yourDatabaseUser"</span>
+ <span class="hljs-attribute">password</span>=<span class="hljs-value">"yourDatabasePassword"</span>
+ <span class="hljs-attribute">driverClassName</span>=<span class="hljs-value">"net.sourceforge.jtds.jdbc.Driver"</span>
+ <span class="hljs-attribute">url</span>=<span class="hljs-value">"jdbc:jtds:sqlserver://localhost:1433/yourDatabaseName"</span>
+ <span class="hljs-attribute">maxTotal</span>=<span class="hljs-value">"25"</span>
+ <span class="hljs-attribute">maxIdle</span>=<span class="hljs-value">"10"</span>
+ <span class="hljs-attribute">validationQuery</span>=<span class="hljs-value">"select 1"</span> /&gt;</span>
+</code></pre>
 </li>
-</ul>
+<li>Ajouter la référence à la BDD dans web.xml:<pre><code class="xml hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;XML&quot;&gt;&amp;lt;resource-ref&amp;gt;
+ &amp;lt;description&amp;gt;Connection Pool&amp;lt;/description&amp;gt;
+ &amp;lt;res-ref-name&amp;gt;jdbc/confluence&amp;lt;/res-ref-name&amp;gt;
+ &amp;lt;res-type&amp;gt;javax.sql.DataSource&amp;lt;/res-type&amp;gt;
+ &amp;lt;res-auth&amp;gt;Container&amp;lt;/res-auth&amp;gt;
+&amp;lt;/resource-ref&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-tag">&lt;<span class="hljs-title">resource-ref</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">description</span>&gt;</span>Connection Pool<span class="hljs-tag">&lt;/<span class="hljs-title">description</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">res-ref-name</span>&gt;</span>jdbc/confluence<span class="hljs-tag">&lt;/<span class="hljs-title">res-ref-name</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">res-type</span>&gt;</span>javax.sql.DataSource<span class="hljs-tag">&lt;/<span class="hljs-title">res-type</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">res-auth</span>&gt;</span>Container<span class="hljs-tag">&lt;/<span class="hljs-title">res-auth</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">resource-ref</span>&gt;</span>
+</code></pre>
 </li>
-<li><span class="title">
-<a href="#jva_310" title="JVA_310">JVA_310</a>
-</span>
-<!--span class="number">
-1
-</span-->
-<ul>
-<li><span class="title">
-<a href="#fonctionnement-global" title="Fonctionnement global">Fonctionnement global</a>
-</span>
-<!--span class="number">
-2
-</span-->
-<ul>
-<li><span class="title">
-<a href="#le-navigateur" title="le Navigateur">le Navigateur</a>
-</span>
-<!--span class="number">
-3
-</span-->
-</li>
-<li><span class="title">
-<a href="#le-serveur" title="Le serveur">Le serveur</a>
-</span>
-<!--span class="number">
-4
-</span-->
-</li>
-<li><span class="title">
-<a href="#persistance-des-données" title="Persistance des données">Persistance des données</a>
-</span>
-<!--span class="number">
-5
-</span-->
-</li>
-<li><span class="title">
-<a href="#la-base-de-données" title="La base de données">La base de données</a>
-</span>
-<!--span class="number">
-6
-</span-->
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><span class="title">
-<a href="#jva_320" title="JVA_320">JVA_320</a>
-</span>
-<!--span class="number">
-7
-</span-->
-<ul>
-<li><span class="title">
-<a href="#java" title="Java">Java</a>
-</span>
-<!--span class="number">
-8
-</span-->
-<ul>
-<li><span class="title">
-<a href="#java-re-(runtime-environnement)" title="Java RE (runtime environnement)">Java RE (runtime environnement)</a>
-</span>
-<!--span class="number">
-9
-</span-->
-</li>
-<li><span class="title">
-<a href="#java-developpeur-kit-(jdk)" title="Java Developpeur kit (JDK)">Java Developpeur kit (JDK)</a>
-</span>
-<!--span class="number">
-10
-</span-->
-<ul>
-<li><span class="title">
-<a href="#java-se-(standart-edition)" title="Java SE (Standart edition)">Java SE (Standart edition)</a>
-</span>
-<!--span class="number">
-11
-</span-->
-</li>
-<li><span class="title">
-<a href="#java-ee-(entreprise-edition)" title="Java EE (Entreprise Edition)">Java EE (Entreprise Edition)</a>
-</span>
-<!--span class="number">
-12
-</span-->
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><span class="title">
-<a href="#dynamique-!" title="Dynamique !">Dynamique !</a>
-</span>
-<!--span class="number">
-13
-</span-->
-</li>
-<li><span class="title">
-<a href="#servlet" title="Servlet">Servlet</a>
-</span>
-<!--span class="number">
-14
-</span-->
-<ul>
-<li><span class="title">
-<a href="#c'est-quoi-?-ça-se-mange-?" title="C’est quoi ? ça se mange ?">C’est quoi ? ça se mange ?</a>
-</span>
-<!--span class="number">
-15
-</span-->
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<li><p>Afin d’utiliser cette connextion dans votre code, voici un exemple de méthode:</p>
+<pre><code class="java hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;JAVA&quot;&gt;@Resource(name=&quot;jdbc/mkyongdb&quot;)
+private DataSource ds;
+public String[] getCustomerList() throws SQLException{
+Connection con = ds.getConnection();
+Statement stm = con.createStatement();
+String str = &quot;SELECT * FROM werverdata.user;&quot;;
+ResultSet rs = stm.executeQuery(str);
+// permet de récupèrer les elements suivants
+// rs.next();
 
-</ul>
-<p></p><h3 id="excuses"><a name="excuses" href="#excuses"></a>Excuses</h3><p>Je tenais à commencer ce chapitre par des excuses, je viens de recevoir le contenu pédagogique de ce cours.<br>Et bien que nous ayons déjà travaillé sur les points les plus importants de ce contenu, il me semble qu’il nous faut revoir certains points depuis le début afin que tout soit plus clair et plus facile pour la suite.</p><p>Je vous demande pardon.</p><h2 id="jva_310"><a name="jva_310" href="#jva_310"></a>JVA_310</h2><h3 id="fonctionnement-global"><a name="fonctionnement-global" href="#fonctionnement-global"></a>Fonctionnement global</h3><p>Tout le monde connaît le principe du Web, mais pas forcement sont fonctionnement.</p><p>Le Chapitre 1 faisait état d’un protocole HTTP entre le serveur et le navigateur internet.</p><h4 id="le-navigateur"><a name="le-navigateur" href="#le-navigateur"></a>le Navigateur</h4><p>Je viendrais rajouter que bien qu’émettant une requête et recevant une réponse le navigateur interprète l’essentiel de ce qu’il reçoit, corrigeant les balises HTML, va chercher les fichiers mentionnés (images, scripts, applet (on verra ce dernier la semaine prochaine)). Selon le navigateur, certaines instructions ne sont pas exécutées de manière similaire, l’exemple le plus commun sont les sites développés pour Internet Explorer qui ne fonctionne pas sur les navigateurs Chrome ou Firefox.</p><p>Les réponses qu’il attend sont typées en catégories, text, image, application, vidéo, audio. Afin de savoir ce qu’il reçoit, l’en-tête de la réponse contient: <code>Content-Type: text/html</code>(ou text/css, text/javascript, image/gif, audio/mpeg, video/webm…).</p><p>Parmi ces types de contenues, le navigateur peut interpréter ce qu’il doit en faire, comme afficher l’image, structurer la page html (en masquant les balises), exécuter le JavaScript, jouter un player sur la vidéo, ou proposer d’enregistrer le contenu s’il est inconnu.</p><h4 id="le-serveur"><a name="le-serveur" href="#le-serveur"></a>Le serveur</h4><p>Quel que soit le langage du serveur, ils se plient tous au protocole HTTP, en attendant des requêtes, en y répondant. Ils mettent à disposition des ‘ports’ (80 pour le web) où ils écoutent les requêtes.</p><p>Des serveurs, il en existe beaucoup, les plus communs sont Apache qui interprète du PHP (ou JAVA, avec Tomcat) et IIS (Internet Information Services) qui peut être développé en C#, .Net, Visual Basic, JAVA. Bien que fournissant un service similaire,il y a beaucoup de différence entre eux, surtout technique.<br>Certains sont de purs fournisseurs de page web, d’autres fournissent en plus des services.<br>Le choix d’un serveur se fait pour ses fonctionnalités externe (capacité à communiqué avec certaines bases de données, les API disponibles…) et interne (Framwork facilité d’accès, légèreté d’exécution…), mais lors que ce n’est pas une contrainte, c’est par pure affinité que l’on choisit un serveur.</p><h4 id="persistance-des-données"><a name="persistance-des-données" href="#persistance-des-données"></a>Persistance des données</h4><p>Les données présentes en web sont classées si dessous:</p><table>
-<thead>
-<tr>
-<th>détenteur</th>
-<th>nom du stockage</th>
-<th>durée de vie</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Navigateur</td>
-<td>page web</td>
-<td>maintenu en cache jusqu’a rafraîchissement</td>
-</tr>
-<tr>
-<td>Navigateur</td>
-<td>ressources (image,fichiers CSS/JS)</td>
-<td>mise en cache jusqu’au redémarrage du navigateur</td>
-</tr>
-<tr>
-<td>Navigateur</td>
-<td>Cookie</td>
-<td>de quelques heures à plusieurs jours</td>
-</tr>
-<tr>
-<td>Serveur</td>
-<td>requête</td>
-<td>jusqu’à l’envoi de la réponse</td>
-</tr>
-<tr>
-<td>Serveur</td>
-<td>Session</td>
-<td>max quelques heures après la dernière requête du navigateur</td>
-</tr>
-<tr>
-<td>Serveur</td>
-<td>Variables et environnement</td>
-<td>jusqu’au redémarrage du serveur</td>
-</tr>
-<tr>
-<td>Base de données</td>
-<td>données envoyées dans une table/base</td>
-<td>∞</td>
-</tr>
-</tbody>
-</table><h4 id="la-base-de-données"><a name="la-base-de-données" href="#la-base-de-données"></a>La base de données</h4><p>Cela permet de stocker de données de manière structurer et rapide d’accès.<br>Ici elle va nous servir à stocker les paramètres d’identification des utilisateurs, mais par la suite la majorité du contenu du site web.</p><p>Elle est complètement extérieure au serveur web, et peut répondre aux demandes de plusieurs services (API, application client…)</p><h2 id="jva_320"><a name="jva_320" href="#jva_320"></a>JVA_320</h2><h3 id="java"><a name="java" href="#java"></a>Java</h3><h4 id="java-re-(runtime-environnement)"><a name="java-re-(runtime-environnement)" href="#java-re-(runtime-environnement)"></a>Java RE (runtime environnement)</h4><p>C’est une machine virtuelle qui comprend les versions compilées des ressources de base pour exécuter des fichiers exécutables.</p><h4 id="java-developpeur-kit-(jdk)"><a name="java-developpeur-kit-(jdk)" href="#java-developpeur-kit-(jdk)"></a>Java Developpeur kit (JDK)</h4><p>Qui se déclines en de multiples variantes.</p><h5 id="java-se-(standart-edition)"><a name="java-se-(standart-edition)" href="#java-se-(standart-edition)"></a>Java SE (Standart edition)</h5><p>Cela comprend les sources des ressources pour compiler des exécutables Java.</p><h5 id="java-ee-(entreprise-edition)"><a name="java-ee-(entreprise-edition)" href="#java-ee-(entreprise-edition)"></a>Java EE (Entreprise Edition)</h5><p>Cela comprend les sources des ressources pour créer les applications, et beaucoup de ressources supplémentaires pour faire des applications plus complexes, comme servir de module à une autre application (ex: mod Minecraft, Servlet, pluggin de navigateur internet)</p><h3 id="dynamique-!"><a name="dynamique-!" href="#dynamique-!"></a>Dynamique !</h3><p>On considère 3 types de sites web:</p><ol>
-<li>Statique, lorsque vous accédez à un fichier HTML</li>
-<li>Dynamique, lorsqu’un serveur compose la page pour vous</li>
-<li>Applet, lorsque vous exécutez une miniapplication sur votre naviguateur (exemple: google doc)</li>
-</ol><h3 id="servlet"><a name="servlet" href="#servlet"></a>Servlet</h3><h4 id="c'est-quoi-?-ça-se-mange-?"><a name="c'est-quoi-?-ça-se-mange-?" href="#c'est-quoi-?-ça-se-mange-?"></a>C’est quoi ? ça se mange ?</h4><p>Un Servlet est une classe java (EE) destiné à être exécuter et gèrer par un conteneur web (principalement un serveur web, Tomcat, Jetty, JBoss).<br>C’est un objet qui est destiné à recevoir des requête et y répondre (communément en HTML, XML).</p><p>Le conteneur est chargé de la selection du Servlet à executer (selon l’URL) et de génèrer l’instances de la requêtes, ce qui fait que chaque requête est isolé des autres au sein du Servlet.</p><div style="display:flex;justify-content:space-between"><div><a href="index.html">← home</a></div><div><a href="cours2.html">suivant →</a></div></div>
+String[] result = new String[2];
+result[0] = rs.getString(&quot;name&quot;);
+result[1] = rs.getString(&quot;password&quot;);
+rs.close();
+stm.close();
+con.close();
+return result;
+}
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-annotation">@Resource</span>(name=<span class="hljs-string">"jdbc/mkyongdb"</span>)
+<span class="hljs-keyword">private</span> DataSource ds;
+<span class="hljs-keyword">public</span> String[] <span class="hljs-title">getCustomerList</span>() <span class="hljs-keyword">throws</span> SQLException{
+Connection con = ds.getConnection();
+Statement stm = con.createStatement();
+String str = <span class="hljs-string">"SELECT * FROM werverdata.user;"</span>;
+ResultSet rs = stm.executeQuery(str);
+<span class="hljs-comment">// permet de récupèrer les elements suivants</span>
+<span class="hljs-comment">// rs.next();</span>
+
+String[] result = <span class="hljs-keyword">new</span> String[<span class="hljs-number">2</span>];
+result[<span class="hljs-number">0</span>] = rs.getString(<span class="hljs-string">"name"</span>);
+result[<span class="hljs-number">1</span>] = rs.getString(<span class="hljs-string">"password"</span>);
+rs.close();
+stm.close();
+con.close();
+<span class="hljs-keyword">return</span> result;
+}
+</code></pre>
+</li>
+</ol><p><a href="https://confluence.atlassian.com/conf59/configuring-a-sql-server-datasource-in-apache-tomcat-792499577.html">Tuto (en englais)</a> vers la config de la base de données (SQL server) dans Tomcat.</p><p><a href="index.html">← home</a></p>
 
 <footer style="position:fixed; font-size:.8em; text-align:right; bottom:0px; margin-left:-25px; height:20px; width:100%;">generated by <a href="http://pad.haroopress.com" target="_blank">haroopad</a></footer>
 </body>
