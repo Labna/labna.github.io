@@ -11,11 +11,11 @@
 <body class="markdown clearness">
 
   <p><a href="index.html">← home</a></p><h1 id="exercice-4---database"><a name="exercice-4---database" href="#exercice-4---database"></a>exercice 4 - database</h1><p>Il va nous falloir une base de données:</p><div style="display:none;"><br>1. <a href="https://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-web-community-8.0.17.0.msi">mySQL</a><br>2. <a href="//labna.github.io/files/mysql-connector-java-8.0.17.jar">à ajouter à tomcat (apache-tomcat-9.0.22\lib\mysql-connector-java-8.0.17.jar)</a><br><br><br>il est possible de rencontrer une erreur de time zone, la solution, dans l’url d’appel du serveur ajouter:<br><code>useJDBCCompliantTimezoneShift=true;useLegacyDatetimeCode=false;serverTimezone=UTC;</code><br>(la même chose pour ajouter le serveur sur votre IDE) (<a href="//www.youtube.com/watch?v=X6DJ348ZTpU">cf vidéo de la solution</a>)<br></div><ol>
-<li>Editez le fichier META-INF comme suit: (en remplaceant username, password, et URL par ceux de votre BDD)<pre><code class="xml hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;XML&quot;&gt;&amp;lt;Resource name=&quot;jdbc/confluence&quot; auth=&quot;Container&quot; type=&quot;javax.sql.DataSource&quot;
+<li>Editez le fichier META-INF comme suit: (en remplaçant username, password, et URL par ceux de votre BDD)<pre><code class="xml hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;XML&quot;&gt;&amp;lt;Resource name=&quot;jdbc/confluence&quot; auth=&quot;Container&quot; type=&quot;javax.sql.DataSource&quot;
  username=&quot;yourDatabaseUser&quot;
  password=&quot;yourDatabasePassword&quot;
  driverClassName=&quot;net.sourceforge.jtds.jdbc.Driver&quot;
- url=&quot;jdbc:jtds:sqlserver://localhost:1433/yourDatabaseName&quot;
+ url=&quot;jdbc:sqlserver://localhost\SQLEXPRESS:57577/databaseName=exoBD&quot;
  maxTotal=&quot;25&quot;
  maxIdle=&quot;10&quot;
  validationQuery=&quot;select 1&quot; /&amp;gt;
@@ -23,35 +23,39 @@
  <span class="hljs-attribute">username</span>=<span class="hljs-value">"yourDatabaseUser"</span>
  <span class="hljs-attribute">password</span>=<span class="hljs-value">"yourDatabasePassword"</span>
  <span class="hljs-attribute">driverClassName</span>=<span class="hljs-value">"net.sourceforge.jtds.jdbc.Driver"</span>
- <span class="hljs-attribute">url</span>=<span class="hljs-value">"jdbc:jtds:sqlserver://localhost:1433/yourDatabaseName"</span>
+ <span class="hljs-attribute">url</span>=<span class="hljs-value">"jdbc:sqlserver://localhost\SQLEXPRESS:57577/databaseName=exoBD"</span>
  <span class="hljs-attribute">maxTotal</span>=<span class="hljs-value">"25"</span>
  <span class="hljs-attribute">maxIdle</span>=<span class="hljs-value">"10"</span>
  <span class="hljs-attribute">validationQuery</span>=<span class="hljs-value">"select 1"</span> /&gt;</span>
 </code></pre>
 </li>
-<li>Ajouter la référence à la BDD dans web.xml:<pre><code class="xml hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;XML&quot;&gt;&amp;lt;resource-ref&amp;gt;
+<li>Ajouter la référence à la BDD dans web.xml:<pre><code class="xml hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;XML&quot;&gt;&amp;lt;Context path=&quot;/VotreProjet&quot;&amp;gt;
+&amp;lt;resource-ref&amp;gt;
  &amp;lt;description&amp;gt;Connection Pool&amp;lt;/description&amp;gt;
  &amp;lt;res-ref-name&amp;gt;jdbc/confluence&amp;lt;/res-ref-name&amp;gt;
  &amp;lt;res-type&amp;gt;javax.sql.DataSource&amp;lt;/res-type&amp;gt;
  &amp;lt;res-auth&amp;gt;Container&amp;lt;/res-auth&amp;gt;
 &amp;lt;/resource-ref&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-tag">&lt;<span class="hljs-title">resource-ref</span>&gt;</span>
+&amp;lt;/Context&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-tag">&lt;<span class="hljs-title">Context</span> <span class="hljs-attribute">path</span>=<span class="hljs-value">"/VotreProjet"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">resource-ref</span>&gt;</span>
  <span class="hljs-tag">&lt;<span class="hljs-title">description</span>&gt;</span>Connection Pool<span class="hljs-tag">&lt;/<span class="hljs-title">description</span>&gt;</span>
  <span class="hljs-tag">&lt;<span class="hljs-title">res-ref-name</span>&gt;</span>jdbc/confluence<span class="hljs-tag">&lt;/<span class="hljs-title">res-ref-name</span>&gt;</span>
  <span class="hljs-tag">&lt;<span class="hljs-title">res-type</span>&gt;</span>javax.sql.DataSource<span class="hljs-tag">&lt;/<span class="hljs-title">res-type</span>&gt;</span>
  <span class="hljs-tag">&lt;<span class="hljs-title">res-auth</span>&gt;</span>Container<span class="hljs-tag">&lt;/<span class="hljs-title">res-auth</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">resource-ref</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">Context</span>&gt;</span>
 </code></pre>
 </li>
-<li><p>Afin d’utiliser cette connextion dans votre code, voici un exemple de méthode:</p>
-<pre><code class="java hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;JAVA&quot;&gt;@Resource(name=&quot;jdbc/mkyongdb&quot;)
+<li><p>Afin d’utiliser cette connexion dans votre code, voici un exemple de méthode:</p>
+<pre><code class="java hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;JAVA&quot;&gt;@Resource(name=&quot;jdbc/confluence&quot;)
 private DataSource ds;
 public String[] getCustomerList() throws SQLException{
 Connection con = ds.getConnection();
 Statement stm = con.createStatement();
 String str = &quot;SELECT * FROM werverdata.user;&quot;;
 ResultSet rs = stm.executeQuery(str);
-// permet de récupèrer les elements suivants
+// permet de récupérer les éléments suivants
 // rs.next();
 
 String[] result = new String[2];
@@ -62,14 +66,14 @@ stm.close();
 con.close();
 return result;
 }
-&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-annotation">@Resource</span>(name=<span class="hljs-string">"jdbc/mkyongdb"</span>)
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-annotation">@Resource</span>(name=<span class="hljs-string">"jdbc/confluence"</span>)
 <span class="hljs-keyword">private</span> DataSource ds;
 <span class="hljs-keyword">public</span> String[] <span class="hljs-title">getCustomerList</span>() <span class="hljs-keyword">throws</span> SQLException{
 Connection con = ds.getConnection();
 Statement stm = con.createStatement();
 String str = <span class="hljs-string">"SELECT * FROM werverdata.user;"</span>;
 ResultSet rs = stm.executeQuery(str);
-<span class="hljs-comment">// permet de récupèrer les elements suivants</span>
+<span class="hljs-comment">// permet de récupérer les éléments suivants</span>
 <span class="hljs-comment">// rs.next();</span>
 
 String[] result = <span class="hljs-keyword">new</span> String[<span class="hljs-number">2</span>];
@@ -82,7 +86,21 @@ con.close();
 }
 </code></pre>
 </li>
-</ol><p><a href="https://confluence.atlassian.com/conf59/configuring-a-sql-server-datasource-in-apache-tomcat-792499577.html">Tuto (en englais)</a> vers la config de la base de données (SQL server) dans Tomcat.</p><p><a href="index.html">← home</a></p>
+</ol><p><a href="https://confluence.atlassian.com/conf59/configuring-a-sql-server-datasource-in-apache-tomcat-792499577.html">Tuto (en anglais)</a> vers la config de la base de données (SQL server) dans Tomcat.</p><p>Pour se connecter au serveur SQL server:</p><ol>
+<li>récupérez le fichier: <a href="https://www.microsoft.com/fr-fr/download/details.aspx/?id=58505">https://www.microsoft.com/fr-fr/download/details.aspx/?id=58505</a> <img src="jar.png" alt="jar.png"></li>
+<li>Ouvrez SQL Server Configuration manager (2008) <img src="configManager.png" alt="configManager.png"></li>
+<li>Activez protocole IP/TCP <img src="ip.png" alt="ip.png"></li>
+<li>récupérez le port de connection <img src="getPort.png" alt="getPort.png"></li>
+<li>Créez un utilisateur dans la base avec SQL Server Manager studio <img src="newUser.png" alt="newUser.png"></li>
+<li>avec les paramètres <img src="userParam.png" alt="userParam.png"></li>
+<li>Editer les paramètres de la bdd <img src="managerStudio.png" alt="managerStudio.png"></li>
+<li>Modifier l’authentification <img src="serverEtWindows.png" alt="serverEtWindows.png"></li>
+<li>Redémarrer le serveur SQL <img src="redemarrer.png" alt="redemarrer.png"></li>
+<li>Dans Votre IDE, créez une nouvelle connexion à une base de données, en utilisant le jar dans l’archive récupérer à l’étape 1 <img src="serverPlugin.png" alt="serverPlugin.png"></li>
+<li>avec les paramètres <img src="autentification.png" alt="autentification.png"></li>
+<li>Ajouter le driver à Tomcat (dans <code>&lt;tomcat&gt;\lib\</code>) <img src="serverDriver.png" alt="serverDriver.png"></li>
+<li>Redémarer Tomcat</li>
+</ol><p><a href="index.html">← home</a></p>
 
 <footer style="position:fixed; font-size:.8em; text-align:right; bottom:0px; margin-left:-25px; height:20px; width:100%;">generated by <a href="http://pad.haroopress.com" target="_blank">haroopad</a></footer>
 </body>
