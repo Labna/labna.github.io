@@ -90,7 +90,7 @@
 </span-->
 </li>
 <li><span class="title">
-<a href="#java-developpeur-kit-(jdk)" title="Java Developpeur kit (JDK)">Java Developpeur kit (JDK)</a>
+<a href="#java-développeur-kit-(jdk)" title="Java Développeur kit (JDK)">Java Développeur kit (JDK)</a>
 </span>
 <!--span class="number">
 10
@@ -129,7 +129,7 @@
 </span-->
 <ul>
 <li><span class="title">
-<a href="#c'est-quoi-?-ça-se-mange-?" title="C’est quoi ? ça se mange ?">C’est quoi ? ça se mange ?</a>
+<a href="#qu'est-ce-?-comment-ça-marche-?" title="Qu’est-ce ? Comment ça marche ?">Qu’est-ce ? Comment ça marche ?</a>
 </span>
 <!--span class="number">
 15
@@ -139,11 +139,66 @@
 </li>
 </ul>
 </li>
+<li><span class="title">
+<a href="#jva_330" title="JVA_330">JVA_330</a>
+</span>
+<!--span class="number">
+16
+</span-->
+<ul>
+<li><span class="title">
+<a href="#les-objets-implicites" title="Les objets implicites">Les objets implicites</a>
+</span>
+<!--span class="number">
+17
+</span-->
+</li>
+<li><span class="title">
+<a href="#javabeans" title="JavaBeans">JavaBeans</a>
+</span>
+<!--span class="number">
+18
+</span-->
+<ul>
+<li><span class="title">
+<a href="#jsp-:-la-boule-à-facettes" title="JSP : la boule à facettes">JSP : la boule à facettes</a>
+</span>
+<!--span class="number">
+19
+</span-->
+<ul>
+<li><span class="title">
+<a href="#raisons-de-ces-ajouts" title="Raisons de ces ajouts">Raisons de ces ajouts</a>
+</span>
+<!--span class="number">
+20
+</span-->
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="title">
+<a href="#le-petit-+" title="Le petit +">Le petit +</a>
+</span>
+<!--span class="number">
+21
+</span-->
+</li>
+</ul>
+</li>
+<li><span class="title">
+<a href="#jva_340" title="JVA_340">JVA_340</a>
+</span>
+<!--span class="number">
+22
+</span-->
+</li>
 </ul>
 </li>
 
 </ul>
-<p></p><h3 id="excuses"><a name="excuses" href="#excuses"></a>Excuses</h3><p>Je tenais à commencer ce chapitre par des excuses, je viens de recevoir le contenu pédagogique de ce cours.<br>Et bien que nous ayons déjà travaillé sur les points les plus importants de ce contenu, il me semble qu’il nous faut revoir certains points depuis le début afin que tout soit plus clair et plus facile pour la suite.</p><p>Je vous demande pardon.</p><h2 id="jva_310"><a name="jva_310" href="#jva_310"></a>JVA_310</h2><h3 id="fonctionnement-global"><a name="fonctionnement-global" href="#fonctionnement-global"></a>Fonctionnement global</h3><p>Tout le monde connaît le principe du Web, mais pas forcement sont fonctionnement.</p><p>Le Chapitre 1 faisait état d’un protocole HTTP entre le serveur et le navigateur internet.</p><h4 id="le-navigateur"><a name="le-navigateur" href="#le-navigateur"></a>le Navigateur</h4><p>Je viendrais rajouter que bien qu’émettant une requête et recevant une réponse le navigateur interprète l’essentiel de ce qu’il reçoit, corrigeant les balises HTML, va chercher les fichiers mentionnés (images, scripts, applet (on verra ce dernier la semaine prochaine)). Selon le navigateur, certaines instructions ne sont pas exécutées de manière similaire, l’exemple le plus commun sont les sites développés pour Internet Explorer qui ne fonctionne pas sur les navigateurs Chrome ou Firefox.</p><p>Les réponses qu’il attend sont typées en catégories, text, image, application, vidéo, audio. Afin de savoir ce qu’il reçoit, l’en-tête de la réponse contient: <code>Content-Type: text/html</code>(ou text/css, text/javascript, image/gif, audio/mpeg, video/webm…).</p><p>Parmi ces types de contenues, le navigateur peut interpréter ce qu’il doit en faire, comme afficher l’image, structurer la page html (en masquant les balises), exécuter le JavaScript, jouter un player sur la vidéo, ou proposer d’enregistrer le contenu s’il est inconnu.</p><h4 id="le-serveur"><a name="le-serveur" href="#le-serveur"></a>Le serveur</h4><p>Quel que soit le langage du serveur, ils se plient tous au protocole HTTP, en attendant des requêtes, en y répondant. Ils mettent à disposition des ‘ports’ (80 pour le web) où ils écoutent les requêtes.</p><p>Des serveurs, il en existe beaucoup, les plus communs sont Apache qui interprète du PHP (ou JAVA, avec Tomcat) et IIS (Internet Information Services) qui peut être développé en C#, .Net, Visual Basic, JAVA. Bien que fournissant un service similaire,il y a beaucoup de différence entre eux, surtout technique.<br>Certains sont de purs fournisseurs de page web, d’autres fournissent en plus des services.<br>Le choix d’un serveur se fait pour ses fonctionnalités externe (capacité à communiqué avec certaines bases de données, les API disponibles…) et interne (Framwork facilité d’accès, légèreté d’exécution…), mais lors que ce n’est pas une contrainte, c’est par pure affinité que l’on choisit un serveur.</p><h4 id="persistance-des-données"><a name="persistance-des-données" href="#persistance-des-données"></a>Persistance des données</h4><p>Les données présentes en web sont classées si dessous:</p><table>
+<p></p><h3 id="excuses"><a name="excuses" href="#excuses"></a>Excuses</h3><p>Je tenais à commencer ce chapitre par des excuses, je viens de recevoir le contenu pédagogique de ce cours.<br>Et bien que nous ayons déjà travaillé sur les points les plus importants de ce contenu, il me semble qu’il nous faut revoir certains points depuis le début afin que tout soit plus clair et plus facile pour la suite.</p><p>Je vous demande pardon.</p><h2 id="jva_310"><a name="jva_310" href="#jva_310"></a>JVA_310</h2><h3 id="fonctionnement-global"><a name="fonctionnement-global" href="#fonctionnement-global"></a>Fonctionnement global</h3><p>Tout le monde connaît le principe du Web, mais pas forcement sont fonctionnement.</p><p>Le Chapitre 1 faisait état d’un protocole HTTP entre le serveur et le navigateur internet.</p><h4 id="le-navigateur"><a name="le-navigateur" href="#le-navigateur"></a>le Navigateur</h4><p>Je viendrais rajouter que bien qu’émettant une requête et recevant une réponse le navigateur interprète l’essentiel de ce qu’il reçoit, corrigeant les balises HTML, va chercher les fichiers mentionnés (images, scripts, applet (on verra ce dernier la semaine prochaine)). Selon le navigateur, certaines instructions ne sont pas exécutées de manière similaire, les exemples le plus communs sont les sites développés pour Internet Explorer qui ne fonctionne pas sur les navigateurs Chrome ou Firefox.</p><p>Les réponses qu’il attend sont typées en catégories, text, image, application, vidéo, audio. Afin de savoir ce qu’il reçoit, l’en-tête de la réponse contient: <code>Content-Type: text/html</code>(ou text/css, text/javascript, image/gif, audio/mpeg, video/webm…).</p><p>Parmi ces types de contenues, le navigateur peut interpréter ce qu’il doit en faire, comme afficher l’image, structurer la page HTML (en masquant les balises), exécuter le JavaScript, ajouter un player sur la vidéo, ou proposer d’enregistrer le contenu s’il est inconnu.</p><h4 id="le-serveur"><a name="le-serveur" href="#le-serveur"></a>Le serveur</h4><p>Quel que soit le langage du serveur, ils se plient tous au protocole HTTP, en attendant des requêtes, en y répondant. Ils mettent à disposition des ‘ports’ (80 pour le web) où ils écoutent les requêtes.</p><p>Des serveurs, il en existe beaucoup, les plus communs sont Apache qui interprète du PHP (ou JAVA, avec Tomcat) et IIS (Internet Information Services) qui peut être développé en C#, .Net, Visual Basic, JAVA. Bien que fournissant un service similaire,il y a beaucoup de différence entre eux, surtout technique.<br>Certains sont de purs fournisseurs de page web, d’autres fournissent en plus des services.<br>Le choix d’un serveur se fait pour ses fonctionnalités externe (capacité à communiqué avec certaines bases de données, les API disponibles…) et interne (Framwork facilité d’accès, légèreté d’exécution…), mais lors que ce n’est pas une contrainte, c’est par pure affinité que l’on choisit un serveur.</p><h4 id="persistance-des-données"><a name="persistance-des-données" href="#persistance-des-données"></a>Persistance des données</h4><p>Les données présentes en web sont classées si dessous:</p><table>
 <thead>
 <tr>
 <th>détenteur</th>
@@ -188,11 +243,146 @@
 <td>∞</td>
 </tr>
 </tbody>
-</table><h4 id="la-base-de-données"><a name="la-base-de-données" href="#la-base-de-données"></a>La base de données</h4><p>Cela permet de stocker de données de manière structurer et rapide d’accès.<br>Ici elle va nous servir à stocker les paramètres d’identification des utilisateurs, mais par la suite la majorité du contenu du site web.</p><p>Elle est complètement extérieure au serveur web, et peut répondre aux demandes de plusieurs services (API, application client…)</p><h2 id="jva_320"><a name="jva_320" href="#jva_320"></a>JVA_320</h2><h3 id="java"><a name="java" href="#java"></a>Java</h3><h4 id="java-re-(runtime-environnement)"><a name="java-re-(runtime-environnement)" href="#java-re-(runtime-environnement)"></a>Java RE (runtime environnement)</h4><p>C’est une machine virtuelle qui comprend les versions compilées des ressources de base pour exécuter des fichiers exécutables.</p><h4 id="java-developpeur-kit-(jdk)"><a name="java-developpeur-kit-(jdk)" href="#java-developpeur-kit-(jdk)"></a>Java Developpeur kit (JDK)</h4><p>Qui se déclines en de multiples variantes.</p><h5 id="java-se-(standart-edition)"><a name="java-se-(standart-edition)" href="#java-se-(standart-edition)"></a>Java SE (Standart edition)</h5><p>Cela comprend les sources des ressources pour compiler des exécutables Java.</p><h5 id="java-ee-(entreprise-edition)"><a name="java-ee-(entreprise-edition)" href="#java-ee-(entreprise-edition)"></a>Java EE (Entreprise Edition)</h5><p>Cela comprend les sources des ressources pour créer les applications, et beaucoup de ressources supplémentaires pour faire des applications plus complexes, comme servir de module à une autre application (ex: mod Minecraft, Servlet, pluggin de navigateur internet)</p><h3 id="dynamique-!"><a name="dynamique-!" href="#dynamique-!"></a>Dynamique !</h3><p>On considère 3 types de sites web:</p><ol>
+</table><h4 id="la-base-de-données"><a name="la-base-de-données" href="#la-base-de-données"></a>La base de données</h4><p>Cela permet de stocker de données de manière structurée et rapide d’accès.<br>Ici elle va nous servir à stocker les paramètres d’identification des utilisateurs, mais par la suite la majorité du contenu du site web.</p><p>Elle est complètement extérieure au serveur web, et peut répondre aux demandes de plusieurs services (API, application client…)</p><h2 id="jva_320"><a name="jva_320" href="#jva_320"></a>JVA_320</h2><h3 id="java"><a name="java" href="#java"></a>Java</h3><h4 id="java-re-(runtime-environnement)"><a name="java-re-(runtime-environnement)" href="#java-re-(runtime-environnement)"></a>Java RE (runtime environnement)</h4><p>C’est une machine virtuelle qui comprend les versions compilées des ressources de base pour exécuter des fichiers exécutables.</p><h4 id="java-développeur-kit-(jdk)"><a name="java-développeur-kit-(jdk)" href="#java-développeur-kit-(jdk)"></a>Java Développeur kit (JDK)</h4><p>Qui se décline en de multiples variantes.</p><h5 id="java-se-(standart-edition)"><a name="java-se-(standart-edition)" href="#java-se-(standart-edition)"></a>Java SE (Standart edition)</h5><p>Cela comprend les sources des ressources pour compiler des exécutables Java.</p><h5 id="java-ee-(entreprise-edition)"><a name="java-ee-(entreprise-edition)" href="#java-ee-(entreprise-edition)"></a>Java EE (Entreprise Edition)</h5><p>Cela comprend les sources des ressources pour créer les applications, et beaucoup de ressources supplémentaires pour faire des applications plus complexes, comme servir de module à une autre application (ex: mod d’un jeu vidéo, Servlet, pluggin de navigateur internet)</p><h3 id="dynamique-!"><a name="dynamique-!" href="#dynamique-!"></a>Dynamique !</h3><p>On considère 3 types de sites web:</p><ol>
 <li>Statique, lorsque vous accédez à un fichier HTML</li>
 <li>Dynamique, lorsqu’un serveur compose la page pour vous</li>
-<li>Applet, lorsque vous exécutez une miniapplication sur votre naviguateur (exemple: google doc)</li>
-</ol><h3 id="servlet"><a name="servlet" href="#servlet"></a>Servlet</h3><h4 id="c'est-quoi-?-ça-se-mange-?"><a name="c'est-quoi-?-ça-se-mange-?" href="#c'est-quoi-?-ça-se-mange-?"></a>C’est quoi ? ça se mange ?</h4><p>Un Servlet est une classe java (EE) destiné à être exécuter et gèrer par un conteneur web (principalement un serveur web, Tomcat, Jetty, JBoss).<br>C’est un objet qui est destiné à recevoir des requête et y répondre (communément en HTML, XML).</p><p>Le conteneur est chargé de la selection du Servlet à executer (selon l’URL) et de génèrer l’instances de la requêtes, ce qui fait que chaque requête est isolé des autres au sein du Servlet.</p><div style="display:flex;justify-content:space-between"><div><a href="index.html">← home</a></div><div><a href="cours2.html">suivant →</a></div></div>
+<li>Applet, lorsque vous exécutez une miniapplication sur votre navigateur (exemple: google doc)</li>
+</ol><h3 id="servlet"><a name="servlet" href="#servlet"></a>Servlet</h3><h4 id="qu'est-ce-?-comment-ça-marche-?"><a name="qu'est-ce-?-comment-ça-marche-?" href="#qu'est-ce-?-comment-ça-marche-?"></a>Qu’est-ce ? Comment ça marche ?</h4><p>Un Servlet est une classe Java (EE) destinée à être exécutée et gérée par un conteneur web (principalement un serveur web, Tomcat, Jetty, JBoss).<br>C’est un objet qui est destiné à recevoir des requêtes et y répondre (communément en HTML, XML).</p><p>Le conteneur est chargé de la sélection du Servlet à exécuter (selon l’URL) et de générer l’instance de la requête, ce qui fait que chaque requête est isolée des autres au sein du Servlet.</p><h2 id="jva_330"><a name="jva_330" href="#jva_330"></a>JVA_330</h2><h3 id="les-objets-implicites"><a name="les-objets-implicites" href="#les-objets-implicites"></a>Les objets implicites</h3><p>Il y a quelques objets toujours disponibles (JSP ou Servlet), et instancier par le conteneur (tomcat), dont voici la liste:</p><table>
+<thead>
+<tr>
+<th>Objets implicites</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>request</td>
+<td>javax.servlet.http.HttpServletRequest</td>
+</tr>
+<tr>
+<td>response</td>
+<td>javax.servlet.http.HttpServletResponse</td>
+</tr>
+<tr>
+<td>pageContext</td>
+<td>javax.servlet.jsp.PageContext</td>
+</tr>
+<tr>
+<td>page</td>
+<td>java.lang.Object</td>
+</tr>
+<tr>
+<td>application</td>
+<td>javax.servlet.ServletContext</td>
+</tr>
+<tr>
+<td>session</td>
+<td>javax.servlet.http.HttpSession</td>
+</tr>
+<tr>
+<td>config</td>
+<td>javax.servlet.ServletConfig</td>
+</tr>
+<tr>
+<td>out</td>
+<td>javax.servlet.jsp.JspWriter</td>
+</tr>
+<tr>
+<td>exception</td>
+<td>java.lang.Throwable</td>
+</tr>
+</tbody>
+</table><p>Les objets response, request et session commencent à vous être familier.</p><h3 id="javabeans"><a name="javabeans" href="#javabeans"></a>JavaBeans</h3><p>C’est une convention de structure d’objet serialisable, qui comprend méthodes et variables (avec accesseurs, Setter et Getter). Les objets implicites font partie de cette catégorie.</p><p>Exemple:</p><pre><code class="java hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;JAVA&quot;&gt;public class PersonBean implements Serializable {
+    private String name;
+
+    // Constructeur par défaut (ne prenant pas d'arguments).
+    public PersonBean() {
+    }
+
+    public String getName() {
+        return this.name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+
+// On l'utilise comme suit:
+public class testPerson{
+  public void maMethode(){
+    PersonBean person = new PersonBean();
+    person.setName = &quot;Labna&quot;
+    Systeme.out.println(person.getName());
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PersonBean</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Serializable</span> </span>{
+    <span class="hljs-keyword">private</span> String name;
+
+    <span class="hljs-comment">// Constructeur par défaut (ne prenant pas d'arguments).</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-title">PersonBean</span>() {
+    }
+
+    <span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span>() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.name;
+    }
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setName</span>(String name) {
+        <span class="hljs-keyword">this</span>.name = name;
+    }
+}
+
+<span class="hljs-comment">// On l'utilise comme suit:</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">testPerson</span></span>{
+  <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">maMethode</span>(){
+    PersonBean person = <span class="hljs-keyword">new</span> PersonBean();
+    person.setName = <span class="hljs-string">"Labna"</span>
+    Systeme.out.println(person.getName());
+  }
+}
+</code></pre><p>Ce type d’élément peut être très utile s’ils correspondent à la structure d’une base de données.</p><h4 id="jsp-:-la-boule-à-facettes"><a name="jsp-:-la-boule-à-facettes" href="#jsp-:-la-boule-à-facettes"></a>JSP : la boule à facettes</h4><p>Dans une page JSP, il est possible d’utiliser de nombreuses technologies:</p><pre><code class="html hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;HTML&quot;&gt;&amp;lt;!-- ceci est du JSP --&amp;gt;
+&amp;lt;jsp:useBean id=&quot;simplePerson&quot; class=&quot;nf.fr.labnaworlds.PersonBean&quot;/&amp;gt;
+&amp;lt;jsp:setProperty id=&quot;simplePerson&quot; name=&quot;name&quot; value=&quot;Alban&quot;/&amp;gt;
+&amp;lt;!-- &amp;lt;% %&amp;gt; est un alias vers &amp;lt;jsp:expression&amp;gt; &amp;lt;/jsp:expression&amp;gt; --&amp;gt;
+
+&amp;lt;!-- ceci est de l'Expression Language (EL) et est résolu avant toutes les autres interprétations (JSP, JSTL...) --&amp;gt;
+&amp;amp;{simplePerson.name}
+
+&amp;lt;!-- ceci est du JSTL (Java Standart Library tag) --&amp;gt;
+&amp;lt;%@ taglib uri=&quot;http://java.sun.com/jstl/core&quot; prefix=&quot;c&quot; %&amp;gt;
+&amp;lt;c:if test=&quot;${simplePerson.name}&quot;&amp;gt;
+  &amp;lt;c:out value=&quot;simplePerson.name&quot;/&amp;gt;
+&amp;lt;/c:if&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-comment">&lt;!-- ceci est du JSP --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">jsp:useBean</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"simplePerson"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nf.fr.labnaworlds.PersonBean"</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">jsp:setProperty</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"simplePerson"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"name"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"Alban"</span>/&gt;</span>
+<span class="hljs-comment">&lt;!-- &lt;% %&gt; est un alias vers &lt;jsp:expression&gt; &lt;/jsp:expression&gt; --&gt;</span>
+
+<span class="hljs-comment">&lt;!-- ceci est de l'Expression Language (EL) et est résolu avant toutes les autres interprétations (JSP, JSTL...) --&gt;</span>
+&amp;{simplePerson.name}
+
+<span class="hljs-comment">&lt;!-- ceci est du JSTL (Java Standart Library tag) --&gt;</span>
+<span class="vbscript">&lt;%@ taglib uri=<span class="hljs-string">"http://java.sun.com/jstl/core"</span> prefix=<span class="hljs-string">"c"</span> %&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">c:if</span> <span class="hljs-attribute">test</span>=<span class="hljs-value">"${simplePerson.name}"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">c:out</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"simplePerson.name"</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">c:if</span>&gt;</span>
+</code></pre><p>Pour fonctionner, le JSTL est à ajouter au ficher web.xml</p><pre><code class="xml hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;XML&quot;&gt;&amp;lt;web-app ...&amp;gt;
+  &amp;lt;context-param&amp;gt;
+    &amp;lt;param-name&amp;gt;javax.servlet.jsp.jstl.sql.dataSource&amp;lt;/param-name&amp;gt;
+    &amp;lt;param-value&amp;gt;jdbc/data&amp;lt;/param-value&amp;gt;
+  &amp;lt;/context-param&amp;gt;
+&amp;lt;/web-app&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-tag">&lt;<span class="hljs-title">web-app</span> <span class="hljs-attribute">...</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">context-param</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">param-name</span>&gt;</span>javax.servlet.jsp.jstl.sql.dataSource<span class="hljs-tag">&lt;/<span class="hljs-title">param-name</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">param-value</span>&gt;</span>jdbc/data<span class="hljs-tag">&lt;/<span class="hljs-title">param-value</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">context-param</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">web-app</span>&gt;</span>
+</code></pre><p>Dans le même sens que le JSTL, il existe d’autres bibliothèques qui sont intégrables aux pages JSP, FMT (qui gère le formatage des textes (mise selon la langue, date… )), SQL (qui permet une écriture simplifier de requêtes), FN (sert à protéger des chaînes, prend en compte des conditions, et des fonctions similaires à celles trouver dans la classe String (join, subtring, replace, split…)). Il est possible d’ajouter sa propre bibliothèque utilisant l’API de JSTL. </p><h5 id="raisons-de-ces-ajouts"><a name="raisons-de-ces-ajouts" href="#raisons-de-ces-ajouts"></a>Raisons de ces ajouts</h5><p>Pour rendre les pages plus simples à développer, plusieurs technologies sont venues s’implémenter avant et après l’interprétation du JSP (dans l’ordre chronologique: EL puis JSP, puis JSTL). Ceci permet de modifier la page sur plusieurs étapes s’imbriquant les unes dans les autres.</p><hr class="underscore"><h3 id="le-petit-+"><a name="le-petit-+" href="#le-petit-+"></a>Le petit +</h3><p>Pour rendre la gestion des liens plus facile, on peut utiliser l’URL racine du projet, renseigné dans request:</p><pre><code class="html hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;HTML&quot;&gt;&amp;lt;img src=&quot;&amp;lt;%=request.getContextPath()%&amp;gt;/ressouces/img/image.png&quot;&amp;gt;
+&amp;lt;!-- ou --&amp;gt;
+&amp;lt;img src=&quot;&amp;lt;c:url value=&quot;/ressources/img/image.png&quot;/&amp;gt;&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"&lt;%=request.getContextPath()%&gt;/ressouces/img/image.png"</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- ou --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"&lt;c:url value="</span>/<span class="hljs-attribute">ressources</span>/<span class="hljs-attribute">img</span>/<span class="hljs-attribute">image.png</span>"/&gt;</span>"&gt;
+</code></pre><hr class="underscore"><h2 id="jva_340"><a name="jva_340" href="#jva_340"></a>JVA_340</h2><p>Bilan sur vos acquis, vos réalisations, la gestion de projet.</p><div style="display:flex;justify-content:space-between"><div><a href="index.html">← home</a></div><div><a href="cours2.html">suivant →</a></div></div>
 
 <footer style="position:fixed; font-size:.8em; text-align:right; bottom:0px; margin-left:-25px; height:20px; width:100%;">generated by <a href="http://pad.haroopress.com" target="_blank">haroopad</a></footer>
 </body>
