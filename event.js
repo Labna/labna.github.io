@@ -46,13 +46,15 @@ function getLargeur(){
 
 var imgList = document.getElementsByClassName('preview');
 for (var i = imgList.length - 1; i >= 0; i--) {
-    imgList[i].addEventListener("click", getFullSize());
+    imgList[i].addEventListener("click", getFullSize);
 }
 function getFullSize() {
     this.classList.remove('preview');
-    this.onclick = "getPreview()";
+    this.removeEventListener("click",getFullSize);
+    this.addEventListener("click",getPreview);
 }
 function getPreview(){
     this.classList.add("preview");
-    this.onclick = "getFullSize()";
+    this.removeEventListener("click", getPreview);
+    this.addEventListener("click", getFullSize)
 }
