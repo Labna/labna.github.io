@@ -45,6 +45,7 @@ function getLargeur(){
 }
 
 function pageLoaded(){
+    console.log('pageLoaded launched !');
     var imgList = document.getElementsByClassName('preview');
     for (var i = imgList.length - 1; i >= 0; i--) {
         imgList[i].addEventListener("click", getFullSize);
@@ -59,7 +60,7 @@ function getFullSize() {
 function getPreview(){
     this.classList.add("preview");
     this.removeEventListener("click", getPreview);
-    this.addEventListener("click", getFullSize)
+    this.addEventListener("click", getFullSize);
 }
 
-document.body.addEventListener("load",pageLoaded);
+document.getElementsByTagName("BODY")[0].addEventListener('load',pageLoaded);
