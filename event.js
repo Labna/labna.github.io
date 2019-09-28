@@ -49,7 +49,7 @@ function pageLoaded(){
     var imgList = document.getElementsByClassName('preview');
     for (var i = imgList.length - 1; i >= 0; i--) {
         imgList[i].addEventListener("click", getFullSize);
-    }
+    };
 }
 
 function getFullSize() {
@@ -57,10 +57,9 @@ function getFullSize() {
     this.removeEventListener("click",getFullSize);
     this.addEventListener("click",getPreview);
 }
+
 function getPreview(){
     this.classList.add("preview");
     this.removeEventListener("click", getPreview);
     this.addEventListener("click", getFullSize);
 }
-
-document.getElementsByTagName("BODY")[0].addEventListener('load',pageLoaded);
