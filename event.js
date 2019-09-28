@@ -44,10 +44,13 @@ function getLargeur(){
     };
 }
 
-var imgList = document.getElementsByClassName('preview');
-for (var i = imgList.length - 1; i >= 0; i--) {
-    imgList[i].addEventListener("click", getFullSize);
+function pageLoaded(){
+    var imgList = document.getElementsByClassName('preview');
+    for (var i = imgList.length - 1; i >= 0; i--) {
+        imgList[i].addEventListener("click", getFullSize);
+    }
 }
+
 function getFullSize() {
     this.classList.remove('preview');
     this.removeEventListener("click",getFullSize);
@@ -58,3 +61,5 @@ function getPreview(){
     this.removeEventListener("click", getPreview);
     this.addEventListener("click", getFullSize)
 }
+
+document.body.addEventListener("load",pageLoaded);
