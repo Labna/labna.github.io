@@ -30,7 +30,7 @@ function fixeMenu(){
 }
 
 function getLargeur(){
-    document.getElementById("compt2").innerHTML =  /*self.pageX*/ window.innerWidth;
+    document.getElementById("compt2").innerHTML = window.innerWidth; /*self.pageX*/
     var temp2 =  window.innerWidth;
     if (temp2 <= 1280){
         HauteurBanniere = Math.floor((temp2 * 0.3125)-40);
