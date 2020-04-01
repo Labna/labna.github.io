@@ -22,6 +22,11 @@ h1 img{
 
 h2, h4{
   color: #0460a4;
+  /*margin-top: 3em;*/
+}
+
+h3{
+  margin-top: 9em;
 }
 
 nav{
@@ -37,7 +42,10 @@ nav li{
   margin: 0 40px;
   color: #0460a4;
   padding: 15px;
+}
 
+nav li:hover{
+  text-decoration: underline;
 }
 
 .ecole{
@@ -51,16 +59,37 @@ nav li{
   display: none;
 }
 
-.onglet ul{
+.section ul{
   list-style-image: url('./pictures/musique/Music_dynamic_forte.png');
+}
+
+.section{
+  display: none;
+}
+
+.section_active{
+  display: block;
+}
+
+.contenu li{
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .onglet_actif{
   display: block;
 }
 
+
 .columnTwo{
   column-count: 2; 
+}
+
+.credits{
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  font-size: 0.7em;
 }
 
 #ecoleactive{
@@ -73,4 +102,8 @@ nav li{
   background-color: #009ee76e;
   color: black;
   border-radius: 50%;
+}
+
+#sectionactive{
+  text-decoration: underline; 
 }

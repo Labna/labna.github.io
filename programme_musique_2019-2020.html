@@ -6,6 +6,22 @@
   <title>Programme Musical 2019-2020</title>
 </head>
 <script type="text/javascript">
+  function changeSection(args) {
+    //console.log(args);
+    caller = args[0];
+    name = args[1];
+    section = document.getElementsByClassName('section');
+    for (var i = section.length - 1; i >= 0; i--) {
+      section[i].classList.remove("section_active");
+    }
+    elem = document.getElementsByClassName(name)[0];
+    //console.log(elem);
+    elem.classList.add('section_active');
+    actif = document.getElementById('sectionactive');
+    if(actif != null){actif.id = '';}
+    caller.id = 'sectionactive';
+  }
+
   function changeOnglet(args) {
     //console.log(args);
     caller = args[0];
@@ -13,6 +29,10 @@
     onglets = document.getElementsByClassName('onglet');
     for (var i = onglets.length - 1; i >= 0; i--) {
       onglets[i].classList.remove("onglet_actif");
+    }
+    section = document.getElementsByClassName('section');
+    for (var i = section.length - 1; i >= 0; i--) {
+      section[i].classList.remove("section_active");
     }
     elem = document.getElementsByClassName(name)[0];
     //console.log(elem);
@@ -26,13 +46,17 @@
     //console.log(args);
     caller = args[0];
     name = args[1];
-    onglets = document.getElementsByClassName('ecole');
-    for (var i = onglets.length - 1; i >= 0; i--) {
-      onglets[i].classList.remove("ecole_active");
+    ecole = document.getElementsByClassName('ecole');
+    for (var i = ecole.length - 1; i >= 0; i--) {
+      ecole[i].classList.remove("ecole_active");
     }
     onglets = document.getElementsByClassName('onglet');
     for (var i = onglets.length - 1; i >= 0; i--) {
       onglets[i].classList.remove("onglet_actif");
+    }
+    section = document.getElementsByClassName('section');
+    for (var i = section.length - 1; i >= 0; i--) {
+      section[i].classList.remove("section_active");
     }
     elem = document.getElementsByClassName(name)[0];
     //console.log(elem);
@@ -64,15 +88,25 @@
       </li>
     </ul>
     <ul class="ecole creche">
-      <li onclick="changeOnglet([this, 'acapela']);">
+      <li onclick="changeOnglet([this, 'cacapela']);">
         A Capela
       </li>
-      <li onclick="changeOnglet([this, 'crescendo']);">
+      <li onclick="changeOnglet([this, 'ccrescendo']);">
         Crescendo
       </li>
-      <li onclick="changeOnglet([this, 'legato']);">
+      <li onclick="changeOnglet([this, 'clegato']);">
         Legato / Ostinato
       </li>
+    </ul>
+    <ul class="onglet cacapela">
+      <li onclick="changeSection([this, 'caafrique'])"><h2>L'Afrique</h2></li>
+      <li onclick="changeSection([this, 'caroyaume'])"><h2>Le Royaume-Unis</h2></li>
+    </ul>
+    <ul class="onglet ccrescendo">
+      <li onclick="changeSection([this, 'ccafrique'])"><h2>L'Afrique</h2></li>
+    </ul>
+    <ul class="onglet clegato">
+      <li onclick="changeSection([this, 'clafrique'])"><h2>L'Afrique</h2></li>
     </ul>
     <ul class="ecole centre">
       Arrivera bientôt.
@@ -80,38 +114,34 @@
   </nav>
   
 
-  <div class="onglet acapela">
-    <h3>Thèmatiques</h3>
+  <div class="section caafrique">
     <ul>
-      <li><b>L'Afrique</b>
-        <ul>
-          <li><a href="#cachansons">Chansons</a></li>
-          <li><a href="#cainstruments">Instruments que nous avons découvert</a></li>
-          <li><a href="#cacomptines">Contine et poésies</a></li>
-          <li><a href="#carepertoire">Répertoire de musique</a></li>
-        </ul>
-      </li>
-      <li>les autres arrivent</li>
+      <li><a href="#caachansons">Chansons</a></li>
+      <li><a href="#caainstruments">Les instruments que nous avons découvert</a></li>
+      <li><a href="#caacomptines">Contine et poésies</a></li>
+      <li><a href="#caarepertoire">Répertoire de musique</a></li>
     </ul>
 
-    <h2>L'Afrique</h2>
-    <h3 id="cachansons">Les Chansons</h3>
-    <ul>
+    <h3 id="caachansons">Les Chansons</h3>
+    <ul class="contenu">
       <li>
         <a href="https://www.youtube.com/watch?v=4UqVCTmo6xI" target="_blank">Bébé Yo</a>
-        <div>
+        <div class="columnTwo">
           <p>Contine du Sénégal</p>
-          <p class="columnTwo">Bébé Yo A bébé Yola<br>Bébé Yo A bébé<br/>Goudi Goudi Yaowa<br/>Bétché bétché Mala<br/>
+          <p class="columnTwo">
+            Bébé Yo A bébé Yola<br>Bébé Yo A bébé<br/>Goudi Goudi Yaowa<br/>Bétché bétché Mala<br/>
             <br/>
             Mon Bébé toi mon Bébé<br/>
             Mon Bébé toi mon Bébé<br/>
             La nuit la nuit c’est pour toi<br/>
-            Le jour le jour c’est pour moi<br/></p>
+            Le jour le jour c’est pour moi<br/>
+          </p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/4UqVCTmo6xI" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </li>
       <li>
         <a href="https://www.youtube.com/watch?v=r3L57fFYYVg" target="_blank">Ké fé ta maman</a>
-        <div>
+        <div class="columnTwo">
           <p>Ké fé ta ma maman<br>
             El fé lé Kamundélé<br>
             Ké fé ta maman<br>
@@ -127,14 +157,16 @@
             Je met un morceau de poisson<br>
             Avec une petite tomate<br>
             Un peu de citron et du piment pili pili<br></p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/r3L57fFYYVg" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </li>
       <li>
-        <a href="https://www.youtube.com/watch?v=VjXdKzUCMTY" target="_blank">La danse du zèbre</a>
+        <a href="https://www.youtube.com/watch?v=VjXdKzUCMTY" target="_blank">La danse du zèbre</a><br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VjXdKzUCMTY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </li>
       <li>
         <a href="https://www.youtube.com/watch?v=LZa5EtxzkIU" target="_blank">Ko Ko Ko Jolie Calao</a>
-        <div>
+        <div class="columnTwo">
           <p>Chanson à geste Africaine</p>
           <p>Kokoko Joli Calao<br>
             Ne vole pas trop trop trop<br>
@@ -147,12 +179,13 @@
             Et vite vite sur le dos Joli Calao<br>
             Roule roule c’est rigolo<br>
             Kokoko Joli Calao<br></p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LZa5EtxzkIU" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </li>
     </ul>
 
-    <h3 id="cainstruments">Instruments que nous avons découvert</h3>
-    <ul>
+    <h3 id="caainstruments">Les instruments que nous avons découvert</h3>
+    <ul class="contenu">
       <li>Le Balafon<br>
         <img src="./pictures/musique/balafon.png" alt="balafon instrument">
       </li>
@@ -161,8 +194,8 @@
       </li>
     </ul>
 
-    <h3 id="cacomptines">Comptines et poésies</h3>
-    <ul>
+    <h3 id="caacomptines">Comptines et poésies</h3>
+    <ul class="contenu">
       <li>
         <p><b>L'éléphant</b><br>
           Quand l’éléphant prend sa douche<br>
@@ -175,36 +208,87 @@
         <p>
       </li>
     </ul>
-    <h3 id="carepertoire">Répertoire de musique</h3>
-    <ul>
+
+    <h3 id="caarepertoire">Répertoire de musique</h3>
+    <ul class="contenu">
       <li><a href="https://www.youtube.com/watch?v=sHyLnZKZ0d0" target="_blank">Guem et Zakapa <i>Forêt Vierge</i></a></li>
       <li><a href="https://www.youtube.com/watch?v=wmNeAUsMfas" target="_blank">Toumani Dibaté <i>Elyne Road</i></a></li>
       <li><a href="https://www.youtube.com/watch?v=QHgOiw1YNvE" target="_blank">Orodara Sidiki <i>Adama Diabaté</i></a></li>
     </ul>
   </div>
 
-  <div class="onglet crescendo">
-    <h3>Thèmatiques</h3>
-    <div>
-      <ul>
-        <li>
-          <b>L'Afrique</b>
-          <ul>
-            <li><a href="#ccchansons">Les chansons</a></li>
-            <li><a href="#ccinstruments">Les instruments que nous avons découvert</a></li>
-            <li><a href="#ccrepertoire">Le répertoire de musique</a></li>
-          </ul>
-        </li>
-        <li>les autres arrivent</li>
-      </ul>
-    </div>
-
-    <h2>L'Afrique</h2>
-    <h3 id="ccchansons">Les Chansons</h3>
+  <div class="section caroyaume">
     <ul>
+      <li><a href="#carchansons">Les Chansons</a></li>
+      <li><a href="#carinstruments">Les instruments que nous avons découvert</a></li>
+      <li><a href="#carrepertoire">Le répertoire de musique</a></li>
+    </ul>
+
+    <h3 id="carchansons">Les Chansons</h3>
+    <ul class="contenu">
+      <li>
+        <a href="https://www.youtube.com/watch?v=_8RsQxKB2z0" target="_blank">Leperchaun’s Dance</a>
+        <div class="columnTwo">
+          <p>Dance dance Leperchaun Dance<br>Dance dance leperchaun dance<br>Dance dance leperchaun dance<br>Do a dance for me</p>
+          <p>Clap clap leperchaun clap<br>Clap clap leperchaun clap<br>Clap clap leperchaun clap<br>Do a clap for me</p>
+          <p>Jump jump leperchaun jump<br>Jump jump leperchaun jump<br>Jump jump leperchaun jump<br>Do a jump for me</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/_8RsQxKB2z0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=FS7wN7YicOM" target="_blank">Mon ami le Dragon</a>
+        <div class="columnTwo">
+          <p>C’est en haut du donjon<br>Que vit mon ami le dragon<br>Un polisson un peu grognon<br>Et aussi un vrai Glouton<br>Donne-lui des macarons<br>Il sera ton compagnon<br>Mais si tu le fâches pour de bon<br>Il crachera du feu à l’horizon</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/FS7wN7YicOM" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=YWYjMCV5pGU" target="_blank">Brother John</a>
+        <div class="columnTwo">
+          <p>Are you sleeping<br>Are you sleeping<br>Brother John<br>Brother John<br>Morning bells are ringing<br>Morning bells are ringing<br>Ding Dang Dong<br>Ding Dang dong</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/YWYjMCV5pGU" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </li>
+    </ul>
+
+    <h3 id="carinstruments">Les instruments que nous avons découvert</h3>
+    <ul class="contenu">
+      <li>La cornemuse<br>
+        <img src="./pictures/musique/cornemuse.jpg" align="cornemuse instrument">
+      </li>
+      <li>Le tin whistle<br>
+        <img src="./pictures/musique/tinwhistle.jpg" align="tinwhistle instrument">
+      </li>
+    </ul>
+
+    <h3 id="carrepertoire">Le répertoire de musique</h3>
+    <ul class="contenu">
+      <li><a href="https://www.youtube.com/watch?v=E9wWBjnaEck">Big Ben strikes</a></li>
+      <li><a href="https://www.youtube.com/watch?v=rblYSKz_VnI">The Beatles <i>Hello Goodbye</i></a></li>
+      <li><a href="https://www.youtube.com/watch?v=AZV0V-R6wgk">Claude Gervaise <i>Branle de Champagne</i></a></li>
+      <li><a href="https://www.youtube.com/watch?v=sQPEWhceJOI">Frédéric Laurent <i>La bourrée des serfs</i></a></li>
+      <li><a href="https://www.youtube.com/watch?v=4zH6LTR0i2c">Riverdance <i>Reel around the sun</i></a></li>
+      <li><a href="https://www.youtube.com/watch?v=-zQoQ1ckFxI"><i>The Skye Boat song</i></a></li>
+      <li><a href="https://www.youtube.com/watch?v=1FKoX7u_Jo8">Celtic legends <i>Amazing Grace</i></a></li>
+      <li><a href="https://www.youtube.com/watch?v=ktMkWojRMu8">The Chieftains <i>Chase Around The Windmill</i></a></li>
+      <li><a href="https://www.youtube.com/watch?v=JYREXxIbKI0">Duo Menguy – Le Pennec <i>Tempus Fugit Valse</i></a></li>
+      <li><a href="https://www.youtube.com/watch?v=NmpdJotqPEI"><i>Gwarchodd LLandona</i> – musique traditionnelle du Pays de Galles</a></li>
+      <li><a href="https://www.youtube.com/watch?v=X29HSYW4_BE">Dacw ‘Nghariad <i>4 Yn y bar</i></a></li>
+    </ul>
+  </div>
+
+  <div class="section ccafrique">
+    <ul>
+      <li><a href="#ccachansons">Les chansons</a></li>
+      <li><a href="#ccainstruments">Les instruments que nous avons découvert</a></li>
+      <li><a href="#ccarepertoire">Le répertoire de musique</a></li>
+    </ul>
+
+    <h3 id="ccachansons">Les Chansons</h3>
+    <ul class="contenu">
       <li>
         <a href="https://www.youtube.com/watch?v=4UqVCTmo6xI" target="_blank">Bébé Yo</a>
-        <div>
+        <div class="columnTwo">
           <p>Contine du Sénégal</p>
           <p class="columnTwo">Bébé Yo A bébé Yola<br>Bébé Yo A bébé<br/>Goudi Goudi Yaowa<br/>Bétché bétché Mala<br/>
             <br/>
@@ -213,38 +297,45 @@
             La nuit la nuit c’est pour toi<br/>
             Le jour le jour c’est pour moi<br/>
           </p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/4UqVCTmo6xI" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </li>
       <li>
-        <a href="https://www.youtube.com/watch?v=VjXdKzUCMTY" target="_blank">La danse du zèbre</a>
+        <a href="https://www.youtube.com/watch?v=VjXdKzUCMTY" target="_blank">La danse du zèbre</a><br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VjXdKzUCMTY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </li>
       <li>
-        <a href="https://www.youtube.com/watch?v=JL3bqL8x4hY" target="_blank">Fatou Yo</a>
+        <a href="https://www.youtube.com/watch?v=JL3bqL8x4hY" target="_blank">Fatou Yo</a><br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/JL3bqL8x4hY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </li>
       <li><a href="https://www.youtube.com/watch?v=LMr4VBXCRvM" target="_blank">Ndéké Moko</a>
-        <div><p>Berceuse Africaine</p>
-        <p>Ndeké Moko Azalaki<br>
-        Okati Ya Mayi<br>
-        Azalaki Na bana<br>
-        Motoba soki sambo<br>
-        Kuna Makati ya mayi hi hi<br>
-        Bana ba komi Kolé la ha ha<br>
-        <br>
-        Refrain :<br>
-        Oya oya oya oh<br>
-        Oya Oya oya oh<br>
-        Oya oya oya oh Oya<br></p>
+        <div class="columnTwo">
+          <p>Berceuse Africaine</p>
+          <p>Ndeké Moko Azalaki<br>
+            Okati Ya Mayi<br>
+            Azalaki Na bana<br>
+            Motoba soki sambo<br>
+            Kuna Makati ya mayi hi hi<br>
+            Bana ba komi Kolé la ha ha<br>
+            <br>
+            Refrain :<br>
+            Oya oya oya oh<br>
+            Oya Oya oya oh<br>
+            Oya oya oya oh Oya<br>
+          </p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/LMr4VBXCRvM" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </li>
       <li><a href="https://www.youtube.com/watch?v=Uw3pprp_btw" target="_blank">Amawolé</a>
-        <div>
+        <div class="columnTwo">
           <p>Contine Africaine</p>
           <p>Amawolé Amawolé Amawolé<br>
           Amawolé Amawolé Amawolé <br>
           Kintéla Anga Naléla Soso Kintéla Anga Naléla Kokodioco</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Uw3pprp_btw" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </li>
       <li><a href="https://www.youtube.com/watch?v=-8tGzPmE51c" target="_blank">Boubou Kalakala A dit que</a>
-        <div>
+        <div class="columnTwo">
           <p>Comptine Africaine</p>
           <p>Boubou Kala kala A dit que (bis)<br>
           Tu danses comme le serpent<br>
@@ -260,12 +351,13 @@
           <br>
           Boubou Kala kala A dit que (bis)<br>
           Tu danses comme L’éléphant<br></p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/-8tGzPmE51c" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </li>
     </ul>
 
-    <h3 id="ccinstruments">Les instruments que nous avons découvert</h3>
-    <ul>
+    <h3 id="ccainstruments">Les instruments que nous avons découvert</h3>
+    <ul class="contenu">
       <li>Le Balafon<br>
         <img src="./pictures/musique/balafon.png" alt="balafon instrument">
       </li>
@@ -277,8 +369,8 @@
       </li>
     </ul>
 
-    <h3 id="ccrepertoire">Le répertoire de musique</h3>
-    <ul>
+    <h3 id="ccarepertoire">Le répertoire de musique</h3>
+    <ul class="contenu">
       <li><a href="https://www.youtube.com/watch?v=sHyLnZKZ0d0" target="_blank">Guem et Zakapa <i>Forêt Vierge</i></a></li>
       <li><a href="https://www.youtube.com/watch?v=wmNeAUsMfas" target="_blank">Toumani Dibaté <i>Elyne Road</i></a></li>
       <li><a href="https://www.youtube.com/watch?v=QHgOiw1YNvE" target="_blank">Orodara Sidiki Adama Diabaté</a></li>
@@ -287,29 +379,20 @@
     </ul>
   </div>
 
-  <div class="onglet legato">
-    <h3>Thèmatiques</h3>
-    <div>
-      <ul>
-        <li>
-          <b>L'Afrique</b>
-          <ul>
-            <li><a href="#clchansons">Les chansons</a></li>
-            <li><a href="#clinstruments">Les instruments que nous avons découvert</a></li>
-            <li><a href="#clcomptines">Comptines</a></li>
-            <li><a href="#clrepertoire">Le répertoire de musique</a></li>
-          </ul>
-        </li>
-        <li>les autres arrivent</li>
-      </ul>
-    </div>
-
-    <h2>L'Afrique</h2>
-    <h3 id="clchansons">Les Chansons</h3>
+  <div class="section clafrique">
     <ul>
+      <li><a href="#clachansons">Les chansons</a></li>
+      <li><a href="#clainstruments">Les instruments que nous avons découvert</a></li>
+      <li><a href="#clacomptines">Comptines</a></li>
+      <li><a href="#clarepertoire">Le répertoire de musique</a></li>
+    </ul>
+
+
+    <h3 id="clachansons">Les Chansons</h3>
+    <ul class="contenu">
       <li>
         <a href="https://www.youtube.com/watch?v=4UqVCTmo6xI" target="_blank">Bébé Yo</a>
-        <div>
+        <div class="columnTwo">
           <p>Contine du Sénégal</p>
           <p class="columnTwo">Bébé Yo A bébé Yola<br>Bébé Yo A bébé<br/>Goudi Goudi Yaowa<br/>Bétché bétché Mala<br/>
             <br/>
@@ -318,32 +401,36 @@
             La nuit la nuit c’est pour toi<br/>
             Le jour le jour c’est pour moi<br/>
           </p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/4UqVCTmo6xI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </li>
       <li><a href="https://www.youtube.com/watch?v=LMr4VBXCRvM" target="_blank">Ndéké Moko</a>
-        <div><p>Berceuse Africaine</p>
-        <p>Ndeké Moko Azalaki<br>
-        Okati Ya Mayi<br>
-        Azalaki Na bana<br>
-        Motoba soki sambo<br>
-        Kuna Makati ya mayi hi hi<br>
-        Bana ba komi Kolé la ha ha<br>
-        <br>
-        Refrain :<br>
-        Oya oya oya oh<br>
-        Oya Oya oya oh<br>
-        Oya oya oya oh Oya<br></p>
+        <div class="columnTwo"><p>Berceuse Africaine</p>
+          <p>Ndeké Moko Azalaki<br>
+          Okati Ya Mayi<br>
+          Azalaki Na bana<br>
+          Motoba soki sambo<br>
+          Kuna Makati ya mayi hi hi<br>
+          Bana ba komi Kolé la ha ha<br>
+          <br>
+          Refrain :<br>
+          Oya oya oya oh<br>
+          Oya Oya oya oh<br>
+          Oya oya oya oh Oya<br></p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/LMr4VBXCRvM" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </li>
       <li><a href="https://www.youtube.com/watch?v=Uw3pprp_btw" target="_blank">Amawolé</a>
-        <div>
+        <div class="columnTwo">
           <p>Contine Africaine</p>
           <p>Amawolé Amawolé Amawolé<br>
           Amawolé Amawolé Amawolé <br>
           Kintéla Anga Naléla Soso Kintéla Anga Naléla Kokodioco</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Uw3pprp_btw" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </li>
       <li><a href="https://www.youtube.com/watch?v=-8tGzPmE51c" target="_blank">Boubou Kalakala A dit que</a>
-        <div>
+        <div class="columnTwo">
           <p>Comptine Africaine</p>
           <p>Boubou Kala kala A dit que (bis)<br>
           Tu danses comme le serpent<br>
@@ -359,10 +446,12 @@
           <br>
           Boubou Kala kala A dit que (bis)<br>
           Tu danses comme L’éléphant<br></p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/-8tGzPmE51c" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </li>
       <li><b>Le Chant de Dounia</b>
         <div>
+          <p>(Enregistrement indisponible – En cours d’élaboration)</p>
           <p>Berceuse Africaine</p>
           <p>Dounia ô Dounia Léb kô léb Nako (bis)<br>
             Génies et sorciers, Rois et reines<br>
@@ -375,24 +464,27 @@
         </div>
       </li>
       <li><a href="https://www.youtube.com/watch?v=N1KZbMprW8U" target="_blank">Siyahamba</a>
-        <div><p>Chanson Traditionnelle Afrique du Sud</p>
-        <p class="columnTwo">Refrain :<br>
-        Siya Hamba couka nié ni couencos<br>
-        Siya Hamba couka nié ni couencos (bis)<br>
-        <br>
-        Couplet :<br>
-        Siya Hamba Ouhou<br>                      
-        Saya Hamba couka nié ni couencos (bis)<br>
-        <br>
-        Nous marchons dans la lumière de Dieu<br>
-        Nous marchons dans la lumière de Dieu<br>
-        <br><br>
-        Nous marchons Ouhou<br>
-        Nous marchons dans la lumière de Dieu
-        </p></div>
+        <div class="columnTwo">
+          <p>Chanson Traditionnelle Afrique du Sud</p>
+          <p class="columnTwo">Refrain :<br>
+          Siya Hamba couka nié ni couencos<br>
+          Siya Hamba couka nié ni couencos (bis)<br>
+          <br>
+          Couplet :<br>
+          Siya Hamba Ouhou<br>                      
+          Saya Hamba couka nié ni couencos (bis)<br>
+          <br>
+          Nous marchons dans la lumière de Dieu<br>
+          Nous marchons dans la lumière de Dieu<br>
+          <br><br>
+          Nous marchons Ouhou<br>
+          Nous marchons dans la lumière de Dieu
+          </p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/N1KZbMprW8U" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </li>
       <li><a href="https://www.youtube.com/watch?v=2aFlQS4k3wo" target="_blank">Shosholoza</a>
-        <div>
+        <div class="columnTwo">
           <p>Chant traditionnel d’Afrique du sud</p>
           <p class="columnTwo">Shosholoza<br>
           Shosholoza Kolezu n’taba<br>
@@ -410,10 +502,12 @@
           Sur ses montagnes,<br>
           Le train à vapeur d'Afrique du Sud
           </p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/2aFlQS4k3wo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </li>
       <li><a href="https://www.youtube.com/watch?v=XBfE7AgnHdk" target="_blank">Sama Doom Jangal</a>
-        <div><p>Na na yé<br>
+        <div class="columnTwo">
+          <p>Na na yé<br>
           Zimbé Na na yé<br>
           Zimbé Na na yé<br>
           Soumaré na na zimbé<br>
@@ -421,12 +515,13 @@
           Mon fils, apprends<br>
           Mon fils, apprends<br>
           So bougué am diplôme</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/XBfE7AgnHdk" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </li>
     </ul>
 
-    <h3 id="clinstruments">Les instruments que nous avons découvert</h3>
-    <ul>
+    <h3 id="clainstruments">Les instruments que nous avons découvert</h3>
+    <ul class="contenu">
         <li>Le Balafon<br>
           <img src="./pictures/musique/balafon.png" alt="balafon instrument">
         </li>
@@ -438,8 +533,8 @@
         </li>
     </ul>
 
-    <h3 id="clcomptines">Comptines</h3>
-    <ul>
+    <h3 id="clacomptines">Comptines</h3>
+    <ul class="contenu">
       <li><p><b>Je m’en vais chasser le lion</b><br><br>
         Je m’en vais chasser le lion (Bis)<br>
         Je n’ai pas peur des fleurs<br>
@@ -477,8 +572,8 @@
       </li>
     </ul>
 
-    <h3 id="clrepertoire">Le répertoire de musique</h3>
-    <ul>
+    <h3 id="clarepertoire">Le répertoire de musique</h3>
+    <ul class="contenu">
       <li><a href="https://www.youtube.com/watch?v=sHyLnZKZ0d0" target="_blank">Guem et Zakapa <i>Forêt Vierge</i></a></li>
       <li><a href="https://www.youtube.com/watch?v=wmNeAUsMfas" target="_blank">Toumani Dibaté <i>Elyne Road</i></a></li>
       <li><a href="https://www.youtube.com/watch?v=QHgOiw1YNvE" target="_blank">Orodara Sidiki Adama Diabaté</a></li>
@@ -490,5 +585,8 @@
     </ul>
   </div>
 
+
+
+<div class="credits">Labna &copy; Tous droits réservés</div>
 </body>
 </html>
