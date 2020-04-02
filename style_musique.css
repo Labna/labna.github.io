@@ -6,6 +6,8 @@ html{
   font-family: arial;
   background-image: url('./pictures/musique/435123-2.jpg');
   background-attachment: fixed;
+  background-size: cover;
+  min-height: 150%;
 }
 
 body{
@@ -32,8 +34,13 @@ h3{
 nav{
   margin-top: 4em;
 }
+
 nav ul{
+  animation: ease-in 2s;
+  /*transition: 2s transform;*/
+  /*transform: : translate(0px,-10px) 2s;  */
 }
+
 
 nav li{
   list-style: none;
@@ -59,6 +66,10 @@ nav li:hover{
   display: none;
 }
 
+.onglet_actif{
+  display: block;
+}
+
 .section ul{
   list-style-image: url('./pictures/musique/Music_dynamic_forte.png');
 }
@@ -76,13 +87,25 @@ nav li:hover{
   margin-bottom: 2em;
 }
 
-.onglet_actif{
+.placeHolder{
   display: block;
+  /*height: 315px;*/
+  width: 560px;
 }
-
 
 .columnTwo{
   column-count: 2; 
+}
+
+.flex-col-two{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
 }
 
 .credits{

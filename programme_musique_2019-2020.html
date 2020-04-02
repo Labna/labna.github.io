@@ -5,68 +5,7 @@
   <link rel="stylesheet" type="text/css" href="style_musique.css">
   <title>Programme Musical 2019-2020</title>
 </head>
-<script type="text/javascript">
-  function changeSection(args) {
-    //console.log(args);
-    caller = args[0];
-    name = args[1];
-    section = document.getElementsByClassName('section');
-    for (var i = section.length - 1; i >= 0; i--) {
-      section[i].classList.remove("section_active");
-    }
-    elem = document.getElementsByClassName(name)[0];
-    //console.log(elem);
-    elem.classList.add('section_active');
-    actif = document.getElementById('sectionactive');
-    if(actif != null){actif.id = '';}
-    caller.id = 'sectionactive';
-  }
-
-  function changeOnglet(args) {
-    //console.log(args);
-    caller = args[0];
-    name = args[1];
-    onglets = document.getElementsByClassName('onglet');
-    for (var i = onglets.length - 1; i >= 0; i--) {
-      onglets[i].classList.remove("onglet_actif");
-    }
-    section = document.getElementsByClassName('section');
-    for (var i = section.length - 1; i >= 0; i--) {
-      section[i].classList.remove("section_active");
-    }
-    elem = document.getElementsByClassName(name)[0];
-    //console.log(elem);
-    elem.classList.add('onglet_actif');
-    actif = document.getElementById('ongletactif');
-    if(actif != null){actif.id = '';}
-    caller.id = 'ongletactif';
-  }
-
-  function changeEcole(args) {
-    //console.log(args);
-    caller = args[0];
-    name = args[1];
-    ecole = document.getElementsByClassName('ecole');
-    for (var i = ecole.length - 1; i >= 0; i--) {
-      ecole[i].classList.remove("ecole_active");
-    }
-    onglets = document.getElementsByClassName('onglet');
-    for (var i = onglets.length - 1; i >= 0; i--) {
-      onglets[i].classList.remove("onglet_actif");
-    }
-    section = document.getElementsByClassName('section');
-    for (var i = section.length - 1; i >= 0; i--) {
-      section[i].classList.remove("section_active");
-    }
-    elem = document.getElementsByClassName(name)[0];
-    //console.log(elem);
-    elem.classList.add('ecole_active');
-    active = document.getElementById('ecoleactive');
-    if (active != null) {active.id = '';}
-    caller.id = 'ecoleactive';
-
-  }
-</script>
+<script language="javascript" type="text/javascript" src="script_musique.js" ></script>
 <body>
   <h1>
     Crèche et Centre Artistique <img src="./pictures/musique/logo.png"> de Casablanca
@@ -79,7 +18,7 @@
     <br/>
     Compte tenu de cette situation plus qu’exceptionnelle, nous nous devons de faire preuve d’adaptation et être plus que jamais force de propositions afin de ne pas perdre les apprentissages passés et futurs.<br/>Il nous est donc indispensable d’assurer un suivi de nos élèves et de proposer des moyens d’y parvenir.<br/>C’est pourquoi, au travers de cette page web, nous vous proposons de retrouver l’intégralité du travail accomplis en musique depuis octobre 2019, et des propositions de nouvelles activités pour la prochaine période.</br>Cette page reste en construction permanente afin de vous offrir le meilleur contenu possible et se verra mise à jour très régulièrement, merci de votre compréhension.<br><br>L'équipe pédagogique</p>
   <nav>
-    <ul>
+    <ul class="center">
       <li onclick="changeEcole([this, 'creche']);">
         Crèche
       </li>
@@ -104,9 +43,11 @@
     </ul>
     <ul class="onglet ccrescendo">
       <li onclick="changeSection([this, 'ccafrique'])"><h2>L'Afrique</h2></li>
+      <li onclick="changeSection([this, 'ccroyaume'])"><h2>Le Royaume-Unis</h2></li>
     </ul>
     <ul class="onglet clegato">
       <li onclick="changeSection([this, 'clafrique'])"><h2>L'Afrique</h2></li>
+      <li onclick="changeSection([this, 'clroyaume'])"><h2>Le Royaume-Unis</h2></li>
     </ul>
     <ul class="ecole centre">
       Arrivera bientôt.
@@ -125,9 +66,9 @@
     <h3 id="caachansons">Les Chansons</h3>
     <ul class="contenu">
       <li>
-        <a href="https://www.youtube.com/watch?v=4UqVCTmo6xI" target="_blank">Bébé Yo</a>
-        <div class="columnTwo">
-          <p>Contine du Sénégal</p>
+        <a href="https://www.youtube.com/watch?v=4UqVCTmo6xI" target="_blank">Bébé Yo</a>&nbsp;<button onclick="openVideoPlayer([this, '4UqVCTmo6xI'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>Contine du Sénégal</p>
           <p class="columnTwo">
             Bébé Yo A bébé Yola<br>Bébé Yo A bébé<br/>Goudi Goudi Yaowa<br/>Bétché bétché Mala<br/>
             <br/>
@@ -135,14 +76,15 @@
             Mon Bébé toi mon Bébé<br/>
             La nuit la nuit c’est pour toi<br/>
             Le jour le jour c’est pour moi<br/>
-          </p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/4UqVCTmo6xI" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p></div>
+          <div class="placeHolder"></div>
+          <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/4UqVCTmo6xI" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         </div>
       </li>
       <li>
-        <a href="https://www.youtube.com/watch?v=r3L57fFYYVg" target="_blank">Ké fé ta maman</a>
-        <div class="columnTwo">
-          <p>Ké fé ta ma maman<br>
+        <a href="https://www.youtube.com/watch?v=r3L57fFYYVg" target="_blank">Ké fé ta maman</a>&nbsp;<button onclick="openVideoPlayer([this, 'r3L57fFYYVg'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>Ké fé ta ma maman<br>
             El fé lé Kamundélé<br>
             Ké fé ta maman<br>
             El fé lé Kamundélé</p>
@@ -156,18 +98,18 @@
             Sur un pic à brochette<br>
             Je met un morceau de poisson<br>
             Avec une petite tomate<br>
-            Un peu de citron et du piment pili pili<br></p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/r3L57fFYYVg" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            Un peu de citron et du piment pili pili<br></p></div>
+            <div class="placeHolder"></div>
         </div>
       </li>
       <li>
-        <a href="https://www.youtube.com/watch?v=VjXdKzUCMTY" target="_blank">La danse du zèbre</a><br>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/VjXdKzUCMTY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/watch?v=VjXdKzUCMTY" target="_blank">La danse du zèbre</a>&nbsp;<button onclick="openVideoPlayer([this, 'VjXdKzUCMTY'])">>> ouvrir la vidéo</button><br><br>
+        <div class="placeHolder"></div>
       </li>
       <li>
-        <a href="https://www.youtube.com/watch?v=LZa5EtxzkIU" target="_blank">Ko Ko Ko Jolie Calao</a>
-        <div class="columnTwo">
-          <p>Chanson à geste Africaine</p>
+        <a href="https://www.youtube.com/watch?v=LZa5EtxzkIU" target="_blank">Ko Ko Ko Jolie Calao</a>&nbsp;<button onclick="openVideoPlayer([this, 'LZa5EtxzkIU'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>Chanson à geste Africaine</p>
           <p>Kokoko Joli Calao<br>
             Ne vole pas trop trop trop<br>
             Fais de petits sauts<br>
@@ -178,8 +120,8 @@
             Comme une girouette<br>
             Et vite vite sur le dos Joli Calao<br>
             Roule roule c’est rigolo<br>
-            Kokoko Joli Calao<br></p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/LZa5EtxzkIU" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            Kokoko Joli Calao<br></p></div>
+            <div class="placeHolder"></div>
         </div>
       </li>
     </ul>
@@ -227,26 +169,26 @@
     <h3 id="carchansons">Les Chansons</h3>
     <ul class="contenu">
       <li>
-        <a href="https://www.youtube.com/watch?v=_8RsQxKB2z0" target="_blank">Leperchaun’s Dance</a>
-        <div class="columnTwo">
-          <p>Dance dance Leperchaun Dance<br>Dance dance leperchaun dance<br>Dance dance leperchaun dance<br>Do a dance for me</p>
+        <a href="https://www.youtube.com/watch?v=_8RsQxKB2z0" target="_blank">Leperchaun’s Dance</a>&nbsp;<button onclick="openVideoPlayer([this, '_8RsQxKB2z0'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>Dance dance Leperchaun Dance<br>Dance dance leperchaun dance<br>Dance dance leperchaun dance<br>Do a dance for me</p>
           <p>Clap clap leperchaun clap<br>Clap clap leperchaun clap<br>Clap clap leperchaun clap<br>Do a clap for me</p>
-          <p>Jump jump leperchaun jump<br>Jump jump leperchaun jump<br>Jump jump leperchaun jump<br>Do a jump for me</p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/_8RsQxKB2z0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>Jump jump leperchaun jump<br>Jump jump leperchaun jump<br>Jump jump leperchaun jump<br>Do a jump for me</p></div>
+          <div class="placeHolder"></div>
         </div>
       </li>
       <li>
-        <a href="https://www.youtube.com/watch?v=FS7wN7YicOM" target="_blank">Mon ami le Dragon</a>
-        <div class="columnTwo">
-          <p>C’est en haut du donjon<br>Que vit mon ami le dragon<br>Un polisson un peu grognon<br>Et aussi un vrai Glouton<br>Donne-lui des macarons<br>Il sera ton compagnon<br>Mais si tu le fâches pour de bon<br>Il crachera du feu à l’horizon</p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/FS7wN7YicOM" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/watch?v=FS7wN7YicOM" target="_blank">Mon ami le Dragon</a>&nbsp;<button onclick="openVideoPlayer([this, 'FS7wN7YicOM'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>C’est en haut du donjon<br>Que vit mon ami le dragon<br>Un polisson un peu grognon<br>Et aussi un vrai Glouton<br>Donne-lui des macarons<br>Il sera ton compagnon<br>Mais si tu le fâches pour de bon<br>Il crachera du feu à l’horizon</p></div>
+          <div class="placeHolder"></div>
         </div>
       </li>
       <li>
-        <a href="https://www.youtube.com/watch?v=YWYjMCV5pGU" target="_blank">Brother John</a>
-        <div class="columnTwo">
-          <p>Are you sleeping<br>Are you sleeping<br>Brother John<br>Brother John<br>Morning bells are ringing<br>Morning bells are ringing<br>Ding Dang Dong<br>Ding Dang dong</p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/YWYjMCV5pGU" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/watch?v=YWYjMCV5pGU" target="_blank">Brother John</a>&nbsp;<button onclick="openVideoPlayer([this, 'YWYjMCV5pGU'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>Are you sleeping<br>Are you sleeping<br>Brother John<br>Brother John<br>Morning bells are ringing<br>Morning bells are ringing<br>Ding Dang Dong<br>Ding Dang dong</p></div>
+          <div class="placeHolder"></div>
         </div>
       </li>
     </ul>
@@ -287,30 +229,30 @@
     <h3 id="ccachansons">Les Chansons</h3>
     <ul class="contenu">
       <li>
-        <a href="https://www.youtube.com/watch?v=4UqVCTmo6xI" target="_blank">Bébé Yo</a>
-        <div class="columnTwo">
-          <p>Contine du Sénégal</p>
+        <a href="https://www.youtube.com/watch?v=4UqVCTmo6xI" target="_blank">Bébé Yo</a>&nbsp;<button onclick="openVideoPlayer([this, '4UqVCTmo6xI'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>Contine du Sénégal</p>
           <p class="columnTwo">Bébé Yo A bébé Yola<br>Bébé Yo A bébé<br/>Goudi Goudi Yaowa<br/>Bétché bétché Mala<br/>
             <br/>
             Mon Bébé toi mon Bébé<br/>
             Mon Bébé toi mon Bébé<br/>
             La nuit la nuit c’est pour toi<br/>
             Le jour le jour c’est pour moi<br/>
-          </p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/4UqVCTmo6xI" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p></div>
+          <div class="placeHolder"></div>
         </div>
       </li>
       <li>
-        <a href="https://www.youtube.com/watch?v=VjXdKzUCMTY" target="_blank">La danse du zèbre</a><br>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/VjXdKzUCMTY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/watch?v=VjXdKzUCMTY" target="_blank">La danse du zèbre</a>&nbsp;<button onclick="openVideoPlayer([this, 'VjXdKzUCMTY'])">>> ouvrir la vidéo</button><br><br>
+        <div class="placeHolder"></div>
       </li>
       <li>
-        <a href="https://www.youtube.com/watch?v=JL3bqL8x4hY" target="_blank">Fatou Yo</a><br>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/JL3bqL8x4hY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/watch?v=JL3bqL8x4hY" target="_blank">Fatou Yo</a>&nbsp;<button onclick="openVideoPlayer([this, 'JL3bqL8x4hY'])">>> ouvrir la vidéo</button><br><br>
+        <div class="placeHolder"></div>
       </li>
-      <li><a href="https://www.youtube.com/watch?v=LMr4VBXCRvM" target="_blank">Ndéké Moko</a>
-        <div class="columnTwo">
-          <p>Berceuse Africaine</p>
+      <li><a href="https://www.youtube.com/watch?v=LMr4VBXCRvM" target="_blank">Ndéké Moko</a>&nbsp;<button onclick="openVideoPlayer([this, 'LMr4VBXCRvM'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>Berceuse Africaine</p>
           <p>Ndeké Moko Azalaki<br>
             Okati Ya Mayi<br>
             Azalaki Na bana<br>
@@ -322,21 +264,21 @@
             Oya oya oya oh<br>
             Oya Oya oya oh<br>
             Oya oya oya oh Oya<br>
-          </p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/LMr4VBXCRvM" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p></div>
+          <div class="placeHolder"></div>
       </li>
-      <li><a href="https://www.youtube.com/watch?v=Uw3pprp_btw" target="_blank">Amawolé</a>
-        <div class="columnTwo">
-          <p>Contine Africaine</p>
+      <li><a href="https://www.youtube.com/watch?v=Uw3pprp_btw" target="_blank">Amawolé</a>&nbsp;<button onclick="openVideoPlayer([this, 'Uw3pprp_btw'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>Contine Africaine</p>
           <p>Amawolé Amawolé Amawolé<br>
           Amawolé Amawolé Amawolé <br>
-          Kintéla Anga Naléla Soso Kintéla Anga Naléla Kokodioco</p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/Uw3pprp_btw" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          Kintéla Anga Naléla Soso Kintéla Anga Naléla Kokodioco</p></div>
+          <div class="placeHolder"></div>
         </div>
       </li>
-      <li><a href="https://www.youtube.com/watch?v=-8tGzPmE51c" target="_blank">Boubou Kalakala A dit que</a>
-        <div class="columnTwo">
-          <p>Comptine Africaine</p>
+      <li><a href="https://www.youtube.com/watch?v=-8tGzPmE51c" target="_blank">Boubou Kalakala A dit que</a>&nbsp;<button onclick="openVideoPlayer([this, '-8tGzPmE51c'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>Comptine Africaine</p>
           <p>Boubou Kala kala A dit que (bis)<br>
           Tu danses comme le serpent<br>
           <br>
@@ -350,8 +292,8 @@
           Tu danses comme la Girafe <br>
           <br>
           Boubou Kala kala A dit que (bis)<br>
-          Tu danses comme L’éléphant<br></p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/-8tGzPmE51c" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          Tu danses comme L’éléphant<br></p></div>
+          <div class="placeHolder"></div>
         </div>
       </li>
     </ul>
@@ -379,6 +321,99 @@
     </ul>
   </div>
 
+  <div class="section ccroyaume">
+    <ul>
+      <li><a href="#ccrchansons">Les Chansons</a></li>
+      <li><a href="#ccrinstruments">Les instruments que nous avons découvert</a></li>
+      <li><a href="#ccrrepertoire">Le répertoire de musique</a></li>
+    </ul>
+
+    <h3 id="ccrchansons">Les Chansons</h3>
+    <ul class="contenu">
+      <li>
+        <a href="https://www.youtube.com/watch?v=_8RsQxKB2z0" target="_blank">Leperchaun’s Dance</a>&nbsp;<button onclick="openVideoPlayer([this, '_8RsQxKB2z0'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>Dance dance Leperchaun Dance<br>Dance dance leperchaun dance<br>Dance dance leperchaun dance<br>Do a dance for me</p>
+          <p>Clap clap leperchaun clap<br>Clap clap leperchaun clap<br>Clap clap leperchaun clap<br>Do a clap for me</p>
+          <p>Jump jump leperchaun jump<br>Jump jump leperchaun jump<br>Jump jump leperchaun jump<br>Do a jump for me</p></div>
+          <div class="placeHolder"></div>
+        </div>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=FS7wN7YicOM" target="_blank">Mon ami le Dragon</a>&nbsp;<button onclick="openVideoPlayer([this, 'FS7wN7YicOM'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>C’est en haut du donjon<br>Que vit mon ami le dragon<br>Un polisson un peu grognon<br>Et aussi un vrai Glouton<br>Donne-lui des macarons<br>Il sera ton compagnon<br>Mais si tu le fâches pour de bon<br>Il crachera du feu à l’horizon</p></div>
+          <div class="placeHolder"></div>
+        </div>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=YWYjMCV5pGU" target="_blank">Brother John</a>&nbsp;<button onclick="openVideoPlayer([this, 'YWYjMCV5pGU'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>Are you sleeping<br>Are you sleeping<br>Brother John<br>Brother John<br>Morning bells are ringing<br>Morning bells are ringing<br>Ding Dang Dong<br>Ding Dang dong</p></div>
+          <div class="placeHolder"></div>
+        </div>
+      </li>
+      <li><i>Colors</i> Mélody Marty
+        <div>
+          <p>Enregistement prochainement disponible</p>
+        </div>
+      </li>
+      <li><i>Clothes</i> Mélody Marty
+        <div>
+          <p>Enregistrement prochainement disponible</p>
+        </div>
+      </li>
+      <li><a href="https://www.youtube.com/watch?v=k1qTJTz-1Rg" target="_blank"><i>The London Bridge</i> chanson traditionnelle</a>&nbsp;<button onclick="openVideoPlayer([this, 'k1qTJTz-1Rg'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>London Bridge is falling down<br>Falling down falling down<br>London Bridge is falling down<br>My fair Lady</p>
+          <p>Built it up with sticks and stones<br>Sticks and stones Sticks and stones<br>Built it up with sticks and stones<br>My fair Lady</p>
+          <p>Le pont de Londres va s’effondrer<br>S’effondrer s’effondrer<br>Le pont de Londres va s’effondrer<br>Ma belle dame</p>
+          <p>Reconstruisez-le de bois et de pierres<br>De bois et de pierres de bois et de pierres<br>Reconstruisez-le de bois et de pierres<br>Ma belle dame</p></div>
+          <div class="placeHolder"></div>
+        </div>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=oky9qwVq3eM" target="_blank">My London Song Les Enfantastiques</a>&nbsp;<button onclick="openVideoPlayer([this, 'oky9qwVq3eM'])">>> ouvrir la vidéo</button><br><br>
+        <div class="placeHolder"></div>
+      </li>
+      <li><a href="https://www.youtube.com/watch?v=qooy_7gn1fk" target="_blank"><i>J’aime la galette</i> chanson traditionnelle</a>&nbsp;<button onclick="openVideoPlayer([this, 'qooy_7gn1fk'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>J’aime la galette<br>Savez-vous comment ?<br>Quand elle est bien faite<br>Avec du beurre dedans</p>
+          <p>Refrain :<br>Trala lala trala lalalère<br>Trala lala trala lalala</p></div>
+          <div class="placeHolder"></div>
+        </div>
+      </li>
+    </ul>
+
+    <h3 id="ccrinstruments">Les instruments que nous avons découvert</h3>
+    <ul class="contenu">
+      <li>La cornemuse<br>
+        <img src="./pictures/musique/cornemuse.jpg" alt="cornemuse instrument">
+      </li>
+      <li>Le tin whistle<br>
+        <img src="./pictures/musique/tinwhistle.jpg" alt="tinwhistle instrument">
+      </li>
+      <li>Le bodhran<br>
+        <img src="./pictures/musique/bodhran.jpg" alt="bodhran instrument">
+      </li>
+    </ul>
+
+    <h3 id="ccrrepertoire">Le répertoire de musique</h3>
+    <ul class="contenu">
+      <li><a href="https://www.youtube.com/watch?v=E9wWBjnaEck">Big Ben strikes</a></li>
+      <li><a href="https://www.youtube.com/watch?v=rblYSKz_VnI">The Beatles Hello Goodbye</a></li>
+      <li><a href="https://www.youtube.com/watch?v=AZV0V-R6wgk">Claude Gervaise Branle de Champagne</a></li>
+      <li><a href="https://www.youtube.com/watch?v=sQPEWhceJOI">Frédéric Laurent La bourrée des serfs</a></li>
+      <li><a href="https://www.youtube.com/watch?v=4zH6LTR0i2c">Riverdance Reel around the sun</a></li>
+      <li><a href="https://www.youtube.com/watch?v=-zQoQ1ckFxI">The Skye Boat song</a></li>
+      <li><a href="https://www.youtube.com/watch?v=1FKoX7u_Jo8">Celtic legends Amazing Grace</a></li>
+      <li><a href="https://www.youtube.com/watch?v=ktMkWojRMu8">The Chieftains Chase Around The Windmill</a></li>
+      <li><a href="https://www.youtube.com/watch?v=JYREXxIbKI0">Duo Menguy – Le Pennec Tempus Fugit Valse</a></li>
+      <li><a href="https://www.youtube.com/watch?v=NmpdJotqPEI">Gwarchodd LLandona – musique traditionnelle du Pays de Galles</a></li>
+      <li><a href="https://www.youtube.com/watch?v=X29HSYW4_BE">Dacw ‘Nghariad 4 Yn y bar</a></li>
+    </ul>
+  </div>
+
   <div class="section clafrique">
     <ul>
       <li><a href="#clachansons">Les chansons</a></li>
@@ -391,22 +426,22 @@
     <h3 id="clachansons">Les Chansons</h3>
     <ul class="contenu">
       <li>
-        <a href="https://www.youtube.com/watch?v=4UqVCTmo6xI" target="_blank">Bébé Yo</a>
-        <div class="columnTwo">
-          <p>Contine du Sénégal</p>
+        <a href="https://www.youtube.com/watch?v=4UqVCTmo6xI" target="_blank">Bébé Yo</a>&nbsp;<button onclick="openVideoPlayer([this, '4UqVCTmo6xI'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>Contine du Sénégal</p>
           <p class="columnTwo">Bébé Yo A bébé Yola<br>Bébé Yo A bébé<br/>Goudi Goudi Yaowa<br/>Bétché bétché Mala<br/>
             <br/>
             Mon Bébé toi mon Bébé<br/>
             Mon Bébé toi mon Bébé<br/>
             La nuit la nuit c’est pour toi<br/>
             Le jour le jour c’est pour moi<br/>
-          </p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/4UqVCTmo6xI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p></div>
+          <div class="placeHolder"></div>
         </div>
       </li>
-      <li><a href="https://www.youtube.com/watch?v=LMr4VBXCRvM" target="_blank">Ndéké Moko</a>
-        <div class="columnTwo"><p>Berceuse Africaine</p>
-          <p>Ndeké Moko Azalaki<br>
+      <li><a href="https://www.youtube.com/watch?v=LMr4VBXCRvM" target="_blank">Ndéké Moko</a>&nbsp;<button onclick="openVideoPlayer([this, 'LMr4VBXCRvM'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two"><p>Berceuse Africaine</p>
+          <div><p>Ndeké Moko Azalaki<br>
           Okati Ya Mayi<br>
           Azalaki Na bana<br>
           Motoba soki sambo<br>
@@ -416,22 +451,22 @@
           Refrain :<br>
           Oya oya oya oh<br>
           Oya Oya oya oh<br>
-          Oya oya oya oh Oya<br></p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/LMr4VBXCRvM" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          Oya oya oya oh Oya<br></p></div>
+          <div class="placeHolder"></div>
         </div>
       </li>
-      <li><a href="https://www.youtube.com/watch?v=Uw3pprp_btw" target="_blank">Amawolé</a>
-        <div class="columnTwo">
-          <p>Contine Africaine</p>
+      <li><a href="https://www.youtube.com/watch?v=Uw3pprp_btw" target="_blank">Amawolé</a>&nbsp;<button onclick="openVideoPlayer([this, 'Uw3pprp_btw'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>Contine Africaine</p>
           <p>Amawolé Amawolé Amawolé<br>
           Amawolé Amawolé Amawolé <br>
-          Kintéla Anga Naléla Soso Kintéla Anga Naléla Kokodioco</p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/Uw3pprp_btw" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          Kintéla Anga Naléla Soso Kintéla Anga Naléla Kokodioco</p></div>
+          <div class="placeHolder"></div>
         </div>
       </li>
-      <li><a href="https://www.youtube.com/watch?v=-8tGzPmE51c" target="_blank">Boubou Kalakala A dit que</a>
-        <div class="columnTwo">
-          <p>Comptine Africaine</p>
+      <li><a href="https://www.youtube.com/watch?v=-8tGzPmE51c" target="_blank">Boubou Kalakala A dit que</a>&nbsp;<button onclick="openVideoPlayer([this, '-8tGzPmE51c'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>Comptine Africaine</p>
           <p>Boubou Kala kala A dit que (bis)<br>
           Tu danses comme le serpent<br>
           <br>
@@ -445,8 +480,8 @@
           Tu danses comme la Girafe <br>
           <br>
           Boubou Kala kala A dit que (bis)<br>
-          Tu danses comme L’éléphant<br></p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/-8tGzPmE51c" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          Tu danses comme L’éléphant<br></p></div>
+          <div class="placeHolder"></div>
         </div>
       </li>
       <li><b>Le Chant de Dounia</b>
@@ -463,9 +498,9 @@
           </p>
         </div>
       </li>
-      <li><a href="https://www.youtube.com/watch?v=N1KZbMprW8U" target="_blank">Siyahamba</a>
-        <div class="columnTwo">
-          <p>Chanson Traditionnelle Afrique du Sud</p>
+      <li><a href="https://www.youtube.com/watch?v=N1KZbMprW8U" target="_blank">Siyahamba</a>&nbsp;<button onclick="openVideoPlayer([this, 'N1KZbMprW8U'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>Chanson Traditionnelle Afrique du Sud</p>
           <p class="columnTwo">Refrain :<br>
           Siya Hamba couka nié ni couencos<br>
           Siya Hamba couka nié ni couencos (bis)<br>
@@ -479,13 +514,13 @@
           <br><br>
           Nous marchons Ouhou<br>
           Nous marchons dans la lumière de Dieu
-          </p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/N1KZbMprW8U" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p></div>
+          <div class="placeHolder"></div>
         </div>
       </li>
-      <li><a href="https://www.youtube.com/watch?v=2aFlQS4k3wo" target="_blank">Shosholoza</a>
+      <li><a href="https://www.youtube.com/watch?v=2aFlQS4k3wo" target="_blank">Shosholoza</a>&nbsp;<button onclick="openVideoPlayer([this, '2aFlQS4k3wo'])">>> ouvrir la vidéo</button>
         <div class="columnTwo">
-          <p>Chant traditionnel d’Afrique du sud</p>
+          <div><p>Chant traditionnel d’Afrique du sud</p>
           <p class="columnTwo">Shosholoza<br>
           Shosholoza Kolezu n’taba<br>
           Stimela Sipume South Africa<br>
@@ -501,21 +536,21 @@
           Tu t'enfuis<br>
           Sur ses montagnes,<br>
           Le train à vapeur d'Afrique du Sud
-          </p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/2aFlQS4k3wo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p></div>
+          <div class="placeHolder"></div>
         </div>
       </li>
-      <li><a href="https://www.youtube.com/watch?v=XBfE7AgnHdk" target="_blank">Sama Doom Jangal</a>
-        <div class="columnTwo">
-          <p>Na na yé<br>
+      <li><a href="https://www.youtube.com/watch?v=XBfE7AgnHdk" target="_blank">Sama Doom Jangal</a>&nbsp;<button onclick="openVideoPlayer([this, 'XBfE7AgnHdk'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>Na na yé<br>
           Zimbé Na na yé<br>
           Zimbé Na na yé<br>
           Soumaré na na zimbé<br>
           Mon fils, apprends<br>
           Mon fils, apprends<br>
           Mon fils, apprends<br>
-          So bougué am diplôme</p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/XBfE7AgnHdk" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          So bougué am diplôme</p></div>
+          <div class="placeHolder"></div>
         </div>
       </li>
     </ul>
@@ -582,6 +617,120 @@
       <li><a href="https://www.youtube.com/watch?v=BLZTOiKBHVA" target="_blank">African Zulu Drum music</a></li>
       <li><a href="https://www.youtube.com/watch?v=oCo4q5jqGX4" target="_blank">African Zulu Voice music</a></li>
       <li><a href="https://www.youtube.com/watch?v=o0CeFX6E2yI" target="_blank">Manu Dibango <i>Soul Makossa</i></a></li>
+    </ul>
+  </div>
+
+  <div class="section clroyaume">
+    <ul>
+      <li><a href="#clrchansons">Les Chansons</a></li>
+      <li><a href="#clrinstrument">Les instruments que nous avons découvert</a></li>
+      <li><a href="#clrrepertoire">Le répertoire de musique</a></li>
+    </ul>
+
+    <h3 id="clrchansons">Les chansons</h3>
+    <ul class="contenu">
+      <li>
+        <a href="https://www.youtube.com/watch?v=_8RsQxKB2z0" target="_blank">Leperchaun’s Dance</a>&nbsp;<button onclick="openVideoPlayer([this, '_8RsQxKB2z0'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>Dance dance Leperchaun Dance<br>Dance dance leperchaun dance<br>Dance dance leperchaun dance<br>Do a dance for me</p>
+          <p>Clap clap leperchaun clap<br>Clap clap leperchaun clap<br>Clap clap leperchaun clap<br>Do a clap for me</p>
+          <p>Jump jump leperchaun jump<br>Jump jump leperchaun jump<br>Jump jump leperchaun jump<br>Do a jump for me</p></div>
+          <div class="placeHolder"></div>
+        </div>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=FS7wN7YicOM" target="_blank">Mon ami le Dragon</a>&nbsp;<button onclick="openVideoPlayer([this, 'FS7wN7YicOM'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>C’est en haut du donjon<br>Que vit mon ami le dragon<br>Un polisson un peu grognon<br>Et aussi un vrai Glouton<br>Donne-lui des macarons<br>Il sera ton compagnon<br>Mais si tu le fâches pour de bon<br>Il crachera du feu à l’horizon</p></div>
+          <div class="placeHolder"></div>
+        </div>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=YWYjMCV5pGU" target="_blank">Brother John</a>&nbsp;<button onclick="openVideoPlayer([this, 'YWYjMCV5pGU'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>Are you sleeping<br>Are you sleeping<br>Brother John<br>Brother John<br>Morning bells are ringing<br>Morning bells are ringing<br>Ding Dang Dong<br>Ding Dang dong</p></div>
+          <div class="placeHolder"></div>
+        </div>
+      </li>
+      <li><i>Colors</i> Mélody Marty
+        <div>
+          <p>Enregistement prochainement disponible</p>
+        </div>
+      </li>
+      <li><i>Clothes</i> Mélody Marty
+        <div>
+          <p>Enregistrement prochainement disponible</p>
+        </div>
+      </li>
+      <li><a href="https://www.youtube.com/watch?v=k1qTJTz-1Rg" target="_blank"><i>The London Bridge</i> chanson traditionnelle</a>&nbsp;<button onclick="openVideoPlayer([this, 'k1qTJTz-1Rg'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>London Bridge is falling down<br>Falling down falling down<br>London Bridge is falling down<br>My fair Lady</p>
+          <p>Built it up with sticks and stones<br>Sticks and stones Sticks and stones<br>Built it up with sticks and stones<br>My fair Lady</p>
+          <p>Le pont de Londres va s’effondrer<br>S’effondrer s’effondrer<br>Le pont de Londres va s’effondrer<br>Ma belle dame</p>
+          <p>Reconstruisez-le de bois et de pierres<br>De bois et de pierres de bois et de pierres<br>Reconstruisez-le de bois et de pierres<br>Ma belle dame</p></div>
+          <div class="placeHolder"></div>
+        </div>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=oky9qwVq3eM" target="_blank">My London Song Les Enfantastiques</a>&nbsp;<button onclick="openVideoPlayer([this, 'oky9qwVq3eM'])">>> ouvrir la vidéo</button><br><br>
+        <div class="placeHolder"></div>
+      </li>
+      <li><a href="https://www.youtube.com/watch?v=qooy_7gn1fk" target="_blank"><i>J’aime la galette</i> chanson traditionnelle</a>&nbsp;<button onclick="openVideoPlayer([this, 'qooy_7gn1fk'])">>> ouvrir la vidéo</button>
+        <div class="flex-col-two">
+          <div><p>J’aime la galette<br>Savez-vous comment ?<br>Quand elle est bien faite<br>Avec du beurre dedans</p>
+          <p>Refrain :<br>Trala lala trala lalalère<br>Trala lala trala lalala</p></div>
+          <div class="placeHolder"></div>
+        </div>
+      </li>
+      <li><i>Sherlock Holmes</i> (sur l’air de Ghost Bbusters) Mélody Marty<br>
+        <div><p>Enregistrement prochainement disponible</p>
+          <p>Quand y’a des énigmes,<br>Et tout un tas d’mystères<br>Qui-est-ce qu’on appelle ?<br>SHERLOCK HOLMES</p>
+          <p>Pour résoudre les enquêtes<br>Avec sa petite loupe<br>Qui est-ce qu’on appelle ?<br>SHERLOCK HOLMES</p>
+          <p>Pour trouver des indices<br>Avec son ami Watson<br>Qui est-ce qu’on appelle ?<br>SHERLOCK HOLMES</p>
+        </div>
+      </li>
+      <li><i>Robin des bois</i> (sur l’air de We will Rock You – Queen) Mélody Marty
+        <div><p>Enregistrement prochainement disponible</p>
+          <p>Qui est le premier de tous les héros<br>Qui détrousse les riches pour donner aux pauvres<br>Qui s’empare du magot avec ses compagnons<br>Frère Toque et Petit Jean ?</p>
+          <p>Robin Robin des bois<br>Robin Robin des Bois</p>
+          <p>Qui est le plus méchant des tyrans<br>Qui détrousse les pauvres pour donner aux riches<br>Qui a emprisonné Richard Cœur de Lion<br>Qui a prit la place du gentil roi</p>
+          <p>Le prince le Prince Jean<br>Le Prince le Prince Jean</p>
+          <p>Qui a sauvé l’Angleterre du tyran<br>Qui épousé d’amour Belle Marianne<br>Qui a remis sur le trône le gentil roi</p>
+          <p>Robin Robin des Bois<br>Robin Robin des Bois</p>
+        </div>
+      </li>
+    </ul>
+
+    <h3 id="clrinstrument">Les instruments que nous avons découvert</h3>
+    <ul class="contenu">
+      <li>La cornemuse<br>
+        <img src="./pictures/musique/cornemuse.jpg" alt="cornemuse instrument">
+      </li>
+      <li>Le tin whistle<br>
+        <img src="./pictures/musique/tinwhistle.jpg" alt="tinwhistle instrument">
+      </li>
+      <li>Le bodhran<br>
+        <img src="./pictures/musique/bodhran.jpg" alt="bodhran instrument">
+      </li>
+      <li>La guitare électrique<br>
+        <img src="./pictures/musique/guitareelectrique.jpg" alt="guitare electrique instrument">
+      </li>
+    </ul>
+
+    <h3 id="clrrepertoire">Le répertoire de musique</h3>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=E9wWBjnaEck">Big Ben strikes</a></li>
+      <li><a href="https://www.youtube.com/watch?v=rblYSKz_VnI">The Beatles Hello Goodbye</a></li>
+      <li><a href="https://www.youtube.com/watch?v=AZV0V-R6wgk">Claude Gervaise Branle de Champagne</a></li>
+      <li><a href="https://www.youtube.com/watch?v=sQPEWhceJOI">Frédéric Laurent La bourrée des serfs</a></li>
+      <li><a href="https://www.youtube.com/watch?v=4zH6LTR0i2c">Riverdance Reel around the sun</a></li>
+      <li><a href="https://www.youtube.com/watch?v=-zQoQ1ckFxI">The Skye Boat song</a></li>
+      <li><a href="https://www.youtube.com/watch?v=1FKoX7u_Jo8">Celtic legends Amazing Grace</a></li>
+      <li><a href="https://www.youtube.com/watch?v=ktMkWojRMu8">The Chieftains Chase Around The Windmill</a></li>
+      <li><a href="https://www.youtube.com/watch?v=JYREXxIbKI0">Duo Menguy – Le Pennec Tempus Fugit Valse</a></li>
+      <li><a href="https://www.youtube.com/watch?v=NmpdJotqPEI">Gwarchodd LLandona – musique traditionnelle du Pays de Galles</a></li>
+      <li><a href="https://www.youtube.com/watch?v=X29HSYW4_BE">Dacw ‘Nghariad 4 Yn y bar</a></li>
+      <li><a href="https://www.youtube.com/watch?v=-tJYN-eG1zk">Queen We will Rock You</a></li>
     </ul>
   </div>
 
