@@ -7,7 +7,6 @@ html{
   background-image: url('./pictures/musique/435123-2.jpg');
   background-attachment: fixed;
   background-size: cover;
-  min-height: 150%;
 }
 
 body{
@@ -28,7 +27,7 @@ h2, h4{
 }
 
 h3{
-  margin-top: 9em;
+  margin-top: 6em;
 }
 
 nav{
@@ -105,6 +104,7 @@ nav li:hover{
 
 .center{
   display: flex;
+  width: 100%;
   justify-content: center;
 }
 
@@ -113,6 +113,11 @@ nav li:hover{
   bottom: 5px;
   right: 5px;
   font-size: 0.7em;
+}
+
+.spacer{
+  display: block;
+  height: 5em;
 }
 
 #ecoleactive{

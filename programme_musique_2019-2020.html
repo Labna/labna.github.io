@@ -10,10 +10,10 @@
   <h1>
     Crèche et Centre Artistique <img src="./pictures/musique/logo.png"> de Casablanca
   </h1>
-  <h2>
+  <!-- <h2>
     Programme musical 2019-2020
-  </h2>
-  <h4>Présentation</h4>
+  </h2> -->
+  <h4>Texte au familles</h4>
   <p>Bonjour à toutes et tous, petits et grands,<br/>
     <br/>
     Compte tenu de cette situation plus qu’exceptionnelle, nous nous devons de faire preuve d’adaptation et être plus que jamais force de propositions afin de ne pas perdre les apprentissages passés et futurs.<br/>Il nous est donc indispensable d’assurer un suivi de nos élèves et de proposer des moyens d’y parvenir.<br/>C’est pourquoi, au travers de cette page web, nous vous proposons de retrouver l’intégralité du travail accomplis en musique depuis octobre 2019, et des propositions de nouvelles activités pour la prochaine période.</br>Cette page reste en construction permanente afin de vous offrir le meilleur contenu possible et se verra mise à jour très régulièrement, merci de votre compréhension.<br><br>L'équipe pédagogique</p>
@@ -22,13 +22,13 @@
       <li onclick="changeEcole([this, 'creche']);">
         Crèche
       </li>
-      <li onclick="changeEcole([this, 'centre']);">
+      <li onclick="changeEcole([this, 'artistique']);">
         Centre Artistique
       </li>
     </ul>
     <ul class="ecole creche">
-      <li onclick="changeOnglet([this, 'cacapela']);">
-        A Capela
+      <li onclick="changeOnglet([this, 'cacapella']);">
+        A Capella
       </li>
       <li onclick="changeOnglet([this, 'ccrescendo']);">
         Crescendo
@@ -37,7 +37,7 @@
         Legato / Ostinato
       </li>
     </ul>
-    <ul class="onglet cacapela">
+    <ul class="onglet cacapella">
       <li onclick="changeSection([this, 'caafrique'])"><h2>L'Afrique</h2></li>
       <li onclick="changeSection([this, 'caroyaume'])"><h2>Le Royaume-Unis</h2></li>
     </ul>
@@ -49,17 +49,24 @@
       <li onclick="changeSection([this, 'clafrique'])"><h2>L'Afrique</h2></li>
       <li onclick="changeSection([this, 'clroyaume'])"><h2>Le Royaume-Unis</h2></li>
     </ul>
-    <ul class="ecole centre">
-      Arrivera bientôt.
+    <ul class="ecole artistique">
+      <li onclick="changeOnglet([this, 'ajardin'])">Jardin Artistique</li>
+      <li onclick="changeOnglet([this, 'aeveil'])">&Eacute;veil Artistique</li>
+      <li onclick="changeOnglet([this, 'ainitiation'])">Initiation Artistique</li>
+      <li onclick="changeOnglet([this, 'afm1'])">Formation Musicale Cycle I, 1<sup>re</sup> Année</li>
+      <li onclick="changeOnglet([this, 'afm2'])">Formation Musicale Cycle I, 2<sup>me</sup> Année</li>
+      <li onclick="changeOnglet([this, 'acomedie'])">Comédie Musicale</li>
+      <li onclick="changeOnglet([this, 'achorale'])">Chorale</li>
+      <li onclick="changeOnglet([this, 'aflute'])">Flûte Traversière</li>
     </ul>
   </nav>
   
 
   <div class="section caafrique">
     <ul>
-      <li><a href="#caachansons">Chansons</a></li>
-      <li><a href="#caainstruments">Les instruments que nous avons découvert</a></li>
-      <li><a href="#caacomptines">Contine et poésies</a></li>
+      <li><a href="#caachansons">Les Chansons</a></li>
+      <li><a href="#caainstruments">Les instruments que nous avons découverts</a></li>
+      <li><a href="#caacomptines">Comptines et poésies</a></li>
       <li><a href="#caarepertoire">Répertoire de musique</a></li>
     </ul>
 
@@ -68,7 +75,7 @@
       <li>
         <a href="https://www.youtube.com/watch?v=4UqVCTmo6xI" target="_blank">Bébé Yo</a>&nbsp;<button onclick="openVideoPlayer([this, '4UqVCTmo6xI'])">>> ouvrir la vidéo</button>
         <div class="flex-col-two">
-          <div><p>Contine du Sénégal</p>
+          <div><p>Comptines du Sénégal</p>
           <p class="columnTwo">
             Bébé Yo A bébé Yola<br>Bébé Yo A bébé<br/>Goudi Goudi Yaowa<br/>Bétché bétché Mala<br/>
             <br/>
@@ -126,7 +133,7 @@
       </li>
     </ul>
 
-    <h3 id="caainstruments">Les instruments que nous avons découvert</h3>
+    <h3 id="caainstruments">Les instruments que nous avons découverts</h3>
     <ul class="contenu">
       <li>Le Balafon<br>
         <img src="./pictures/musique/balafon.png" alt="balafon instrument">
@@ -162,7 +169,7 @@
   <div class="section caroyaume">
     <ul>
       <li><a href="#carchansons">Les Chansons</a></li>
-      <li><a href="#carinstruments">Les instruments que nous avons découvert</a></li>
+      <li><a href="#carinstruments">Les instruments que nous avons découverts</a></li>
       <li><a href="#carrepertoire">Le répertoire de musique</a></li>
     </ul>
 
@@ -193,7 +200,7 @@
       </li>
     </ul>
 
-    <h3 id="carinstruments">Les instruments que nous avons découvert</h3>
+    <h3 id="carinstruments">Les instruments que nous avons découverts</h3>
     <ul class="contenu">
       <li>La cornemuse<br>
         <img src="./pictures/musique/cornemuse.jpg" align="cornemuse instrument">
@@ -222,7 +229,7 @@
   <div class="section ccafrique">
     <ul>
       <li><a href="#ccachansons">Les chansons</a></li>
-      <li><a href="#ccainstruments">Les instruments que nous avons découvert</a></li>
+      <li><a href="#ccainstruments">Les instruments que nous avons découverts</a></li>
       <li><a href="#ccarepertoire">Le répertoire de musique</a></li>
     </ul>
 
@@ -231,7 +238,7 @@
       <li>
         <a href="https://www.youtube.com/watch?v=4UqVCTmo6xI" target="_blank">Bébé Yo</a>&nbsp;<button onclick="openVideoPlayer([this, '4UqVCTmo6xI'])">>> ouvrir la vidéo</button>
         <div class="flex-col-two">
-          <div><p>Contine du Sénégal</p>
+          <div><p>Comptines du Sénégal</p>
           <p class="columnTwo">Bébé Yo A bébé Yola<br>Bébé Yo A bébé<br/>Goudi Goudi Yaowa<br/>Bétché bétché Mala<br/>
             <br/>
             Mon Bébé toi mon Bébé<br/>
@@ -269,7 +276,7 @@
       </li>
       <li><a href="https://www.youtube.com/watch?v=Uw3pprp_btw" target="_blank">Amawolé</a>&nbsp;<button onclick="openVideoPlayer([this, 'Uw3pprp_btw'])">>> ouvrir la vidéo</button>
         <div class="flex-col-two">
-          <div><p>Contine Africaine</p>
+          <div><p>Comptine Africaine</p>
           <p>Amawolé Amawolé Amawolé<br>
           Amawolé Amawolé Amawolé <br>
           Kintéla Anga Naléla Soso Kintéla Anga Naléla Kokodioco</p></div>
@@ -298,7 +305,7 @@
       </li>
     </ul>
 
-    <h3 id="ccainstruments">Les instruments que nous avons découvert</h3>
+    <h3 id="ccainstruments">Les instruments que nous avons découverts</h3>
     <ul class="contenu">
       <li>Le Balafon<br>
         <img src="./pictures/musique/balafon.png" alt="balafon instrument">
@@ -324,7 +331,7 @@
   <div class="section ccroyaume">
     <ul>
       <li><a href="#ccrchansons">Les Chansons</a></li>
-      <li><a href="#ccrinstruments">Les instruments que nous avons découvert</a></li>
+      <li><a href="#ccrinstruments">Les instruments que nous avons découverts</a></li>
       <li><a href="#ccrrepertoire">Le répertoire de musique</a></li>
     </ul>
 
@@ -385,7 +392,7 @@
       </li>
     </ul>
 
-    <h3 id="ccrinstruments">Les instruments que nous avons découvert</h3>
+    <h3 id="ccrinstruments">Les instruments que nous avons découverts</h3>
     <ul class="contenu">
       <li>La cornemuse<br>
         <img src="./pictures/musique/cornemuse.jpg" alt="cornemuse instrument">
@@ -417,7 +424,7 @@
   <div class="section clafrique">
     <ul>
       <li><a href="#clachansons">Les chansons</a></li>
-      <li><a href="#clainstruments">Les instruments que nous avons découvert</a></li>
+      <li><a href="#clainstruments">Les instruments que nous avons découverts</a></li>
       <li><a href="#clacomptines">Comptines</a></li>
       <li><a href="#clarepertoire">Le répertoire de musique</a></li>
     </ul>
@@ -428,7 +435,7 @@
       <li>
         <a href="https://www.youtube.com/watch?v=4UqVCTmo6xI" target="_blank">Bébé Yo</a>&nbsp;<button onclick="openVideoPlayer([this, '4UqVCTmo6xI'])">>> ouvrir la vidéo</button>
         <div class="flex-col-two">
-          <div><p>Contine du Sénégal</p>
+          <div><p>Comptine du Sénégal</p>
           <p class="columnTwo">Bébé Yo A bébé Yola<br>Bébé Yo A bébé<br/>Goudi Goudi Yaowa<br/>Bétché bétché Mala<br/>
             <br/>
             Mon Bébé toi mon Bébé<br/>
@@ -457,7 +464,7 @@
       </li>
       <li><a href="https://www.youtube.com/watch?v=Uw3pprp_btw" target="_blank">Amawolé</a>&nbsp;<button onclick="openVideoPlayer([this, 'Uw3pprp_btw'])">>> ouvrir la vidéo</button>
         <div class="flex-col-two">
-          <div><p>Contine Africaine</p>
+          <div><p>Comptine Africaine</p>
           <p>Amawolé Amawolé Amawolé<br>
           Amawolé Amawolé Amawolé <br>
           Kintéla Anga Naléla Soso Kintéla Anga Naléla Kokodioco</p></div>
@@ -555,7 +562,7 @@
       </li>
     </ul>
 
-    <h3 id="clainstruments">Les instruments que nous avons découvert</h3>
+    <h3 id="clainstruments">Les instruments que nous avons découverts</h3>
     <ul class="contenu">
         <li>Le Balafon<br>
           <img src="./pictures/musique/balafon.png" alt="balafon instrument">
@@ -623,7 +630,7 @@
   <div class="section clroyaume">
     <ul>
       <li><a href="#clrchansons">Les Chansons</a></li>
-      <li><a href="#clrinstrument">Les instruments que nous avons découvert</a></li>
+      <li><a href="#clrinstrument">Les instruments que nous avons découverts</a></li>
       <li><a href="#clrrepertoire">Le répertoire de musique</a></li>
     </ul>
 
@@ -701,7 +708,7 @@
       </li>
     </ul>
 
-    <h3 id="clrinstrument">Les instruments que nous avons découvert</h3>
+    <h3 id="clrinstrument">Les instruments que nous avons découverts</h3>
     <ul class="contenu">
       <li>La cornemuse<br>
         <img src="./pictures/musique/cornemuse.jpg" alt="cornemuse instrument">
@@ -734,7 +741,93 @@
     </ul>
   </div>
 
+  <div class="onglet ajardin">
+    
+  </div>
+  
+  <div class="onglet aeveil">
+    
+  </div>
+  
+  <div class="onglet ainitiation">
+    
+  </div>
+  
+  <div class="onglet afm1">
+    <div class="spacer"></div>
+    <p>Bonjour à toutes et tous,<br>Vous trouverez, ci-après, notre première séance de Formation musicale I 1 ère année en ligne qui réunit nos axes habituels de travail, que sont :  l’écoute, les jeux rythmiques, le chant et l’expression corporelle.  Vous y trouverez différents exercices dont vous pourrez m'envoyer les réponse en cliquant sur le bouton à la fin du formulaire.<br>Ainsi, nous nous donnerons rendez-vous ici, chaque semaine, où vous sera envoyée une nouvelle séance et de nouveaux exercices.<br>Profitez-en, les enfants, pour me poser toutes les questions que vous voudrez, la boîte mail mise en place est faite pour ça !<br>Amusez-vous bien !<br>Restant à votre disposition, musicalement,</p>
+    <p>Mélody Marty</p>
+    <h3>Un peu d’écoute…</h3>
+    <button onclick="openVideoPlayer([this, 'Pi4g5VjxU6o'])"> Ouvrir la vidéo</button>
+    <div class="placeHolder"></div>
+    Stomp – spectacle 2012- extrait, <i>Just Clap Your Hands</i>
+    <p><b>Stomp</b> est une troupe de huit artistes musiciens créée à Brighton en 1991 par Steve McNicholas (comédien, musicien et auteur) et Luke Cresswell (percussionniste)1.<br>Leur spectacle est fait de jeu instrumental chorégraphié qui utilise des objets du quotidien. Que ce soit sur scène ou en extérieur, la troupe se sert d’objets du quotidien pour faire de la percussion : ballons de basket, casseroles, balais, tonneaux de plastique, poubelles en fer, claquements de doigts, tubes métalliques… Le spectacle demande une synchronisation parfaite dans l’exécution des numéros de percussion.</p>
 
+
+    <div class="flex-col-two">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNzB6zNhlVfCgBocElIJ3IXGsQwnWfJijg-PhtBGcWvC2mMQ/viewform?embedded=true" width="1000" height="1520" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+      <div>
+        <br><br>
+        Enregistrement 1<br>
+        <audio controls>
+          <source src="./audio/Exercice rythmique doum tak doum doum tak.ogg" type="audio/ogg">
+          <source src="./audio/Exercice rythmique doum tak doum doum tak.mp3" type="audio/mp3">
+        </audio><br>
+
+        Enregistrement 2<br>
+        <audio controls><br>
+          <source src="./audio/Exercice Rythmique boum tak boupm tak tak.ogg" type="audio/ogg">
+          <source src="./audio/Exercice Rythmique boum tak boupm tak tak.mp3" type="audio/mp3">
+        </audio><br>
+
+        Enregistrement 3<br>
+        <audio controls><br>
+          <source src="./audio/Exercice rythmique Boum boum boum digui digui digui digui.ogg" type="audio/ogg">
+          <source src="./audio/Exercice rythmique Boum boum boum digui digui digui digui.mp3" type="audio/mp3">
+        </audio><br>
+
+      </div>
+    </div>
+
+    <h3>Et si on chantait…</h3>
+    <p>Te souviens-tu de la chanson Dobrù Noc ? En voici un enregistrement pour que tu t’entraînes à la chanter avec moi. Il y a aussi un enregistrement sans les paroles, pour que tu chantes tout seul comme une star !<br>A toi de jouer !</p>
+
+    <audio controls>
+      <source src="./audio/Dobrù Noc 2e avec voix.ogg" type="audio/ogg">
+      <source src="./audio/Dobrù Noc 2e avec voix.mp3" type="audio/mp3">
+    </audio>
+    <div class="spacer"></div>
+    <audio controls>
+      <source src="./audio/Dobrù Noc 2e.ogg" type="audio/ogg">
+      <source src="./audio/Dobrù Noc 2e.mp3" type="audio/mp3">
+    </audio>
+
+    <div>
+      <h3>Let’s Do It...</h3>
+      <p>Maintenant, voici une vidéo dans la quelle je te propose un rythme de percussion corporelle. Tu le connais, nous l’avons vue en classe, mais maintenant tu as tout ce qu’il faut pour le refaire chez toi ! Aller c’est partie, faisons de la musique !</p>
+
+      <button onclick="openVideoPlayer([this, 'fatosbdqeu0'])">Ouvrir la vidéo</button>
+      <div class="center placeHolder"></div>
+    </div>
+  </div>
+  
+  <div class="onglet afm2">
+    
+  </div>
+  
+  <div class="onglet acomedie">
+    
+  </div>
+  
+  <div class="onglet achorale">
+    
+  </div>
+  
+  <div class="onglet aflute">
+    
+  </div>
+
+  <div class="spacer"></div>
 
 <div class="credits">Labna &copy; Tous droits réservés</div>
 </body>
