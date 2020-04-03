@@ -130,6 +130,10 @@ nav li:hover{
   height: 5em;
 }
 
+.hidden{
+  display: none;
+}
+
 #ecoleactive{
   background-color: #009ee76e;
   color: black;
