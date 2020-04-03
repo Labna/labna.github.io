@@ -5,14 +5,15 @@ html{
   /*background-color: #dfc28a;*/
   font-family: arial;
   background-image: url('./pictures/musique/435123-2.jpg');
-  background-attachment: fixed;
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 }
 
 body{
   width: 80%;
   min-width: 600px;
-  /*background-color: #EEEEEE88;*/
+  background-color: #EEEEEE20;
 }
 
 h1 img{
@@ -106,6 +107,15 @@ nav li:hover{
   display: flex;
   width: 100%;
   justify-content: center;
+}
+
+.contact {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  background-color: #009ee76e;
+  border-radius: 0 0 0 37px;
 }
 
 .credits{
