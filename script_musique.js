@@ -72,6 +72,17 @@ function openVideoPlayer(args) {
   link = args[1];
   //place = args=[2];
   place = button.parentNode.querySelector('.placeHolder');
-  button.parentNode.removeChild(button);
+  // button.parentNode.removeChild(button);
+  button.innerHTML = "Fermer la vidéo <<";
+  button.onclick = function() { closeVideoPlayer([button, link]);};
   place.innerHTML = "" + iframeStart + link + iframEnd;
+}
+
+function closeVideoPlayer(args) {
+  button = args[0];
+  link = args[1];
+  place = button.parentNode.querySelector('.placeHolder');
+  button.innerHTML = ">> Ouvrir la vidéo";
+  button.onclick = function() { openVideoPlayer([button, link]); };
+  place.innerHTML = "";
 }
