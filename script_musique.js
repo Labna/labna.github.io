@@ -64,8 +64,8 @@ function changeEcole(args) {
   caller.id = 'ecoleactive';
 }
 
-iframeStart = '<iframe width="560" height="315" src="https://www.youtube.com/embed/';
-iframEnd = '" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+youtubeStart = '<iframe width="560" height="315" src="https://www.youtube.com/embed/';
+youtubeEnd = '" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 
 function openVideoPlayer(args) {
   button = args[0];
@@ -75,7 +75,7 @@ function openVideoPlayer(args) {
   // button.parentNode.removeChild(button);
   button.innerHTML = "Fermer la vidéo <<";
   button.onclick = function() { closeVideoPlayer([button, link]);};
-  place.innerHTML = "" + iframeStart + link + iframEnd;
+  place.innerHTML = "" + youtubeStart + link + youtubeEnd;
 }
 
 function closeVideoPlayer(args) {
@@ -86,3 +86,17 @@ function closeVideoPlayer(args) {
   button.onclick = function() { openVideoPlayer([button, link]); };
   place.innerHTML = "";
 }
+
+formsStart = '<iframe src="https://docs.google.com/forms/d/e/';
+formsMiddle  =  '/viewform?embedded=true" width="1000" height="';
+formsEnd = '" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>';
+
+function openForm(args){
+  button = args[0];
+  link = args[1];
+  height = args[2];
+  place = button.parentNode.querySelector('.placeHolder');
+  button.parentNode.removeChild(button);
+  place.innerHTML = "" + formsStart + link + formsMiddle + height + formsEnd;
+}
+

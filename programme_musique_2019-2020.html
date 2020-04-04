@@ -51,14 +51,14 @@
       <li onclick="changeSection([this, 'clroyaume'])"><h2>Le Royaume-Unis</h2></li>
     </ul>
     <ul class="ecole artistique">
-      <li onclick="changeOnglet([this, 'ajardin'])">Jardin Artistique</li>
-      <li onclick="changeOnglet([this, 'aeveil'])">&Eacute;veil Artistique</li>
-      <li onclick="changeOnglet([this, 'ainitiation'])">Initiation Artistique</li>
+      <!-- <li onclick="changeOnglet([this, 'ajardin'])">Jardin Artistique</li> -->
+      <!-- <li onclick="changeOnglet([this, 'aeveil'])">&Eacute;veil Artistique</li> -->
+      <!-- <li onclick="changeOnglet([this, 'ainitiation'])">Initiation Artistique</li> -->
       <li onclick="changeOnglet([this, 'afm1'])">Formation Musicale Cycle I, 1<sup>re</sup> Année</li>
       <li onclick="changeOnglet([this, 'afm2'])">Formation Musicale Cycle I, 2<sup>me</sup> Année</li>
-      <li onclick="changeOnglet([this, 'acomedie'])">Comédie Musicale</li>
-      <li onclick="changeOnglet([this, 'achorale'])">Chorale</li>
-      <li onclick="changeOnglet([this, 'aflute'])">Flûte Traversière</li>
+      <!-- <li onclick="changeOnglet([this, 'acomedie'])">Comédie Musicale</li> -->
+      <!-- <li onclick="changeOnglet([this, 'achorale'])">Chorale</li> -->
+      <!-- <li onclick="changeOnglet([this, 'aflute'])">Flûte Traversière</li> -->
     </ul>
   </nav>
   
@@ -766,7 +766,11 @@
 
 
     <div class="flex-col-two">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNzB6zNhlVfCgBocElIJ3IXGsQwnWfJijg-PhtBGcWvC2mMQ/viewform?embedded=true" width="1000" height="1520" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+      <div>
+        <button onclick="openForm([this, '1FAIpQLSdNzB6zNhlVfCgBocElIJ3IXGsQwnWfJijg-PhtBGcWvC2mMQ', '2955'])">Ouvrir le questionnaire</button>
+        <div class="placeHolder"></div>
+      </div>
+      <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNzB6zNhlVfCgBocElIJ3IXGsQwnWfJijg-PhtBGcWvC2mMQ/viewform?embedded=true" width="1000" height="1520" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe> -->
       <div>
         <br><br>
         Enregistrement 1<br>
@@ -825,9 +829,11 @@
     <p><i>Erghen Diado</i>, chant traditionnel Bulgare par Le Mystère Des Voix Bulgares.</p><br>
     <p>La musique bulgare s'inscrit dans le cadre des traditions des Balkans où se croisent les influences byzantines, slaves et ottomanes. La présence traditionnelle de l'instrument Le Gaida atteste d'une très ancienne présence et des échanges culturels des traces avec le monde celtique. Cette musique a été rendue célèbre récemment grâce au succès obtenu par le Mystère des voix bulgares, un chœur féminin typique, excellant dans les harmonies vocales.</p>
 
-
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfhcukE2FpGkgzt3mCcrDmfpR5EGuaL-DMvWQpSrHr2Lti3sg/viewform?embedded=true" width="1000" height="1154" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
-
+    <div>
+      <button onclick="openForm([this, '1FAIpQLSfhcukE2FpGkgzt3mCcrDmfpR5EGuaL-DMvWQpSrHr2Lti3sg'])">Ouvrir le questionnaire</button>
+      <div class="placeHolder"></div>
+      <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfhcukE2FpGkgzt3mCcrDmfpR5EGuaL-DMvWQpSrHr2Lti3sg/viewform?embedded=true" width="1000" height="1154" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe> -->
+    </div>
     <h3>Un peu de rythme...</h3>
     <p>Dans l’extrait musical suivant, il y a un rythme au tambourin suivi d’un rythme aux castagnettes. Peux-tu le jouer en même temps que l’enregistrement ?<br><br>Et si tu devais l’écrire, comment l’écrirais-tu ?</p>
     <audio controls preload="none">
