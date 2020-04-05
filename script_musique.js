@@ -95,7 +95,7 @@ function openForm(args){
   button = args[0];
   link = args[1];
   height = args[2];
-  place = button.parentNode.querySelector('.placeHolder');
+  place = button.parentNode.querySelector('.placeHolderForm');
   button.parentNode.removeChild(button);
   place.innerHTML = "" + formsStart + link + formsMiddle + height + formsEnd;
 }

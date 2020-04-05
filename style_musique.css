@@ -93,6 +93,10 @@ nav li:hover{
   width: 560px;
 }
 
+.placeHolderForm{
+  display: block;
+}
+
 .columnTwo{
   column-count: 2; 
 }
@@ -101,6 +105,14 @@ nav li:hover{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  /*flex-flow: row-reverse;*/
+}
+
+@media (max-width: 1250px){
+  .flex-col-two{
+    flex-flow: column-reverse;
+  }
 }
 
 .center{
