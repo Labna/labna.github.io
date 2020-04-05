@@ -130,6 +130,15 @@ nav li:hover{
   border-radius: 0 0 0 37px;
 }
 
+.infocontact{
+  display: none;
+}
+
+.contact:hover .infocontact{
+  display: block;
+}
+
+
 .credits{
   position: fixed;
   bottom: 5px;
