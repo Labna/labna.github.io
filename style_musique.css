@@ -109,6 +109,12 @@ nav li:hover{
   /*flex-flow: row-reverse;*/
 }
 
+.flex-row{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 @media (max-width: 1250px){
   .flex-col-two{
     flex-flow: column-reverse;
