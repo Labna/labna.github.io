@@ -155,6 +155,12 @@ nav li:hover{
   transition-timing-function: cubic-bezier(.17,.84,.44,1);
 }
 
+@media (min-resolution: 2dppx){
+  .contact:hover .infocontact{
+    width: 579px;
+    height: 408px;
+  }
+}
 
 .credits{
   position: fixed;
