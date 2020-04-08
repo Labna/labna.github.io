@@ -2,7 +2,6 @@ html{
   display: flex;
   width: 100%;
   justify-content: center;
-  /*background-color: #dfc28a;*/
   font-family: arial;
   background-image: url('./pictures/musique/435123-2.jpg');
   background-size: cover;
@@ -24,7 +23,6 @@ h1 img{
 
 h2, h4{
   color: #0460a4;
-  /*margin-top: 3em;*/
 }
 
 h3{
@@ -37,8 +35,6 @@ nav{
 
 nav ul{
   animation: ease-in 2s;
-  /*transition: 2s transform;*/
-  /*transform: : translate(0px,-10px) 2s;  */
 }
 
 
@@ -89,7 +85,6 @@ nav li:hover{
 
 .placeHolder{
   display: block;
-  /*height: 315px;*/
   width: 560px;
 }
 
@@ -106,7 +101,6 @@ nav li:hover{
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  /*flex-flow: row-reverse;*/
 }
 
 .flex-row{
@@ -136,12 +130,23 @@ nav li:hover{
   border-radius: 0 0 0 37px;
 }
 
-.infocontact{
-  display: none;
+.contact .infocontact{
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  transition: height 0.3s, width 0.3s;
+  transition-timing-function: cubic-bezier(.17,.84,.44,1);
+}
+
+.infocontact *{
+  overflow: hidden;
 }
 
 .contact:hover .infocontact{
-  display: block;
+  height: 268px;
+  width: 386px;
+  transition: height 0.3s, width 0.3s;
+  transition-timing-function: cubic-bezier(.17,.84,.44,1);
 }
 
 
