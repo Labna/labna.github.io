@@ -56,6 +56,7 @@ nav h2{
 
 nav ul{
   animation: ease-in 2s;
+  padding: 0;
 }
 
 nav li{
@@ -150,16 +151,19 @@ nav li:hover{
 }
 
 .contact:hover .infocontact{
-  height: 268px;
-  width: 386px;
+  height: 304px;
+  width: 407px;
   transition: height 0.3s, width 0.3s;
   transition-timing-function: cubic-bezier(.17,.84,.44,1);
 }
 
 @media (min-resolution: 2dppx){
+  .contact:hover{
+    /*padding: 15px 0;*/
+  }
   .contact:hover .infocontact{
-    width: 579px;
-    height: 408px;
+    width: 570px;
+    height: 553px;
   }
 }
 
