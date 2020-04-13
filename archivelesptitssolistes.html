@@ -1,0 +1,55 @@
+<!DOCTYPE html >
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style_musique.css">
+  <title>Les P'tits Solistes</title>
+</head>
+<script language="javascript" type="text/javascript" src="script_musique.js" ></script>
+<body>
+  <h1>
+    Archives de la Crèche et Centre Artistique <img src="./pictures/musique/logo.png"> de Casablanca
+  </h1>
+
+    <nav>
+    <ul class="center">
+      <!-- <li onclick="changeEcole([this, 'semaine'])">La Chanson de la Semaine</li> -->
+      <li onclick="changeEcole([this, 'creche']);">Crèche</li>
+      <!-- <li onclick="changeEcole([this, 'artistique']);">Centre Artistique</li> -->
+    </ul>
+    <ul class="ecole creche">
+      <!-- <li onclick="changeOnglet([this, 'cacapella']);">A Capella</li> -->
+      <li onclick="changeOnglet([this, 'ccrescendo']);">Crescendo</li>
+      <li onclick="changeOnglet([this, 'clegato']);">Legato / Ostinato</li>
+    </ul>
+    <ul class="onglet cacapella">
+      <li onclick="changeSection([this, 'caafrique'])"><h2>L'Afrique</h2></li>
+      <li onclick="changeSection([this, 'caroyaume'])"><h2>Le Royaume-Unis</h2></li>
+    </ul>
+    <ul class="onglet ccrescendo">
+      <li onclick="changeSection([this, 'ccactivite'])"><h2>Activitées Pédagogiques</h2></li>
+      <!-- <li onclick="changeSection([this, 'ccafrique'])"><h2>L'Afrique</h2></li> -->
+      <!-- <li onclick="changeSection([this, 'ccroyaume'])"><h2>Le Royaume-Unis</h2></li> -->
+    </ul>
+    <ul class="onglet clegato">
+      <li onclick="changeSection([this, 'clactivite'])"><h2>Activitées Pédagogiques</h2></li>
+      <!-- <li onclick="changeSection([this, 'clafrique'])"><h2>L'Afrique</h2></li> -->
+      <!-- <li onclick="changeSection([this, 'clroyaume'])"><h2>Le Royaume-Unis</h2></li> -->
+    </ul>
+    <ul class="ecole artistique">
+      <!-- <li onclick="changeOnglet([this, 'ajardin'])">Jardin Artistique</li> -->
+      <!-- <li onclick="changeOnglet([this, 'aeveil'])">&Eacute;veil Artistique</li> -->
+      <!-- <li onclick="changeOnglet([this, 'ainitiation'])">Initiation Artistique</li> -->
+      <li onclick="changeOnglet([this, 'afm1'])">Formation Musicale Cycle I, 1<sup>re</sup> Année</li>
+      <li onclick="changeOnglet([this, 'afm2'])">Formation Musicale Cycle I, 2<sup>me</sup> Année</li>
+      <!-- <li onclick="changeOnglet([this, 'acomedie'])">Comédie Musicale</li> -->
+      <li onclick="changeOnglet([this, 'achorale'])">Chorale</li>
+      <!-- <li onclick="changeOnglet([this, 'aflute'])">Flûte Traversière</li> -->
+      <li onclick="changeOnglet([this, 'apiano'])">Piano</li>
+    </ul>
+  </nav>
+
+  
+
+</body>
+</html>
