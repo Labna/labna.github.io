@@ -119,7 +119,11 @@ nav li:hover{
   .flex-col-two{
     flex-flow: column-reverse;
   }
+  .flex-col-two-norevers{
+    flex-flow: column;
+  }
 }
+
 
 .center{
   display: flex;
@@ -157,13 +161,20 @@ nav li:hover{
   transition-timing-function: cubic-bezier(.17,.84,.44,1);
 }
 
-@media (min-resolution: 2dppx){
+.width-half{
+  width: 50%;
+}
+
+@media (min-resolution: 2dppx) or (max-width: 1000px){
   .contact:hover{
     /*padding: 15px 0;*/
   }
   .contact:hover .infocontact{
     width: 570px;
     height: 553px;
+  }
+  .width-half{
+    width: 100%;
   }
 }
 
@@ -192,6 +203,16 @@ nav li:hover{
 
 .hidden{
   display: none;
+}
+
+
+
+.text-justify{
+  text-align: justify;
+}
+
+.text-center{
+  text-align: center;
 }
 
 #ecoleactive{
