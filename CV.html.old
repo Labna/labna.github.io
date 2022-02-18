@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CV</title>
+<link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<style type="text/css">
+
+/* {outline:1px solid red;}*/
+
+.thumbnail{
+position: relative;
+z-index: 0;
+display: inline;
+padding: 0px;
+border: none;
+}
+
+.thumbnail:hover{
+background-color: transparent;
+z-index: 50;
+}
+
+.thumbnail span{ /*CSS for enlarged image*/
+position: absolute;
+left: -1000px;
+/*border: 1px dashed gray;*/
+visibility: hidden;
+color: black;
+text-decoration: none;
+}
+
+.thumbnail span a img{ /*CSS for enlarged image*/
+border-width: 0;
+padding: 0px;
+}
+
+.thumbnail:hover span{ /*CSS for enlarged image on hover*/
+visibility: visible;
+top: 0;
+left: 60px; /*position where enlarged image should offset horizontally */
+
+}
+
+#easter {
+  background-image: url("pictures/krokmou-dragons-2square-mini.jpg");
+  float:right;
+  width:200px;
+  height:200px;
+}
+
+#easter:hover {
+  background-position:100% 0;
+}
+</style>
+</head>
+<body>
+<!-- for link hover -->
+
+
+<div class="container">
+  <div style="float:right; display: inline-block;">
+    <!-- <img src="pictures/krokmou-dragons-2square.jpg" style="overflow:hidden; float:right;"> -->
+    <div id="easter"></div>
+  </div>
+<p><h1>Alban Cornuau</h1> <br/>
+06/01/1994<br>
+<!--6 janvier 1994 <br/>
+La Petite Mer Rouge <br>
+36300 DOUADIC <br>-->
+<!-- 67 rue de Maurian<br/>
+Rce le Maurian 4204D<br/>
+33290 Blanquefort<br/> -->
+<!-- 3 chemin du chêne Papinot<br/>
+Virollet 79360 Villiers-en-Bois<br/> -->
+25 rue Charles Aubry
+79250 Nueil-Les-Aubiers
+06 95 18 15 55<br/>
+alban.cornuau@free.fr</p>
+<h2 id="competences-informatiques" style="text-align:center">COMP&Eacute;TENCES INFORMATIQUES</h2>
+
+<table>
+  <tr>
+    <td>Web</td>
+    <td>HTML, CSS, JS/jQuery, Bootstrap Python, PHP, SQL</td>
+  </tr>
+  <tr>
+    <td>développement</td>
+    <td>Git/BitBucket, Docker, Jest</td>
+  </tr>
+  <tr>
+    <td>programmation</td>
+    <td>Python, C#, BASH/BATCH, PHP, C, JAVA</td>
+  </tr>
+  <tr>
+    <td>Framework</td>
+    <td>Unity, ERP(Odoo, PeopleSoft)</td>
+  </tr>
+  <tr>
+    <td>Base de donn&eacute;es</td>
+    <td>Microsoft Access, SQL, mySQL, </td>
+  </tr>
+  <tr>
+    <td>OS</td>
+    <td>Windows, Linux, Mac</td>
+  </tr>
+</table>
+
+<h2 id="etudes-et-formations" style="text-align:center">&Eacute;TUDES ET FORMATIONS</h2>
+
+<table>
+  <tr>
+    <td>2018</td>
+    <td>Formation au sein du Groupe HN</td>
+  </tr>
+  <tr>
+    <td>2015/2017</td>
+    <td>(niveau) 2<sup>e</sup> ann&eacute;e cycle ingénieur EXIA CESI</td>
+  </tr>
+  <tr>
+    <td>2015</td>
+    <td>Diplôme d'analyste programmeur</td>
+  </tr> 
+  <tr>
+    <td>2013-2015</td>
+    <td>1i&egrave;re/2i&egrave;me Ann&eacute;e pr&eacute;paratoires &Eacute;cole sup&eacute;rieure d’informatique <a class="thumbnail" href="#thumb">EXIA CESI<span><img src="pictures/exia.cesi.jpg" alt="exia.cesi.fr"></img></span></a></td>
+  </tr>
+  <tr>
+    <td>2013</td>
+    <td>Baccalaur&eacute;at S Sciences de l’Ing&eacute;nieur option Sport</td>
+  </tr>
+  <tr>
+    <td>2009</td>
+    <td>Brevet des coll&egrave;ges</td>
+  </tr>
+</table>
+
+<h2 id="experiences-professionnelles" style="text-align:center">EXP&Eacute;RIENCES PROFESSIONNELLES</h2>
+
+<table>
+  <tr>
+    <td>2019/2020</td>
+    <td>jusqu'à aujourd'hui</td>
+    <td>Développement en auto-entreprise d'un site internet communautaire en PHP/mySQL dédier au joueurs de jeux vidéo.</td>
+  </tr>
+  <tr>
+    <td>2018/2019</td>
+    <td>6 mois</td>
+    <td>Mise en place d'une migration documentaire via BASH et Python chez Natixis Financement.</td>
+  </tr>
+  <tr>
+    <td>2018</td>
+    <td>6 mois</td>
+    <td>Développement d'un module spécifique sur l'ERP PeopleSoft au sein du Crédit Agricole</td>
+  </tr>
+  <tr>
+    <td>2017</td>
+    <td>3 mois</td>
+    <td>Création du site internet de l'entreprise <a href="www.webwag.com">Webwag mobil</a>, en Responsive design.</td>
+  </tr>
+  <tr>
+    <td>2016</td>
+    <td>3 mois</td>
+    <td>Refonte du site Web applicatif Beenov en Python(<a href="werkzeug.palletsprojects.com/en/1.0.x/">werkzerg</a>) pour la CCI d'aquitaine, travail en partenaria avec <a href="widmee.com">Widmee</a></td>
+  </tr>
+  <tr>
+    <td>2015</td>
+    <td>9 semaines</td>
+    <td>Création d'un module d'ERP(Odoo) et d'une application android de réalité augmenté avec Unity à <a href="www.aldebarande.fr">Aldébarande</a></td>
+  </tr>
+  <tr>
+    <td>2014</td>
+    <td>9 semaines</td>
+    <td>Stage &agrave; <a class="thumbnail" href="#thumb">ANTSYS<span><img src="pictures/ANTSYS.JPG" alt="www.antsys.fr"></img></span></a>, cr&eacute;ation interface de vente bas&eacute; sur une base de données. La mission consistais &agrave; d&ecute;velopper l'interface en C# pour les utilisateurs </td>
+  </tr>
+  <tr>
+    <td>2012/13/14</td>
+    <td>Juillet/Aout</td>
+    <td>Guide/batelier saisonnier Marais Poitevin <a class="thumbnail" href="#thumb">Embarcad&egrave;re Prada<span><img src="pictures/prada-thumb_large.jpg" alt="www.bateaux-maraispoitevin.fr"></img></span></a></td>
+  </tr>
+  <tr>
+    <td>Mars 2011</td>
+    <td>une semaine</td>
+    <td>Stage à <a class="thumbnail" href="#thumb">HEULIEZ<span><img src="pictures/heuliez.jpg" alt="www.heuliezbus.com"></img></span></a>, rencontre des ing&eacute;nieurs et de l'administration, d&eacute;couverte de l'organisation g&eacute;n&eacute;ral et mise en production</td>
+  </tr>
+</table>
+
+<h2 id="informations-complementaires" style="text-align:center">INFORMATIONS COMPL&Eacute;MENTAIRES</h2>
+
+<ul>
+  <li>Projet web personnel, tournage/montage vidéo, retouche photo, création logo - 2019/2020</li>
+  <li>Wwoofing en Allemagne - Septembre-Mars 2018</li>
+  <li>TOEIC (860/990)<br/></li>
+  <li>PSC1 (pr&eacute;vention et secours civiques de niveau 1)<br/><!--2012--></li>
+  <li>Permis et voiture<br/><!--2012--></li>
+  <li>Judo (ceinture marron)<br/><!--2001/2013--></li>
+  <li>Scouts de France<br/><!--2001/2010--></li>
+</ul>
+
+</div>
+
+</body>
+</html>
