@@ -31,15 +31,31 @@
 
 ## Vocabulaire
 
- - Pointeur : c'est la souris <!--🖱️🐭--> <svg width="8.0" height="14.5" viewBox="-3 -5 80 145"><polygon points="0,0 0,100 24.41,90.02 41.25,132.92 64.82,123.15 46.6,80.7 70.71,70.71" style="fill:white;stroke:black;stroke-width:5;"></svg>
- - Curseur : c'est <span style="animation:1s steps(2, start) infinite colblink;">|</span> , ou <span style="animation:1s steps(2, start) infinite colblink;">_</span> clignotant ou autre selon l'application
- - Fenêtre : le cadre avec les boutons &nbsp; -- &nbsp; &#9744;&nbsp; &#10005; (ou <svg height=8 width=8><circle cx="4" cy="4" r="3.5" stroke="black" stroke-width=".4" fill="red" /></svg> <svg height=8 width=8><circle cx="4" cy="4" r="3.5" stroke="black" stroke-width=".4" fill="orange" /></svg> <svg height=8 width=8><circle cx="4" cy="4" r="3.5" stroke="black" stroke-width=".4" fill="lightgreen" /></svg>)
- - Onglet : souvent en haut, parfois en bas ou sur le côté, qui permet d'avoir plusieurs vues dans une même fenêtre
- - Application : ensemble cohérent d'outils qui permet d'effectuer une tâche
- - Logiciel : Ensemble d'applications souvent installées sur un poste/PC
- - Serveur : Application qui attend la connexion d'un client pour fournir un service
- - <key>ALT</key> et <key>ALT GR</key> n'ont pas le même comportement ni les mêmes fonctionnalités
- - Presse papier : espace mémoire contenant les éléments copiés
+Pointeur
+:c'est la souris <!--🖱️🐭--> <svg width="8.0" height="14.5" viewBox="-3 -5 80 145"><polygon points="0,0 0,100 24.41,90.02 41.25,132.92 64.82,123.15 46.6,80.7 70.71,70.71" style="fill:white;stroke:black;stroke-width:5;"></svg>
+
+Curseur
+:c'est <span style="animation:1s steps(2, start) infinite colblink;">|</span> , ou <span style="animation:1s steps(2, start) infinite colblink;">_</span> clignotant ou autre selon l'application
+
+Fenêtre
+:le cadre avec les boutons &nbsp; -- &nbsp; &#9744;&nbsp; &#10005; (ou <svg height=8 width=8><circle cx="4" cy="4" r="3.5" stroke="black" stroke-width=".4" fill="red" /></svg> <svg height=8 width=8><circle cx="4" cy="4" r="3.5" stroke="black" stroke-width=".4" fill="orange" /></svg> <svg height=8 width=8><circle cx="4" cy="4" r="3.5" stroke="black" stroke-width=".4" fill="lightgreen" /></svg>)
+
+Onglet
+:souvent en haut, parfois en bas ou sur le côté, qui permet d'avoir plusieurs vues dans une même fenêtre
+
+Application
+:ensemble cohérent d'outils qui permet d'effectuer une tâche
+
+Logiciel
+:Ensemble d'applications souvent installées sur un poste/PC
+
+Serveur
+:Application qui attend la connexion d'un client pour fournir un service
+
+Presse papier
+:espace mémoire contenant les éléments copiés
+
+<key>ALT</key> et <key>ALT GR</key> n'ont pas le même comportement ni les mêmes fonctionnalités
 
 > Dans ce document les touches majuscules sont représentées : <key class="tab">&uArr;</key>  
 > Les touches entourées de deux flèches &darr;<key>ALT</key>&darr; sont à appuyer et maintenir tout le temps de la manipulation
@@ -95,8 +111,6 @@ La touche "Windows" <key style="display:inline-block;width:1em;padding:5px;fill:
 
 [https://regex101.com]:https://regex101.com "Dans un nouvel onglet" target="_blank"
 
-<span class="pageBreak"></span>
-
 ## Excel
 
 ### Déplacement
@@ -137,8 +151,6 @@ Tous ces déplacements sont utilisables avec <key class="tab">&uArr;</key> pour 
 - <key>CTRL</key> + <key>0</key> : rétablit la taille du texte et des images par défaut
 - <key>F5</key> __ou__ <key>CTRL</key> + <key>R</key> : recharge la page
 - <key>CTRL</key> + <key>F5</key> : supprime le cache et recharge la page
-
-<span class="pageBreak"></span>
 
 ## Manipulation des fenêtres et bureaux
 
@@ -239,6 +251,15 @@ h1{
 }
 .courier{
   font-family: courier;
+}
+dl{
+  columns: 2;
+}
+dl > dt:first-child{
+  margin-top:0;
+}
+dt{
+  break-after:avoid;
 }
 </style>
 <style type="text/css">
@@ -507,8 +528,19 @@ sup {
   .noPrint{
     display:none;
   }
-  .pageBreak {
-    page-break-before:always; /* page-break-after works too */
+  h1, h2, h3, h4, h5, h6{
+    page-break-after: avoid;
+  }
+  p, blockquote, ul, ol, dl, li, table, pre{
+    margin: 0;
+  }
+  /*.pageBreak {
+    page-break-before:always; /* page-break-after works too * /
+  }*/
+  @keyframes colblink{
+    to{
+      color:black;
+    }
   }
 }
 @keyframes colblink{

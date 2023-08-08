@@ -39,17 +39,33 @@
 
 <h2 id="vocabulaire">Vocabulaire</h2>
 
-<ul>
-<li> Pointeur : c&#8217;est la souris <!--🖱️🐭--> <svg width="8.0" height="14.5" viewBox="-3 -5 80 145"><polygon points="0,0 0,100 24.41,90.02 41.25,132.92 64.82,123.15 46.6,80.7 70.71,70.71" style="fill:white;stroke:black;stroke-width:5;"></svg></li>
-<li> Curseur : c&#8217;est <span style="animation:1s steps(2, start) infinite colblink;">|</span> , ou <span style="animation:1s steps(2, start) infinite colblink;">_</span> clignotant ou autre selon l&#8217;application</li>
-<li> Fenêtre : le cadre avec les boutons &nbsp; &#8211; &nbsp; &#9744;&nbsp; &#10005; (ou <svg height=8 width=8><circle cx="4" cy="4" r="3.5" stroke="black" stroke-width=".4" fill="red" /></svg> <svg height=8 width=8><circle cx="4" cy="4" r="3.5" stroke="black" stroke-width=".4" fill="orange" /></svg> <svg height=8 width=8><circle cx="4" cy="4" r="3.5" stroke="black" stroke-width=".4" fill="lightgreen" /></svg>)</li>
-<li> Onglet : souvent en haut, parfois en bas ou sur le côté, qui permet d&#8217;avoir plusieurs vues dans une même fenêtre</li>
-<li> Application : ensemble cohérent d&#8217;outils qui permet d&#8217;effectuer une tâche</li>
-<li> Logiciel : Ensemble d&#8217;applications souvent installées sur un poste/PC</li>
-<li> Serveur : Application qui attend la connexion d&#8217;un client pour fournir un service</li>
-<li> <key>ALT</key> et <key>ALT GR</key> n&#8217;ont pas le même comportement ni les mêmes fonctionnalités</li>
-<li> Presse papier : espace mémoire contenant les éléments copiés</li>
-</ul>
+<dl>
+<dt>Pointeur</dt>
+<dd>c&#8217;est la souris <!--🖱️🐭--> <svg width="8.0" height="14.5" viewBox="-3 -5 80 145"><polygon points="0,0 0,100 24.41,90.02 41.25,132.92 64.82,123.15 46.6,80.7 70.71,70.71" style="fill:white;stroke:black;stroke-width:5;"></svg></dd>
+
+<dt>Curseur</dt>
+<dd>c&#8217;est <span style="animation:1s steps(2, start) infinite colblink;">|</span> , ou <span style="animation:1s steps(2, start) infinite colblink;">_</span> clignotant ou autre selon l&#8217;application</dd>
+
+<dt>Fenêtre</dt>
+<dd>le cadre avec les boutons &nbsp; &#8211; &nbsp; &#9744;&nbsp; &#10005; (ou <svg height=8 width=8><circle cx="4" cy="4" r="3.5" stroke="black" stroke-width=".4" fill="red" /></svg> <svg height=8 width=8><circle cx="4" cy="4" r="3.5" stroke="black" stroke-width=".4" fill="orange" /></svg> <svg height=8 width=8><circle cx="4" cy="4" r="3.5" stroke="black" stroke-width=".4" fill="lightgreen" /></svg>)</dd>
+
+<dt>Onglet</dt>
+<dd>souvent en haut, parfois en bas ou sur le côté, qui permet d&#8217;avoir plusieurs vues dans une même fenêtre</dd>
+
+<dt>Application</dt>
+<dd>ensemble cohérent d&#8217;outils qui permet d&#8217;effectuer une tâche</dd>
+
+<dt>Logiciel</dt>
+<dd>Ensemble d&#8217;applications souvent installées sur un poste/PC</dd>
+
+<dt>Serveur</dt>
+<dd>Application qui attend la connexion d&#8217;un client pour fournir un service</dd>
+
+<dt>Presse papier</dt>
+<dd>espace mémoire contenant les éléments copiés</dd>
+</dl>
+
+<p><key>ALT</key> et <key>ALT GR</key> n&#8217;ont pas le même comportement ni les mêmes fonctionnalités</p>
 
 <blockquote>
 <p>Dans ce document les touches majuscules sont représentées : <key class="tab">&uArr;</key><br />
@@ -120,8 +136,6 @@ La touche "Windows" <key style="display:inline-block;width:1em;padding:5px;fill:
 <li><key>CTRL</key> + <key>H</key> : Ouvre le menu de remplacement (certaines applications proposent une option nommée Regex ou <code>.*</code>, cf. : <em><a href="https://regex101.com" title="Dans un nouvel onglet" target="_blank">https://regex101.com</a></em> )</li>
 </ul>
 
-<p><span class="pageBreak"></span></p>
-
 <h2 id="excel">Excel</h2>
 
 <h3 id="déplacement">Déplacement</h3>
@@ -174,8 +188,6 @@ La touche "Windows" <key style="display:inline-block;width:1em;padding:5px;fill:
 <li><key>F5</key> <strong>ou</strong> <key>CTRL</key> + <key>R</key> : recharge la page</li>
 <li><key>CTRL</key> + <key>F5</key> : supprime le cache et recharge la page</li>
 </ul>
-
-<p><span class="pageBreak"></span></p>
 
 <h2 id="manipulationdesfenêtresetbureaux">Manipulation des fenêtres et bureaux</h2>
 
@@ -296,6 +308,15 @@ text-align: center;
 }
 .courier{
 font-family: courier;
+}
+dl{
+columns: 2;
+}
+dl > dt:first-child{
+margin-top:0;
+}
+dt{
+break-after:avoid;
 }
 </style>
 <style type="text/css">
@@ -566,8 +587,19 @@ word-wrap: break-word;
 .noPrint{
 display:none;
 }
-.pageBreak {
-page-break-before:always; /* page-break-after works too */
+h1, h2, h3, h4, h5, h6{
+page-break-after: avoid;
+}
+p, blockquote, ul, ol, dl, li, table, pre{
+margin: 0;
+}
+/<em>.pageBreak {
+page-break-before:always; /</em> page-break-after works too * /
+}*/
+@keyframes colblink{
+to{
+color:black;
+}
 }
 }
 @keyframes colblink{
