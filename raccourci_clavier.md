@@ -32,7 +32,7 @@
 ## Vocabulaire
 
 Pointeur
-:c'est la souris <!--🖱️🐭--> <svg width="8.0" height="14.5" viewBox="-3 -5 80 145"><polygon points="0,0 0,100 24.41,90.02 41.25,132.92 64.82,123.15 46.6,80.7 70.71,70.71" style="fill:white;stroke:black;stroke-width:5;"></svg>
+:c'est la souris <!--🖱️🐭--> <svg width="8.0" height="14.5" viewBox="-3 -5 80 145"><polygon points="0,0 0,100 24.41,90.02 41.25,132.92 64.82,123.15 46.6,80.7 70.71,70.71" style="fill:white;stroke:black;stroke-width:5;"/></svg>
 
 Curseur
 :c'est <span class="blink">|</span> , ou <span class="blink">_</span> clignotant ou autre selon l'application
@@ -62,7 +62,8 @@ Presse papier
 
 ## Raccourcis de navigation communs
 
-> Excel ne suit pas la même logique pour les déplacements, cf. : chapitre Excel
+>  Excel ne suit pas la même logique pour les déplacements, cf. : chapitre Excel
+
 
 1. Début <key>&nwarr;</key> : déplace le curseur au début de la ligne (<key>Pos1</key>, <key>Début</key>, <key>Home</key>, <key>Origine</key>)
 2. Fin <key>FIN</key> : déplace le curseur à la fin de la ligne
@@ -115,6 +116,8 @@ Presse papier
 les touches saisie permet d'accéder au fonctions, par exemple <key>L</key> permet d'accéder au bandeau "Accueil", puis <key>V</key> permet d'ouvrir le menu de collage.  
 Une fois ces chemins appris, il est possible d'aller plus vite en déclenchant la suite de touches : &darr;<key>ALT</key>&darr; + <key>L</key>, <key>V</key>, <key>V</key> réalise un coller valeur
 
+<div class="pageBreak"></div>
+
 ### Déplacement
 
  - <key class="tab">&lrarr;</key> : déplace le curseur d'une case sur la droite
@@ -122,9 +125,9 @@ Une fois ces chemins appris, il est possible d'aller plus vite en déclenchant l
  - <key>CTRL</key> + <key class="tab">&lrarr;</key> : lorsque plusieurs fenêtres d'Excel sont ouvertes, permet de passer de l'une à l'autre.
  - <key class="enter">&ldsh;</key> : déplace le curseur d'une case en bas
 
-> En se déplaçant avec tabulation, la touche <key class="enter">&ldsh;</key> entrée permet d'accéder au début d'une nouvelle ligne de saisie
+> En se déplaçant avec tabulation, la touche <key class="enter">&ldsh;</key><!--⏎--> entrée permet d'accéder au début d'une nouvelle ligne de saisie
 
- - <key>CTRL</key> + (touche directionnelle) : saute jusqu’à la dernière valeur de la ligne ou de la colonne (!! s'arrête à la première case vide), puis jusqu'à la dernière case du document
+ - <key>CTRL</key> + (touche directionnelle) **ou** <kbd>Fin</kbd>, (touche directionnel) : saute jusqu’à la dernière valeur de la ligne ou de la colonne (!! s'arrête à la première case vide), puis jusqu'à la dernière case du document
 
 Tous ces déplacements sont utilisables avec <key class="tab">&uArr;</key> pour en faire une sélection
 
@@ -137,10 +140,11 @@ Tous ces déplacements sont utilisables avec <key class="tab">&uArr;</key> pour 
 
 ### Édition de cellules
 
-- <key>F2</key> : ouvre la saisie rapide de la cellule sous le curseur
+- <key>CTRL</key> + <key class="enter">&ldsh;</key> : permet de reproduire la saisie dans toutes les cellules sélectionnées
+- <key>F2</key> : ouvre la saisie rapide de la cellule sous le curseur, puis permet de changer de mode de saisi : Modifier/Entrer
 - <key>F4</key> : lors de la saisi de coordonnée de cellule, permet de permuter entre relative, absolu, ligne absolu-colonne relative et ligne relative et colonne absolu
 
-> la bible des raccourcis clavier avec Excel : _[https://support.microsoft.com/fr-fr/office/raccourcis-clavier-dans-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f]_
+> Tous les raccourcis clavier sur Excel : _[https://support.microsoft.com/fr-fr/office/raccourcis-clavier-dans-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f]_
 
 [https://support.microsoft.com/fr-fr/office/raccourcis-clavier-dans-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f]:https://support.microsoft.com/fr-fr/office/raccourcis-clavier-dans-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f "Dans un nouvel onglet" target="_blank"
 
@@ -155,6 +159,8 @@ Tous ces déplacements sont utilisables avec <key class="tab">&uArr;</key> pour 
  - <key>CTRL</key> + <key>0</key> : rétablit la taille du texte et des images par défaut
  - <key>F5</key> __ou__ <key>CTRL</key> + <key>R</key> : recharge la page
  - <key>CTRL</key> + <key>F5</key> : supprime le cache et recharge la page
+
+<div class="pageBreak"></div>
 
 ## Manipulation des fenêtres et bureaux
 
@@ -200,17 +206,28 @@ Tous ces déplacements sont utilisables avec <key class="tab">&uArr;</key> pour 
  - <key>ALT</key> + <key class="tab">&uArr;</key> + <key>P</key> : Active/Désactive le panneau de détails
  - <key>ALT</key> + <key>F</key> : ouvre le menu déroulant (équivalent clic-droit) plus complet
  - <key>ALT</key> + <key>G</key> : ouvre les options d'affichages
+ - <key class="tab">&uArr;</key> + clic sur la colonne "Nom" : avec tri actif met les dossiers en haut de la liste.
  
 ## Divers dans le système
 
  - <key class="tab">&uArr;</key> + <key>F10</key> : ouvre le menu déroulant à l'emplacement du curseur (= clic droit)
  - <key>F2</key> : renomme l'élément sous le curseur, en cas de sélection multiple : renomme tous éléments en ajoutant un numéro incrémenté selon l'ordre dans lequel ils sont affiché.
+ - <kbd>ALT</kbd> : Fait apparaître et déplace le curseur dans le menu de l'application (Fichier, Édition, Aide...)
  - <key>ÉCHAP</key> : ferme le menu contextuel ouvert, annule la sélection en cours
  - <key>ALT</key> + <key class="tab">espace</key> : ouvre le menu de la fenêtre
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> **ou** <key>CTRL</key> + <key>ÉCHAP</key> : ouvre le menu démarrer, taper des lettres pour chercher une application
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key class="tab">&uArr;</key> + <key>S</key> : prendre une capture d'écran
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>L</key> : Verrouille la session
  - <key>CTRL</key> + <key class="tab">&uArr;</key> + <key>ÉCHAP</key> : ouvre le gestionnaire de tâche
+ - <kbd style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></kbd> + <kbd>E</kbd> : Ouvre le gestionnaire de fichiers
+ - <kbd style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></kbd> + <kbd>P</kbd> : ouvre le panneau "Projeter" pour changer l'affichage des écrans en dupliqué, étendu ou éteint
+ 
+
+> Toutes les raccourcis Windows sont ici : _[https://support.microsoft.com/fr-fr/windows/raccourcis-clavier-dans-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec]_
+
+[https://support.microsoft.com/fr-fr/windows/raccourcis-clavier-dans-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec]: https://support.microsoft.com/fr-fr/windows/raccourcis-clavier-dans-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec "Dans un nouvel onglet" target="_blank"
+
+<div class="pageBreak"></div>
 
 ## Écrire tous les symboles
 
@@ -237,7 +254,7 @@ Tous ces déplacements sont utilisables avec <key class="tab">&uArr;</key> pour 
 [https://usefulshortcuts.com/downloads/ALT-Codes.pdf]: https://usefulshortcuts.com/downloads/ALT-Codes.pdf "Dans un nouvel onglet" target="_blank"
 
 <style type="text/css">
-key{
+key, kbd{
   border: 1px solid grey;
   border-radius: 3px;
   background-color: #000000bb;
@@ -561,15 +578,15 @@ sup {
   .noPrint{
     display:none;
   }
-  h1, h2, h3, h4, h5, h6{
+  h1, h2, h3, h4, h5, h6, dt{
     break-after: avoid;
   }
   p, blockquote, ul, ol, dl, li, table, pre{
     break-inside: avoid;
   }
-  /* .pageBreak {
-    break-before:always; /* page-break-after works too
-  } */
+  .pageBreak {
+    break-after:page; /* page-break-before works too */
+  }
   .blink{
     animation: none;
   }
@@ -587,12 +604,20 @@ La touche "Windows" <key style="display:inline-block;width:1em;padding:5px;fill:
 -->
 
 <!--
+╭─┬╮⭾
+│ ││
+├─┼┤
+╰─┴╯
+-->
+
+<!--
 traitement du fichier post-extraction :
 replace : \n\n -> \n
 replace : i> <k -> i><k
 replace : </ul></li> -> </ul>\n</li>
 
 all style lines : Edit->Line->Join Lines
+replace : > < → ><
 
 -->
 </body>
