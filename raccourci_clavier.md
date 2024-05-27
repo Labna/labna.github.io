@@ -1,9 +1,9 @@
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Raccourcis Claviers V3</title>
-	<!-- <base target="_blank"></base> -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raccourcis Claviers V3</title>
+  <!-- <base target="_blank"></base> -->
 </head>
 <body>
 
@@ -38,7 +38,7 @@ Curseur
 :c'est <span class="blink">|</span> , ou <span class="blink">_</span> clignotant ou autre selon l'application
 
 Fenêtre
-:le cadre avec les boutons &nbsp; -- &nbsp; &#9744;&nbsp; &#10005; (ou <svg height=8 width=8><circle cx="4" cy="4" r="3.5" stroke="black" stroke-width=".4" fill="red" /></svg> <svg height=8 width=8><circle cx="4" cy="4" r="3.5" stroke="black" stroke-width=".4" fill="orange" /></svg> <svg height=8 width=8><circle cx="4" cy="4" r="3.5" stroke="black" stroke-width=".4" fill="lightgreen" /></svg>)
+:le cadre avec les boutons &nbsp; -- &nbsp;&#9744;&nbsp;&#10005; (ou <svg height=8 width=8><circle cx="4" cy="4" r="3.5" stroke="black" stroke-width=".4" fill="red" /></svg>&nbsp;<svg height=8 width=8><circle cx="4" cy="4" r="3.5" stroke="black" stroke-width=".4" fill="orange" /></svg>&nbsp;<svg height=8 width=8><circle cx="4" cy="4" r="3.5" stroke="black" stroke-width=".4" fill="lightgreen" /></svg>)
 
 Onglet
 :souvent en haut, parfois en bas ou sur le côté, qui permet d'avoir plusieurs vues dans une même fenêtre
@@ -612,13 +612,13 @@ La touche "Windows" <key style="display:inline-block;width:1em;padding:5px;fill:
 
 <!--
 traitement du fichier post-extraction :
-replace : \n\n -> \n
+//replace : \n\n -> \n
 replace : i> <k -> i><k
-replace : </ul></li> -> </ul>\n</li>
+//replace : </ul></li> -> </ul>\n</li>
 
 all style lines : Edit->Line->Join Lines
-replace : > < → ><
-
+replace / {2,}/ → / /
+replace /\n+/ → //
 -->
 </body>
 </html>
