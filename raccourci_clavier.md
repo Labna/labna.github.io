@@ -177,8 +177,9 @@ Tous ces déplacements sont utilisables avec <key class="tab">&uArr;</key> pour 
   - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>1</key> **ou** <key>2</key> **ou** <key>3</key>**...** : équivaut à un clic sur l'icône correspondant dans la barre d'application (maintenir <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> et appuyer plusieurs fois sur le même nombre si plusieurs fenêtres d'une même application)
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>CTRL</key> + <key>1</key> **ou** <key>2</key> **ou** <key>3</key>**...** : Passe d'une fenêtre ouverte à l'autre (correspondant à l'emplacement sur la barre de tâche)
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>ALT</key> + <key>1</key> **ou** <key>2</key> **ou** <key>3</key>**...** : ouvre le menu (= clic droit) de l'application épinglé au numéro correspondant
-  - Clic molette sur les icônes de la barre d'application ouvre une nouvelle fenêtre
+  - (<kbd class="tab">&uArr;</kbd> + clique gauche) **ou** Clic molette, sur les icônes de la barre d'application : ouvre une nouvelle fenêtre
   - Clic molette sur l'aperçu de la barre d'application d'une fenêtre d'une application ferme la fenêtre
+  - <kbd>CRTL</kbd> + <kbd class="tab">&uArr;</kbd> + (clique gauche **ou** <key class="enter">&ldsh;</key>), sur une application dans la barre de tâche, le menu démarrer, le gestionnaire de fichier ou le bureau : Ouvre l'application en tant qu'administrateur
 
 ### Gestion des bureaux virtuels
 
@@ -221,6 +222,7 @@ Tous ces déplacements sont utilisables avec <key class="tab">&uArr;</key> pour 
  - <key>CTRL</key> + <key class="tab">&uArr;</key> + <key>ÉCHAP</key> : ouvre le gestionnaire de tâche
  - <kbd style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></kbd> + <kbd>E</kbd> : Ouvre le gestionnaire de fichiers
  - <kbd style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></kbd> + <kbd>P</kbd> : ouvre le panneau "Projeter" pour changer l'affichage des écrans en dupliqué, étendu ou éteint
+ - <kbd>ALT</kbd> + <kbd class="tab">&uArr;</kbd> + touche directionnel, dans le menu démarrer : déplace le raccourci sélectionné
  
 
 > Toutes les raccourcis Windows sont ici : _[https://support.microsoft.com/fr-fr/windows/raccourcis-clavier-dans-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec]_
