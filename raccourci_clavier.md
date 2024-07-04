@@ -57,25 +57,24 @@ Presse papier
 
 <key>ALT</key> et <key>ALT GR</key> n'ont pas le même comportement ni les mêmes fonctionnalités
 
-> Dans ce document les touches majuscules sont représentées : <key class="tab">&uArr;</key>  
+> Dans ce document les touches majuscules sont représentées : <key class="tab">&#8679;</key>  
 > Les touches entourées de deux flèches &darr;<key>ALT</key>&darr; sont à appuyer et maintenir tout le temps de la manipulation
 
 ## Raccourcis de navigation communs
 
 >  Excel ne suit pas la même logique pour les déplacements, cf. : chapitre Excel
 
-
 1. Début <key>&nwarr;</key> : déplace le curseur au début de la ligne (<key>Pos1</key>, <key>Début</key>, <key>Home</key>, <key>Origine</key>)
 2. Fin <key>FIN</key> : déplace le curseur à la fin de la ligne
 3. <key>&#9651;</key>, <key>&#9661;</key>, <key>&#9665;</key>, <key>&#9655;</key> (touches directionnelles) : déplace le curseur d'un caractère ou d'une ligne
-4. <key>&#8670;</key>, <key>&#8671;</key> : déplace le curseur d'une hauteur d'écran, de fenêtre ou de vu (<key>PgUp</key>, <key>PgDn</key>)
+4. <key>&#8670;</key>, <key>&#8671;</key> : déplace le curseur d'une hauteur d'écran, de fenêtre ou de vu (<key>PgUp</key>, <key>PgDn</key> ou <kbd>Pg AR</kbd>, <kbd>Pg AV</kbd>)
 5. <key>CTRL</key> + <key>&#9665;</key> __ou__ <key>&#9655;</key> : déplace le curseur d'un mot
-6. <key class="tab">&lrarr;</key> __ou__ <key>F6</key> : déplace le curseur parmi les éléments de la fenêtre
+6. <key class="tab">&#x2B7E;</key> __ou__ <key>F6</key> : déplace le curseur parmi les éléments de la fenêtre
 
 ## Raccourcis de sélection communs
 
  - <key>CTRL</key> + <key>A</key> : sélectionner tout
- - <key class="tab">&uArr;</key> + [raccourci de navigation] : sélectionne entre le point d'origine et la nouvelle position du curseur
+ - <key class="tab">&#8679;</key> + [raccourci de navigation] : sélectionne entre le point d'origine et la nouvelle position du curseur
  - <key>CTRL</key> + [raccourci de navigation] : déplace le curseur sans sélectionner
  - <key>CTRL</key> + <key class="tab">ESPACE</key> : sélectionne/désélectionne l’élément sous le curseur
 
@@ -86,15 +85,15 @@ Presse papier
 - <key>CTRL</key> + <key>Z</key> : annuler la dernière action
 - Rétablir la dernière action annulée (dépend de l'application) :
     + <key>CTRL</key> + <key>Y</key>
-    + <key>CTRL</key> + <key class="tab">&uArr;</key> + <key>Z</key>
+    + <key>CTRL</key> + <key class="tab">&#8679;</key> + <key>Z</key>
 - <key>CTRL</key> + <key>C</key> : copier (enregistre dans le presse-papier)
 - <key>CTRL</key> + <key>X</key> : couper (enregistre dans le presse-papier, et supprime l'élément sélectionné)
 - <key>CTRL</key> + <key>V</key> : coller (le 1e élément du presse-papier)
 - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>V</key> : coller un des éléments de l'historique du presse-papier (À noter que l’on peut épingler un élément pour le coller plus tard)
 - <key>CTRL</key> + <key>S</key> : enregistrer
 - <key>CTRL</key> + <key>P</key> : imprimer <span class="noPrint">(cette page est imprimable 😉)</span>
-- <key>CTRL</key> + <key class="tab">&lrarr;</key> : passe à l'onglet suivant
-- <key>CTRL</key> + <key class="tab">&uArr;</key> + <key class="tab">&lrarr;</key> : passe à l'onglet précédent
+- <key>CTRL</key> + <key class="tab">&#x2B7E;</key> : passe à l'onglet suivant
+- <key>CTRL</key> + <key class="tab">&#8679;</key> + <key class="tab">&#x2B7E;</key> : passe à l'onglet précédent
 
 ## Raccourcis de manipulation de texte
 
@@ -112,31 +111,41 @@ Presse papier
 
 ### Contrôle au clavier
 
-<key>ALT</key> __ou__ <key class="tab">&uArr;</key> + <key>/</key> : déclenche l'affichage des raccourcis des fonctions  
+<key>ALT</key> __ou__ <key class="tab">&#8679;</key> + <key>/</key> : déclenche l'affichage des raccourcis des fonctions  
 les touches saisie permet d'accéder au fonctions, par exemple <key>L</key> permet d'accéder au bandeau "Accueil", puis <key>V</key> permet d'ouvrir le menu de collage.  
-Une fois ces chemins appris, il est possible d'aller plus vite en déclenchant la suite de touches : &darr;<key>ALT</key>&darr; + <key>L</key>, <key>V</key>, <key>V</key> réalise un coller valeur
+Une fois ces chemins appris, il est possible d'aller plus vite en déclenchant la suite de touches : &darr;<key>ALT</key>&darr; + <key>L</key>, <key>V</key>, <key>V</key> réalise un coller valeur.
+
+- <kbd class="tab">&#8679;</kbd> + <kbd>F11</kbd> : Insert une nouvelle feuille de calcul.
+- <kbd>CTRL</kbd> + <kbd class="tab">&#8679;</kbd> + <kbd>&#8670;</kbd> : change la feuille active vers la précédente
+- <kbd>CTRL</kbd> + <kbd class="tab">&#8679;</kbd> + <kbd>&#8671;</kbd> : change la feuille active vers la suivante
 
 <div class="pageBreak"></div>
 
 ### Déplacement
 
- - <key class="tab">&lrarr;</key> : déplace le curseur d'une case sur la droite
- - <key class="tab">&uArr;</key> + <key class="tab">&lrarr;</key> : déplace le curseur d'une case sur la gauche
- - <key>CTRL</key> + <key class="tab">&lrarr;</key> : lorsque plusieurs fenêtres d'Excel sont ouvertes, permet de passer de l'une à l'autre.
+ - <key class="tab">&#x2B7E;</key> : déplace le curseur d'une case sur la droite (depuis la dernière cellule d'un tableau, va au début d'une nouvelle ligne).
+ - <key class="tab">&#8679;</key> + <key class="tab">&#x2B7E;</key> : déplace le curseur d'une case sur la gauche
+ - <key>CTRL</key> + <key class="tab">&#x2B7E;</key> : lorsque plusieurs fenêtres d'Excel sont ouvertes, permet de passer de l'une à l'autre.
  - <key class="enter">&ldsh;</key> : déplace le curseur d'une case en bas
 
 > En se déplaçant avec tabulation, la touche <key class="enter">&ldsh;</key><!--⏎--> entrée permet d'accéder au début d'une nouvelle ligne de saisie
 
  - <key>CTRL</key> + (touche directionnelle) **ou** <kbd>Fin</kbd>, (touche directionnel) : saute jusqu’à la dernière valeur de la ligne ou de la colonne (!! s'arrête à la première case vide), puis jusqu'à la dernière case du document
 
-Tous ces déplacements sont utilisables avec <key class="tab">&uArr;</key> pour en faire une sélection
+Tous ces déplacements sont utilisables avec <key class="tab">&#8679;</key> pour en faire une sélection
 
 ### Sélection
 
  - <key>CTRL</key> + <key>A</key> : tout sélectionner (le tableau, puis la feuille, puis toutes les lignes et colonnes)
  - <key>CTRL</key> + <key class="tab">ESPACE</key> : étend la sélection à la/aux colonne/s (de valeur du tableau, puis avec l'entête, puis toute/s la/les colonne/s)
- - <key class="tab">&uArr;</key> + <key class="tab">ESPACE</key> : étend la sélection à la/aux ligne/s (de valeur, puis avec l'entête, toute/s la/les ligne/s)
- - <key>CTRL</key> + <key class="tab">&uArr;</key> + <key class="tab">ESPACE</key> : équivalent de <key>CTRL</key> + <key>A</key>
+ - <key class="tab">&#8679;</key> + <key class="tab">ESPACE</key> : étend la sélection à la/aux ligne/s (de valeur, puis avec l'entête, toute/s la/les ligne/s)
+ - <key>CTRL</key> + <key class="tab">&#8679;</key> + <key class="tab">ESPACE</key> : équivalent de <key>CTRL</key> + <key>A</key>
+ 
+> Les sélections discontinus tout au clavier sont possible avec la touche <kbd>F8</kbd>, il m'a fallut et il vous faudra sans doute vous entraîner un peut pour utiliser cette fonction
+
+- <kbd>F8</kbd> : passe en mode sélection étendu depuis la cellule active (équivalent au cliqué-glissé) (les modificateurs de déplacement sont utilisables)
+- <kbd class="tab">&#8679;</kbd> + <kbd>F8</kbd> : Ajoute/supprime une sélection discontinu (permettant de déplacer le curseur en gardant la sélection précédente)
+- <kbd class="tab">&#x2B7E;</kbd> : permet de déplacer le curseur de cellules en cellules sélectionné et de modifier les sélections précédentes.
 
 ### Édition de cellules
 
@@ -152,8 +161,8 @@ Tous ces déplacements sont utilisables avec <key class="tab">&uArr;</key> pour 
 
  - <key>CTRL</key> + <key>T</key> : nouvel onglet (new tab)
  - <key>CTRL</key> + <key>N</key> : nouvelle fenêtre
- - <key>CTRL</key> + <key class="tab">&uArr;</key> + <key>T</key> : restaure le dernier onglet fermé
- - <key>CTRL</key> + <key class="tab">&uArr;</key> + <key>N</key> : restaure la dernière fenêtre fermé
+ - <key>CTRL</key> + <key class="tab">&#8679;</key> + <key>T</key> : restaure le dernier onglet fermé
+ - <key>CTRL</key> + <key class="tab">&#8679;</key> + <key>N</key> : restaure la dernière fenêtre fermé
  - <key>CTRL</key> + <key>+</key> : agrandir le texte et les images
  - <key>CTRL</key> + <key>-</key> : réduire le texte et les images
  - <key>CTRL</key> + <key>0</key> : rétablit la taille du texte et des images par défaut
@@ -164,8 +173,9 @@ Tous ces déplacements sont utilisables avec <key class="tab">&uArr;</key> pour 
 
 ## Manipulation des fenêtres et bureaux
 
- - &darr;<key>ALT</key>&darr; + ( <key class="tab">&lrarr;</key> * N ) : navigue parmi les fenêtres ouvertes de gauche à droite
- - &darr;<key>ALT</key>&darr; + &darr;<key class="tab">&uArr;</key>&darr; + ( <key class="tab">&lrarr;</key> * N ) : Navigue parmi les fenêtres ouvertes de droite à gauche
+ - &darr;<key>ALT</key>&darr; + ( <key class="tab">&#x2B7E;</key> * N ) : navigue parmi les fenêtres ouvertes de gauche à droite
+ - &darr;<key>ALT</key>&darr; + &darr;<key class="tab">&#8679;</key>&darr; + ( <key class="tab">&#x2B7E;</key> * N ) : Navigue parmi les fenêtres ouvertes de droite à gauche
+ - <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd class="tab">&#x2B7E;</kbd> : ouvre le panneau des fenêtres ouvertes
  - <key>ALT</key> + <key>ÉCHAP</key> : place la fenêtre active derrière toutes les autres
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>M</key> : minimise toutes les fenêtres
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>D</key> : Montre ou cache le bureau
@@ -173,19 +183,19 @@ Tous ces déplacements sont utilisables avec <key class="tab">&uArr;</key> pour 
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>&#9651;</key> **ou** <key>&#9661;</key> **ou** <key>&#9665;</key> **ou** <key>&#9655;</key> : déplace la fenêtre
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>ALT</key> + <key>&#9651;</key> **ou** <key>&#9661;</key> : (Windows 11 uniquement) dimensionne la fenêtre sur la partie supérieur **ou** inférieur de l'écran
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>Z</key> : (Windows 11 uniquement) affiche le menu de positionnement de la fenêtre active, puis entrer le nombre pour sélectionner la disposition, puis l'emplacement
- - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key class="tab">&uArr;</key> + <key>&#9665;</key> **ou** <key>&#9655;</key> : déplace la fenêtre d'écran en écran
+ - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key class="tab">&#8679;</key> + <key>&#9665;</key> **ou** <key>&#9655;</key> : déplace la fenêtre d'écran en écran
   - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>1</key> **ou** <key>2</key> **ou** <key>3</key>**...** : équivaut à un clic sur l'icône correspondant dans la barre d'application (maintenir <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> et appuyer plusieurs fois sur le même nombre si plusieurs fenêtres d'une même application)
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>CTRL</key> + <key>1</key> **ou** <key>2</key> **ou** <key>3</key>**...** : Passe d'une fenêtre ouverte à l'autre (correspondant à l'emplacement sur la barre de tâche)
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>ALT</key> + <key>1</key> **ou** <key>2</key> **ou** <key>3</key>**...** : ouvre le menu (= clic droit) de l'application épinglé au numéro correspondant
-  - (<kbd class="tab">&uArr;</kbd> + clique gauche) **ou** Clic molette, sur les icônes de la barre d'application : ouvre une nouvelle fenêtre
+  - (<kbd class="tab">&#8679;</kbd> + clique gauche) **ou** Clic molette, sur les icônes de la barre d'application : ouvre une nouvelle fenêtre
   - Clic molette sur l'aperçu de la barre d'application d'une fenêtre d'une application ferme la fenêtre
-  - <kbd>CRTL</kbd> + <kbd class="tab">&uArr;</kbd> + (clique gauche **ou** <key class="enter">&ldsh;</key>), sur une application dans la barre de tâche, le menu démarrer, le gestionnaire de fichier ou le bureau : Ouvre l'application en tant qu'administrateur
+  - <kbd>CRTL</kbd> + <kbd class="tab">&#8679;</kbd> + (clique gauche **ou** <key class="enter">&ldsh;</key>), sur une application dans la barre de tâche, le menu démarrer, le gestionnaire de fichier ou le bureau : Ouvre l'application en tant qu'administrateur
 
 ### Gestion des bureaux virtuels
 
 > Les bureaux virtuels peuvent avoir des font d'écran différent un nom personnalisé, une même fenêtre peut être présente sur tous les bureaux. Ces actions n'ont pas de contrôles au clavier, il faut donc les faire à la souris dans le gestionnaire de bureaux (un bouton est par défaut dans la barre de tâches)
 
- - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key class="tab">&lrarr;</key> : Ouvre le gestionnaire de bureaux
+ - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key class="tab">&#x2B7E;</key> : Ouvre le gestionnaire de bureaux
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>CTRL</key> + <key>D</key> : Ajoute un bureau virtuel
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>CTRL</key> + <key>&#9665;</key> **ou** <key>&#9655;</key> : Change de bureau actif, à gauche ou à droite
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>CTRL</key> + <key>F4</key> : Ferme le bureau virtuel actuel
@@ -194,7 +204,7 @@ Tous ces déplacements sont utilisables avec <key class="tab">&uArr;</key> pour 
 
 ## Explorateur Windows : Gestionnaire de fichier
 
- - <key>CTRL</key> + <key class="tab">&uArr;</key> + <key>N</key> : crée un nouveau dossier
+ - <key>CTRL</key> + <key class="tab">&#8679;</key> + <key>N</key> : crée un nouveau dossier
  - <key>CTRL</key> + <key>E</key> __ou__ <key>CTRL</key> + <key>F</key> **ou** <key>F3</key> : déplace le curseur dans le champ de recherche
  - <key>CTRL</key> + <key>T</key> : ouvre un nouvel onglet (Windows 11)
  - <key>CTRL</key> + <key>D</key> : Supprime le fichier sans mettre à la corbeille
@@ -204,25 +214,25 @@ Tous ces déplacements sont utilisables avec <key class="tab">&uArr;</key> pour 
  - <key>ALT</key> + <key>E</key> : ouvre les options d'éditions, puis <key>I</key> permet d'inverser la sélection
  - <key>ALT</key> + <key>O</key> : ouvre les options des dossiers
  - <key>ALT</key> + <key>P</key> : Active/Désactive le panneau d'aperçu (P comme Preview)
- - <key>ALT</key> + <key class="tab">&uArr;</key> + <key>P</key> : Active/Désactive le panneau de détails
+ - <key>ALT</key> + <key class="tab">&#8679;</key> + <key>P</key> : Active/Désactive le panneau de détails
  - <key>ALT</key> + <key>F</key> : ouvre le menu déroulant (équivalent clic-droit) plus complet
  - <key>ALT</key> + <key>G</key> : ouvre les options d'affichages
- - <key class="tab">&uArr;</key> + clic sur la colonne "Nom" : avec tri actif met les dossiers en haut de la liste.
+ - <key class="tab">&#8679;</key> + clic sur la colonne "Nom" : avec tri actif met les dossiers en haut de la liste.
  
 ## Divers dans le système
 
- - <key class="tab">&uArr;</key> + <key>F10</key> : ouvre le menu déroulant à l'emplacement du curseur (= clic droit)
+ - <key class="tab">&#8679;</key> + <key>F10</key> : ouvre le menu déroulant à l'emplacement du curseur (= clic droit)
  - <key>F2</key> : renomme l'élément sous le curseur, en cas de sélection multiple : renomme tous éléments en ajoutant un numéro incrémenté selon l'ordre dans lequel ils sont affiché.
  - <kbd>ALT</kbd> : Fait apparaître et déplace le curseur dans le menu de l'application (Fichier, Édition, Aide...)
  - <key>ÉCHAP</key> : ferme le menu contextuel ouvert, annule la sélection en cours
  - <key>ALT</key> + <key class="tab">espace</key> : ouvre le menu de la fenêtre
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> **ou** <key>CTRL</key> + <key>ÉCHAP</key> : ouvre le menu démarrer, taper des lettres pour chercher une application
- - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key class="tab">&uArr;</key> + <key>S</key> : prendre une capture d'écran
+ - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key class="tab">&#8679;</key> + <key>S</key> : prendre une capture d'écran
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>L</key> : Verrouille la session
- - <key>CTRL</key> + <key class="tab">&uArr;</key> + <key>ÉCHAP</key> : ouvre le gestionnaire de tâche
+ - <key>CTRL</key> + <key class="tab">&#8679;</key> + <key>ÉCHAP</key> : ouvre le gestionnaire de tâche
  - <kbd style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></kbd> + <kbd>E</kbd> : Ouvre le gestionnaire de fichiers
  - <kbd style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></kbd> + <kbd>P</kbd> : ouvre le panneau "Projeter" pour changer l'affichage des écrans en dupliqué, étendu ou éteint
- - <kbd>ALT</kbd> + <kbd class="tab">&uArr;</kbd> + touche directionnel, dans le menu démarrer : déplace le raccourci sélectionné
+ - <kbd>ALT</kbd> + <kbd class="tab">&#8679;</kbd> + touche directionnel, _dans le menu démarrer_ : déplace le raccourci sélectionné
  
 
 > Toutes les raccourcis Windows sont ici : _[https://support.microsoft.com/fr-fr/windows/raccourcis-clavier-dans-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec]_
@@ -252,6 +262,19 @@ Tous ces déplacements sont utilisables avec <key class="tab">&uArr;</key> pour 
     - La touche <key>ALT GR</key> + <key  style="display:inline-flex;line-height:.7;flex-wrap:wrap;width:1em;transform:translateY(-0.3em);padding: 5px 5px 0"><span>7</span><span> </span><span>è</span><span>`</span></key>
 
 * Pour tous les autres symboles voire cette fiche : _[https://usefulshortcuts.com/downloads/ALT-Codes.pdf]_
+
+> Sous linux plusieurs combinaisons de clavier existes. Les plus répendus sont :
+
+- &darr;<kbd>CTRL</kbd>&darr; + &darr;<kbd>&#8679;</kbd>&darr; + <kbd>U</kbd><kbd>2</kbd><kbd>0</kbd><kbd>3</kbd><kbd>D</kbd>
+
+| Bonus | symbole |
+|---|
+|0x203D ou 0d8253 exclarrogatif | &#x203D;  
+0x2E18 ou 0d11800 | &#x2E18;  
+0x2049 ou 0d8265 | &#x2049;  
+0x2048 ou 0d8264 | &#x2048;
+
+
 
 [https://usefulshortcuts.com/downloads/ALT-Codes.pdf]: https://usefulshortcuts.com/downloads/ALT-Codes.pdf "Dans un nouvel onglet" target="_blank"
 
@@ -606,8 +629,8 @@ La touche "Windows" <key style="display:inline-block;width:1em;padding:5px;fill:
 -->
 
 <!--
-╭─┬╮⭾
-│ ││
+╭─┬╮⭾ 0x2B7E
+│ ││↹ 0x2189
 ├─┼┤
 ╰─┴╯
 -->
