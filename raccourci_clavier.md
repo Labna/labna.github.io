@@ -58,18 +58,20 @@ Presse papier
 <key>ALT</key> et <key>ALT GR</key> n'ont pas le même comportement ni les mêmes fonctionnalités
 
 > Dans ce document les touches majuscules sont représentées : <key class="tab">&#8679;</key>  
-> Les touches entourées de deux flèches &darr;<key>ALT</key>&darr; sont à appuyer et maintenir tout le temps de la manipulation
+> Les touches entourées de deux flèches &darr;<key>ALT</key>&darr; sont à appuyer et maintenir tout le temps de la manipulation  
+> Les touches à presser **simultanément** sont séparer par `+`  
+> Les touches à presser **successivement** sont séparer par `,`
 
 ## Raccourcis de navigation communs
 
 >  Excel ne suit pas la même logique pour les déplacements, cf. : chapitre Excel
 
-1. Début <key>&nwarr;</key> : déplace le curseur au début de la ligne (<key>Pos1</key>, <key>Début</key>, <key>Home</key>, <key>Origine</key>)
-2. Fin <key>FIN</key> : déplace le curseur à la fin de la ligne
-3. <key>&#9651;</key>, <key>&#9661;</key>, <key>&#9665;</key>, <key>&#9655;</key> (touches directionnelles) : déplace le curseur d'un caractère ou d'une ligne
-4. <key>&#8670;</key>, <key>&#8671;</key> : déplace le curseur d'une hauteur d'écran, de fenêtre ou de vu (<key>PgUp</key>, <key>PgDn</key> ou <kbd>Pg AR</kbd>, <kbd>Pg AV</kbd>)
-5. <key>CTRL</key> + <key>&#9665;</key> __ou__ <key>&#9655;</key> : déplace le curseur d'un mot
-6. <key class="tab">&#x2B7E;</key> __ou__ <key>F6</key> : déplace le curseur parmi les éléments de la fenêtre
+- Début <key>&nwarr;</key> : déplace le curseur au début de la ligne (<key>Pos1</key>, <key>Début</key>, <key>Home</key>, <key>Origine</key>)
+- Fin <key>FIN</key> : déplace le curseur à la fin de la ligne
+- <key>&#9651;</key> **ou** <key>&#9661;</key> **ou** <key>&#9665;</key> **ou** <key>&#9655;</key> (= **touches directionnelles**) : déplace le curseur d'un caractère ou d'une ligne
+- <key>&#8670;</key> **ou** <key>&#8671;</key> : déplace le curseur d'une hauteur d'écran, de fenêtre ou de vu (<key>PgUp</key>, <key>PgDn</key> **ou** <kbd>Pg&nbsp;AR</kbd>, <kbd>Pg&nbsp;AV</kbd>)
+- <key>CTRL</key> + <key>&#9665;</key> __ou__ <key>&#9655;</key> : déplace le curseur d'un mot
+- <key class="tab">&#x2B7E;</key> __ou__ <key>F6</key> : déplace le curseur parmi les éléments de la fenêtre
 
 ## Raccourcis de sélection communs
 
@@ -83,13 +85,13 @@ Presse papier
 ## Raccourcis de manipulation communs
 
 - <key>CTRL</key> + <key>Z</key> : annuler la dernière action
-- Rétablir la dernière action annulée (dépend de l'application) :
+- Rétablir la dernière action annulée (selon l'application) :
     + <key>CTRL</key> + <key>Y</key>
     + <key>CTRL</key> + <key class="tab">&#8679;</key> + <key>Z</key>
 - <key>CTRL</key> + <key>C</key> : copier (enregistre dans le presse-papier)
 - <key>CTRL</key> + <key>X</key> : couper (enregistre dans le presse-papier, et supprime l'élément sélectionné)
-- <key>CTRL</key> + <key>V</key> : coller (le 1e élément du presse-papier)
-- <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>V</key> : coller un des éléments de l'historique du presse-papier (À noter que l’on peut épingler un élément pour le coller plus tard)
+- <key>CTRL</key> + <key>V</key> : coller (le 1^er élément du presse-papier)
+- <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>V</key> : coller un des éléments de l'historique du presse-papier (À noter que l’on peut épingler un élément pour le coller plus tard, même après redémarrage)
 - <key>CTRL</key> + <key>S</key> : enregistrer
 - <key>CTRL</key> + <key>P</key> : imprimer <span class="noPrint">(cette page est imprimable 😉)</span>
 - <key>CTRL</key> + <key class="tab">&#x2B7E;</key> : passe à l'onglet suivant
@@ -113,11 +115,13 @@ Presse papier
 
 <key>ALT</key> __ou__ <key class="tab">&#8679;</key> + <key>/</key> : déclenche l'affichage des raccourcis des fonctions  
 les touches saisie permet d'accéder au fonctions, par exemple <key>L</key> permet d'accéder au bandeau "Accueil", puis <key>V</key> permet d'ouvrir le menu de collage.  
-Une fois ces chemins appris, il est possible d'aller plus vite en déclenchant la suite de touches : &darr;<key>ALT</key>&darr; + <key>L</key>, <key>V</key>, <key>V</key> réalise un coller valeur.
+Une fois ces chemins appris, il est possible d'aller plus vite en déclenchant la suite de touches : &darr;<key>ALT</key>&darr; + <key>L</key>, <key>V</key>, <key>V</key> réalise un coller valeur. (**ou** <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>V</kbd>, <kbd>V</kbd>, <kbd class="enter">&ldsh;</kbd>)
 
 - <kbd class="tab">&#8679;</kbd> + <kbd>F11</kbd> : Insert une nouvelle feuille de calcul.
-- <kbd>CTRL</kbd> + <kbd class="tab">&#8679;</kbd> + <kbd>&#8670;</kbd> : change la feuille active vers la précédente
+- <kbd>CTRL</kbd> + <kbd>L</kbd> : Insérer un tableau
+- <kbd>CTRL</kbd> + <kbd class="tab">&#8679;</kbd> + <kbd>&#8670;</kbd> : passer la feuille active vers la précédente
 - <kbd>CTRL</kbd> + <kbd class="tab">&#8679;</kbd> + <kbd>&#8671;</kbd> : change la feuille active vers la suivante
+- <kbd>CTRL</kbd> + (<kbd>F6</kbd> **ou** <kbd class="tab">&#x2B7E;</kbd>) : passer d'un classeur à un autre
 
 <div class="pageBreak"></div>
 
@@ -130,7 +134,7 @@ Une fois ces chemins appris, il est possible d'aller plus vite en déclenchant l
 
 > En se déplaçant avec tabulation, la touche <key class="enter">&ldsh;</key><!--⏎--> entrée permet d'accéder au début d'une nouvelle ligne de saisie
 
- - <key>CTRL</key> + (touche directionnelle) **ou** <kbd>Fin</kbd>, (touche directionnel) : saute jusqu’à la dernière valeur de la ligne ou de la colonne (!! s'arrête à la première case vide), puis jusqu'à la dernière case du document
+ - <key>CTRL</key> + [touche directionnelle] **ou** <kbd>Fin</kbd>, (touche directionnel) : saute jusqu’à la dernière valeur de la ligne ou de la colonne (!! s'arrête à la première case vide), puis jusqu'à la dernière case de la feuille
 
 Tous ces déplacements sont utilisables avec <key class="tab">&#8679;</key> pour en faire une sélection
 
@@ -140,6 +144,7 @@ Tous ces déplacements sont utilisables avec <key class="tab">&#8679;</key> pour
  - <key>CTRL</key> + <key class="tab">ESPACE</key> : étend la sélection à la/aux colonne/s (de valeur du tableau, puis avec l'entête, puis toute/s la/les colonne/s)
  - <key class="tab">&#8679;</key> + <key class="tab">ESPACE</key> : étend la sélection à la/aux ligne/s (de valeur, puis avec l'entête, toute/s la/les ligne/s)
  - <key>CTRL</key> + <key class="tab">&#8679;</key> + <key class="tab">ESPACE</key> : équivalent de <key>CTRL</key> + <key>A</key>
+ - <kbd>ALT</kbd> + <kbd>;</kbd> : sélectionne uniquement les cellules visibles
  
 > Les sélections discontinus tout au clavier sont possible avec la touche <kbd>F8</kbd>, il m'a fallut et il vous faudra sans doute vous entraîner un peut pour utiliser cette fonction
 
@@ -149,9 +154,10 @@ Tous ces déplacements sont utilisables avec <key class="tab">&#8679;</key> pour
 
 ### Édition de cellules
 
-- <key>CTRL</key> + <key class="enter">&ldsh;</key> : permet de reproduire la saisie dans toutes les cellules sélectionnées
+- <key>CTRL</key> + <key class="enter">&ldsh;</key> : permet de reproduire la saisie dans toutes les cellules sélectionnées.
 - <key>F2</key> : ouvre la saisie rapide de la cellule sous le curseur, puis permet de changer de mode de saisi : Modifier/Entrer
-- <key>F4</key> : lors de la saisi de coordonnée de cellule, permet de permuter entre relative, absolu, ligne absolu-colonne relative et ligne relative et colonne absolu
+- <key>F4</key> : lors de la saisi de coordonnée de cellule, permet de permuter entre relative, absolu, ligne absolu-colonne relative et ligne relative et colonne absolu (`A1 → $A$1 → A$1 → $A1 → A1` **ou** `LC → L1C1 → L1C → LC1 → LC`)
+- <kbd>ALT</kbd> + <kbd class="enter">&ldsh;</kbd>  : valide la saisie sans quitter la cellule. 
 
 > Tous les raccourcis clavier sur Excel : _[https://support.microsoft.com/fr-fr/office/raccourcis-clavier-dans-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f]_
 
@@ -183,7 +189,7 @@ Tous ces déplacements sont utilisables avec <key class="tab">&#8679;</key> pour
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>&#9651;</key> **ou** <key>&#9661;</key> **ou** <key>&#9665;</key> **ou** <key>&#9655;</key> : déplace la fenêtre
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>ALT</key> + <key>&#9651;</key> **ou** <key>&#9661;</key> : (Windows 11 uniquement) dimensionne la fenêtre sur la partie supérieur **ou** inférieur de l'écran
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>Z</key> : (Windows 11 uniquement) affiche le menu de positionnement de la fenêtre active, puis entrer le nombre pour sélectionner la disposition, puis l'emplacement
- - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key class="tab">&#8679;</key> + <key>&#9665;</key> **ou** <key>&#9655;</key> : déplace la fenêtre d'écran en écran
+ - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key class="tab">&#8679;</key> + (<key>&#9665;</key> **ou** <key>&#9655;</key>) : déplace la fenêtre d'écran en écran
   - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>1</key> **ou** <key>2</key> **ou** <key>3</key>**...** : équivaut à un clic sur l'icône correspondant dans la barre d'application (maintenir <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> et appuyer plusieurs fois sur le même nombre si plusieurs fenêtres d'une même application)
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>CTRL</key> + <key>1</key> **ou** <key>2</key> **ou** <key>3</key>**...** : Passe d'une fenêtre ouverte à l'autre (correspondant à l'emplacement sur la barre de tâche)
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>ALT</key> + <key>1</key> **ou** <key>2</key> **ou** <key>3</key>**...** : ouvre le menu (= clic droit) de l'application épinglé au numéro correspondant
@@ -232,7 +238,7 @@ Tous ces déplacements sont utilisables avec <key class="tab">&#8679;</key> pour
  - <key>CTRL</key> + <key class="tab">&#8679;</key> + <key>ÉCHAP</key> : ouvre le gestionnaire de tâche
  - <kbd style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></kbd> + <kbd>E</kbd> : Ouvre le gestionnaire de fichiers
  - <kbd style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></kbd> + <kbd>P</kbd> : ouvre le panneau "Projeter" pour changer l'affichage des écrans en dupliqué, étendu ou éteint
- - <kbd>ALT</kbd> + <kbd class="tab">&#8679;</kbd> + touche directionnel, _dans le menu démarrer_ : déplace le raccourci sélectionné
+ - <kbd>ALT</kbd> + <kbd class="tab">&#8679;</kbd> + [touche directionnel], _dans le menu démarrer_ : déplace le raccourci sélectionné
  
 
 > Toutes les raccourcis Windows sont ici : _[https://support.microsoft.com/fr-fr/windows/raccourcis-clavier-dans-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec]_
