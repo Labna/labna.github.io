@@ -244,6 +244,8 @@ Tous ces déplacements sont utilisables avec <key class="tab maj">&#8679;</key> 
   - Clic molette sur l'aperçu d'une fenêtre de la barre d'application&nbsp;: fermer la fenêtre.
   - <kbd>CRTL</kbd> + <kbd class="tab maj">&#8679;</kbd> + (clique gauche **ou** <key class="enter">&ldsh;</key>), sur une application dans la barre de tâche, le menu démarrer, le gestionnaire de fichier ou le bureau&nbsp;: Ouvrir l'application en tant qu'administrateur.
 
+<div class="pageBreak"></div>
+
 ### Gestion des bureaux virtuels
 
 > Les bureaux virtuels peuvent avoir des font d'écran différent un nom personnalisé, une même fenêtre peut être présente sur tous les bureaux. Ces actions n'ont pas de contrôles au clavier, il faut donc les faire à la souris dans le gestionnaire de bureaux (un bouton est par défaut dans la barre de tâches).
@@ -252,8 +254,6 @@ Tous ces déplacements sont utilisables avec <key class="tab maj">&#8679;</key> 
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>CTRL</key> + <key>D</key>&nbsp;: Ajouter un bureau virtuel.
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>CTRL</key> + <key>&#9665;</key> **ou** <key>&#9655;</key>&nbsp;: Changer de bureau actif, à gauche ou à droite.
  - <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> + <key>CTRL</key> + <key>F4</key>&nbsp;: Fermer le bureau virtuel actuel.
-
-<div class="pageBreak"></div>
 
 ## Explorateur Windows&nbsp;: Gestionnaire de fichier
 
@@ -272,8 +272,12 @@ Tous ces déplacements sont utilisables avec <key class="tab maj">&#8679;</key> 
  - <key>ALT</key> + <key>G</key>&nbsp;: ouvrir les options d'affichages.
  - <key class="tab maj">&#8679;</key> + clic sur la colonne "Nom"&nbsp;: avec tri actif met les dossiers en haut de la liste.
 
+> La recherche peut être faite avec une interprétation littéral, exemple `~*5-a` retournera des résultat comportant exactement '5-a'; avec des opérateur NOT, OR, >, < ou .. (entre); avec les noms des champs, exemple `Nom:abc datedemodification:aujourdhui sorte:video type:mp4 Date:<01/01/2026 taille:10k..1M`
+
 > Il est possible de lancer une application dans le dossier ouvert en saisissant le nom de l'exécutable dans le champ chemin.  
 > Exemple avec l'invite de commande CMD (ou PowerShell (alias powershell))&nbsp;: ALT+A (ou CTRL+L) puis `cmd` (ou `powershell`) et [&ldsh;&nbsp;ENTREE]
+
+<div class="pageBreak"></div>
 
 ## Résoudre un problème
 
@@ -284,8 +288,6 @@ Tous ces déplacements sont utilisables avec <key class="tab maj">&#8679;</key> 
  - <kbd style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></kbd> + <kbd>R</kbd>&nbsp;: ouvre l'invite de lancement (quelques exemples&nbsp;: `taskmgr`, `cmd`, `explorer`, `excel`, `firefox`, `regedit`, `control`, `ms-settings:`, `powershell`, `winget update -r`)
  - <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>Suppr</kbd>&nbsp;: pour verrouillé la session, hanger d'utilisateur, se déconnecter, modifier le mot de passe ou ouvrir le gestionnaire de tâches.
  - <kbd style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></kbd>  + <kbd>CTRL</kbd> + <kbd class="tab maj">&#8679;</kbd> + <kbd>B</kbd>&nbsp;: fait redémarrer l'affichage.
-
-<div class="pageBreak"></div>
 
 ## Divers dans le système
 
@@ -789,7 +791,7 @@ traitement du fichier post-extraction&nbsp;:
 
 Add <!DOCTYPE html>
 join all lines.
-supprimer les commentaires : /<!-- .*? --Δ>/
+supprimer les commentaires : /\n*<!-- .*? --Δ>\n*/
 
 Ne pas utilisé:
 Upload the file here&nbsp;: https://codebeautify.org/minify-html
