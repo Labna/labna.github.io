@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Color Gamut Tester</title>
+</head>
+<body>
+The text below say witch color gamut the browser is capable of, based on @media query.
+<br/>
+<div class="text-off">
+<span class="text-sRGB">Browser capable of sRGB gamut</span><br/>
+<span class="text-p3">Browser capable of p3 gamut</span><br/>
+<span class="text-rec2020">Browser capable of rec2020 gamut</span><br/>
+</div>
+</body>
+<style>
+  .text-off{
+    color: white;
+  }
+  @media (color-gamut: srgb){
+    .text-sRGB{
+      color: black;
+      background-color: rgb(5 200 5);
+    }
+  }
+  @media (color-gamut: p3){
+    .text-p3{
+      color: black;
+      background-color: oklch(0.8234 0.2926 141.82);
+    }
+  }
+  @media (color-gamut: rec2020){
+    .text-rec2020 {
+      color: black;
+      background-color: oklch(0.8234 0.3398 141.82);
+    }
+  }
+</style>
+</html>
