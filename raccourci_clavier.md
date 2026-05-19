@@ -20,9 +20,10 @@
 - [Raccourcis de manipulation de texte]
 - [Excel]
     + [Contrôle au clavier]
-    + [Déplacement]
+    + [Déplacement du curseur]
     + [Sélection]
     + [Édition de cellules]
+    + [Déplacement de la vue]
 - [Word]
     + [Publipostage]
 - [Navigateur internet]
@@ -131,17 +132,17 @@ Une fois ces chemins appris, il est possible d'aller plus vite en déclenchant l
 - <kbd>ALT</kbd> + <kbd>"</kbd>&nbsp;: Masquer les lignes de la sélection
 - <kbd>ALT</kbd> + <Kbd>_</kbd>&nbsp;: Afficher les lignes dans la sélection
 - <kbd>ALT</kbd> + <kbd>(</kbd>&nbsp;: Masquer les colonnes de la sélection
-- <kbd>ALT</kbd> + <kbd>)</kbd>&nbsp;: Afficher les lignes dans la sélection
+- <kbd>ALT</kbd> + <kbd>)</kbd>&nbsp;: Afficher les colonnes dans la sélection
 - <kbd>CTRL</kbd> + <kbd>L</kbd>&nbsp;: Insérer un tableau.
 - <kbd class="tab maj">&#8679;</kbd> + <kbd>F11</kbd>&nbsp; **ou** <kbd>ALT</kbd> + <kbd class="tab maj">&#8679;</kbd> + <kbd>F1</kbd>: Insert une nouvelle feuille de calcul.
-- <kbd>CTRL</kbd> + <kbd class="tab maj">&#8679;</kbd> + <kbd>&#8670;</kbd>&nbsp;: passer la feuille active vers la précédente.
-- <kbd>CTRL</kbd> + <kbd class="tab maj">&#8679;</kbd> + <kbd>&#8671;</kbd>&nbsp;: changer la feuille active vers la suivante.
+- <kbd>CTRL</kbd> + <kbd>&#8670;</kbd>&nbsp;: passer la feuille active vers la précédente.
+- <kbd>CTRL</kbd> + <kbd>&#8671;</kbd>&nbsp;: changer la feuille active vers la suivante.
 - <kbd>CTRL</kbd> + (<kbd>F6</kbd> **ou** <kbd class="tab">&#x2B7E;</kbd>)&nbsp;: passer d'un classeur à un autre.
 - <kbd>CTRL</kbd> + <kbd class="tab maj">&#8679;</kbd> + <kbd>F1</kbd>&nbsp;: passer en plein écran.
 - <kbd>ALT</kbd> + <kbd class="tab maj">&#8679;</kbd> + <kbd>&larr;</kbd>&nbsp;: Dissocier le groupe de lignes ou de colonnes
 - <kbd>ALT</kbd> + <kbd class="tab maj">&#8679;</kbd> + <kbd>&rarr;</kbd>&nbsp;: Grouper les lignes ou les colonnes
 
-### Déplacement
+### Déplacement du curseur
 
  - <key class="tab">&#x2B7E;</key>&nbsp;: déplacer le curseur d'une case sur la droite (depuis la dernière cellule d'un tableau, va au début d'une nouvelle ligne).
  - <key class="tab maj">&#8679;</key> + <key class="tab">&#x2B7E;</key>&nbsp;: déplacer le curseur d'une case sur la gauche.
@@ -151,6 +152,8 @@ Une fois ces chemins appris, il est possible d'aller plus vite en déclenchant l
 > En se déplaçant avec tabulation, la touche <key class="enter">&ldsh;</key><!--⏎--> entrée permet d'accéder au début d'une nouvelle ligne de saisie.
 
  - <key>CTRL</key> + [touche directionnelle] **ou** <kbd>Fin</kbd>, (touche directionnel)&nbsp;: sauter jusqu’à la dernière valeur de la ligne ou de la colonne (!! s'arrête à la première case vide), puis jusqu'à la dernière case de la feuille.
+ - En mode arrêt défilement, <kbd>&nwarr;</kbd> et <kbd>FIN</kbd>&nbsp;: déplace le curseur dans la première/dernière cellule visible (mode arrêt défilement : voire Déplacement de la vue)
+
 
 Tous ces déplacements sont utilisables avec <key class="tab maj">&#8679;</key> pour en faire une sélection.
 
@@ -180,11 +183,28 @@ Tous ces déplacements sont utilisables avec <key class="tab maj">&#8679;</key> 
 - <kbd>ALT</kbd> + <kbd class="enter">&ldsh;</kbd> &nbsp;: valide la saisie sans quitter la cellule.
 - <kbd>CTRL</kbd> + <kbd>B</kbd>&nbsp;: Recopie la valeur de la première cellule sélectionner dans toute la sélection (équivalent du  &#x271A; glisser avec le pointeur).
 
+### Déplacement de la vue
+
+Pour modifier la plage de ligne et de colonne affiché.
+
+ * <kbd>MAJ</kbd> + <kbd class="tab">&#8679;</kbd> + Mollette de la souris&nbsp;: déplacer la vue horizontalement
+ * <kbd>CTRL</kbd> + Molette de la souris&nbsp;: augmenté ou diminuer l'agrandissement (zoom)
+ * <kbd>Arrêt défilement</kbd>&nbsp;: active ou désactive le mode "Arrêt défilement" (clique sur "Arrêt défil." en bas à gauche de la fenêtre désactive aussi le mode)
+ * En mode Arrêt défilement, touches directionnelles : déplacé la vue d'une ligne/colonne
+ * En arrêt défilement, <kbd>CTRL</kbd> + touches directionnelles&nbsp;: déplace la vue d'un écran
+
+> les claviers sans la touche <kbd>Arrêt défilement</kbd>, <kbd>Scroll Lock</kbd>, ![arrdef] ou ![arrdef2]  ont une des combinaisons alternative : <kbd>fn</kbd> + <kbd>S</kbd> (Dell) ; <kbd>fn</kbd> + <kbd>C</kbd> (Lenovo & HP) ; <kbd>fn</kbd> + <kbd>F6</kbd> (Lenovo) ; <kbd>fn</kbd> + <kbd>K</kbd> (HP) ; <kbd>fn</kbd> + <kbd>F11</kbd> (divers)
+
+[arrdef]: data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%20-1%2032%2020%22%3E%3Cdefs%3E%3Cmarker%20id%3D%22A%22%20viewBox%3D%220%200%2010%2010%22%20refX%3D%225%22%20refY%3D%225%22%20markerWidth%3D%226%22%20markerHeight%3D%226%22%20orient%3D%22auto-start-reverse%22%3E%3Cpath%20d%3D%22M0%200l6%205-6%205z%22%2F%3E%3C%2Fmarker%3E%3C%2Fdefs%3E%3Cg%20stroke%3D%22%23000%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200v18h32V0z%22%2F%3E%3Cpath%20marker-start%3D%22url(%23A)%22%20marker-end%3D%22url(%23A)%22%20d%3D%22M16%201v16%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E "arrêt défilement logo 1" style="height: 1em"
+
+[arrdef2]: data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%20-1%2032%2020%22%3E%3Cdefs%3E%3Cmarker%20id%3D%22A%22%20viewBox%3D%220%200%2010%2010%22%20refX%3D%225%22%20refY%3D%225%22%20markerWidth%3D%226%22%20markerHeight%3D%226%22%20orient%3D%22auto-start-reverse%22%3E%3Cpath%20d%3D%22M0%200l6%205-6%205z%22%2F%3E%3C%2Fmarker%3E%3C%2Fdefs%3E%3Cg%20stroke%3D%22%23000%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%20.5V17h32V.5z%22%2F%3E%3Cpath%20d%3D%22M0%2014h32%22%2F%3E%3Cpath%20marker-end%3D%22url(%23A)%22%20d%3D%22M16%202v11%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E "arrêt défilement logo 2" style="height:1em"
+
+
+> Le mode "Arrêt défilement" est particulièrement pertinent avec la saisi des cellules avec tabulation et entrée
+
 > <svg class="qrcode" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" version="1.1" viewBox="0 0 27 27"><rect x="0" y="0" width="27" height="27" style="fill:#ffffff"/><path d="M1 1h1v7h-1M2 1h6v1h-6M9 1h1v1h-1M11 1h2v1h-2M14 1h4v1h-4M19 1h1v7h-1M20 1h6v1h-6M7 2h1v6h-1M12 2h1v2h-1M13 2h1v1h-1M15 2h1v1h-1M25 2h1v6h-1M3 3h3v3h-3M10 3h1v1h-1M16 3h1v1h-1M21 3h3v3h-3M9 4h1v7h-1M13 4h1v2h-1M15 4h1v1h-1M10 5h1v2h-1M11 5h1v1h-1M16 5h2v1h-2M14 6h2v1h-2M17 6h1v2h-1M2 7h6v1h-6M11 7h1v1h-1M13 7h1v4h-1M15 7h1v5h-1M20 7h6v1h-6M10 8h1v1h-1M16 8h1v1h-1M1 9h3v1h-3M5 9h1v1h-1M7 9h1v1h-1M11 9h1v1h-1M18 9h5v2h-5M25 9h1v6h-1M6 10h1v1h-1M10 10h1v1h-1M14 10h3v1h-3M23 10h1v3h-1M2 11h3v2h-3M5 11h1v1h-1M7 11h1v1h-1M19 11h6v1h-6M6 12h1v3h-1M9 12h1v1h-1M12 12h2v1h-2M17 12h1v2h-1M18 12h1v1h-1M20 12h2v1h-2M24 12h2v3h-2M2 13h1v3h-1M4 13h4v1h-4M10 13h2v2h-2M14 13h1v1h-1M16 13h1v4h-1M19 13h1v3h-1M22 13h1v2h-1M1 14h4v1h-4M8 14h1v1h-1M13 14h1v3h-1M20 14h6v1h-6M5 15h1v1h-1M7 15h1v1h-1M9 15h1v2h-1M11 15h1v5h-1M14 15h3v2h-3M8 16h9v1h-9M21 16h3v3h-3M24 16h1v1h-1M1 17h1v1h-1M5 17h4v1h-4M10 17h1v1h-1M14 17h1v1h-1M17 17h1v5h-1M18 17h3v1h-3M25 17h1v1h-1M9 18h1v1h-1M12 18h2v1h-2M15 18h1v1h-1M1 19h1v7h-1M2 19h6v1h-6M13 19h1v1h-1M19 19h1v1h-1M21 19h1v3h-1M22 19h1v1h-1M24 19h1v3h-1M7 20h1v6h-1M10 20h1v5h-1M16 20h1v1h-1M3 21h3v3h-3M9 21h1v1h-1M14 21h2v1h-2M18 21h4v1h-4M23 21h1v5h-1M11 22h2v1h-2M15 22h1v4h-1M16 22h1v2h-1M25 22h1v1h-1M9 23h2v2h-2M12 23h1v3h-1M17 23h2v2h-2M24 23h1v3h-1M14 24h1v1h-1M21 24h4v2h-4M2 25h6v1h-6M9 25h1v1h-1M11 25h3v1h-3M16 25h1v1h-1M19 25h7v1h-7"></path></svg> Tous les raccourcis clavier sur Excel&nbsp;: _[https://support.microsoft.com/fr-fr/office/raccourcis-clavier-dans-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f]_
 
 [https://support.microsoft.com/fr-fr/office/raccourcis-clavier-dans-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f]:https://support.microsoft.com/fr-fr/office/raccourcis-clavier-dans-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f "Dans un nouvel onglet" target="_blank"
-
-<div class="pageBreak"></div>
 
 ## Word
 
@@ -244,8 +264,6 @@ Tous ces déplacements sont utilisables avec <key class="tab maj">&#8679;</key> 
   - Clic molette sur l'aperçu d'une fenêtre de la barre d'application&nbsp;: fermer la fenêtre.
   - <kbd>CRTL</kbd> + <kbd class="tab maj">&#8679;</kbd> + (clique gauche **ou** <key class="enter">&ldsh;</key>), sur une application dans la barre de tâche, le menu démarrer, le gestionnaire de fichier ou le bureau&nbsp;: Ouvrir l'application en tant qu'administrateur.
 
-<div class="pageBreak"></div>
-
 ### Gestion des bureaux virtuels
 
 > Les bureaux virtuels peuvent avoir des font d'écran différent un nom personnalisé, une même fenêtre peut être présente sur tous les bureaux. Ces actions n'ont pas de contrôles au clavier, il faut donc les faire à la souris dans le gestionnaire de bureaux (un bouton est par défaut dans la barre de tâches).
@@ -254,6 +272,8 @@ Tous ces déplacements sont utilisables avec <key class="tab maj">&#8679;</key> 
  - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key>CTRL</key> + <key>D</key>&nbsp;: Ajouter un bureau virtuel.
  - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key>CTRL</key> + <key>&#9665;</key> **ou** <key>&#9655;</key>&nbsp;: Changer de bureau actif, à gauche ou à droite.
  - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key>CTRL</key> + <key>F4</key>&nbsp;: Fermer le bureau virtuel actuel.
+
+<div class="pageBreak"></div>
 
 ## Explorateur Windows&nbsp;: Gestionnaire de fichier
 
@@ -274,10 +294,7 @@ Tous ces déplacements sont utilisables avec <key class="tab maj">&#8679;</key> 
 
 > La recherche peut être faite avec une interprétation littéral, exemple `~*5-a` retournera des résultat comportant exactement '5-a'; avec des opérateur NOT, OR, >, < ou .. (entre); avec les noms des champs, exemple `Nom:abc datedemodification:aujourdhui sorte:video type:mp4 Date:<01/01/2026 taille:10k..1M`
 
-> Il est possible de lancer une application dans le dossier ouvert en saisissant le nom de l'exécutable dans le champ chemin.  
-> Exemple avec l'invite de commande CMD (ou PowerShell (alias powershell))&nbsp;: ALT+A (ou CTRL+L) puis `cmd` (ou `powershell`) et [&ldsh;&nbsp;ENTREE]
-
-<div class="pageBreak"></div>
+> Il est possible de lancer une application dans le dossier ouvert en saisissant le nom de l'exécutable dans le champ chemin. Exemple avec l'invite de commande CMD (ou PowerShell (alias powershell))&nbsp;: ALT+A (ou CTRL+L) puis `cmd` (ou `powershell`) et [&ldsh;&nbsp;ENTREE]
 
 ## Résoudre un problème
 
@@ -289,6 +306,8 @@ Tous ces déplacements sont utilisables avec <key class="tab maj">&#8679;</key> 
  - <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>Suppr</kbd>&nbsp;: pour verrouillé la session, hanger d'utilisateur, se déconnecter, modifier le mot de passe ou ouvrir le gestionnaire de tâches.
  - <kbd style="display:inline-block;width:1em;padding:5px;">![windows]</kbd>  + <kbd>CTRL</kbd> + <kbd class="tab maj">&#8679;</kbd> + <kbd>B</kbd>&nbsp;: fait redémarrer l'affichage.
 
+<div class="pageBreak"></div>
+
 ## Divers dans le système
 
  - <key class="tab maj">&#8679;</key> + <key>F10</key>&nbsp;: ouvre le menu déroulant à l'emplacement du curseur (= clic droit)
@@ -297,7 +316,6 @@ Tous ces déplacements sont utilisables avec <key class="tab maj">&#8679;</key> 
  - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> **ou** <key>CTRL</key> + <key>ÉCHAP</key>&nbsp;: ouvre le menu démarrer, taper des lettres pour chercher une application
  - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key class="tab maj">&#8679;</key> + <key>S</key>&nbsp;: prendre une capture d'écran
  - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key>L</key>&nbsp;: Verrouille la session
-
  - <kbd style="display:inline-block;width:1em;padding:5px;">![windows]</kbd> + <kbd>E</kbd>&nbsp;: Ouvre le gestionnaire de fichiers
  - <kbd style="display:inline-block;width:1em;padding:5px;">![windows]</kbd> + <kbd>P</kbd>&nbsp;: ouvre le panneau "Projeter" pour changer l'affichage des écrans en dupliqué, étendu ou éteint
  - <kbd>ALT</kbd> + <kbd class="tab maj">&#8679;</kbd> + [touche directionnel], _dans le menu démarrer_&nbsp;: déplace le raccourci sélectionné
@@ -305,8 +323,6 @@ Tous ces déplacements sont utilisables avec <key class="tab maj">&#8679;</key> 
 > <svg class="qrcode" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" version="1.1" viewBox="0 0 27 27"><rect x="0" y="0" width="27" height="27" style="fill:#ffffff"/><path d="M1 1h1v7h-1M2 1h6v1h-6M9 1h3v1h-3M14 1h4v1h-4M19 1h1v7h-1M20 1h6v1h-6M7 2h1v6h-1M10 2h1v2h-1M25 2h1v6h-1M3 3h3v3h-3M9 3h1v5h-1M11 3h2v1h-2M14 3h3v2h-3M17 3h1v1h-1M21 3h3v3h-3M12 4h1v1h-1M15 5h1v4h-1M16 5h1v2h-1M10 6h1v1h-1M12 6h1v1h-1M14 6h4v1h-4M2 7h6v1h-6M11 7h1v1h-1M13 7h1v1h-1M17 7h1v5h-1M20 7h6v1h-6M10 8h1v2h-1M12 8h1v1h-1M14 8h3v1h-3M3 9h6v1h-6M11 9h1v4h-1M16 9h2v3h-2M18 9h1v1h-1M20 9h3v2h-3M23 9h1v1h-1M25 9h1v1h-1M1 10h2v2h-2M3 10h2v1h-2M9 10h1v1h-1M12 10h2v1h-2M24 10h1v1h-1M5 11h3v1h-3M10 11h2v2h-2M13 11h1v2h-1M14 11h1v1h-1M18 11h2v1h-2M21 11h1v2h-1M25 11h1v1h-1M1 12h1v1h-1M3 12h1v1h-1M12 12h1v2h-1M19 12h3v1h-3M6 13h3v1h-3M14 13h1v2h-1M16 13h1v2h-1M17 13h1v1h-1M19 13h1v1h-1M22 13h1v3h-1M24 13h1v2h-1M25 13h1v1h-1M2 14h1v4h-1M4 14h1v1h-1M9 14h1v1h-1M15 14h1v5h-1M23 14h1v4h-1M1 15h3v1h-3M5 15h1v1h-1M7 15h2v1h-2M10 15h2v1h-2M17 15h1v1h-1M20 15h1v3h-1M25 15h1v1h-1M6 16h1v2h-1M8 16h2v1h-2M11 16h1v1h-1M13 16h1v1h-1M18 16h1v2h-1M21 16h1v6h-1M1 17h3v1h-3M5 17h3v1h-3M9 17h2v1h-2M14 17h7v1h-7M24 17h1v6h-1M17 18h1v4h-1M22 18h1v2h-1M25 18h1v1h-1M1 19h1v7h-1M2 19h6v1h-6M9 19h1v5h-1M11 19h1v1h-1M13 19h1v3h-1M19 19h1v1h-1M7 20h1v6h-1M10 20h1v1h-1M14 20h3v1h-3M25 20h1v6h-1M3 21h3v3h-3M11 21h1v2h-1M15 21h8v1h-8M14 22h2v1h-2M18 22h1v1h-1M20 22h1v1h-1M22 22h1v4h-1M23 22h1v2h-1M13 23h1v3h-1M17 23h1v1h-1M19 23h1v3h-1M21 23h2v3h-2M10 24h2v1h-2M14 24h2v1h-2M2 25h6v1h-6M11 25h3v1h-3M15 25h2v1h-2M20 25h6v1h-6"></path></svg> Toutes les raccourcis Windows sont ici&nbsp;: _[https://support.microsoft.com/fr-fr/windows/raccourcis-clavier-dans-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec]_
 
 [https://support.microsoft.com/fr-fr/windows/raccourcis-clavier-dans-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec]: https://support.microsoft.com/fr-fr/windows/raccourcis-clavier-dans-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec "Dans un nouvel onglet" target="_blank"
-
-<div class="pageBreak"></div>
 
 ## Écrire tous les symboles
 
@@ -346,7 +362,7 @@ Tous ces déplacements sont utilisables avec <key class="tab maj">&#8679;</key> 
 0x2048 ou 0d8264 | &#x2048;
 
 -->
-<br/><br/>
+
 <span class="noScreen">Retrouvez ce document en ligne prêt à imprimer sur <https://labna.github.io/raccourci_clavier.html></span><br/>
 <span class="noScreen">QrCode generated with <https://github.com/udwarf/qrcode-compact-svg></span>
 
@@ -418,6 +434,7 @@ dt{
 @media screen {
   .noScreen{
     display: none;
+    clear: both;
   }
   .mist{
     position: fixed;
@@ -780,7 +797,7 @@ C:\> curl -o node.setup.msi https://nodejs.org/dist/v24.12.0/node-v24.12.0-x64.m
 C:\> node.setup.msi
 
 C:\> curl -o qrcode-compact.min.js  https://raw.githubusercontent.com/udwarf/qrcode-compact-svg/master/dist/qrcode-compact.min.js
-C:\> node.exe (ne marche pas ?)
+C:\> node.exe (ne marche pas ? cherches dans le menu démarrer)
 
 > var QRCode = require("./qrcode-compact.min.js");
 > const fs = require('fs');
@@ -788,6 +805,11 @@ C:\> node.exe (ne marche pas ?)
 > fs.writeFile("file.svg", svg, function(err){});
 
 Il faut ajouter la class : class="qrcode" et enlever les sauts de lignes pour avoir un qrcode ultra leger !
+
+= = =
+SVG to data URI :
+https://gist.github.com/jennyknuth/222825e315d45a738ed9d6e04c7a88d0
+url encode : https://www.urlencoder.io/
 
 traitement du fichier post-extraction&nbsp;:
 // replace&nbsp;: \n\n -> \n
