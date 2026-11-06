@@ -98,7 +98,7 @@ Presse papier
 - <key>CTRL</key> + <key>C</key>&nbsp;: copier (enregistre dans le presse-papier)
 - <key>CTRL</key> + <key>X</key>&nbsp;: couper (enregistre dans le presse-papier, et supprime l'élément sélectionné)
 - <key>CTRL</key> + <key>V</key>&nbsp;: coller (le 1^er élément du presse-papier)
-- <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key>V</key>&nbsp;: coller un des éléments de l'historique du presse-papier (À noter que l’on peut épingler un élément pour le coller plus tard, même après redémarrage)
+- <key class="windows">![windows]</key> + <key>V</key>&nbsp;: coller un des éléments de l'historique du presse-papier (À noter que l’on peut épingler un élément pour le coller plus tard, même après redémarrage)
 - <key>CTRL</key> + <key>S</key>&nbsp;: enregistrer.
 - <key>CTRL</key> + <key>P</key>&nbsp;: imprimer <span class="noPrint">(cette page est imprimable 😉)</span>
 - <key>CTRL</key> + <key class="tab">&#x2B7E;</key>&nbsp;: passer à l'onglet suivant.
@@ -250,16 +250,17 @@ Pour modifier la plage de ligne et de colonne affiché.
  - &darr;<key>ALT</key>&darr; + &darr;<key class="tab maj">&#8679;</key>&darr; + ( <key class="tab">&#x2B7E;</key> * N )&nbsp;: Naviguer parmi les fenêtres ouvertes de droite à gauche.
  - <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd class="tab">&#x2B7E;</kbd>&nbsp;: ouvrir le panneau des fenêtres ouvertes.
  - <key>ALT</key> + <key>ÉCHAP</key>&nbsp;: placer la fenêtre active derrière toutes les autres.
- - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key>M</key>&nbsp;: minimiser toutes les fenêtres.
- - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key>D</key>&nbsp;: montrer ou cacher le bureau.
- - &darr;<key style="display:inline-block;width:1em;padding:5px;">![windows]</key>&darr; + <key>,</key>&nbsp;: montrer le bureau tant que maintenu.
- - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key>&#9651;</key> **ou** <key>&#9661;</key> **ou** <key>&#9665;</key> **ou** <key>&#9655;</key>&nbsp;: déplacer la fenêtre.
- - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key>ALT</key> + <key>&#9651;</key> **ou** <key>&#9661;</key>&nbsp;: (Windows 11 uniquement) dimensionner la fenêtre sur la partie supérieur **ou** inférieur de l'écran.
- - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key>Z</key>&nbsp;: (Windows 11 uniquement) afficher le menu de positionnement de la fenêtre active, puis entrer le nombre pour sélectionner la disposition, puis l'emplacement.
- - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key class="tab maj">&#8679;</key> + (<key>&#9665;</key> **ou** <key>&#9655;</key>)&nbsp;: déplacer la fenêtre d'écran en écran.
-  - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key>1</key> **ou** <key>2</key> **ou** <key>3</key>**...**&nbsp;: équivaut à un clic sur l'icône correspondant dans la barre d'application (maintenir <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> et appuyer plusieurs fois sur le même nombre si plusieurs fenêtres d'une même application)
- - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key>CTRL</key> + <key>1</key> **ou** <key>2</key> **ou** <key>3</key>**...**&nbsp;: passer d'une fenêtre ouverte à l'autre (correspondant à l'emplacement sur la barre de tâche)
- - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key>ALT</key> + <key>1</key> **ou** <key>2</key> **ou** <key>3</key>**...**&nbsp;: ouvrir le menu (= clic droit) de l'application épinglé au numéro correspondant.
+ - <key class="windows">![windows]</key> + <key>M</key>&nbsp;: minimiser toutes les fenêtres.
+ - <key class="windows">![windows]</key> + <key>D</key>&nbsp;: montrer ou cacher le bureau.
+ - &darr;<key class="windows">![windows]</key>&darr; + <key>,</key>&nbsp;: montrer le bureau tant que maintenu.
+ - <key class="windows">![windows]</key> + <key>&#9651;</key> **ou** <key>&#9661;</key> **ou** <key>&#9665;</key> **ou** <key>&#9655;</key>&nbsp;: déplacer la fenêtre et l'ancrer.
+ - <key class="windows">![windows]</key> + <kbd class="tab maj">&#8679;</kbd> + <key>&#9661;</key>&nbsp;: retire l'ancre de la fenêtre, restaure ses dimensions et positions.
+ - <key class="windows">![windows]</key> + <key>ALT</key> + <key>&#9651;</key> **ou** <key>&#9661;</key>&nbsp;: (Windows 11 uniquement) dimensionner la fenêtre sur la partie supérieur **ou** inférieur de l'écran.
+ - <key class="windows">![windows]</key> + <key>Z</key>&nbsp;: (Windows 11 uniquement) afficher le menu de positionnement de la fenêtre active, puis entrer le nombre pour sélectionner la disposition, puis l'emplacement.
+ - <key class="windows">![windows]</key> + <key class="tab maj">&#8679;</key> + (<key>&#9665;</key> **ou** <key>&#9655;</key>)&nbsp;: déplacer la fenêtre d'écran en écran.
+  - <key class="windows">![windows]</key> + <key>1</key> **ou** <key>2</key> **ou** <key>3</key>**...**&nbsp;: équivaut à un clic sur l'icône correspondant dans la barre d'application (maintenir <key class="windows">![windows]</key> et appuyer plusieurs fois sur le même nombre si plusieurs fenêtres d'une même application)
+ - <key class="windows">![windows]</key> + <key>CTRL</key> + <key>1</key> **ou** <key>2</key> **ou** <key>3</key>**...**&nbsp;: passer d'une fenêtre ouverte à l'autre (correspondant à l'emplacement sur la barre de tâche)
+ - <key class="windows">![windows]</key> + <key>ALT</key> + <key>1</key> **ou** <key>2</key> **ou** <key>3</key>**...**&nbsp;: ouvrir le menu (= clic droit) de l'application épinglé au numéro correspondant.
   - (<kbd class="tab maj">&#8679;</kbd> + clique gauche) **ou** Clic molette, sur les icônes de la barre d'application&nbsp;: ouvrir une nouvelle fenêtre.
   - Clic molette sur l'aperçu d'une fenêtre de la barre d'application&nbsp;: fermer la fenêtre.
   - <kbd>CRTL</kbd> + <kbd class="tab maj">&#8679;</kbd> + (clique gauche **ou** <key class="enter">&ldsh;</key>), sur une application dans la barre de tâche, le menu démarrer, le gestionnaire de fichier ou le bureau&nbsp;: Ouvrir l'application en tant qu'administrateur.
@@ -268,10 +269,10 @@ Pour modifier la plage de ligne et de colonne affiché.
 
 > Les bureaux virtuels peuvent avoir des font d'écran différent un nom personnalisé, une même fenêtre peut être présente sur tous les bureaux. Ces actions n'ont pas de contrôles au clavier, il faut donc les faire à la souris dans le gestionnaire de bureaux (un bouton est par défaut dans la barre de tâches).
 
- - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key class="tab">&#x2B7E;</key>&nbsp;: Ouvrir le gestionnaire de bureaux.
- - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key>CTRL</key> + <key>D</key>&nbsp;: Ajouter un bureau virtuel.
- - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key>CTRL</key> + <key>&#9665;</key> **ou** <key>&#9655;</key>&nbsp;: Changer de bureau actif, à gauche ou à droite.
- - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key>CTRL</key> + <key>F4</key>&nbsp;: Fermer le bureau virtuel actuel.
+ - <key class="windows">![windows]</key> + <key class="tab">&#x2B7E;</key>&nbsp;: Ouvrir le gestionnaire de bureaux.
+ - <key class="windows">![windows]</key> + <key>CTRL</key> + <key>D</key>&nbsp;: Ajouter un bureau virtuel.
+ - <key class="windows">![windows]</key> + <key>CTRL</key> + <key>&#9665;</key> **ou** <key>&#9655;</key>&nbsp;: Changer de bureau actif, à gauche ou à droite.
+ - <key class="windows">![windows]</key> + <key>CTRL</key> + <key>F4</key>&nbsp;: Fermer le bureau virtuel actuel.
 
 <div class="pageBreak"></div>
 
@@ -302,9 +303,9 @@ Pour modifier la plage de ligne et de colonne affiché.
  - <key>ALT</key> + <key class="tab">espace</key>&nbsp;: ouvrir le menu de la fenêtre (pour la fermer, le redimensionner).
  - <kbd>ALT</kbd> + <kbd>F4</kbd>&nbsp;: Fermer l'application, sur le bureau ouvre le menu d'extinction et de redémarrage.
  - <key>CTRL</key> + <key class="tab maj">&#8679;</key> + <key>ÉCHAP</key>&nbsp;: ouvrir le gestionnaire de tâche (si ALT+F4 n'a pas fonctionné)
- - <kbd style="display:inline-block;width:1em;padding:5px;">![windows]</kbd> + <kbd>R</kbd>&nbsp;: ouvre l'invite de lancement (quelques exemples&nbsp;: `taskmgr`, `cmd`, `explorer`, `excel`, `firefox`, `regedit`, `control`, `ms-settings:`, `powershell`, `winget update -r`)
+ - <kbd class="windows">![windows]</kbd> + <kbd>R</kbd>&nbsp;: ouvre l'invite de lancement (quelques exemples&nbsp;: `taskmgr`, `cmd`, `explorer`, `excel`, `firefox`, `regedit`, `control`, `ms-settings:`, `powershell`, `winget update -r`)
  - <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>Suppr</kbd>&nbsp;: pour verrouillé la session, hanger d'utilisateur, se déconnecter, modifier le mot de passe ou ouvrir le gestionnaire de tâches.
- - <kbd style="display:inline-block;width:1em;padding:5px;">![windows]</kbd>  + <kbd>CTRL</kbd> + <kbd class="tab maj">&#8679;</kbd> + <kbd>B</kbd>&nbsp;: fait redémarrer l'affichage.
+ - <kbd class="windows">![windows]</kbd>  + <kbd>CTRL</kbd> + <kbd class="tab maj">&#8679;</kbd> + <kbd>B</kbd>&nbsp;: fait redémarrer l'affichage.
 
 <div class="pageBreak"></div>
 
@@ -313,12 +314,18 @@ Pour modifier la plage de ligne et de colonne affiché.
  - <key class="tab maj">&#8679;</key> + <key>F10</key>&nbsp;: ouvre le menu déroulant à l'emplacement du curseur (= clic droit)
  - <key>F2</key>&nbsp;: renomme l'élément sous le curseur, en cas de sélection multiple&nbsp;: renomme tous éléments en ajoutant un numéro incrémenté selon l'ordre dans lequel ils sont affiché.
  - <key>ÉCHAP</key>&nbsp;: ferme le menu contextuel ouvert, annule la sélection en cours
- - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> **ou** <key>CTRL</key> + <key>ÉCHAP</key>&nbsp;: ouvre le menu démarrer, taper des lettres pour chercher une application
- - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key class="tab maj">&#8679;</key> + <key>S</key>&nbsp;: prendre une capture d'écran
- - <key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key>L</key>&nbsp;: Verrouille la session
- - <kbd style="display:inline-block;width:1em;padding:5px;">![windows]</kbd> + <kbd>E</kbd>&nbsp;: Ouvre le gestionnaire de fichiers
- - <kbd style="display:inline-block;width:1em;padding:5px;">![windows]</kbd> + <kbd>P</kbd>&nbsp;: ouvre le panneau "Projeter" pour changer l'affichage des écrans en dupliqué, étendu ou éteint
+ - <key class="windows">![windows]</key> **ou** <key>CTRL</key> + <key>ÉCHAP</key>&nbsp;: ouvre le menu démarrer, taper des lettres pour chercher une application
+ - <key class="windows">![windows]</key> + <key class="tab maj">&#8679;</key> + <key>S</key>&nbsp;: prendre une capture d'écran
+ - <key class="windows">![windows]</key> + <key class="tab maj">&#8679;</key> + <key>R</key>&nbsp;: prendre une vidéo capture d'écran
+ - <key class="windows">![windows]</key> + <key>L</key>&nbsp;: Verrouille la session
+ - <kbd class="windows">![windows]</kbd> + <kbd>E</kbd>&nbsp;: Ouvre le gestionnaire de fichiers
+ - <kbd class="windows">![windows]</kbd> + <kbd>Q</kbd> **OU** <kbd>S</kbd>&nbsp;: Commence un recherche
+ - <kbd class="windows">![windows]</kbd> + <kbd>P</kbd>&nbsp;: Ouvre le panneau "Projeter" pour changer l'affichage des écrans en dupliqué, étendu ou éteint
+ - <kbd class="windows">![windows]</kbd> + <kbd>I</kbd>&nbsp;: Ouvre les paramètres
+ - <kbd class="windows">![windows]</kbd> + <kbd>CTRL</kbd> + <kbd>Q</kbd>&nbsp;: Ouvre l'Assistance rapide
+ - <kbd class="windows">![windows]</kbd> + <kbd>CTRL</kbd> + <kbd>V</kbd> : Ouvre le panneau sortie son.
  - <kbd>ALT</kbd> + <kbd class="tab maj">&#8679;</kbd> + [touche directionnel], _dans le menu démarrer_&nbsp;: déplace le raccourci sélectionné
+ - <kbd>CTRL</kbd> + <kbd class="tab maj">&#8679;</kbd> + [touche directionnel], _dans le menu démarrer_&nbsp;: déplace le raccourci sélectionné dans ou hors d'un dossier
 
 > <svg class="qrcode" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" version="1.1" viewBox="0 0 27 27"><rect x="0" y="0" width="27" height="27" style="fill:#ffffff"/><path d="M1 1h1v7h-1M2 1h6v1h-6M9 1h3v1h-3M14 1h4v1h-4M19 1h1v7h-1M20 1h6v1h-6M7 2h1v6h-1M10 2h1v2h-1M25 2h1v6h-1M3 3h3v3h-3M9 3h1v5h-1M11 3h2v1h-2M14 3h3v2h-3M17 3h1v1h-1M21 3h3v3h-3M12 4h1v1h-1M15 5h1v4h-1M16 5h1v2h-1M10 6h1v1h-1M12 6h1v1h-1M14 6h4v1h-4M2 7h6v1h-6M11 7h1v1h-1M13 7h1v1h-1M17 7h1v5h-1M20 7h6v1h-6M10 8h1v2h-1M12 8h1v1h-1M14 8h3v1h-3M3 9h6v1h-6M11 9h1v4h-1M16 9h2v3h-2M18 9h1v1h-1M20 9h3v2h-3M23 9h1v1h-1M25 9h1v1h-1M1 10h2v2h-2M3 10h2v1h-2M9 10h1v1h-1M12 10h2v1h-2M24 10h1v1h-1M5 11h3v1h-3M10 11h2v2h-2M13 11h1v2h-1M14 11h1v1h-1M18 11h2v1h-2M21 11h1v2h-1M25 11h1v1h-1M1 12h1v1h-1M3 12h1v1h-1M12 12h1v2h-1M19 12h3v1h-3M6 13h3v1h-3M14 13h1v2h-1M16 13h1v2h-1M17 13h1v1h-1M19 13h1v1h-1M22 13h1v3h-1M24 13h1v2h-1M25 13h1v1h-1M2 14h1v4h-1M4 14h1v1h-1M9 14h1v1h-1M15 14h1v5h-1M23 14h1v4h-1M1 15h3v1h-3M5 15h1v1h-1M7 15h2v1h-2M10 15h2v1h-2M17 15h1v1h-1M20 15h1v3h-1M25 15h1v1h-1M6 16h1v2h-1M8 16h2v1h-2M11 16h1v1h-1M13 16h1v1h-1M18 16h1v2h-1M21 16h1v6h-1M1 17h3v1h-3M5 17h3v1h-3M9 17h2v1h-2M14 17h7v1h-7M24 17h1v6h-1M17 18h1v4h-1M22 18h1v2h-1M25 18h1v1h-1M1 19h1v7h-1M2 19h6v1h-6M9 19h1v5h-1M11 19h1v1h-1M13 19h1v3h-1M19 19h1v1h-1M7 20h1v6h-1M10 20h1v1h-1M14 20h3v1h-3M25 20h1v6h-1M3 21h3v3h-3M11 21h1v2h-1M15 21h8v1h-8M14 22h2v1h-2M18 22h1v1h-1M20 22h1v1h-1M22 22h1v4h-1M23 22h1v2h-1M13 23h1v3h-1M17 23h1v1h-1M19 23h1v3h-1M21 23h2v3h-2M10 24h2v1h-2M14 24h2v1h-2M2 25h6v1h-6M11 25h3v1h-3M15 25h2v1h-2M20 25h6v1h-6"></path></svg> Toutes les raccourcis Windows sont ici&nbsp;: _[https://support.microsoft.com/fr-fr/windows/raccourcis-clavier-dans-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec]_
 
@@ -328,7 +335,7 @@ Pour modifier la plage de ligne et de colonne affiché.
 
 > Avec Windows 10 et 11 un raccourci clavier à été ajouter ouvrant un pop-up&nbsp;:
 
-<key style="display:inline-block;width:1em;padding:5px;">![windows]</key> + <key>;</key> (comme pour faire le smiley ;-) 😉) **ou** <key>.</key>&nbsp;: permettant la saisi des smiley, symboles et caractères spéciaux n'importe où.
+<key class="windows">![windows]</key> + <key>;</key> (comme pour faire le smiley ;-) 😉) **ou** <key>.</key>&nbsp;: permettant la saisi des smiley, symboles et caractères spéciaux n'importe où.
 
 > Avec la touche <key>ALT</key> maintenue enfoncé on tape le code du caractère sur le pavé numérique puis au relâchement de <key>ALT</key> apparaît le symbole désiré
 
@@ -371,15 +378,19 @@ Pour modifier la plage de ligne et de colonne affiché.
 ↓ version base64
 -->
 
-[windows]: data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20448%20512%22%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M0%2093.7l183.6-25.3v177.4H0V93.7zm0%20324.6l183.6%2025.3V268.4H0v149.9zm203.8%2028L448%20480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8%2065.7z%22%2F%3E%3C%2Fsvg%3E "Windows"
+[windows]: data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20448%20512%22%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M0%2093.7l183.6-25.3v177.4H0V93.7zm0%20324.6l183.6%2025.3V268.4H0v149.9zm203.8%2028L448%20480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8%2065.7z%22%2F%3E%3C%2Fsvg%3E "Windows" style="height:1em;vertical-align:text-top;"
 
 <style type="text/css">
 key, kbd{
   border: 1px solid grey;
   border-radius: 3px;
   background-color: #000000bb;
-  padding: 0 5px;
+  padding: 1px 5px;
   color: white;
+  &.windows{
+    display: inline-block;
+    padding: 2px 5px;
+  }
 }
 .tab{
   padding-right: 15px;
@@ -749,7 +760,7 @@ sup {
 <div class="mist noPrint"></div>
 
 <!--
-La touche "Windows" <key style="display:inline-block;width:1em;padding:5px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> est représenté par son nom générique&nbsp;: <key>Super</key>
+La touche "Windows" <key style="display:inline-block;padding:2px;fill:white;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></key> est représenté par son nom générique&nbsp;: <key>Super</key>
 -->
 
 <!--
@@ -807,9 +818,13 @@ C:\> node.exe (ne marche pas ? cherches dans le menu démarrer)
 Il faut ajouter la class : class="qrcode" et enlever les sauts de lignes pour avoir un qrcode ultra leger !
 
 = = =
-SVG to data URI :
-https://gist.github.com/jennyknuth/222825e315d45a738ed9d6e04c7a88d0
-url encode : https://www.urlencoder.io/
+Compress SVG :
+https://vecta.io/nano
+
+
+// SVG to data URI :
+// https://gist.github.com/jennyknuth/222825e315d45a738ed9d6e04c7a88d0
+// url encode : https://www.urlencoder.io/
 
 traitement du fichier post-extraction&nbsp;:
 // replace&nbsp;: \n\n -> \n
@@ -822,7 +837,9 @@ traitement du fichier post-extraction&nbsp;:
 
 Add <!DOCTYPE html>
 join all lines.
-supprimer les commentaires : /\n*<!-- .*? --Δ>\n*/
+supprimer les commentaires : /<!--.*?--Δ>/
+supprimer les commentaires : /\/\*.*?\*\//
+supprimer les espaces superflu : /  +/
 
 Ne pas utilisé:
 Upload the file here&nbsp;: https://codebeautify.org/minify-html
