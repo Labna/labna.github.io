@@ -135,31 +135,27 @@ Une fois ces chemins appris, il est possible d'aller plus vite en déclenchant l
 - <kbd>ALT</kbd> + <kbd>)</kbd>&nbsp;: Afficher les colonnes dans la sélection
 - <kbd>CTRL</kbd> + <kbd>L</kbd>&nbsp;: Insérer un tableau.
 - <kbd class="tab maj">&#8679;</kbd> + <kbd>F11</kbd>&nbsp; **ou** <kbd>ALT</kbd> + <kbd class="tab maj">&#8679;</kbd> + <kbd>F1</kbd>: Insert une nouvelle feuille de calcul.
-- <kbd>CTRL</kbd> + <kbd>&#8670;</kbd>&nbsp;: passer la feuille active vers la précédente.
-- <kbd>CTRL</kbd> + <kbd>&#8671;</kbd>&nbsp;: changer la feuille active vers la suivante.
-- <kbd>CTRL</kbd> + (<kbd>F6</kbd> **ou** <kbd class="tab">&#x2B7E;</kbd>)&nbsp;: passer d'un classeur à un autre.
+- <kbd>CTRL</kbd> + <kbd>&#8670;</kbd>&nbsp;: passer &agrave; la feuille (onglet) précédente.
+- <kbd>CTRL</kbd> + <kbd>&#8671;</kbd>&nbsp;: passer &agrave; la feuille (onglet) suivante.
+- <kbd>CTRL</kbd> + (<kbd>F6</kbd> **ou** <kbd class="tab">&#x2B7E;</kbd>)&nbsp;: lorsque plusieurs fenêtres d'Excel sont ouvertes, permet de passer de l'une à l'autre.
 - <kbd>CTRL</kbd> + <kbd class="tab maj">&#8679;</kbd> + <kbd>F1</kbd>&nbsp;: passer en plein écran.
 - <kbd>ALT</kbd> + <kbd class="tab maj">&#8679;</kbd> + <kbd>&larr;</kbd>&nbsp;: Dissocier le groupe de lignes ou de colonnes
 - <kbd>ALT</kbd> + <kbd class="tab maj">&#8679;</kbd> + <kbd>&rarr;</kbd>&nbsp;: Grouper les lignes ou les colonnes
 
 ### Déplacement du curseur
 
- - <key class="tab">&#x2B7E;</key>&nbsp;: déplacer le curseur d'une case sur la droite (depuis la dernière cellule d'un tableau, va au début d'une nouvelle ligne).
+ - <key class="tab">&#x2B7E;</key>&nbsp;: déplacer le curseur d'une case sur la droite, si depuis la dernière cellule d'un tableau, alors va au début d'une nouvelle ligne. Dans une sélection, permet de déplacer le curseur.
  - <key class="tab maj">&#8679;</key> + <key class="tab">&#x2B7E;</key>&nbsp;: déplacer le curseur d'une case sur la gauche.
- - <key>CTRL</key> + <key class="tab">&#x2B7E;</key>&nbsp;: lorsque plusieurs fenêtres d'Excel sont ouvertes, permet de passer de l'une à l'autre.
- - <key class="enter">&ldsh;</key>&nbsp;: déplace le curseur d'une case en bas.
+ - <key class="enter">&ldsh;</key>&nbsp;: déplace le curseur d'une case en bas. Dans une sélection, permet de déplacer le curseur.
 
-> En se déplaçant avec tabulation, la touche <key class="enter">&ldsh;</key><!--⏎--> entrée permet d'accéder au début d'une nouvelle ligne de saisie.
+> En se déplaçant avec tabulation, la touche <key class="enter">&ldsh;</key><!--⏎--> (entrée) permet d'accéder au début d'une nouvelle ligne de saisie.
 
  - <key>CTRL</key> + [touche directionnelle] **ou** <kbd>Fin</kbd>, (touche directionnel)&nbsp;: sauter jusqu’à la dernière valeur de la ligne ou de la colonne (!! s'arrête à la première case vide), puis jusqu'à la dernière case de la feuille.
  - En mode arrêt défilement, <kbd>&nwarr;</kbd> et <kbd>FIN</kbd>&nbsp;: déplace le curseur dans la première/dernière cellule visible (mode arrêt défilement : voire Déplacement de la vue)
 
-
-Tous ces déplacements sont utilisables avec <key class="tab maj">&#8679;</key> pour en faire une sélection.
-
-<div class="pageBreak"></div>
-
 ### Sélection
+
+Tous les raccourcis de navigation communs sont utilisables avec <key class="tab maj">&#8679;</key> pour en faire une sélection.
 
  - <key>CTRL</key> + <key>A</key>&nbsp;: tout sélectionner (le tableau, puis la feuille, puis toutes les lignes et colonnes)
  - <key>CTRL</key> + <key class="tab">ESPACE</key>&nbsp;: étend la sélection à la/aux colonne/s (de valeur du tableau, puis avec l'entête, puis toute/s la/les colonne/s)
@@ -172,7 +168,6 @@ Tous ces déplacements sont utilisables avec <key class="tab maj">&#8679;</key> 
 
 - <kbd>F8</kbd>&nbsp;: passe en mode sélection étendu depuis la cellule active (équivalent au cliqué-glissé ou &#8679; + touche de déplacement) (les modificateurs de déplacement sont utilisables)
 - <kbd class="tab maj">&#8679;</kbd> + <kbd>F8</kbd>&nbsp;: Ajoute/supprime une sélection discontinu (permettant de déplacer le curseur en gardant la sélection précédente)
-- <kbd class="tab">&#x2B7E;</kbd>&nbsp;: permet de déplacer le curseur de cellules en cellules sélectionné et de modifier les sélections précédentes.
 
 ### Édition de cellules
 
@@ -181,13 +176,14 @@ Tous ces déplacements sont utilisables avec <key class="tab maj">&#8679;</key> 
 - <key>F2</key>&nbsp;: ouvrir la saisie rapide de la cellule sous le curseur, puis permet de changer de mode de saisi&nbsp;: Modifier/Entrer.
 - <key>F4</key>&nbsp;: lors de la saisi de coordonnée de cellule, permet de permuter entre relative, absolu, ligne absolu-colonne relative et ligne relative et colonne absolu (`A1 → $A$1 → A$1 → $A1 → A1` **ou** `LC → L1C1 → L1C → LC1 → LC`)
 - <kbd>ALT</kbd> + <kbd class="enter">&ldsh;</kbd> &nbsp;: valide la saisie sans quitter la cellule.
-- <kbd>CTRL</kbd> + <kbd>B</kbd>&nbsp;: Recopie la valeur de la première cellule sélectionner dans toute la sélection (équivalent du  &#x271A; glisser avec le pointeur).
+- <kbd>CTRL</kbd> + <kbd>B</kbd>&nbsp;: Recopie la **première ligne** sélectionner dans toute la sélection (équivalent du  &#x271A; glisser avec le pointeur).
+- <kbd>CTRL</kbd> + <kbd>D</kbd>&nbsp;: Recopie la **première colonne** sélectionner dans toute la sélection (équivalent du  &#x271A; glisser avec le pointeur).
 
 ### Déplacement de la vue
 
 Pour modifier la plage de ligne et de colonne affiché.
 
- * <kbd>MAJ</kbd> + <kbd class="tab">&#8679;</kbd> + Mollette de la souris&nbsp;: déplacer la vue horizontalement
+ * <kbd>CTRL</kbd> + <kbd class="tab">&#8679;</kbd> + Mollette de la souris&nbsp;: déplacer la vue horizontalement
  * <kbd>CTRL</kbd> + Molette de la souris&nbsp;: augmenté ou diminuer l'agrandissement (zoom)
  * <kbd>Arrêt défilement</kbd>&nbsp;: active ou désactive le mode "Arrêt défilement" (clique sur "Arrêt défil." en bas à gauche de la fenêtre désactive aussi le mode)
  * En mode Arrêt défilement, touches directionnelles : déplacé la vue d'une ligne/colonne
@@ -822,9 +818,9 @@ Compress SVG :
 https://vecta.io/nano
 
 
-// SVG to data URI :
-// https://gist.github.com/jennyknuth/222825e315d45a738ed9d6e04c7a88d0
-// url encode : https://www.urlencoder.io/
+SVG to data URI :
+https://gist.github.com/jennyknuth/222825e315d45a738ed9d6e04c7a88d0
+url encode : https://www.urlencoder.io/
 
 traitement du fichier post-extraction&nbsp;:
 // replace&nbsp;: \n\n -> \n
@@ -839,7 +835,7 @@ Add <!DOCTYPE html>
 join all lines.
 supprimer les commentaires : /<!--.*?--Δ>/
 supprimer les commentaires : /\/\*.*?\*\//
-supprimer les espaces superflu : /  +/
+supprimer les espaces superflu : /  +/ -> / /
 
 Ne pas utilisé:
 Upload the file here&nbsp;: https://codebeautify.org/minify-html
