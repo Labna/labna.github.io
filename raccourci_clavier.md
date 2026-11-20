@@ -25,6 +25,7 @@
     + [Édition de cellules]
     + [Déplacement de la vue]
 - [Word]
+    + [Écriture rapide]
     + [Publipostage]
 - [Navigateur internet]
 - [Manipulation des fenêtres et bureaux]
@@ -204,6 +205,18 @@ Pour modifier la plage de ligne et de colonne affiché.
 
 ## Word
 
+
+### Écriture rapide
+
+* <kbd>CTRL</kbd> + <kbd>&</kbd>, (<kbd>A</kbd> **ou** <kbd>O</kbd>)&nbsp;: écrit &aelig; ou &oelig;, &AElig; ou &OElig;
+* <kbd>CTRL</kbd> + <kbd>,</kbd>, <kbd>C</kbd>&nbsp;: écrit &ccedil;, &Ccedil;
+
+Avec les nouvelles versions de Word et OneNote, les &#xAB;&nbsp;ALT code&nbsp;&#xBB; avant 32 et après 255 ont disparut, il faut maintenant changer un paramètre et taper le code hexadecimal UTF-8 :  
+Options &xrarr; Personnaliser le ruban &xrarr; Raccourcis clavier [Personnaliser...] &xrarr; catégorie : "Toutes les commandes" &xrarr; Commande "BasculerCodeCaractère" &xrarr; Spécifier une séquence clavier "Touches actuelles" par défaut en français "Alt + C" est attribuer, mais ce raccourci est également attribuer à "SetFocusToCopilot", nous pouvons utilisé le raccourci anglais par défaut "Alt + X" qui est libre.  
+Avec ce raccourci il faut saisir le code du caractère : `2192` puis avec le curseur derrière le code ou avec le texte sélectionné, faire la combinaison <kbd>ALT</kbd> + <kbd>X</kbd>/<kbd>C</kbd> qui transforme en `→`<!-- &#x2192; -->
+
+> Une liste de code <span class="noScreen">en fin de ce document</span><span class="noPrint">dans le chapitre <a href="#%C3%89criretouslessymboles">Écrire tous les symboles</a></span>
+
 ### Publipostage
 
 > quelques raccourcis permettent une saisi plus aisé des champs de fusions.
@@ -333,23 +346,54 @@ Pour modifier la plage de ligne et de colonne affiché.
 
 <key class="windows">![windows]</key> + <key>;</key> (comme pour faire le smiley ;-) 😉) **ou** <key>.</key>&nbsp;: permettant la saisi des smiley, symboles et caractères spéciaux n'importe où.
 
-> Avec la touche <key>ALT</key> maintenue enfoncé on tape le code du caractère sur le pavé numérique puis au relâchement de <key>ALT</key> apparaît le symbole désiré
+Pour les raccourcis suivant, il est possible de faire des majuscule en faisant <kbd class="tab maj">&#8679;</kbd> en même temps que taper la lettre.
 
-* Les principaux
-    - É&nbsp;: &darr;<key>ALT</key>&darr; + <key>0</key><key>2</key><key>0</key><key>1</key>
-    - È&nbsp;: &darr;<key>ALT</key>&darr; + <key>0</key><key>2</key><key>0</key><key>0</key>
-    - Ç&nbsp;: &darr;<key>ALT</key>&darr; + <key>0</key><key>1</key><key>9</key><key>9</key>
-    - À&nbsp;: &darr;<key>ALT</key>&darr; + <key>0</key><key>1</key><key>9</key><key>2</key>
-    - ↑/↓/→/←&nbsp;: &darr;<key>ALT</key>&darr; + <key>2</key><key>4</key> / <key>2</key><key>5</key> / <key>2</key><key>6</key> / <key>2</key><key>7</key>
+* La touche à coté de <key>P</key> &rarr; (<key style="display:inline-flex;flex-direction:column;line-height:.7;transform:translateY(-0.3em);padding: 5px 5px 0"><span>¨</span><span>^</span></key> **ou** <key>ALT GR</key> + <key>9</key>), <kbd>*lettre*</kbd>&nbsp;: écrit â, Â, ê, Ê, ô, Ô, û, Û, etc
+* La touche <key>ALT GR</key> + <key  style="display:inline-flex;line-height:.7;flex-wrap:wrap;width:1em;transform:translateY(-0.3em);padding: 5px 5px 0"><span>7</span><span> </span><span>è</span><span>`</span></key>, <kbd>*lettre*</kbd>&nbsp;: écrit à, À, è, È, ù, Ù, etc
 
-* Autres méthodes pour les accents&nbsp;: ^ (circonflexe) et &grave; (grave)
+> Avec la touche <key>ALT</key> maintenue enfoncé on tape le code du caractère sur le pavé numérique puis au relâchement de <key>ALT</key> apparaît le symbole désiré.
 
-    - La touche à coté de <key>P</key> &rarr; <key style="display:inline-flex;flex-direction:column;line-height:.7;transform:translateY(-0.3em);padding: 5px 5px 0"><span>¨</span><span>^</span></key> (ou <key>ALT GR</key> + <key>9</key>)
-    - La touche <key>ALT GR</key> + <key  style="display:inline-flex;line-height:.7;flex-wrap:wrap;width:1em;transform:translateY(-0.3em);padding: 5px 5px 0"><span>7</span><span> </span><span>è</span><span>`</span></key>
+Le principe pour le lire le tableau des codes, exemple avec É&nbsp;:
 
-* <svg class="qrcode" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" version="1.1" viewBox="0 0 27 27"><rect x="0" y="0" width="27" height="27" style="fill:#ffffff"/><path d="M1 1h1v7h-1M2 1h6v1h-6M9 1h1v1h-1M11 1h1v2h-1M13 1h1v1h-1M15 1h1v3h-1M17 1h1v5h-1M19 1h1v7h-1M20 1h6v1h-6M7 2h1v6h-1M10 2h1v4h-1M12 2h1v3h-1M14 2h1v1h-1M25 2h1v6h-1M3 3h3v3h-3M9 3h1v1h-1M13 3h1v2h-1M21 3h3v3h-3M16 4h1v1h-1M12 6h1v1h-1M14 6h1v1h-1M16 6h1v1h-1M2 7h6v1h-6M9 7h1v2h-1M11 7h1v2h-1M13 7h1v1h-1M15 7h1v3h-1M17 7h1v2h-1M20 7h6v1h-6M16 8h1v3h-1M1 9h1v1h-1M3 9h1v1h-1M6 9h2v1h-2M12 9h1v4h-1M14 9h1v3h-1M18 9h1v3h-1M19 9h1v1h-1M23 9h1v1h-1M25 9h1v6h-1M2 10h1v1h-1M5 10h1v1h-1M9 10h1v3h-1M11 10h1v1h-1M21 10h1v2h-1M22 10h1v1h-1M3 11h1v2h-1M4 11h1v1h-1M6 11h1v4h-1M7 11h1v1h-1M13 11h1v2h-1M17 11h1v4h-1M20 11h1v3h-1M24 11h1v1h-1M2 12h2v1h-2M8 12h2v1h-2M15 12h1v1h-1M23 12h1v1h-1M1 13h1v1h-1M4 13h1v3h-1M7 13h1v1h-1M11 13h1v1h-1M18 13h3v1h-3M2 14h5v1h-5M10 14h1v4h-1M13 14h1v6h-1M14 14h1v1h-1M16 14h2v1h-2M19 14h1v2h-1M21 14h1v8h-1M22 14h1v3h-1M24 14h2v1h-2M1 15h2v1h-2M7 15h1v1h-1M11 15h1v2h-1M20 15h1v1h-1M3 16h1v2h-1M9 16h8v1h-8M23 16h2v1h-2M4 17h4v1h-4M12 17h3v1h-3M16 17h5v1h-5M24 17h1v2h-1M25 17h1v1h-1M11 18h1v3h-1M17 18h1v4h-1M22 18h3v1h-3M1 19h1v7h-1M2 19h6v1h-6M10 19h5v1h-5M16 19h2v3h-2M19 19h1v1h-1M7 20h1v6h-1M9 20h3v1h-3M14 20h1v1h-1M23 20h2v2h-2M3 21h3v3h-3M18 21h7v1h-7M10 22h3v1h-3M15 22h1v2h-1M16 22h1v1h-1M23 22h1v1h-1M25 22h1v1h-1M9 23h1v1h-1M11 23h1v1h-1M22 23h1v2h-1M10 24h1v2h-1M14 24h1v2h-1M17 24h1v1h-1M23 24h1v2h-1M2 25h6v1h-6M9 25h3v1h-3M13 25h3v1h-3M18 25h2v1h-2M21 25h1v1h-1M25 25h1v1h-1"></path></svg> Pour tous les autres symboles voire cette fiche&nbsp;: _[https://usefulshortcuts.com/downloads/ALT-Codes.pdf]_
+colonne | raccourci|signification
+-------:|:---------|---
+**<key>ALT</key>**|&darr;<key>ALT</key>&darr; + <kbd>1</kbd>, <kbd>4</kbd>, <kbd>4</kbd>|table ASCII
+**<key>ALT</key> "0"**|&darr;<key>ALT</key>&darr; + <key>0</key>, <key>2</key>, <key>0</key>, <key>1</key>|écriture décimal de la table UTF-8 
+**<key>ALT</key> + <key>+</key>**|&darr;<key>ALT</key>&darr; + <kbd>+</kbd>, <kbd>C</kbd>, <kbd>9</kbd>|écriture hexadécimal de la table UTF-8
 
-[https://usefulshortcuts.com/downloads/ALT-Codes.pdf]: https://usefulshortcuts.com/downloads/ALT-Codes.pdf "Dans un nouvel onglet" target="_blank"
+Quelques codes :
+
+| <kbd>ALT</kbd> | <kbd>ALT</kbd> "0" | <kbd>ALT</kbd> + <kbd>+</kbd> | Caractère, exemple | | <kbd>ALT</kbd> | <kbd>ALT</kbd> "0" | <kbd>ALT</kbd> + <kbd>+</kbd> | Caractère, exemple |
+|:---:|:-----:|:-----:|-----------|-|:---:|:-----:|:-----:|-----------|
+|`183`|`0192`|`c0`|&#192;| |`212`|`0200`|`c8`|&#200;, &Egrave;ve-Angéline
+|`144`|`0201`|`c9`|&#xc9;, &Eacute;milie| |`182`|`0194`|`c2`|&#xc2;, &Acirc;ne 
+|`210`|`0202`|`ca`|&#xca;, &Ecirc;tre| |`226`|`0212`|`d4`|&#xd4;, &Ocirc;ter
+|`128`|`0199`|`c7`|&#xc7;, &Ccedil;a| |`146`|`0198`|`c6`|&#xc6;, &AElig;chmea
+|`145`|`0230`|`e6`|&#230;, L&aelig;titia| |-|`0338`|`152`|&#338;, &OElig;agre
+|-|`0339`|`153`|&#339;, c&oelig;ur | |-|`8263`|`2047`|&#x2047;
+|-|`8264`|`2048`|&#8264;| |-|`8265`|`2049`|&#x2049;
+|`174`|`0171`|`ab`|&#171;| |`175`|`0187`|`bb`|&#xbb;
+|`158`|`0215`|`d7`|&#xd7;| |`246`|`0247`|`f7`|&#xf7;
+|`241`|`0177`|`b1`|&#xb1;| |-|`8709`|`2205`|&#8709;
+|-|`8800`|`2260`|&#8800;| |-|`8776`|`2248`|&#8776;
+|-|`8804`|`2264`|&#8804;| |-|`8805`|`2265`|&#8805;
+|`27`|`8592`|`2190`|&#8592;| |`26`|`8594`|`2192`|&#8594;
+|`24`|`8593`|`2191`|&#8593;| |`25`|`8595`|`2193`|&#8595;
+|-|`10003`|`2713`|&#x2713;| |-|`10007`|`2717`|&#x2717;
+|-|`10004`|`2714`|&#x2714;| |-|`10008`|`2718`|&#x2718;
+|-|`9744`|`2610`|&#x2610;| |-|`9745`|`2611`|&#x2611;
+|-|`9746`|`2612`|&#x2612;|
+[Tableau des codes]
+
+`2160` au `216f`&nbsp;: &#x2160;, &#x2161;, &#x2162;, &#x2163;, &#x2164;, &#x2165;, &#x2166;, &#x2167;, &#x2168;, &#x2169;, &#x216a;, &#x216b;, &#x216c;=50, &#x216d;=100, &#x216e;=500,  &#x216f;=1000  
+
+Petit bonus pour l'apprentissage des codes hexadécimaux de la table UTF-8 : quelques soit le système d'exploitation que vous utilisez, ce code reste identique (linux : <kbd>CTRL</kbd> + <kbd class="maj tab">&#8679;</kbd> + <kbd>U</kbd>; Mac : <kbd>CTRL</kbd> + <kbd>CMD</kbd> + <kbd>ESPACE</kbd>)
+
+
+
+* <svg class="qrcode" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" version="1.1" viewBox="0 0 27 27"><rect x="0" y="0" width="27" height="27" style="fill:#ffffff"/><path d="M1 1h1v7h-1M2 1h6v1h-6M9 1h1v1h-1M11 1h1v2h-1M13 1h1v1h-1M15 1h1v3h-1M17 1h1v5h-1M19 1h1v7h-1M20 1h6v1h-6M7 2h1v6h-1M10 2h1v4h-1M12 2h1v3h-1M14 2h1v1h-1M25 2h1v6h-1M3 3h3v3h-3M9 3h1v1h-1M13 3h1v2h-1M21 3h3v3h-3M16 4h1v1h-1M12 6h1v1h-1M14 6h1v1h-1M16 6h1v1h-1M2 7h6v1h-6M9 7h1v2h-1M11 7h1v2h-1M13 7h1v1h-1M15 7h1v3h-1M17 7h1v2h-1M20 7h6v1h-6M16 8h1v3h-1M1 9h1v1h-1M3 9h1v1h-1M6 9h2v1h-2M12 9h1v4h-1M14 9h1v3h-1M18 9h1v3h-1M19 9h1v1h-1M23 9h1v1h-1M25 9h1v6h-1M2 10h1v1h-1M5 10h1v1h-1M9 10h1v3h-1M11 10h1v1h-1M21 10h1v2h-1M22 10h1v1h-1M3 11h1v2h-1M4 11h1v1h-1M6 11h1v4h-1M7 11h1v1h-1M13 11h1v2h-1M17 11h1v4h-1M20 11h1v3h-1M24 11h1v1h-1M2 12h2v1h-2M8 12h2v1h-2M15 12h1v1h-1M23 12h1v1h-1M1 13h1v1h-1M4 13h1v3h-1M7 13h1v1h-1M11 13h1v1h-1M18 13h3v1h-3M2 14h5v1h-5M10 14h1v4h-1M13 14h1v6h-1M14 14h1v1h-1M16 14h2v1h-2M19 14h1v2h-1M21 14h1v8h-1M22 14h1v3h-1M24 14h2v1h-2M1 15h2v1h-2M7 15h1v1h-1M11 15h1v2h-1M20 15h1v1h-1M3 16h1v2h-1M9 16h8v1h-8M23 16h2v1h-2M4 17h4v1h-4M12 17h3v1h-3M16 17h5v1h-5M24 17h1v2h-1M25 17h1v1h-1M11 18h1v3h-1M17 18h1v4h-1M22 18h3v1h-3M1 19h1v7h-1M2 19h6v1h-6M10 19h5v1h-5M16 19h2v3h-2M19 19h1v1h-1M7 20h1v6h-1M9 20h3v1h-3M14 20h1v1h-1M23 20h2v2h-2M3 21h3v3h-3M18 21h7v1h-7M10 22h3v1h-3M15 22h1v2h-1M16 22h1v1h-1M23 22h1v1h-1M25 22h1v1h-1M9 23h1v1h-1M11 23h1v1h-1M22 23h1v2h-1M10 24h1v2h-1M14 24h1v2h-1M17 24h1v1h-1M23 24h1v2h-1M2 25h6v1h-6M9 25h3v1h-3M13 25h3v1h-3M18 25h2v1h-2M21 25h1v1h-1M25 25h1v1h-1"></path></svg> Pour tous les autres symboles voire cette fiche&nbsp;: _[https://alt-codes.fr/tables/windows/]_
+
+[https://alt-codes.fr/tables/windows/]: https://alt-codes.fr/tables/windows/ "Dans un nouvel onglet" target="_blank"
 
 <!--
 
